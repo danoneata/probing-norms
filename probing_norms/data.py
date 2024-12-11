@@ -1,6 +1,8 @@
 import pdb
+import os
 
 from functools import partial
+from itertools import groupby
 from pathlib import Path
 
 import pandas as pd
@@ -9,25 +11,36 @@ from PIL import Image
 from torch.utils.data import Dataset
 
 from torchvision.datasets import ImageNet
-from toolz import identity
+from toolz import first, identity, second
 
 from probing_norms.utils import read_file, reverse_dict
 
 
-DIR_GPT3_NORMS = Path("/home/doneata/work/semantic-features-gpt-3")
+DIR_GPT3_NORMS = "/home/doneata/work/semantic-features-gpt-3"
+DIR_GPT3_NORMS = os.environ.get("DIR_GPT3_NORMS", DIR_GPT3_NORMS)
+DIR_GPT3_NORMS = Path(DIR_GPT3_NORMS)
+
 DIR_THINGS = Path("/mnt/private-share/speechDatabases/THINGS")
 DIR_IMAGENET = Path("/mnt/private-share/speechDatabases/imagenet12")
 
 
+FEATURE_NORMS_OPTIONS = {
+    "priming": ["mcrae", "cslb"],
+    "model": ["chatgpt-gpt3.5-turbo", "gpt3-davinci"],
+    "num_runs": [10, 30],
+}
+
+
 def load_gpt3_feature_norms(
+    *,
     root=DIR_GPT3_NORMS,
     priming="mcrae",
     model="chatgpt-gpt3.5-turbo",
     num_runs=30,
 ):
-    assert priming in "mcrae cslb".split()
-    assert model in "chatgpt-gpt3.5-turbo gpt3-davinci".split()
-    assert num_runs in [10, 30]
+    assert priming in FEATURE_NORMS_OPTIONS["priming"]
+    assert model in FEATURE_NORMS_OPTIONS["model"]
+    assert num_runs in FEATURE_NORMS_OPTIONS["num_runs"]
     path = (
         root
         / "data"
@@ -44,6 +57,12 @@ def load_gpt3_feature_norms(
     df = df.drop_duplicates()
     concept_feature = df.values.tolist()
     return concept_feature
+
+
+def get_feature_to_concepts(concept_feature):
+    concept_feature = sorted(concept_feature, key=second)
+    feature_groups = groupby(concept_feature, key=second)
+    return {feature: list(map(first, group)) for feature, group in feature_groups}
 
 
 class THINGS(Dataset):

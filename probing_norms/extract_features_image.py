@@ -95,42 +95,20 @@ def main(dataset_name, feature_type):
             feature = feature.cpu().numpy()
             return feature
 
-    path_hdf5 = f"output/features-image/{dataset_name}-{feature_type}.h5"
-
-    with h5py.File(path_hdf5, "a") as f:
-        for batch in tqdm(dataloader):
-            features = extract1(batch["image"])
-            for i, feature in enumerate(features):
-                name = batch["name"][i]
-                label = batch["label"][i]
-
-                try:
-                    group = f.create_group(name)
-                except ValueError:
-                    group = f[name]
-
-                if "feature" in group:
-                    continue
-
-                group = f[name]
-                group.create_dataset("feature", data=feature)
-                group.create_dataset("label", data=label)
-
-    # Store data in NumPy format
     num_samples = len(dataset)
     feature_dim = feature_extractor.feature_dim
 
     X = np.zeros((num_samples, feature_dim))
     y = np.zeros(num_samples)
 
-    with h5py.File(path_hdf5, "r") as f:
-        for i, index in enumerate(tqdm(range(num_samples))):
-            filename = dataset.get_file_name(index)
-            group = f[filename]
-            X[i] = np.array(group["feature"])
-            y[i] = np.array(group["label"])
+    for batch in tqdm(dataloader):
+        features = extract1(batch["image"])
 
-    path_np = Path(path_hdf5).with_suffix(".npz")
+        for i, feature in enumerate(features):
+            X[i] = feature
+            y[i] = batch["label"][i].item()
+
+    path_np = f"output/features-image/{dataset_name}-{feature_type}.npz"
     np.savez(path_np, X=X, y=y)
 
 

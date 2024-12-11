@@ -84,8 +84,6 @@ def main():
             int(dataset.label_to_class[label] in concepts) for label in dataset.labels
         ]
 
-    pdb.set_trace()
-
     for feature in tqdm(features):
         concepts = feature_to_concepts[feature]
         if len(concepts) < 15:

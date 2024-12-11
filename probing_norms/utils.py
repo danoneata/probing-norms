@@ -35,6 +35,11 @@ def sigmoid(logit: np.ndarray):
     return 1 / (1 + np.exp(-logit))
 
 
+def read_json(path: str):
+    with open(path, "r") as f:
+        return json.load(f)
+
+
 def cache_np(path, func, *args, **kwargs):
     if os.path.exists(path):
         return np.load(path)
@@ -46,8 +51,7 @@ def cache_np(path, func, *args, **kwargs):
 
 def cache_json(path, func, *args, **kwargs):
     try:
-        with open(path, "r") as f:
-            return json.load(f)
+        read_json(path)
     except FileNotFoundError:
         result = func(*args, **kwargs)
         with open(path, "w") as f:

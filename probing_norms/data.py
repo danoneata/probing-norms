@@ -73,6 +73,7 @@ class THINGS(Dataset):
         self.image_files = image_files
         self.labels = labels
         self.label_to_class = label_to_class
+        self.class_to_label = reverse_dict(label_to_class)
 
     def get_image_path(self, image_name):
         _, class_name, file_name = image_name.split("/")

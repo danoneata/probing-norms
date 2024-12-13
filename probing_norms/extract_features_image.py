@@ -10,7 +10,12 @@ import torch
 import numpy as np
 import torch.nn as nn
 
-from transformers import AutoProcessor, PaliGemmaForConditionalGeneration
+from transformers import (
+    AutoProcessor,
+    PaliGemmaForConditionalGeneration,
+    ViTMAEForPreTraining,
+    ViTMAEModel,
+)
 from torch.utils.data import DataLoader
 
 import torchvision.transforms as T
@@ -69,9 +74,30 @@ class PaliGemma(nn.Module):
         return features
 
 
+class VITMAE(nn.Module):
+    def __init__(self):
+        super(VITMAE, self).__init__()
+        model_id = "facebook/vit-mae-large"
+        self.model = ViTMAEModel.from_pretrained(model_id).eval()
+        self.processor = AutoProcessor.from_pretrained(model_id)
+        self.feature_dim = self.model.config.hidden_size
+
+    def transform(self, x):
+        output = self.processor(images=x, return_tensors="pt")
+        output = output["pixel_values"]
+        output = output.squeeze(0)
+        return output
+
+    def forward(self, x):
+        features = self.model(x)
+        features = features.last_hidden_state.mean(1)
+        return features
+
+
 FEATURE_EXTRACTORS = {
     "dino-resnet50": partial(ImageBackboneDINO, type_="resnet50"),
     "pali-gemma-224": PaliGemma,
+    "vit-mae-large": VITMAE,
 }
 
 
@@ -103,14 +129,12 @@ def main(dataset_name, feature_type):
 
     for batch in tqdm(dataloader):
         features = extract1(batch["image"])
-
         for i, feature in enumerate(features):
             X[i] = feature
             y[i] = batch["label"][i].item()
 
     path_np = f"output/features-image/{dataset_name}-{feature_type}.npz"
     np.savez(path_np, X=X, y=y)
-
 
 
 if __name__ == "__main__":

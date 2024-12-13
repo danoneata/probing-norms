@@ -51,7 +51,7 @@ def cache_np(path, func, *args, **kwargs):
 
 def cache_json(path, func, *args, **kwargs):
     try:
-        read_json(path)
+        return read_json(path)
     except FileNotFoundError:
         result = func(*args, **kwargs)
         with open(path, "w") as f:

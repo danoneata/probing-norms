@@ -7,6 +7,7 @@ from functools import partial
 from sklearn.metrics import average_precision_score
 from tqdm import tqdm
 
+from probing_norms.constants import NUM_MIN_CONCEPTS
 from probing_norms.data import (
     DATASETS,
     FEATURE_NORMS_OPTIONS,
@@ -14,9 +15,6 @@ from probing_norms.data import (
     load_gpt3_feature_norms,
 )
 from probing_norms.utils import read_json, cache_df
-
-
-st.set_page_config(page_title="Results per feature norms", layout="wide")
 
 
 def compute_score(predictions):
@@ -88,13 +86,14 @@ def load_features_metadata(model):
     feature_to_concepts = {
         feature: concepts
         for feature, concepts in feature_to_concepts.items()
-        if len(concepts) >= 15
+        if len(concepts) >= NUM_MIN_CONCEPTS
     }
 
     return feature_to_concepts, feature_to_id
 
 
 def main():
+    st.set_page_config(page_title="Results per feature norms", layout="wide")
     dataset = DATASETS["things"]()
 
     num_cols = 4
@@ -104,7 +103,7 @@ def main():
         feature_norm = "_".join(["mcrae", model, "30"])
         feature_id = feature_to_id[feature]
         return (
-            "output/linear-probe-predictions/things-pali-gemma-224-{}-{}.json".format(
+            "output/linear-probe-predictions/old/things-pali-gemma-224-{}-{}.json".format(
                 feature_norm,
                 feature_id,
             )

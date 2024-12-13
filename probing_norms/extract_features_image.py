@@ -127,11 +127,13 @@ def main(dataset_name, feature_type):
     X = np.zeros((num_samples, feature_dim))
     y = np.zeros(num_samples)
 
+    i = 0
     for batch in tqdm(dataloader):
         features = extract1(batch["image"])
-        for i, feature in enumerate(features):
+        for j, feature in enumerate(features):
             X[i] = feature
-            y[i] = batch["label"][i].item()
+            y[i] = batch["label"][j].item()
+            i += 1
 
     path_np = f"output/features-image/{dataset_name}-{feature_type}.npz"
     np.savez(path_np, X=X, y=y)

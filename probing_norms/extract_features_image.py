@@ -11,9 +11,9 @@ import numpy as np
 import torch.nn as nn
 
 from transformers import (
+    AutoModel,
     AutoProcessor,
     PaliGemmaForConditionalGeneration,
-    ViTMAEForPreTraining,
     ViTMAEModel,
 )
 from torch.utils.data import DataLoader
@@ -51,6 +51,28 @@ class ImageBackboneDINO(nn.Module):
     def forward(self, x):
         features = self.model(x)
         features = features.mean([2, 3])
+        return features
+
+
+class SigLIP(nn.Module):
+    def __init__(self):
+        super(SigLIP, self).__init__()
+        model_id = "google/siglip-so400m-patch14-224"
+        model = AutoModel.from_pretrained(model_id).eval()
+        self.model = model.vision_model
+        self.model.head = nn.Identity()
+        self.processor = AutoProcessor.from_pretrained(model_id)
+        self.feature_dim = model.config.vision_config.hidden_size
+
+    def transform(self, x):
+        output = self.processor(images=x, return_tensors="pt")
+        output = output["pixel_values"]
+        output = output.squeeze(0)
+        return output
+
+    def forward(self, x):
+        features = self.model(x)
+        features = features.last_hidden_state.mean(1)
         return features
 
 
@@ -96,6 +118,7 @@ class VITMAE(nn.Module):
 
 FEATURE_EXTRACTORS = {
     "dino-resnet50": partial(ImageBackboneDINO, type_="resnet50"),
+    "siglip-224": SigLIP,
     "pali-gemma-224": PaliGemma,
     "vit-mae-large": VITMAE,
 }

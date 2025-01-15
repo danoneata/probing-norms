@@ -8,6 +8,7 @@ import click
 import h5py
 import torch
 import numpy as np
+import timm
 import torch.nn as nn
 
 from transformers import (
@@ -116,11 +117,34 @@ class VITMAE(nn.Module):
         return features
 
 
+class TimmModel(nn.Module):
+    def __init__(self, model_id):
+        super(TimmModel, self).__init__()
+        self.model = timm.create_model(model_id, pretrained=True, num_classes=0)
+        self.model = self.model.eval()
+        self.data_config = timm.data.resolve_model_data_config(self.model)
+        self.transform = timm.data.create_transform(
+            **self.data_config,
+            is_training=False,
+        )
+        self.feature_dim = self.model.num_features
+
+    def forward(self, x):
+        return self.model(x)
+
+
 FEATURE_EXTRACTORS = {
+    # fmt: off
+    # Self supervised models
     "dino-resnet50": partial(ImageBackboneDINO, type_="resnet50"),
+    "vit-mae-large": VITMAE,
+    # Image-text models
     "siglip-224": SigLIP,
     "pali-gemma-224": PaliGemma,
-    "vit-mae-large": VITMAE,
+    # Supervised models
+    "swin-v2": partial(TimmModel, model_id="swinv2_large_window12to24_192to384.ms_in22k_ft_in1k"),
+    "max-vit-large": partial(TimmModel, model_id="maxvit_large_tf_384.in1k"),
+    # fmt: on
 }
 
 

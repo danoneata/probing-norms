@@ -1,5 +1,8 @@
+import json
 import pdb
 import random
+import os
+import pickle
 
 from dataclasses import dataclass
 from typing import Dict, List
@@ -39,7 +42,7 @@ def predict1(X, y, split, dataset):
 
     y_pr = clf.predict_proba(X_te)[:, 1]
 
-    return [
+    preds = [
         {
             "i": i.item(),
             "name": dataset.image_files[i],
@@ -49,13 +52,17 @@ def predict1(X, y, split, dataset):
         }
         for i, p, t in zip(idxs_te, y_pr, y_te)
     ]
+    return {
+        "preds": preds,
+        "clf": clf,
+    }
 
 
 def predict_splits(X, y, splits, dataset):
     return [
         {
-            "preds": predict1(X, y, split, dataset),
             "split": split.metadata,
+            **predict1(X, y, split, dataset),
         }
         for split in tqdm(splits, leave=False)
     ]
@@ -143,13 +150,14 @@ def main(feature_type, norms_model, split_type):
     ]
 
     random.seed(42)
-    features_selected = random.sample(features_selected, 64)
+    _ = random.sample(features_selected, 64)
+    features_selected = random.sample(features_selected, 256 - 64)
     print(sorted(features_selected))
 
     def get_path(feature):
         feature_norm = "{}_{}_{}".format(norms_priming, norms_model, norms_num_runs)
         feature_id = feature_to_id[feature]
-        return "output/linear-probe-predictions/{}/{}-{}-{}-{}.json".format(
+        return "output/linear-probe-predictions/{}/{}-{}-{}-{}".format(
             split_type,
             dataset_name,
             feature_type,
@@ -170,8 +178,23 @@ def main(feature_type, norms_model, split_type):
         feature_to_concepts,
     )
 
+    def cache_clf_and_preds(path, func, *args):
+        path_json = path + ".json"
+        path_pkl = path + ".pkl"
+        paths_exist = os.path.exists(path_json) and os.path.exists(path_pkl)
+        if not paths_exist:
+            results = func(*args)
+
+            data1 = [{k: r[k] for k in ("split", "preds")} for r in results]
+            with open(path_json, "w") as f:
+                json.dump(data1, f, indent=4)
+
+            data2 = [{k: r[k] for k in ("split", "clf")} for r in results]
+            with open(path_pkl, "wb") as f:
+                pickle.dump(data2, f)
+
     def process_feature(feature):
-        cache_json(
+        cache_clf_and_preds(
             get_path(feature),
             predict_splits,
             embeddings,

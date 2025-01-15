@@ -24,10 +24,28 @@ from probing_norms.utils import cache_json
 from multiprocess import Pool
 
 
-def load_embeddings(dataset_name, feature_type):
+def aggregate_by_labels(embeddings, labels):
+    unique_labels = np.unique(labels)
+    agg_embeddings = np.zeros((len(unique_labels), embeddings.shape[1]))
+    for i, label in enumerate(unique_labels):
+        idxs = labels == label
+        agg_embeddings[i] = embeddings[idxs].mean(axis=0)
+    return agg_embeddings, unique_labels
+
+
+AGGREGATE_EMBEDDINGS = {
+    "instance": lambda x, y: (x, y),
+    "concept": aggregate_by_labels,
+}
+
+
+def load_embeddings(dataset_name, feature_type, embeddings_level):
     path = "output/features-image/{}-{}.npz".format(dataset_name, feature_type)
     output = np.load(path, allow_pickle=True)
-    return output["X"]
+    embeddings = output["X"]
+    labels = output["y"]
+    embeddings, labels = AGGREGATE_EMBEDDINGS[embeddings_level](embeddings, labels)
+    return embeddings, labels
 
 
 def predict1(X, y, split, dataset):
@@ -76,26 +94,28 @@ class Split:
 
 
 def get_train_test_split_iid_fixed(
-    dataset,
+    labels,
     features,
-    feature_to_concepts,
+    **_,
 ) -> Dict[str, List[Split]]:
-    idxs = np.arange(len(dataset))
+    idxs = np.arange(len(labels))
     idxss = train_test_split(idxs, test_size=0.2, random_state=42)
     get_f = lambda f: [Split(*idxss, metadata=dict(feature=f))]
     return {feature: get_f(feature) for feature in features}
 
 
 def get_train_test_split_leave_one_out(
-    dataset,
+    labels,
     features,
+    *,
     feature_to_concepts,
+    class_to_label,
 ) -> Dict[str, List[Split]]:
     def get_c(concept):
-        idxs = list(range(len(dataset)))
-        label = dataset.class_to_label[concept]
-        tr_idxs = [i for i in idxs if dataset.labels[i] != label]
-        te_idxs = [i for i in idxs if dataset.labels[i] == label]
+        idxs = list(range(len(labels)))
+        label = class_to_label[concept]
+        tr_idxs = [i for i in idxs if labels[i] != label]
+        te_idxs = [i for i in idxs if labels[i] == label]
         return {
             "tr_idxs": np.array(tr_idxs),
             "te_idxs": np.array(te_idxs),
@@ -121,18 +141,22 @@ GET_TRAIN_TEST_SPLIT = {
 
 
 @click.command()
+@click.option(
+    "--embeddings-level",
+    "embeddings_level",
+    type=click.Choice(AGGREGATE_EMBEDDINGS.keys()),
+    required=True,
+)
 @click.option("--feature-type", "feature_type", type=str, required=True)
 @click.option("--norms-model", "norms_model", type=str, required=True)
 @click.option("--split-type", "split_type", type=str, required=True)
-def main(feature_type, norms_model, split_type):
+def main(embeddings_level, feature_type, norms_model, split_type):
     dataset_name = "things"
     # feature_type = "pali-gemma-224"
     dataset = DATASETS[dataset_name]()
-    embeddings = load_embeddings(dataset_name, feature_type)
+    embeddings, labels = load_embeddings(dataset_name, feature_type, embeddings_level)
 
     norms_priming = "mcrae"
-    # norms_model = "chatgpt-gpt3.5-turbo"
-    # norms_model = "gpt3-davinci"
     norms_num_runs = 30
     concept_feature = load_gpt3_feature_norms(
         priming=norms_priming,
@@ -150,14 +174,15 @@ def main(feature_type, norms_model, split_type):
     ]
 
     random.seed(42)
-    _ = random.sample(features_selected, 64)
-    features_selected = random.sample(features_selected, 256 - 64)
-    print(sorted(features_selected))
+    features_selected_1 = random.sample(features_selected, 64)
+    features_selected_2 = random.sample(features_selected, 256 - 64)
+    features_selected = sorted(set(features_selected_1 + features_selected_2))
 
     def get_path(feature):
         feature_norm = "{}_{}_{}".format(norms_priming, norms_model, norms_num_runs)
         feature_id = feature_to_id[feature]
-        return "output/linear-probe-predictions/{}/{}-{}-{}-{}".format(
+        return "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}".format(
+            embeddings_level,
             split_type,
             dataset_name,
             feature_type,
@@ -165,17 +190,18 @@ def main(feature_type, norms_model, split_type):
             feature_id,
         )
 
-    def get_labels(feature):
-        concepts = feature_to_concepts[feature]
-        labels = [
-            int(dataset.label_to_class[label] in concepts) for label in dataset.labels
-        ]
-        return np.array(labels)
+    def get_binary_labels(feature):
+        concepts_str = feature_to_concepts[feature]
+        concepts_num = [dataset.class_to_label[c] for c in concepts_str]
+        concepts_num = set(concepts_num)
+        binary_labels = [label in concepts_num for label in labels]
+        return np.array(binary_labels).astype(int)
 
     splits = GET_TRAIN_TEST_SPLIT[split_type](
-        dataset,
+        labels,
         features_selected,
-        feature_to_concepts,
+        feature_to_concepts=feature_to_concepts,
+        class_to_label=dataset.class_to_label,
     )
 
     def cache_clf_and_preds(path, func, *args):
@@ -198,7 +224,7 @@ def main(feature_type, norms_model, split_type):
             get_path(feature),
             predict_splits,
             embeddings,
-            get_labels(feature),
+            get_binary_labels(feature),
             splits[feature],
             dataset,
         )

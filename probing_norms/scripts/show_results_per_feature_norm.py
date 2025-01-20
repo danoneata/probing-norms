@@ -11,8 +11,7 @@ from probing_norms.constants import NUM_MIN_CONCEPTS
 from probing_norms.data import (
     DATASETS,
     FEATURE_NORMS_OPTIONS,
-    get_feature_to_concepts,
-    load_gpt3_feature_norms,
+    load_features_metadata,
 )
 from probing_norms.utils import read_json, cache_df
 
@@ -76,22 +75,6 @@ def create_selectbox(i, features):
     )
 
 
-def load_features_metadata(model):
-    concept_feature = load_gpt3_feature_norms(model=model)
-    feature_to_concepts = get_feature_to_concepts(concept_feature)
-
-    features_all = sorted(feature_to_concepts.keys())
-    feature_to_id = {feature: i for i, feature in enumerate(features_all)}
-
-    feature_to_concepts = {
-        feature: concepts
-        for feature, concepts in feature_to_concepts.items()
-        if len(concepts) >= NUM_MIN_CONCEPTS
-    }
-
-    return feature_to_concepts, feature_to_id
-
-
 def main():
     st.set_page_config(page_title="Results per feature norms", layout="wide")
     dataset = DATASETS["things"]()
@@ -140,8 +123,9 @@ def main():
         )
         st.markdown("---")
 
-        feature_to_concepts, feature_to_id = load_features_metadata(model)
-        features = sorted(feature_to_concepts.keys())
+        feature_to_concepts, feature_to_id = load_features_metadata(model=model)
+        features = [f for f, cs in feature_to_concepts.items() if len(cs) >= NUM_MIN_CONCEPTS]
+        features = sorted(features)
         features_selected = [create_selectbox(i, features) for i in range(num_cols)]
 
         st.button(

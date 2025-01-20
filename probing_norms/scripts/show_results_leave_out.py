@@ -3,18 +3,11 @@ import random
 import pandas as pd
 import streamlit as st
 
-from functools import partial
 from sklearn.metrics import average_precision_score, accuracy_score
-from tqdm import tqdm
 from toolz import first
 
-from probing_norms.data import (
-    DATASETS,
-    FEATURE_NORMS_OPTIONS,
-    get_feature_to_concepts,
-    load_gpt3_feature_norms,
-)
-from probing_norms.utils import read_json, cache_df, cache_json
+from probing_norms.data import DATASETS
+from probing_norms.utils import read_json, cache_json
 from probing_norms.scripts.show_results_per_feature_norm import load_features_metadata
 
 
@@ -52,7 +45,7 @@ def main():
     dataset = DATASETS["things"]()
     norms_model = "chatgpt-gpt3.5-turbo"
 
-    feature_to_concepts, feature_to_id = load_features_metadata(norms_model)
+    feature_to_concepts, feature_to_id = load_features_metadata(model=norms_model)
     features = sorted(feature_to_concepts.keys())
 
     random.seed(42)
@@ -64,7 +57,7 @@ def main():
     def get_path(embedding_type, feature, ext):
         norms_type = "_".join(["mcrae", norms_model, "30"])
         norms_feature_id = feature_to_id[feature]
-        return "output/linear-probe-predictions/leave-one-concept-out/things-{}-{}-{}.{}".format(
+        return "output/linear-probe-predictions/instance/leave-one-concept-out/things-{}-{}-{}.{}".format(
             embedding_type,
             norms_type,
             norms_feature_id,

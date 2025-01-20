@@ -65,6 +65,23 @@ def get_feature_to_concepts(concept_feature):
     return {feature: list(map(first, group)) for feature, group in feature_groups}
 
 
+def load_features_metadata(
+    *,
+    priming="mcrae",
+    model="chatgpt-gpt3.5-turbo",
+    num_runs=30,
+):
+    concept_feature = load_gpt3_feature_norms(
+        priming=priming,
+        model=model,
+        num_runs=num_runs,
+    )
+    feature_to_concepts = get_feature_to_concepts(concept_feature)
+    features = sorted(feature_to_concepts.keys())
+    feature_to_id = {feature: i for i, feature in enumerate(features)}
+    return feature_to_concepts, feature_to_id
+
+
 class THINGS(Dataset):
     def __init__(self, root=DIR_THINGS, transform=identity):
         self.root = root

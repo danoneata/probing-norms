@@ -11,17 +11,20 @@ import click
 import numpy as np
 
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, RepeatedStratifiedKFold
 from tqdm import tqdm
 
 from probing_norms.constants import NUM_MIN_CONCEPTS
 from probing_norms.data import (
     DATASETS,
-    load_gpt3_feature_norms,
-    get_feature_to_concepts,
+    load_features_metadata,
 )
 from probing_norms.utils import cache_json
 from multiprocess import Pool
+
+
+NORMS_PRIMING = "mcrae"
+NORMS_NUM_RUNS = 30
 
 
 def aggregate_by_labels(embeddings, labels):
@@ -48,7 +51,7 @@ def load_embeddings(dataset_name, feature_type, embeddings_level):
     return embeddings, labels
 
 
-def predict1(X, y, split, dataset):
+def predict1(X, y, split):
     idxs_tr = split.tr_idxs
     idxs_te = split.te_idxs
 
@@ -63,8 +66,8 @@ def predict1(X, y, split, dataset):
     preds = [
         {
             "i": i.item(),
-            "name": dataset.image_files[i],
-            "label": dataset.labels[i],
+            # "name": dataset.image_files[i],
+            # "label": dataset.labels[i],
             "pred": p.item(),
             "true": t.item(),
         }
@@ -76,11 +79,11 @@ def predict1(X, y, split, dataset):
     }
 
 
-def predict_splits(X, y, splits, dataset):
+def predict_splits(X, y, splits):
     return [
         {
             "split": split.metadata,
-            **predict1(X, y, split, dataset),
+            **predict1(X, y, split),
         }
         for split in tqdm(splits, leave=False)
     ]
@@ -134,10 +137,65 @@ def get_train_test_split_leave_one_out(
     return {feature: get_f(feature) for feature in features}
 
 
+def get_binary_labels(labels, feature, feature_to_concepts, class_to_label):
+    concepts_str = feature_to_concepts[feature]
+    concepts_num = [class_to_label[c] for c in concepts_str]
+    concepts_num = set(concepts_num)
+    binary_labels = [label in concepts_num for label in labels]
+    return np.array(binary_labels).astype(int)
+
+
+def get_train_test_split_k_fold(
+    labels,
+    features,
+    *,
+    feature_to_concepts,
+    class_to_label,
+    n_splits=5,
+    n_repeats=2,
+):
+    def get_f(feature):
+        binary_labels = get_binary_labels(
+            labels,
+            feature,
+            feature_to_concepts,
+            class_to_label,
+        )
+        rskf = RepeatedStratifiedKFold(
+            n_splits=n_splits,
+            n_repeats=n_repeats,
+            random_state=42,
+        )
+        return [
+            Split(
+                *idxss,
+                metadata={"feature": feature},
+            )
+            for idxss in rskf.split(binary_labels, binary_labels)
+        ]
+
+    return {feature: get_f(feature) for feature in features}
+
+
 GET_TRAIN_TEST_SPLIT = {
     "iid-fixed": get_train_test_split_iid_fixed,
     "leave-one-concept-out": get_train_test_split_leave_one_out,
+    "repeated-k-fold": get_train_test_split_k_fold,
 }
+
+
+def sample_features(feature_to_concepts):
+    features_selected = [
+        feature
+        for feature, concepts in feature_to_concepts.items()
+        if len(concepts) >= NUM_MIN_CONCEPTS
+    ]
+
+    random.seed(42)
+    features_selected_1 = random.sample(features_selected, 64)
+    features_selected_2 = random.sample(features_selected, 256 - 64)
+    features_selected = sorted(set(features_selected_1 + features_selected_2))
+    return features_selected
 
 
 @click.command()
@@ -156,30 +214,15 @@ def main(embeddings_level, feature_type, norms_model, split_type):
     dataset = DATASETS[dataset_name]()
     embeddings, labels = load_embeddings(dataset_name, feature_type, embeddings_level)
 
-    norms_priming = "mcrae"
-    norms_num_runs = 30
-    concept_feature = load_gpt3_feature_norms(
-        priming=norms_priming,
+    feature_to_concepts, feature_to_id = load_features_metadata(
+        priming=NORMS_PRIMING,
         model=norms_model,
-        num_runs=norms_num_runs,
+        num_runs=NORMS_NUM_RUNS,
     )
-    feature_to_concepts = get_feature_to_concepts(concept_feature)
-    features = sorted(feature_to_concepts.keys())
-    feature_to_id = {feature: i for i, feature in enumerate(features)}
-
-    features_selected = [
-        feature
-        for feature in features
-        if len(feature_to_concepts[feature]) >= NUM_MIN_CONCEPTS
-    ]
-
-    random.seed(42)
-    features_selected_1 = random.sample(features_selected, 64)
-    features_selected_2 = random.sample(features_selected, 256 - 64)
-    features_selected = sorted(set(features_selected_1 + features_selected_2))
+    features_selected = sample_features(feature_to_concepts)
 
     def get_path(feature):
-        feature_norm = "{}_{}_{}".format(norms_priming, norms_model, norms_num_runs)
+        feature_norm = "{}_{}_{}".format(NORMS_PRIMING, norms_model, NORMS_NUM_RUNS)
         feature_id = feature_to_id[feature]
         return "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}".format(
             embeddings_level,
@@ -189,13 +232,6 @@ def main(embeddings_level, feature_type, norms_model, split_type):
             feature_norm,
             feature_id,
         )
-
-    def get_binary_labels(feature):
-        concepts_str = feature_to_concepts[feature]
-        concepts_num = [dataset.class_to_label[c] for c in concepts_str]
-        concepts_num = set(concepts_num)
-        binary_labels = [label in concepts_num for label in labels]
-        return np.array(binary_labels).astype(int)
 
     splits = GET_TRAIN_TEST_SPLIT[split_type](
         labels,
@@ -220,13 +256,15 @@ def main(embeddings_level, feature_type, norms_model, split_type):
                 pickle.dump(data2, f)
 
     def process_feature(feature):
+        binary_labels = get_binary_labels(
+            labels, feature, feature_to_concepts, dataset.class_to_label
+        )
         cache_clf_and_preds(
             get_path(feature),
             predict_splits,
             embeddings,
-            get_binary_labels(feature),
+            binary_labels,
             splits[feature],
-            dataset,
         )
 
     # with Pool(16) as pool:

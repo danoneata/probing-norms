@@ -59,6 +59,15 @@ def load_gpt3_feature_norms(
     return concept_feature
 
 
+def load_mcrae_feature_norms():
+    cols = ["Concept", "Feature"]
+    df = pd.read_csv("data/norms/mcrae/CONCS_FEATS_concstats_brm.txt", sep="\t")
+    df = df[cols]
+    df = df.drop_duplicates()
+    concept_feature = df.values.tolist()
+    return concept_feature
+
+
 def get_feature_to_concepts(concept_feature):
     concept_feature = sorted(concept_feature, key=second)
     feature_groups = groupby(concept_feature, key=second)

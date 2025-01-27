@@ -5,6 +5,7 @@ import os
 import pickle
 
 from dataclasses import dataclass
+from functools import partial
 from typing import Dict, List
 
 import click
@@ -198,6 +199,58 @@ def sample_features(feature_to_concepts):
     return features_selected
 
 
+class NormsLoader:
+    def __call__(self):
+        raise NotImplementedError
+
+    def get_suffix(self) -> str:
+        raise NotImplementedError
+
+
+class GPT3NormsLoader(NormsLoader):
+    def __init__(self, norms_model):
+        self.norms_model = norms_model
+
+    def __call__(self):
+        feature_to_concepts, feature_to_id = load_features_metadata(
+            priming=NORMS_PRIMING,
+            model=self.norms_model,
+            num_runs=NORMS_NUM_RUNS,
+        )
+        features_selected = sample_features(feature_to_concepts)
+        return feature_to_concepts, feature_to_id, features_selected
+
+    def get_suffix(self):
+        return "{}_{}_{}".format(NORMS_PRIMING, self.norms_model, NORMS_NUM_RUNS)
+
+
+class McRaeMappedNormsLoader(NormsLoader):
+    def __init__(self):
+        self.model = "mcrae-to-gpt35"
+
+    def __call__(self):
+        with open("output/map-{}.json".format(self.model)) as f:
+            data = json.load(f)
+
+        feature_to_concepts = {d["norm"]: d["concepts"] for d in data}
+        feature_to_id = {d["norm"]: i for i, d in enumerate(data)}
+        features_selected = [
+            norm
+            for norm, concepts in feature_to_concepts.items()
+            if len(concepts) >= 10
+        ]
+        return feature_to_concepts, feature_to_id, features_selected
+
+    def get_suffix(self):
+        return str(self.model)
+
+
+NORMS_LOADERS = {
+    "generated-gpt35": partial(GPT3NormsLoader, norms_model="chatgpt-gpt3.5-turbo"),
+    "mcrae-mapped": McRaeMappedNormsLoader,
+}
+
+
 @click.command()
 @click.option(
     "--embeddings-level",
@@ -206,23 +259,19 @@ def sample_features(feature_to_concepts):
     required=True,
 )
 @click.option("--feature-type", "feature_type", type=str, required=True)
-@click.option("--norms-model", "norms_model", type=str, required=True)
+@click.option("--norms-type", "norms_type", type=str, required=True)
 @click.option("--split-type", "split_type", type=str, required=True)
-def main(embeddings_level, feature_type, norms_model, split_type):
+def main(embeddings_level, feature_type, norms_type, split_type):
     dataset_name = "things"
     # feature_type = "pali-gemma-224"
     dataset = DATASETS[dataset_name]()
     embeddings, labels = load_embeddings(dataset_name, feature_type, embeddings_level)
 
-    feature_to_concepts, feature_to_id = load_features_metadata(
-        priming=NORMS_PRIMING,
-        model=norms_model,
-        num_runs=NORMS_NUM_RUNS,
-    )
-    features_selected = sample_features(feature_to_concepts)
+    norm_loader = NORMS_LOADERS[norms_type]()
+    feature_to_concepts, feature_to_id, features_selected = norm_loader()
 
     def get_path(feature):
-        feature_norm = "{}_{}_{}".format(NORMS_PRIMING, norms_model, NORMS_NUM_RUNS)
+        feature_norm = norm_loader.get_suffix()
         feature_id = feature_to_id[feature]
         return "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}".format(
             embeddings_level,

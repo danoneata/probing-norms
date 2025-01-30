@@ -1,0 +1,2527 @@
+Feature	CPF	Disting	Distinct	Feat_Length_Including_Spaces	Number_Of_Words	BR_Label	Display
+a_baby_bird	1	D	1.000	11	3	taxonomic	a baby bird
+a_baby_cow	1	D	1.000	10	3	taxonomic	a baby cow
+a_baby_deer	1	D	1.000	11	3	taxonomic	a baby deer
+a_baby_fish	1	D	1.000	11	3	taxonomic	a baby fish
+a_baby_is_a_kitten	1	D	1.000	18	5	taxonomic	a baby is a kitten
+a_baby_is_a_lamb	1	D	1.000	16	5	taxonomic	a baby is a lamb
+a_baby_is_a_piglet	1	D	1.000	18	5	taxonomic	a baby is a piglet
+a_bag	1	D	1.000	5	2	taxonomic	a bag
+a_barrier	1	D	1.000	9	2	taxonomic	a barrier
+a_basin	1	D	1.000	7	2	taxonomic	a basin
+a_berry	3	ND	0.333	7	2	taxonomic	a berry
+a_bike	2	D	0.500	6	2	taxonomic	a bike
+a_bikini	1	D	1.000	8	2	taxonomic	a bikini
+a_bird	39	ND	0.026	6	2	taxonomic	a bird
+a_birth_stone	1	D	1.000	13	3	taxonomic	a birth stone
+a_board	1	D	1.000	7	2	taxonomic	a board
+a_boat	4	ND	0.250	6	2	taxonomic	a boat
+a_bolts	1	D	1.000	7	2	taxonomic	a bolts
+a_branch	1	D	1.000	8	2	taxonomic	a branch
+a_bug	3	ND	0.333	5	2	taxonomic	a bug
+a_building	6	ND	0.167	10	2	taxonomic	a building
+a_cab	1	D	1.000	5	2	taxonomic	a cab
+a_cape	1	D	1.000	6	2	taxonomic	a cape
+a_car	4	ND	0.250	5	2	taxonomic	a car
+a_carnivore	11	ND	0.091	11	2	taxonomic	a carnivore
+a_cat	5	ND	0.200	5	2	taxonomic	a cat
+a_chair	1	D	1.000	7	2	taxonomic	a chair
+a_chicken	1	D	1.000	9	2	taxonomic	a chicken
+a_Chinese_language	1	D	1.000	18	3	taxonomic	a Chinese language
+a_church	1	D	1.000	8	2	taxonomic	a church
+a_coat	1	D	1.000	6	2	taxonomic	a coat
+a_colour	1	D	1.000	8	2	taxonomic	a colour
+a_coniferous	2	D	0.500	12	2	taxonomic	a coniferous
+a_container	5	ND	0.200	11	2	taxonomic	a container
+a_cow	1	D	1.000	5	2	taxonomic	a cow
+a_crustacean	2	D	0.500	12	2	taxonomic	a crustacean
+a_cup	1	D	1.000	5	2	taxonomic	a cup
+a_curtains	1	D	1.000	10	2	taxonomic	a curtains
+a_cutlery	1	D	1.000	9	2	taxonomic	a cutlery
+a_dairy_product	1	D	1.000	15	3	taxonomic	a dairy product
+a_deer	1	D	1.000	6	2	taxonomic	a deer
+a_desk	1	D	1.000	6	2	taxonomic	a desk
+a_dessert	2	D	0.500	9	2	taxonomic	a dessert
+a_dish	2	D	0.500	6	2	taxonomic	a dish
+a_dog	1	D	1.000	5	2	taxonomic	a dog
+a_dress	1	D	1.000	7	2	taxonomic	a dress
+a_dresser	1	D	1.000	9	2	taxonomic	a dresser
+a_drink	1	D	1.000	7	2	taxonomic	a drink
+a_fashion_accessory	3	ND	0.333	19	3	taxonomic	a fashion accessory
+a_faucet	1	D	1.000	8	2	taxonomic	a faucet
+a_feline	2	D	0.500	8	2	taxonomic	a feline
+a_fish	16	ND	0.063	6	2	taxonomic	a fish
+a_flower	1	D	1.000	8	2	taxonomic	a flower
+a_food	9	ND	0.111	6	2	taxonomic	a food
+a_footwear	2	D	0.500	10	2	taxonomic	a footwear
+a_frog	1	D	1.000	6	2	taxonomic	a frog
+a_fruit	29	ND	0.034	7	2	taxonomic	a fruit
+a_fungus	1	D	1.000	8	2	taxonomic	a fungus
+a_grain	1	D	1.000	7	2	taxonomic	a grain
+a_gun	6	ND	0.167	5	2	taxonomic	a gun
+a_hardware	1	D	1.000	10	2	taxonomic	a hardware
+a_hat	1	D	1.000	5	2	taxonomic	a hat
+a_herb	1	D	1.000	6	2	taxonomic	a herb
+a_herbivore	5	ND	0.200	11	2	taxonomic	a herbivore
+a_horse	2	D	0.500	7	2	taxonomic	a horse
+a_hotel	1	D	1.000	7	2	taxonomic	a hotel
+a_house	6	ND	0.167	7	2	taxonomic	a house
+a_jacket	1	D	1.000	8	2	taxonomic	a jacket
+a_jewel	1	D	1.000	7	2	taxonomic	a jewel
+a_jewelry	3	ND	0.333	9	2	taxonomic	a jewelry
+a_knife	2	D	0.500	7	2	taxonomic	a knife
+a_light_fixture	1	D	1.000	15	3	taxonomic	a light fixture
+a_lingerie	1	D	1.000	10	2	taxonomic	a lingerie
+a_lizard	2	D	0.500	8	2	taxonomic	a lizard
+a_loaf	1	D	1.000	6	2	taxonomic	a loaf
+a_long_knife	1	D	1.000	12	3	taxonomic	a long knife
+a_machine	3	ND	0.333	9	2	taxonomic	a machine
+a_male_chicken	1	D	1.000	14	3	taxonomic	a male chicken
+a_mammal	42	ND	0.024	8	2	taxonomic	a mammal
+a_melon	2	D	0.500	7	2	taxonomic	a melon
+a_mittens	1	D	1.000	9	2	taxonomic	a mittens
+a_mug	1	D	1.000	5	2	taxonomic	a mug
+a_music	1	D	1.000	7	2	taxonomic	a music
+a_musical_instrument	18	ND	0.056	20	3	taxonomic	a musical instrument
+a_nut	1	D	1.000	5	2	taxonomic	a nut
+a_pan	1	D	1.000	5	2	taxonomic	a pan
+a_pants	1	D	1.000	7	2	taxonomic	a pants
+a_pantyhose	1	D	1.000	11	2	taxonomic	a pantyhose
+a_paper	1	D	1.000	7	2	taxonomic	a paper
+a_pest	1	D	1.000	6	2	taxonomic	a pest
+a_pet	11	ND	0.091	5	2	taxonomic	a pet
+a_piano	1	D	1.000	7	2	taxonomic	a piano
+a_pillow	1	D	1.000	8	2	taxonomic	a pillow
+a_plant	3	ND	0.333	7	2	taxonomic	a plant
+a_plate	1	D	1.000	7	2	taxonomic	a plate
+a_poultry	1	D	1.000	9	2	taxonomic	a poultry
+a_predator	9	ND	0.111	10	2	taxonomic	a predator
+a_prize	1	D	1.000	7	2	taxonomic	a prize
+a_rabbit	1	D	1.000	8	2	taxonomic	a rabbit
+a_relative_of_cats	1	D	1.000	18	4	taxonomic	a relative of cats
+a_relative_of_frogs	1	D	1.000	19	4	taxonomic	a relative of frogs
+a_relative_of_humans	1	D	1.000	20	4	taxonomic	a relative of humans
+a_reptile	8	ND	0.125	9	2	taxonomic	a reptile
+a_reward	1	D	1.000	8	2	taxonomic	a reward
+a_rock	1	D	1.000	6	2	taxonomic	a rock
+a_rodent	5	ND	0.200	8	2	taxonomic	a rodent
+a_room	2	D	0.500	6	2	taxonomic	a room
+a_root	3	ND	0.333	6	2	taxonomic	a root
+a_rug	1	D	1.000	5	2	taxonomic	a rug
+a_safety_accessory	1	D	1.000	18	3	taxonomic	a safety accessory
+a_scavenger	5	ND	0.200	11	2	taxonomic	a scavenger
+a_seafood	4	ND	0.250	9	2	taxonomic	a seafood
+a_seasoning	1	D	1.000	11	2	taxonomic	a seasoning
+a_shirt	1	D	1.000	7	2	taxonomic	a shirt
+a_shoe	1	D	1.000	6	2	taxonomic	a shoe
+a_shovel	1	D	1.000	8	2	taxonomic	a shovel
+a_sign	1	D	1.000	6	2	taxonomic	a sign
+a_small_horse	1	D	1.000	13	3	taxonomic	a small horse
+a_snake	1	D	1.000	7	2	taxonomic	a snake
+a_space	1	D	1.000	7	2	taxonomic	a space
+a_spice	2	D	0.500	7	2	taxonomic	a spice
+a_spoon	1	D	1.000	7	2	taxonomic	a spoon
+a_stairs	1	D	1.000	8	2	taxonomic	a stairs
+a_stick	1	D	1.000	7	2	taxonomic	a stick
+a_stockings	1	D	1.000	11	2	taxonomic	a stockings
+a_stone	2	D	0.500	7	2	taxonomic	a stone
+a_tap	1	D	1.000	5	2	taxonomic	a tap
+a_tights	1	D	1.000	8	2	taxonomic	a tights
+a_tool	18	ND	0.056	6	2	taxonomic	a tool
+a_toy	5	ND	0.200	5	2	taxonomic	a toy
+a_train	1	D	1.000	7	2	taxonomic	a train
+a_treat	1	D	1.000	7	2	encyclopaedic	a treat
+a_tree	5	ND	0.200	6	2	taxonomic	a tree
+a_truck	1	D	1.000	7	2	taxonomic	a truck
+a_tube	1	D	1.000	6	2	taxonomic	a tube
+a_turtle	1	D	1.000	8	2	taxonomic	a turtle
+a_type_of_wood	1	D	1.000	14	4	taxonomic	a type of wood
+a_UFO	1	D	1.000	5	2	taxonomic	a UFO
+a_utensil	12	ND	0.083	9	2	taxonomic	a utensil
+a_van	1	D	1.000	5	2	taxonomic	a van
+a_vegetable	28	ND	0.036	11	2	taxonomic	a vegetable
+a_vehicle	10	ND	0.100	9	2	taxonomic	a vehicle
+a_vice	1	D	1.000	6	2	taxonomic	a vice
+a_watch	1	D	1.000	7	2	taxonomic	a watch
+a_weapon	29	ND	0.034	8	2	taxonomic	a weapon
+a_weed	1	D	1.000	6	2	taxonomic	a weed
+a_wolf	1	D	1.000	6	2	taxonomic	a wolf
+a_wonder_of_the_world	1	D	1.000	21	5	taxonomic	a wonder of the world
+a_woodwind	1	D	1.000	10	2	taxonomic	a woodwind
+an_airplane	1	D	1.000	11	2	taxonomic	an airplane
+an_amphibian	3	ND	0.333	12	2	taxonomic	an amphibian
+an_animal	99	ND	0.010	9	2	taxonomic	an animal
+an_appliance	10	ND	0.100	12	2	taxonomic	an appliance
+an_award	2	D	0.500	8	2	taxonomic	an award
+an_axe	2	D	0.500	6	2	taxonomic	an axe
+an_evergreen	2	D	0.500	12	2	taxonomic	an evergreen
+an_explosive	1	D	1.000	12	2	taxonomic	an explosive
+an_inanimate	1	D	1.000	12	2	taxonomic	an inanimate
+an_insect	12	ND	0.083	9	2	taxonomic	an insect
+an_instrument	1	D	1.000	13	2	taxonomic	an instrument
+an_oven	1	D	1.000	7	2	taxonomic	an oven
+an_undergarment	2	D	0.500	15	2	taxonomic	an undergarment
+associated_with_2_bedrooms	1	D	1.000	26	4	encyclopaedic	associated with 2 bedrooms
+associated_with_achievements	1	D	1.000	28	3	encyclopaedic	associated with achievements
+associated_with_angels	1	D	1.000	22	3	encyclopaedic	associated with angels
+associated_with_babies	1	D	1.000	22	3	encyclopaedic	associated with babies
+associated_with_bad_hair_days	1	D	1.000	29	5	encyclopaedic	associated with bad hair days
+associated_with_baseball	1	D	1.000	24	3	encyclopaedic	associated with baseball
+associated_with_Batman	1	D	1.000	22	3	encyclopaedic	associated with Batman
+associated_with_Bell	1	D	1.000	20	3	encyclopaedic	associated with Bell
+associated_with_cartoons	1	D	1.000	24	3	encyclopaedic	associated with cartoons
+associated_with_cheese	1	D	1.000	22	3	encyclopaedic	associated with cheese
+associated_with_China	1	D	1.000	21	3	encyclopaedic	associated with China
+associated_with_cigarettes	1	D	1.000	26	3	encyclopaedic	associated with cigarettes
+associated_with_couch_potato	1	D	1.000	28	4	encyclopaedic	associated with couch potato
+associated_with_Dracula	1	D	1.000	23	3	encyclopaedic	associated with Dracula
+associated_with_Easter	1	D	1.000	22	3	encyclopaedic	associated with Easter
+associated_with_envelopes	1	D	1.000	25	3	encyclopaedic	associated with envelopes
+associated_with_Eskimos	1	D	1.000	23	3	encyclopaedic	associated with Eskimos
+associated_with_fairy_tales	1	D	1.000	27	4	encyclopaedic	associated with fairy tales
+associated_with_football_games	1	D	1.000	30	4	encyclopaedic	associated with football games
+associated_with_holidays	1	D	1.000	24	3	encyclopaedic	associated with holidays
+associated_with_hot_air_balloons	1	D	1.000	32	5	encyclopaedic	associated with hot air balloons
+associated_with_humans	1	D	1.000	22	3	encyclopaedic	associated with humans
+associated_with_knights	1	D	1.000	23	3	encyclopaedic	associated with knights
+associated_with_Lion_King	1	D	1.000	25	4	encyclopaedic	associated with Lion King
+associated_with_morning	1	D	1.000	23	3	encyclopaedic	associated with morning
+associated_with_Olympics	1	D	1.000	24	3	encyclopaedic	associated with Olympics
+associated_with_pageants	1	D	1.000	24	3	encyclopaedic	associated with pageants
+associated_with_polkas	1	D	1.000	22	3	encyclopaedic	associated with polkas
+associated_with_Popeye	1	D	1.000	22	3	encyclopaedic	associated with Popeye
+associated_with_religion	3	ND	0.333	24	3	encyclopaedic	associated with religion
+associated_with_rock_and_roll	1	D	1.000	29	5	encyclopaedic	associated with rock and roll
+associated_with_saddles	1	D	1.000	23	3	encyclopaedic	associated with saddles
+associated_with_Scotland	1	D	1.000	24	3	encyclopaedic	associated with Scotland
+associated_with_snakes	1	D	1.000	22	3	encyclopaedic	associated with snakes
+associated_with_sneezing	1	D	1.000	24	3	encyclopaedic	associated with sneezing
+associated_with_Superman	1	D	1.000	24	3	encyclopaedic	associated with Superman
+associated_with_swimming_pools	1	D	1.000	30	4	encyclopaedic	associated with swimming pools
+associated_with_swords	1	D	1.000	22	3	encyclopaedic	associated with swords
+associated_with_The_House_of_God	1	D	1.000	32	6	encyclopaedic	associated with The House of God
+associated_with_training	1	D	1.000	24	3	encyclopaedic	associated with training
+associated_with_vampires	1	D	1.000	24	3	encyclopaedic	associated with vampires
+associated_with_winning	1	D	1.000	23	3	encyclopaedic	associated with winning
+associated_with_winter	1	D	1.000	22	3	encyclopaedic	associated with winter
+associated_with_witches	1	D	1.000	23	3	encyclopaedic	associated with witches
+becomes_a_butterfly	1	D	1.000	19	3	encyclopaedic	becomes a butterfly
+beh_-_bahs	2	D	0.500	10	3	sound	beh - bahs
+beh_-_bark_peals_off	1	D	1.000	20	5	encyclopaedic	beh - bark peals off
+beh_-_barks	1	D	1.000	11	3	sound	beh - barks
+beh_-_bites	4	ND	0.250	11	3	visual-motion	beh - bites
+beh_-_branches_droop_down	1	D	1.000	25	5	visual-form_and_surface	beh - branches droop down
+beh_-_breathes	1	D	1.000	14	3	encyclopaedic	beh - breathes
+beh_-_builds_dams	1	D	1.000	17	4	encyclopaedic	beh - builds dams
+beh_-_builds_nests	10	ND	0.100	18	4	encyclopaedic	beh - builds nests
+beh_-_burrows	2	D	0.500	13	3	visual-motion	beh - burrows
+beh_-_buzzes	3	ND	0.333	12	3	sound	beh - buzzes
+beh_-_cannot_fly	7	ND	0.143	16	4	encyclopaedic	beh - cannot fly
+beh_-_caws	2	D	0.500	10	3	sound	beh - caws
+beh_-_chases	1	D	1.000	12	3	visual-motion	beh - chases
+beh_-_chases_cats	1	D	1.000	17	4	visual-motion	beh - chases cats
+beh_-_chews_on_wood	1	D	1.000	19	5	visual-motion	beh - chews on wood
+beh_-_chirps	6	ND	0.167	12	3	sound	beh - chirps
+beh_-_climbs	2	D	0.500	12	3	visual-motion	beh - climbs
+beh_-_climbs_trees	4	ND	0.250	18	4	visual-motion	beh - climbs trees
+beh_-_clucks	1	D	1.000	12	3	sound	beh - clucks
+beh_-_cocoons	1	D	1.000	13	3	encyclopaedic	beh - cocoons
+beh_-_communicates	1	D	1.000	18	3	sound	beh - communicates
+beh_-_coos	1	D	1.000	10	3	sound	beh - coos
+beh_-_crawls	5	ND	0.200	12	3	visual-motion	beh - crawls
+beh_-_croaks	2	D	0.500	12	3	sound	beh - croaks
+beh_-_crows	1	D	1.000	11	3	sound	beh - crows
+beh_-_cuts_down_trees	1	D	1.000	21	5	encyclopaedic	beh - cuts down trees
+beh_-_digs_holes	3	ND	0.333	16	4	visual-motion	beh - digs holes
+beh_-_does_tricks	2	D	0.500	17	4	encyclopaedic	beh - does tricks
+beh_-_drinks	1	D	1.000	12	3	visual-motion	beh - drinks
+beh_-_drinks_water	2	D	0.500	18	4	visual-motion	beh - drinks water
+beh_-_eats	39	ND	0.026	10	3	visual-motion	beh - eats
+beh_-_eats_animals	2	D	0.500	18	4	visual-motion	beh - eats animals
+beh_-_eats_anything	1	D	1.000	19	4	visual-motion	beh - eats anything
+beh_-_eats_bananas	2	D	0.500	18	4	visual-motion	beh - eats bananas
+beh_-_eats_bugs	1	D	1.000	15	4	visual-motion	beh - eats bugs
+beh_-_eats_carrots	2	D	0.500	18	4	visual-motion	beh - eats carrots
+beh_-_eats_cheese	1	D	1.000	17	4	visual-motion	beh - eats cheese
+beh_-_eats_clothing	1	D	1.000	19	4	visual-motion	beh - eats clothing
+beh_-_eats_dead_flesh	2	D	0.500	21	5	visual-motion	beh - eats dead flesh
+beh_-_eats_fish	7	ND	0.143	15	4	visual-motion	beh - eats fish
+beh_-_eats_fish_food	1	D	1.000	20	5	visual-motion	beh - eats fish food
+beh_-_eats_flies	3	ND	0.333	16	4	visual-motion	beh - eats flies
+beh_-_eats_garbage	5	ND	0.200	18	4	visual-motion	beh - eats garbage
+beh_-_eats_grain	1	D	1.000	16	4	visual-motion	beh - eats grain
+beh_-_eats_grass	7	ND	0.143	16	4	visual-motion	beh - eats grass
+beh_-_eats_hay	1	D	1.000	14	4	visual-motion	beh - eats hay
+beh_-_eats_insects	5	ND	0.200	18	4	visual-motion	beh - eats insects
+beh_-_eats_leaves	3	ND	0.333	17	4	visual-motion	beh - eats leaves
+beh_-_eats_mice	3	ND	0.333	15	4	visual-motion	beh - eats mice
+beh_-_eats_nuts	2	D	0.500	15	4	visual-motion	beh - eats nuts
+beh_-_eats_peanuts	1	D	1.000	18	4	visual-motion	beh - eats peanuts
+beh_-_eats_people	2	D	0.500	17	4	visual-motion	beh - eats people
+beh_-_eats_rodents	3	ND	0.333	18	4	visual-motion	beh - eats rodents
+beh_-_eats_seeds	3	ND	0.333	16	4	visual-motion	beh - eats seeds
+beh_-_eats_small_animals	1	D	1.000	24	5	visual-motion	beh - eats small animals
+beh_-_eats_water_plants	1	D	1.000	23	5	visual-motion	beh - eats water plants
+beh_-_eats_worms	3	ND	0.333	16	4	visual-motion	beh - eats worms
+beh_-_fans_tail_feathers	1	D	1.000	24	5	visual-motion	beh - fans tail feathers
+beh_-_flies	46	ND	0.022	11	3	visual-motion	beh - flies
+beh_-_gobbles	1	D	1.000	13	3	sound	beh - gobbles
+beh_-_hates_red	1	D	1.000	15	4	encyclopaedic	beh - hates red
+beh_-_hibernates	3	ND	0.333	16	3	encyclopaedic	beh - hibernates
+beh_-_honks	1	D	1.000	11	3	sound	beh - honks
+beh_-_hoots	1	D	1.000	11	3	sound	beh - hoots
+beh_-_hops	4	ND	0.250	10	3	visual-motion	beh - hops
+beh_-_howls	1	D	1.000	11	3	sound	beh - howls
+beh_-_hunts	5	ND	0.200	11	3	encyclopaedic	beh - hunts
+beh_-_is_attracted_to_light	1	D	1.000	27	6	encyclopaedic	beh - is attracted to light
+beh_-_is_nocturnal	3	ND	0.333	18	4	encyclopaedic	beh - is nocturnal
+beh_-_is_quiet	1	D	1.000	14	4	sound	beh - is quiet
+beh_-_jumps	5	ND	0.200	11	3	visual-motion	beh - jumps
+beh_-_kills	1	D	1.000	11	3	encyclopaedic	beh - kills
+beh_-_kills_people	1	D	1.000	18	4	encyclopaedic	beh - kills people
+beh_-_laughs	1	D	1.000	12	3	sound	beh - laughs
+beh_-_lays_blue_eggs	1	D	1.000	20	5	encyclopaedic	beh - lays blue eggs
+beh_-_lays_eggs	32	ND	0.031	15	4	encyclopaedic	beh - lays eggs
+beh_-_lays_large_eggs	1	D	1.000	21	5	encyclopaedic	beh - lays large eggs
+beh_-_likes_flowers	1	D	1.000	19	4	encyclopaedic	beh - likes flowers
+beh_-_loses_leaves_in_the_fall	1	D	1.000	30	7	encyclopaedic	beh - loses leaves in the fall
+beh_-_makes_loud_noises	2	D	0.500	23	5	sound	beh - makes loud noises
+beh_-_makes_noises	2	D	0.500	18	4	sound	beh - makes noises
+beh_-_meows	1	D	1.000	11	3	sound	beh - meows
+beh_-_migrates	5	ND	0.200	14	3	encyclopaedic	beh - migrates
+beh_-_moos	2	D	0.500	10	3	sound	beh - moos
+beh_-_oinks	1	D	1.000	11	3	sound	beh - oinks
+beh_-_pecks	1	D	1.000	11	3	visual-motion	beh - pecks
+beh_-_pollinates_flowers	1	D	1.000	24	4	visual-motion	beh - pollinates flowers
+beh_-_produces_manure	3	ND	0.333	21	4	visual-motion	beh - produces manure
+beh_-_produces_milk	2	D	0.500	19	4	visual-motion	beh - produces milk
+beh_-_produces_offspring	4	ND	0.250	24	4	encyclopaedic	beh - produces offspring
+beh_-_produces_poison	1	D	1.000	21	4	encyclopaedic	beh - produces poison
+beh_-_produces_pollen	1	D	1.000	21	4	encyclopaedic	beh - produces pollen
+beh_-_purrs	1	D	1.000	11	3	sound	beh - purrs
+beh_-_puts_holes_in_trees	1	D	1.000	25	6	visual-motion	beh - puts holes in trees
+beh_-_quacks	1	D	1.000	12	3	sound	beh - quacks
+beh_-_rattles	1	D	1.000	13	3	sound	beh - rattles
+beh_-_roars	2	D	0.500	11	3	sound	beh - roars
+beh_-_runs	5	ND	0.200	10	3	visual-motion	beh - runs
+beh_-_runs_fast	3	ND	0.333	15	4	visual-motion	beh - runs fast
+beh_-_runs_on_wheels	1	D	1.000	20	5	visual-motion	beh - runs on wheels
+beh_-_screeches	1	D	1.000	15	3	sound	beh - screeches
+beh_-_sees_its_shadow	1	D	1.000	21	5	encyclopaedic	beh - sees its shadow
+beh_-_sees_well	1	D	1.000	15	4	encyclopaedic	beh - sees well
+beh_-_shoots_ink	2	D	0.500	16	4	visual-motion	beh - shoots ink
+beh_-_shoots_quills	1	D	1.000	19	4	visual-motion	beh - shoots quills
+beh_-_sings	11	ND	0.091	11	3	sound	beh - sings
+beh_-_sits_on_lily_pads	1	D	1.000	23	6	encyclopaedic	beh - sits on lily pads
+beh_-_sleeps_upside_down	1	D	1.000	24	5	encyclopaedic	beh - sleeps upside down
+beh_-_slithers	3	ND	0.333	14	3	visual-motion	beh - slithers
+beh_-_soars	1	D	1.000	11	3	visual-motion	beh - soars
+beh_-_spins_webs	1	D	1.000	16	4	visual-motion	beh - spins webs
+beh_-_spits	1	D	1.000	11	3	visual-motion	beh - spits
+beh_-_spouts_water	1	D	1.000	18	4	visual-motion	beh - spouts water
+beh_-_sprays_when_in_danger	1	D	1.000	27	6	visual-motion	beh - sprays when in danger
+beh_-_squawks	1	D	1.000	13	3	sound	beh - squawks
+beh_-_squeaks	1	D	1.000	13	3	sound	beh - squeaks
+beh_-_squeals	1	D	1.000	13	3	sound	beh - squeals
+beh_-_stains	2	D	0.500	12	3	encyclopaedic	beh - stains
+beh_-_stands_on_one_leg	1	D	1.000	23	6	encyclopaedic	beh - stands on one leg
+beh_-_sticks_head_in_sand	1	D	1.000	25	6	visual-motion	beh - sticks head in sand
+beh_-_stings	2	D	0.500	12	3	visual-motion	beh - stings
+beh_-_stores_water	1	D	1.000	18	4	encyclopaedic	beh - stores water
+beh_-_strangles_prey	1	D	1.000	20	4	visual-motion	beh - strangles prey
+beh_-_suckles_milk	1	D	1.000	18	4	visual-motion	beh - suckles milk
+beh_-_sucks_blood	1	D	1.000	17	4	visual-motion	beh - sucks blood
+beh_-_swims	33	ND	0.030	11	3	visual-motion	beh - swims
+beh_-_swims_fast	1	D	1.000	16	4	visual-motion	beh - swims fast
+beh_-_swims_in_schools	1	D	1.000	22	5	visual-motion	beh - swims in schools
+beh_-_swings_from_trees	1	D	1.000	23	5	visual-motion	beh - swings from trees
+beh_-_talks	2	D	0.500	11	3	sound	beh - talks
+beh_-_travels_in_herds	5	ND	0.200	22	5	visual-motion	beh - travels in herds
+beh_-_uses_radar_to_navigate	1	D	1.000	28	6	encyclopaedic	beh - uses radar to navigate
+beh_-_waddles	2	D	0.500	13	3	visual-motion	beh - waddles
+beh_-_walks	1	D	1.000	11	3	visual-motion	beh - walks
+beh_-_walks_sideways	1	D	1.000	20	4	visual-motion	beh - walks sideways
+beh_-_walks_slowly	1	D	1.000	18	4	visual-motion	beh - walks slowly
+beh_-_wiggles	1	D	1.000	13	3	visual-motion	beh - wiggles
+beh_-_will_snap_at_people	1	D	1.000	25	6	visual-motion	beh - will snap at people
+bought/sold_in_hardware_stores	1	D	1.000	30	4	encyclopaedic	bought/sold in hardware stores
+bought/sold_in_stores	5	ND	0.200	21	3	encyclopaedic	bought/sold in stores
+carries_disease	1	D	1.000	15	2	encyclopaedic	carries disease
+causes_allergies	1	D	1.000	16	2	encyclopaedic	causes allergies
+causes_bad_breath	2	D	0.500	17	3	encyclopaedic	causes bad breath
+causes_cancer	2	D	0.500	13	2	encyclopaedic	causes cancer
+causes_crying/tears	1	D	1.000	19	2	encyclopaedic	causes crying/tears
+causes_disease	1	D	1.000	14	2	encyclopaedic	causes disease
+causes_freezer_burn	1	D	1.000	19	3	encyclopaedic	causes freezer burn
+causes_gas	1	D	1.000	10	2	encyclopaedic	causes gas
+causes_itching	1	D	1.000	14	2	encyclopaedic	causes itching
+causes_pollution	1	D	1.000	16	2	encyclopaedic	causes pollution
+clothing	34	ND	0.029	8	1	taxonomic	clothing
+comes_from_a_caterpillar	1	D	1.000	24	4	encyclopaedic	comes from a caterpillar
+comes_from_a_cocoon	1	D	1.000	19	4	encyclopaedic	comes from a cocoon
+comes_from_trees	2	D	0.500	16	3	encyclopaedic	comes from trees
+comes_frozen	1	D	1.000	12	2	encyclopaedic	comes frozen
+comes_in_a_brine	1	D	1.000	16	4	encyclopaedic	comes in a brine
+comes_in_arrangements	1	D	1.000	21	3	visual-form_and_surface	comes in arrangements
+comes_in_bags	1	D	1.000	13	3	encyclopaedic	comes in bags
+comes_in_boxes	1	D	1.000	14	3	encyclopaedic	comes in boxes
+comes_in_bulbs	2	D	0.500	14	3	visual-form_and_surface	comes in bulbs
+comes_in_bunches	1	D	1.000	16	3	encyclopaedic	comes in bunches
+comes_in_cans	2	D	0.500	13	3	encyclopaedic	comes in cans
+comes_in_cloves	1	D	1.000	15	3	visual-form_and_surface	comes in cloves
+comes_in_jars	1	D	1.000	13	3	encyclopaedic	comes in jars
+comes_in_pairs	7	ND	0.143	14	3	encyclopaedic	comes in pairs
+comes_in_rolls	1	D	1.000	14	3	visual-form_and_surface	comes in rolls
+comes_in_small_pieces	1	D	1.000	21	4	visual-form_and_surface	comes in small pieces
+comes_on_cobs	1	D	1.000	13	3	visual-form_and_surface	comes on cobs
+different_colours	58	ND	0.017	17	2	visual-colour	different colours
+different_designs	1	D	1.000	17	2	visual-form_and_surface	different designs
+different_kinds	1	D	1.000	15	2	encyclopaedic	different kinds
+different_lengths	1	D	1.000	17	2	visual-form_and_surface	different lengths
+different_shapes	3	ND	0.333	16	2	visual-form_and_surface	different shapes
+different_sizes	19	ND	0.053	15	2	visual-form_and_surface	different sizes
+different_speeds	2	D	0.500	16	2	encyclopaedic	different speeds
+different_styles	3	ND	0.333	16	2	encyclopaedic	different styles
+different_types	2	D	0.500	15	2	encyclopaedic	different types
+dropped_from_airplanes	1	D	1.000	22	3	encyclopaedic	dropped from airplanes
+eaten_as_bacon	1	D	1.000	14	3	function	eaten as bacon
+eaten_as_beef	1	D	1.000	13	3	function	eaten as beef
+eaten_as_coleslaw	1	D	1.000	17	3	function	eaten as coleslaw
+eaten_as_escargot	1	D	1.000	17	3	function	eaten as escargot
+eaten_as_food	1	D	1.000	13	3	function	eaten as food
+eaten_as_french_fries	1	D	1.000	21	4	function	eaten as french fries
+eaten_as_ham	1	D	1.000	12	3	function	eaten as ham
+eaten_as_jam	1	D	1.000	12	3	function	eaten as jam
+eaten_as_meat	6	ND	0.167	13	3	function	eaten as meat
+eaten_as_pickles	2	D	0.500	16	3	function	eaten as pickles
+eaten_as_popcorn	1	D	1.000	16	3	function	eaten as popcorn
+eaten_as_pork	1	D	1.000	13	3	function	eaten as pork
+eaten_as_prunes_(dried)	1	D	1.000	23	4	function	eaten as prunes (dried)
+eaten_as_sauces	1	D	1.000	15	3	function	eaten as sauces
+eaten_as_seasoning	1	D	1.000	18	3	function	eaten as seasoning
+eaten_as_toast	1	D	1.000	14	3	function	eaten as toast
+eaten_as_veal	1	D	1.000	13	3	function	eaten as veal
+eaten_at_birthdays	1	D	1.000	18	3	encyclopaedic	eaten at birthdays
+eaten_at_Christmas	3	ND	0.333	18	3	encyclopaedic	eaten at Christmas
+eaten_at_special_occasions	1	D	1.000	26	4	encyclopaedic	eaten at special occasions
+eaten_at_Thanksgiving	2	D	0.500	21	3	encyclopaedic	eaten at Thanksgiving
+eaten_at_weddings	1	D	1.000	17	3	encyclopaedic	eaten at weddings
+eaten_by_animals	1	D	1.000	16	3	function	eaten by animals
+eaten_by_baking	6	ND	0.167	15	3	function	eaten by baking
+eaten_by_birds	2	D	0.500	14	3	function	eaten by birds
+eaten_by_boiling	2	D	0.500	16	3	function	eaten by boiling
+eaten_by_catching	1	D	1.000	17	3	function	eaten by catching
+eaten_by_chopping	1	D	1.000	17	3	function	eaten by chopping
+eaten_by_cooking	15	ND	0.067	16	3	function	eaten by cooking
+eaten_by_fish	2	D	0.500	13	3	function	eaten by fish
+eaten_by_frying	2	D	0.500	15	3	function	eaten by frying
+eaten_by_lions	1	D	1.000	14	3	function	eaten by lions
+eaten_by_mashing	1	D	1.000	16	3	function	eaten by mashing
+eaten_by_mice	1	D	1.000	13	3	function	eaten by mice
+eaten_by_monkeys	1	D	1.000	16	3	function	eaten by monkeys
+eaten_by_natives	1	D	1.000	16	3	function	eaten by natives
+eaten_by_old_people	1	D	1.000	19	4	function	eaten by old people
+eaten_by_peeling	4	ND	0.250	16	3	function	eaten by peeling
+eaten_by_people	1	D	1.000	15	3	function	eaten by people
+eaten_by_rabbits	2	D	0.500	16	3	function	eaten by rabbits
+eaten_by_steaming	1	D	1.000	17	3	function	eaten by steaming
+eaten_by_stuffing	1	D	1.000	17	3	function	eaten by stuffing
+eaten_for_breakfast	1	D	1.000	19	3	encyclopaedic	eaten for breakfast
+eaten_for_constipation	1	D	1.000	22	3	function	eaten for constipation
+eaten_for_dieting	1	D	1.000	17	3	function	eaten for dieting
+eaten_for_helping_digestion	1	D	1.000	27	4	function	eaten for helping digestion
+eaten_in_borscht	1	D	1.000	16	3	function	eaten in borscht
+eaten_in_breads	2	D	0.500	15	3	function	eaten in breads
+eaten_in_cabbage_rolls	1	D	1.000	22	4	function	eaten in cabbage rolls
+eaten_in_cereals	1	D	1.000	16	3	function	eaten in cereals
+eaten_in_fruit_salads	1	D	1.000	21	4	function	eaten in fruit salads
+eaten_in_jams	2	D	0.500	13	3	function	eaten in jams
+eaten_in_martinis	1	D	1.000	17	3	function	eaten in martinis
+eaten_in_pasta	1	D	1.000	14	3	function	eaten in pasta
+eaten_in_pies	5	ND	0.200	13	3	function	eaten in pies
+eaten_in_salads	13	ND	0.077	15	3	function	eaten in salads
+eaten_in_sandwiches	4	ND	0.250	19	3	function	eaten in sandwiches
+eaten_in_sauces	1	D	1.000	15	3	function	eaten in sauces
+eaten_in_soups	5	ND	0.200	14	3	function	eaten in soups
+eaten_in_spaghetti_sauce	1	D	1.000	24	4	function	eaten in spaghetti sauce
+eaten_in_summer	5	ND	0.200	15	3	encyclopaedic	eaten in summer
+eaten_on_pizza	4	ND	0.250	14	3	function	eaten on pizza
+eaten_raw	4	ND	0.250	9	2	function	eaten raw
+eaten_with_butter	4	ND	0.250	17	3	encyclopaedic	eaten with butter
+eaten_with_cheese_sauce	1	D	1.000	23	4	encyclopaedic	eaten with cheese sauce
+eaten_with_dips	1	D	1.000	15	3	encyclopaedic	eaten with dips
+eaten_with_dressings	1	D	1.000	20	3	encyclopaedic	eaten with dressings
+eaten_with_food	1	D	1.000	15	3	encyclopaedic	eaten with food
+eaten_with_gravy	1	D	1.000	16	3	encyclopaedic	eaten with gravy
+eaten_with_hamburgers	1	D	1.000	21	3	encyclopaedic	eaten with hamburgers
+eaten_with_ice_cream	1	D	1.000	20	4	encyclopaedic	eaten with ice cream
+eaten_with_stuffing	1	D	1.000	19	3	encyclopaedic	eaten with stuffing
+eaten_with_tea	1	D	1.000	14	3	encyclopaedic	eaten with tea
+eaten_with_turkey	1	D	1.000	17	3	encyclopaedic	eaten with turkey
+eg_-_a_drawbridge	1	D	1.000	17	4	taxonomic	eg - a drawbridge
+eg_-_a_king	1	D	1.000	11	4	taxonomic	eg - a king
+eg_-_a_pull-over	1	D	1.000	16	4	taxonomic	eg - a pull-over
+eg_-_acoustic	1	D	1.000	13	3	taxonomic	eg - acoustic
+eg_-_apple_pie	1	D	1.000	14	4	taxonomic	eg - apple pie
+eg_-_bambi	2	D	0.500	10	3	taxonomic	eg - bambi
+eg_-_Barbie	1	D	1.000	11	3	taxonomic	eg - Barbie
+eg_-_baseball	1	D	1.000	13	3	taxonomic	eg - baseball
+eg_-_bell_bottoms	1	D	1.000	17	4	taxonomic	eg - bell bottoms
+eg_-_bow	1	D	1.000	8	3	taxonomic	eg - bow
+eg_-_cheddar	1	D	1.000	12	3	taxonomic	eg - cheddar
+eg_-_chocolate_cake	1	D	1.000	19	4	taxonomic	eg - chocolate cake
+eg_-_cowboy	1	D	1.000	11	3	taxonomic	eg - cowboy
+eg_-_digital	1	D	1.000	12	3	taxonomic	eg - digital
+eg_-_dolls	1	D	1.000	10	3	taxonomic	eg - dolls
+eg_-_dump	1	D	1.000	9	3	taxonomic	eg - dump
+eg_-_electric	1	D	1.000	13	3	taxonomic	eg - electric
+eg_-_flying_saucer	1	D	1.000	18	4	taxonomic	eg - flying saucer
+eg_-_grand	1	D	1.000	10	3	taxonomic	eg - grand
+eg_-_granny_smith	1	D	1.000	17	4	taxonomic	eg - granny smith
+eg_-_iceberg	1	D	1.000	12	3	taxonomic	eg - iceberg
+eg_-_jeans	1	D	1.000	10	3	taxonomic	eg - jeans
+eg_-_kidney	1	D	1.000	11	3	taxonomic	eg - kidney
+eg_-_lima	1	D	1.000	9	3	taxonomic	eg - lima
+eg_-_mallard	1	D	1.000	12	3	taxonomic	eg - mallard
+eg_-_maraschino	1	D	1.000	15	3	taxonomic	eg - maraschino
+eg_-_metal	1	D	1.000	10	3	taxonomic	eg - metal
+eg_-_mini_skirt	1	D	1.000	15	4	taxonomic	eg - mini skirt
+eg_-_monarch	1	D	1.000	12	3	taxonomic	eg - monarch
+eg_-_mountain	1	D	1.000	13	3	taxonomic	eg - mountain
+eg_-_picket	1	D	1.000	11	3	taxonomic	eg - picket
+eg_-_rifle	1	D	1.000	10	3	taxonomic	eg - rifle
+eg_-_romaine	1	D	1.000	12	3	taxonomic	eg - romaine
+eg_-_spanish	1	D	1.000	12	3	taxonomic	eg - spanish
+eg_-_sport	1	D	1.000	10	3	taxonomic	eg - sport
+eg_-_Swiss	1	D	1.000	10	3	taxonomic	eg - Swiss
+eg_-_ten_speed	1	D	1.000	14	4	taxonomic	eg - ten speed
+eg_-_t-shirt	1	D	1.000	12	3	taxonomic	eg - t-shirt
+eg_-_vanilla_cake	1	D	1.000	17	4	taxonomic	eg - vanilla cake
+eg_-_wood	1	D	1.000	9	3	taxonomic	eg - wood
+eg_weeping	1	D	1.000	10	2	taxonomic	eg weeping
+found_at_bus_stops	1	D	1.000	18	4	encyclopaedic	found at bus stops
+found_at_funerals	1	D	1.000	17	3	encyclopaedic	found at funerals
+found_at_tables	1	D	1.000	15	3	encyclopaedic	found at tables
+found_at_the_end_of_a_gun	1	D	1.000	25	7	encyclopaedic	found at the end of a gun
+found_at_trailer_parks	1	D	1.000	22	4	encyclopaedic	found at trailer parks
+found_below_ground	1	D	1.000	18	3	encyclopaedic	found below ground
+found_beside_salt	1	D	1.000	17	3	encyclopaedic	found beside salt
+found_by_doors	1	D	1.000	14	3	encyclopaedic	found by doors
+found_in_airports	1	D	1.000	17	3	encyclopaedic	found in airports
+found_in_back_yards	1	D	1.000	19	4	encyclopaedic	found in back yards
+found_in_ballrooms	1	D	1.000	18	3	encyclopaedic	found in ballrooms
+found_in_bars	2	D	0.500	13	3	encyclopaedic	found in bars
+found_in_basements	1	D	1.000	18	3	encyclopaedic	found in basements
+found_in_bathrooms	10	ND	0.100	18	3	encyclopaedic	found in bathrooms
+found_in_bathtubs	1	D	1.000	17	3	encyclopaedic	found in bathtubs
+found_in_bedrooms	5	ND	0.200	17	3	encyclopaedic	found in bedrooms
+found_in_buildings	3	ND	0.333	18	3	encyclopaedic	found in buildings
+found_in_cafeterias	1	D	1.000	19	3	encyclopaedic	found in cafeterias
+found_in_cars	2	D	0.500	13	3	encyclopaedic	found in cars
+found_in_cartoons	1	D	1.000	17	3	encyclopaedic	found in cartoons
+found_in_cities	3	ND	0.333	15	3	encyclopaedic	found in cities
+found_in_clams	1	D	1.000	14	3	encyclopaedic	found in clams
+found_in_classrooms	2	D	0.500	19	3	encyclopaedic	found in classrooms
+found_in_closets	1	D	1.000	16	3	encyclopaedic	found in closets
+found_in_cupboards	2	D	0.500	18	3	encyclopaedic	found in cupboards
+found_in_dens	1	D	1.000	13	3	encyclopaedic	found in dens
+found_in_deserts	1	D	1.000	16	3	encyclopaedic	found in deserts
+found_in_dining_rooms	2	D	0.500	21	4	encyclopaedic	found in dining rooms
+found_in_Egypt	1	D	1.000	14	3	encyclopaedic	found in Egypt
+found_in_forests	2	D	0.500	16	3	encyclopaedic	found in forests
+found_in_gardens	1	D	1.000	16	3	encyclopaedic	found in gardens
+found_in_grocery_stores	1	D	1.000	23	4	encyclopaedic	found in grocery stores
+found_in_hair_salons	1	D	1.000	20	4	encyclopaedic	found in hair salons
+found_in_hallways	1	D	1.000	17	3	encyclopaedic	found in hallways
+found_in_high-rises	1	D	1.000	19	3	encyclopaedic	found in high-rises
+found_in_houses	11	ND	0.091	15	3	encyclopaedic	found in houses
+found_in_kitchens	32	ND	0.031	17	3	encyclopaedic	found in kitchens
+found_in_laboratories	1	D	1.000	21	3	encyclopaedic	found in laboratories
+found_in_large_cities	1	D	1.000	21	4	encyclopaedic	found in large cities
+found_in_libraries	4	ND	0.250	18	3	encyclopaedic	found in libraries
+found_in_living_rooms	2	D	0.500	21	4	encyclopaedic	found in living rooms
+found_in_malls	1	D	1.000	14	3	encyclopaedic	found in malls
+found_in_New_York	1	D	1.000	17	4	encyclopaedic	found in New York
+found_in_oceans	1	D	1.000	15	3	encyclopaedic	found in oceans
+found_in_offices	2	D	0.500	16	3	encyclopaedic	found in offices
+found_in_orchestras	1	D	1.000	19	3	encyclopaedic	found in orchestras
+found_in_oysters	1	D	1.000	16	3	encyclopaedic	found in oysters
+found_in_parks	1	D	1.000	14	3	encyclopaedic	found in parks
+found_in_rooms	1	D	1.000	14	3	encyclopaedic	found in rooms
+found_in_schools	2	D	0.500	16	3	encyclopaedic	found in schools
+found_in_seas	1	D	1.000	13	3	encyclopaedic	found in seas
+found_in_sewing_kits	1	D	1.000	20	4	encyclopaedic	found in sewing kits
+found_in_sinks	1	D	1.000	14	3	encyclopaedic	found in sinks
+found_in_summer	2	D	0.500	15	3	encyclopaedic	found in summer
+found_in_the_country	3	ND	0.333	20	4	encyclopaedic	found in the country
+found_in_toolboxes	4	ND	0.250	18	3	encyclopaedic	found in toolboxes
+found_in_trees	1	D	1.000	14	3	encyclopaedic	found in trees
+found_in_vases	1	D	1.000	14	3	encyclopaedic	found in vases
+found_in_water	1	D	1.000	14	3	encyclopaedic	found in water
+found_in_workshops	1	D	1.000	18	3	encyclopaedic	found in workshops
+found_near_the_ocean	1	D	1.000	20	4	encyclopaedic	found near the ocean
+found_near_the_water	1	D	1.000	20	4	encyclopaedic	found near the water
+found_on_beaches	1	D	1.000	16	3	encyclopaedic	found on beaches
+found_on_beds	2	D	0.500	13	3	encyclopaedic	found on beds
+found_on_belts	1	D	1.000	14	3	encyclopaedic	found on belts
+found_on_boats	2	D	0.500	14	3	encyclopaedic	found on boats
+found_on_ceilings	1	D	1.000	17	3	encyclopaedic	found on ceilings
+found_on_chains	1	D	1.000	15	3	encyclopaedic	found on chains
+found_on_chairs	1	D	1.000	15	3	encyclopaedic	found on chairs
+found_on_couches	1	D	1.000	16	3	encyclopaedic	found on couches
+found_on_doors	1	D	1.000	14	3	encyclopaedic	found on doors
+found_on_farms	1	D	1.000	14	3	encyclopaedic	found on farms
+found_on_floors	3	ND	0.333	15	3	encyclopaedic	found on floors
+found_on_gifts	1	D	1.000	14	3	encyclopaedic	found on gifts
+found_on_horses_backs	1	D	1.000	21	4	encyclopaedic	found on horses backs
+found_on_shelves	1	D	1.000	16	3	encyclopaedic	found on shelves
+found_on_shoes	1	D	1.000	14	3	encyclopaedic	found on shoes
+found_on_sinks	1	D	1.000	14	3	encyclopaedic	found on sinks
+found_on_tables	3	ND	0.333	15	3	encyclopaedic	found on tables
+found_on_the_bottom_floor	1	D	1.000	25	5	encyclopaedic	found on the bottom floor
+found_on_the_nickel	1	D	1.000	19	4	encyclopaedic	found on the nickel
+found_on_walls	7	ND	0.143	14	3	encyclopaedic	found on walls
+found_on_water	2	D	0.500	14	3	encyclopaedic	found on water
+found_outdoors	2	D	0.500	14	2	encyclopaedic	found outdoors
+found_over_bathtubs	1	D	1.000	19	3	encyclopaedic	found over bathtubs
+found_over_sinks	1	D	1.000	16	3	encyclopaedic	found over sinks
+found_over_water	1	D	1.000	16	3	encyclopaedic	found over water
+found_underground	1	D	1.000	17	2	encyclopaedic	found underground
+furniture	11	ND	0.091	9	1	taxonomic	furniture
+grows_in_California	1	D	1.000	19	3	encyclopaedic	grows in California
+grows_in_fields	2	D	0.500	15	3	encyclopaedic	grows in fields
+grows_in_Florida	3	ND	0.333	16	3	encyclopaedic	grows in Florida
+grows_in_forests	5	ND	0.200	16	3	encyclopaedic	grows in forests
+grows_in_gardens	18	ND	0.056	16	3	encyclopaedic	grows in gardens
+grows_in_grass	1	D	1.000	14	3	encyclopaedic	grows in grass
+grows_in_Hawaii	1	D	1.000	15	3	encyclopaedic	grows in Hawaii
+grows_in_oceans	1	D	1.000	15	3	encyclopaedic	grows in oceans
+grows_in_patches	1	D	1.000	16	3	encyclopaedic	grows in patches
+grows_in_pods	1	D	1.000	13	3	encyclopaedic	grows in pods
+grows_in_seas	1	D	1.000	13	3	encyclopaedic	grows in seas
+grows_in_the_ground	8	ND	0.125	19	4	encyclopaedic	grows in the ground
+grows_in_the_summer	1	D	1.000	19	4	encyclopaedic	grows in the summer
+grows_in_the_wild	1	D	1.000	17	4	encyclopaedic	grows in the wild
+grows_in_tropical_climates	1	D	1.000	26	4	encyclopaedic	grows in tropical climates
+grows_in_warm_climates	4	ND	0.250	22	4	encyclopaedic	grows in warm climates
+grows_in_water	2	D	0.500	14	3	encyclopaedic	grows in water
+grows_on_bushes	4	ND	0.250	15	3	encyclopaedic	grows on bushes
+grows_on_houses	1	D	1.000	15	3	encyclopaedic	grows on houses
+grows_on_palm_trees	1	D	1.000	19	4	encyclopaedic	grows on palm trees
+grows_on_plants	2	D	0.500	15	3	encyclopaedic	grows on plants
+grows_on_the_ground	3	ND	0.333	19	4	encyclopaedic	grows on the ground
+grows_on_trees	19	ND	0.053	14	3	encyclopaedic	grows on trees
+grows_on_vines	4	ND	0.250	14	3	encyclopaedic	grows on vines
+grows_underground	4	ND	0.250	17	2	encyclopaedic	grows underground
+has_>_4_wheels	1	D	1.000	14	4	visual-form_and_surface	has > 4 wheels
+has_1_level	1	D	1.000	11	3	visual-form_and_surface	has 1 level
+has_1_piece	1	D	1.000	11	3	visual-form_and_surface	has 1 piece
+has_1_wheel	2	D	0.500	11	3	visual-form_and_surface	has 1 wheel
+has_18_wheels	1	D	1.000	13	3	visual-form_and_surface	has 18 wheels
+has_2_arms	1	D	1.000	10	3	visual-form_and_surface	has 2 arms
+has_2_blades	1	D	1.000	12	3	visual-form_and_surface	has 2 blades
+has_2_buttons	1	D	1.000	13	3	visual-form_and_surface	has 2 buttons
+has_2_feet	2	D	0.500	10	3	visual-form_and_surface	has 2 feet
+has_2_handles	1	D	1.000	13	3	visual-form_and_surface	has 2 handles
+has_2_humps	1	D	1.000	11	3	visual-form_and_surface	has 2 humps
+has_2_legs	3	ND	0.333	10	3	visual-form_and_surface	has 2 legs
+has_2_pieces	2	D	0.500	12	3	visual-form_and_surface	has 2 pieces
+has_2_pointed_ends	1	D	1.000	18	4	visual-form_and_surface	has 2 pointed ends
+has_2_prongs	1	D	1.000	12	3	visual-form_and_surface	has 2 prongs
+has_2_wheels	5	ND	0.200	12	3	visual-form_and_surface	has 2 wheels
+has_3_buttons	1	D	1.000	13	3	visual-form_and_surface	has 3 buttons
+has_3_legs	1	D	1.000	10	3	visual-form_and_surface	has 3 legs
+has_3_prongs	1	D	1.000	12	3	visual-form_and_surface	has 3 prongs
+has_3_valves	1	D	1.000	12	3	visual-form_and_surface	has 3 valves
+has_3_wheels	1	D	1.000	12	3	visual-form_and_surface	has 3 wheels
+has_4_doors	1	D	1.000	11	3	visual-form_and_surface	has 4 doors
+has_4_hoofs	1	D	1.000	11	3	visual-form_and_surface	has 4 hoofs
+has_4_legs	49	ND	0.020	10	3	visual-form_and_surface	has 4 legs
+has_4_prongs	1	D	1.000	12	3	visual-form_and_surface	has 4 prongs
+has_4_sides	1	D	1.000	11	3	visual-form_and_surface	has 4 sides
+has_4_wheels	11	ND	0.091	12	3	visual-form_and_surface	has 4 wheels
+has_6_bullets	1	D	1.000	13	3	encyclopaedic	has 6 bullets
+has_6_legs	3	ND	0.333	10	3	visual-form_and_surface	has 6 legs
+has_6_sides	1	D	1.000	11	3	visual-form_and_surface	has 6 sides
+has_8_legs	1	D	1.000	10	3	visual-form_and_surface	has 8 legs
+has_8_tentacles	1	D	1.000	15	3	visual-form_and_surface	has 8 tentacles
+has_a_back	2	D	0.500	10	3	visual-form_and_surface	has a back
+has_a_bag	1	D	1.000	9	3	visual-form_and_surface	has a bag
+has_a_balcony	1	D	1.000	13	3	visual-form_and_surface	has a balcony
+has_a_ball	1	D	1.000	10	3	visual-form_and_surface	has a ball
+has_a_ball_inside	1	D	1.000	17	4	visual-form_and_surface	has a ball inside
+has_a_ball_point	1	D	1.000	16	4	visual-form_and_surface	has a ball point
+has_a_bar	1	D	1.000	9	3	encyclopaedic	has a bar
+has_a_barrel	2	D	0.500	12	3	visual-form_and_surface	has a barrel
+has_a_basement	1	D	1.000	14	3	visual-form_and_surface	has a basement
+has_a_bathroom	1	D	1.000	14	3	visual-form_and_surface	has a bathroom
+has_a_beak	38	ND	0.026	10	3	visual-form_and_surface	has a beak
+has_a_beard	1	D	1.000	11	3	visual-form_and_surface	has a beard
+has_a_bed	2	D	0.500	9	3	visual-form_and_surface	has a bed
+has_a_bedroom	1	D	1.000	13	3	visual-form_and_surface	has a bedroom
+has_a_bell	2	D	0.500	10	3	visual-form_and_surface	has a bell
+has_a_belt	1	D	1.000	10	3	visual-form_and_surface	has a belt
+has_a_bench	1	D	1.000	11	3	encyclopaedic	has a bench
+has_a_bill	2	D	0.500	10	3	visual-form_and_surface	has a bill
+has_a_bin	1	D	1.000	9	3	visual-form_and_surface	has a bin
+has_a_blade	6	ND	0.167	11	3	visual-form_and_surface	has a blade
+has_a_bow	1	D	1.000	9	3	encyclopaedic	has a bow
+has_a_box_spring	1	D	1.000	16	4	visual-form_and_surface	has a box spring
+has_a_breast	1	D	1.000	12	3	visual-form_and_surface	has a breast
+has_a_brown_outside	1	D	1.000	19	4	visual-colour	has a brown outside
+has_a_bushy_tail	1	D	1.000	16	4	visual-form_and_surface	has a bushy tail
+has_a_caboose	1	D	1.000	13	3	visual-form_and_surface	has a caboose
+has_a_candle	1	D	1.000	12	3	visual-form_and_surface	has a candle
+has_a_cap	2	D	0.500	9	3	visual-form_and_surface	has a cap
+has_a_carrying_capacity	1	D	1.000	23	4	encyclopaedic	has a carrying capacity
+has_a_case	1	D	1.000	10	3	encyclopaedic	has a case
+has_a_cassette_deck	1	D	1.000	19	4	visual-form_and_surface	has a cassette deck
+has_a_CD_player	1	D	1.000	15	4	visual-form_and_surface	has a CD player
+has_a_chain	1	D	1.000	11	3	visual-form_and_surface	has a chain
+has_a_charm	1	D	1.000	11	3	visual-form_and_surface	has a charm
+has_a_chin_rest	1	D	1.000	15	4	visual-form_and_surface	has a chin rest
+has_a_clasp	2	D	0.500	11	3	visual-form_and_surface	has a clasp
+has_a_clefted_head/claw	1	D	1.000	23	4	visual-form_and_surface	has a clefted head/claw
+has_a_closet	1	D	1.000	12	3	visual-form_and_surface	has a closet
+has_a_collar	2	D	0.500	12	3	visual-form_and_surface	has a collar
+has_a_comb	1	D	1.000	10	3	visual-form_and_surface	has a comb
+has_a_comforter	1	D	1.000	15	3	encyclopaedic	has a comforter
+has_a_concave_end/ladle	1	D	1.000	23	4	visual-form_and_surface	has a concave end/ladle
+has_a_congregation	1	D	1.000	18	3	encyclopaedic	has a congregation
+has_a_container	1	D	1.000	15	3	visual-form_and_surface	has a container
+has_a_cord	4	ND	0.250	10	3	visual-form_and_surface	has a cord
+has_a_core	2	D	0.500	10	3	visual-form_and_surface	has a core
+has_a_cork	1	D	1.000	10	3	visual-form_and_surface	has a cork
+has_a_cover	1	D	1.000	11	3	visual-form_and_surface	has a cover
+has_a_covering	1	D	1.000	14	3	visual-form_and_surface	has a covering
+has_a_cross	2	D	0.500	11	3	encyclopaedic	has a cross
+has_a_crust	2	D	0.500	11	3	visual-form_and_surface	has a crust
+has_a_curly_end	1	D	1.000	15	4	visual-form_and_surface	has a curly end
+has_a_curly_tail	1	D	1.000	16	4	visual-form_and_surface	has a curly tail
+has_a_cushion	2	D	0.500	13	3	visual-form_and_surface	has a cushion
+has_a_dead_nose	1	D	1.000	15	4	visual-form_and_surface	has a dead nose
+has_a_dial	1	D	1.000	10	3	visual-form_and_surface	has a dial
+has_a_door	5	ND	0.200	10	3	visual-form_and_surface	has a door
+has_a_drain	2	D	0.500	11	3	visual-form_and_surface	has a drain
+has_a_drain_plug	2	D	0.500	16	4	encyclopaedic	has a drain plug
+has_a_dresser	1	D	1.000	13	3	visual-form_and_surface	has a dresser
+has_a_face	1	D	1.000	10	3	visual-form_and_surface	has a face
+has_a_filter	1	D	1.000	12	3	visual-form_and_surface	has a filter
+has_a_finish_signal	1	D	1.000	19	4	sound	has a finish signal
+has_a_fireplace	1	D	1.000	15	3	visual-form_and_surface	has a fireplace
+has_a_flat_head	1	D	1.000	15	4	visual-form_and_surface	has a flat head
+has_a_flat_head_(slot)	1	D	1.000	22	5	visual-form_and_surface	has a flat head (slot)
+has_a_flat_surface	1	D	1.000	18	4	visual-form_and_surface	has a flat surface
+has_a_foot_rest	1	D	1.000	15	4	visual-form_and_surface	has a foot rest
+has_a_foundation	1	D	1.000	16	3	visual-form_and_surface	has a foundation
+has_a_frame	1	D	1.000	11	3	visual-form_and_surface	has a frame
+has_a_freezer	1	D	1.000	13	3	visual-form_and_surface	has a freezer
+has_a_furnace	1	D	1.000	13	3	visual-form_and_surface	has a furnace
+has_a_green_outside	1	D	1.000	19	4	visual-colour	has a green outside
+has_a_green_stem	1	D	1.000	16	4	visual-colour	has a green stem
+has_a_green_top	2	D	0.500	15	4	visual-colour	has a green top
+has_a_guard	1	D	1.000	11	3	visual-form_and_surface	has a guard
+has_a_hand_grip	1	D	1.000	15	4	visual-form_and_surface	has a hand grip
+has_a_handle	42	ND	0.024	12	3	visual-form_and_surface	has a handle
+has_a_hard_cover	1	D	1.000	16	4	visual-form_and_surface	has a hard cover
+has_a_hard_shell	3	ND	0.333	16	4	tactile	has a hard shell
+has_a_hay_loft	1	D	1.000	14	4	visual-form_and_surface	has a hay loft
+has_a_head	7	ND	0.143	10	3	visual-form_and_surface	has a head
+has_a_headboard	1	D	1.000	15	3	visual-form_and_surface	has a headboard
+has_a_hidden_bed	1	D	1.000	16	4	visual-form_and_surface	has a hidden bed
+has_a_hitch	1	D	1.000	11	3	visual-form_and_surface	has a hitch
+has_a_hole	1	D	1.000	10	3	visual-form_and_surface	has a hole
+has_a_hood	4	ND	0.250	10	3	visual-form_and_surface	has a hood
+has_a_hump	1	D	1.000	10	3	visual-form_and_surface	has a hump
+has_a_kitchen	2	D	0.500	13	3	visual-form_and_surface	has a kitchen
+has_a_knob	1	D	1.000	10	3	visual-form_and_surface	has a knob
+has_a_knot	1	D	1.000	10	3	visual-form_and_surface	has a knot
+has_a_label	1	D	1.000	11	3	visual-form_and_surface	has a label
+has_a_large_beak	2	D	0.500	16	4	visual-form_and_surface	has a large beak
+has_a_large_pit	2	D	0.500	15	4	visual-form_and_surface	has a large pit
+has_a_latch	1	D	1.000	11	3	visual-form_and_surface	has a latch
+has_a_leafy_top	1	D	1.000	15	4	visual-form_and_surface	has a leafy top
+has_a_lid	6	ND	0.167	9	3	visual-form_and_surface	has a lid
+has_a_light_inside	3	ND	0.333	18	4	visual-form_and_surface	has a light inside
+has_a_lighthouse	1	D	1.000	16	3	encyclopaedic	has a lighthouse
+has_a_lining	1	D	1.000	12	3	visual-form_and_surface	has a lining
+has_a_lock	4	ND	0.250	10	3	visual-form_and_surface	has a lock
+has_a_long_barrel	1	D	1.000	17	4	visual-form_and_surface	has a long barrel
+has_a_long_beak	2	D	0.500	15	4	visual-form_and_surface	has a long beak
+has_a_long_blade	1	D	1.000	16	4	visual-form_and_surface	has a long blade
+has_a_long_handle	4	ND	0.250	17	4	visual-form_and_surface	has a long handle
+has_a_long_mane	1	D	1.000	15	4	visual-form_and_surface	has a long mane
+has_a_long_neck	5	ND	0.200	15	4	visual-form_and_surface	has a long neck
+has_a_long_tail	6	ND	0.167	15	4	visual-form_and_surface	has a long tail
+has_a_long_tongue	3	ND	0.333	17	4	visual-form_and_surface	has a long tongue
+has_a_mane	4	ND	0.250	10	3	visual-form_and_surface	has a mane
+has_a_mask	1	D	1.000	10	3	visual-form_and_surface	has a mask
+has_a_mast	1	D	1.000	10	3	visual-form_and_surface	has a mast
+has_a_mattress	1	D	1.000	14	3	visual-form_and_surface	has a mattress
+has_a_message	3	ND	0.333	13	3	visual-form_and_surface	has a message
+has_a_metal_blade	2	D	0.500	17	4	visual-form_and_surface	has a metal blade
+has_a_metal_end	1	D	1.000	15	4	visual-form_and_surface	has a metal end
+has_a_metal_head	2	D	0.500	16	4	visual-form_and_surface	has a metal head
+has_a_mirror_on_top	1	D	1.000	19	5	visual-form_and_surface	has a mirror on top
+has_a_motor	2	D	0.500	11	3	visual-form_and_surface	has a motor
+has_a_mouth	1	D	1.000	11	3	visual-form_and_surface	has a mouth
+has_a_mouthpiece	1	D	1.000	16	3	visual-form_and_surface	has a mouthpiece
+has_a_mouth-piece	2	D	0.500	17	3	visual-form_and_surface	has a mouth-piece
+has_a_name_on_it	1	D	1.000	16	5	visual-form_and_surface	has a name on it
+has_a_neck	5	ND	0.200	10	3	visual-form_and_surface	has a neck
+has_a_nose	2	D	0.500	10	3	visual-form_and_surface	has a nose
+has_a_nozzle	1	D	1.000	12	3	visual-form_and_surface	has a nozzle
+has_a_pendant	1	D	1.000	13	3	encyclopaedic	has a pendant
+has_a_periscope	1	D	1.000	15	3	visual-form_and_surface	has a periscope
+has_a_Phillips_head	1	D	1.000	19	4	visual-form_and_surface	has a Phillips head
+has_a_pillow_case	1	D	1.000	17	4	encyclopaedic	has a pillow case
+has_a_pin	1	D	1.000	9	3	visual-form_and_surface	has a pin
+has_a_pit	6	ND	0.167	9	3	visual-form_and_surface	has a pit
+has_a_plug	2	D	0.500	10	3	visual-form_and_surface	has a plug
+has_a_pointed_end	11	ND	0.091	17	4	visual-form_and_surface	has a pointed end
+has_a_propeller	2	D	0.500	15	3	visual-form_and_surface	has a propeller
+has_a_radio	1	D	1.000	11	3	visual-form_and_surface	has a radio
+has_a_rattle_on_tail	1	D	1.000	20	5	visual-form_and_surface	has a rattle on tail
+has_a_receiver	1	D	1.000	14	3	visual-form_and_surface	has a receiver
+has_a_red_breast	1	D	1.000	16	4	visual-colour	has a red breast
+has_a_red_outside	1	D	1.000	17	4	visual-colour	has a red outside
+has_a_retractable_head	1	D	1.000	22	4	visual-form_and_surface	has a retractable head
+has_a_ribbon	1	D	1.000	12	3	encyclopaedic	has a ribbon
+has_a_ring_in_its_nose	1	D	1.000	22	6	encyclopaedic	has a ring in its nose
+has_a_roof	7	ND	0.143	10	3	visual-form_and_surface	has a roof
+has_a_round_end	1	D	1.000	15	4	visual-form_and_surface	has a round end
+has_a_screw_end	1	D	1.000	15	4	visual-form_and_surface	has a screw end
+has_a_screw_on_lid	1	D	1.000	18	5	visual-form_and_surface	has a screw on lid
+has_a_seal	2	D	0.500	10	3	visual-form_and_surface	has a seal
+has_a_seat	7	ND	0.143	10	3	visual-form_and_surface	has a seat
+has_a_shade	1	D	1.000	11	3	visual-form_and_surface	has a shade
+has_a_sheath	2	D	0.500	12	3	visual-form_and_surface	has a sheath
+has_a_sheet	1	D	1.000	11	3	visual-form_and_surface	has a sheet
+has_a_shell	10	ND	0.100	11	3	visual-form_and_surface	has a shell
+has_a_shirt	1	D	1.000	11	3	visual-form_and_surface	has a shirt
+has_a_signature	1	D	1.000	15	3	visual-form_and_surface	has a signature
+has_a_siren	1	D	1.000	11	3	visual-form_and_surface	has a siren
+has_a_skin	3	ND	0.333	10	3	visual-form_and_surface	has a skin
+has_a_slide_valve	1	D	1.000	17	4	visual-form_and_surface	has a slide valve
+has_a_snout	1	D	1.000	11	3	visual-form_and_surface	has a snout
+has_a_soft_cover	1	D	1.000	16	4	visual-form_and_surface	has a soft cover
+has_a_spout	1	D	1.000	11	3	visual-form_and_surface	has a spout
+has_a_steering_wheel	1	D	1.000	20	4	visual-form_and_surface	has a steering wheel
+has_a_stem	4	ND	0.250	10	3	visual-form_and_surface	has a stem
+has_a_stinger	2	D	0.500	13	3	visual-form_and_surface	has a stinger
+has_a_stone	1	D	1.000	11	3	visual-form_and_surface	has a stone
+has_a_stone_blade	1	D	1.000	17	4	visual-form_and_surface	has a stone blade
+has_a_strap	3	ND	0.333	11	3	visual-form_and_surface	has a strap
+has_a_string	3	ND	0.333	12	3	visual-form_and_surface	has a string
+has_a_stripe	1	D	1.000	12	3	visual-form_and_surface	has a stripe
+has_a_strong_beak	1	D	1.000	17	4	visual-form_and_surface	has a strong beak
+has_a_sun_roof	1	D	1.000	14	4	visual-form_and_surface	has a sun roof
+has_a_surface	1	D	1.000	13	3	visual-form_and_surface	has a surface
+has_a_switch	1	D	1.000	12	3	visual-form_and_surface	has a switch
+has_a_tail	39	ND	0.026	10	3	visual-form_and_surface	has a tail
+has_a_television	1	D	1.000	16	3	encyclopaedic	has a television
+has_a_temperature_control	1	D	1.000	25	4	visual-form_and_surface	has a temperature control
+has_a_thumb	2	D	0.500	11	3	visual-form_and_surface	has a thumb
+has_a_thumb_(1)_and_all_fingers_(2)	1	D	1.000	35	8	visual-form_and_surface	has a thumb (1) and all fingers (2)
+has_a_timer	1	D	1.000	11	3	visual-form_and_surface	has a timer
+has_a_tongue	4	ND	0.250	12	3	visual-form_and_surface	has a tongue
+has_a_top	1	D	1.000	9	3	visual-form_and_surface	has a top
+has_a_trigger	5	ND	0.200	13	3	visual-form_and_surface	has a trigger
+has_a_trunk	1	D	1.000	11	3	visual-form_and_surface	has a trunk
+has_a_turntable	2	D	0.500	15	3	visual-form_and_surface	has a turntable
+has_a_visor	1	D	1.000	11	3	visual-form_and_surface	has a visor
+has_a_wet_nose	1	D	1.000	14	4	tactile	has a wet nose
+has_a_white_tail	1	D	1.000	16	4	visual-colour	has a white tail
+has_a_wick	1	D	1.000	10	3	visual-form_and_surface	has a wick
+has_a_window	1	D	1.000	12	3	visual-form_and_surface	has a window
+has_a_wooden_handle	7	ND	0.143	19	4	visual-form_and_surface	has a wooden handle
+has_a_Y_shaped_part	1	D	1.000	19	5	visual-form_and_surface	has a Y shaped part
+has_a_zipper	4	ND	0.250	12	3	visual-form_and_surface	has a zipper
+has_adjustable_volume_control	1	D	1.000	29	4	visual-form_and_surface	has adjustable volume control
+has_advertisements	1	D	1.000	18	2	encyclopaedic	has advertisements
+has_alcohol	1	D	1.000	11	2	encyclopaedic	has alcohol
+has_an_alarm	1	D	1.000	12	3	encyclopaedic	has an alarm
+has_an_alter	1	D	1.000	12	3	visual-form_and_surface	has an alter
+has_an_antenna	1	D	1.000	14	3	visual-form_and_surface	has an antenna
+has_an_end	3	ND	0.333	10	3	visual-form_and_surface	has an end
+has_an_engine	10	ND	0.100	13	3	visual-form_and_surface	has an engine
+has_an_eraser	1	D	1.000	13	3	visual-form_and_surface	has an eraser
+has_an_eraser_on_end	1	D	1.000	20	5	visual-form_and_surface	has an eraser on end
+has_an_inside	11	ND	0.091	13	3	visual-form_and_surface	has an inside
+has_an_outside	4	ND	0.250	14	3	visual-form_and_surface	has an outside
+has_an_oven	1	D	1.000	11	3	visual-form_and_surface	has an oven
+has_an_udder	1	D	1.000	12	3	visual-form_and_surface	has an udder
+has_antennae	4	ND	0.250	12	2	visual-form_and_surface	has antennae
+has_antlers	4	ND	0.250	11	2	visual-form_and_surface	has antlers
+has_armrests	3	ND	0.333	12	2	visual-form_and_surface	has armrests
+has_articles	1	D	1.000	12	2	visual-form_and_surface	has articles
+has_authors	1	D	1.000	11	2	encyclopaedic	has authors
+has_bark	4	ND	0.250	8	2	visual-form_and_surface	has bark
+has_bars	1	D	1.000	8	2	visual-form_and_surface	has bars
+has_bathrooms	1	D	1.000	13	2	visual-form_and_surface	has bathrooms
+has_batteries	1	D	1.000	13	2	encyclopaedic	has batteries
+has_beady_eyes	1	D	1.000	14	3	visual-form_and_surface	has beady eyes
+has_bedrooms	2	D	0.500	12	2	visual-form_and_surface	has bedrooms
+has_beds	1	D	1.000	8	2	visual-form_and_surface	has beds
+has_belt_loops	1	D	1.000	14	3	visual-form_and_surface	has belt loops
+has_benches	1	D	1.000	11	2	visual-form_and_surface	has benches
+has_big_ears	1	D	1.000	12	3	visual-form_and_surface	has big ears
+has_bindings	1	D	1.000	12	2	visual-form_and_surface	has bindings
+has_bits	1	D	1.000	8	2	visual-form_and_surface	has bits
+has_black_spots	1	D	1.000	15	3	visual-colour	has black spots
+has_blades	5	ND	0.200	10	2	visual-form_and_surface	has blades
+has_blankets	1	D	1.000	12	2	encyclopaedic	has blankets
+has_blubber	1	D	1.000	11	2	visual-form_and_surface	has blubber
+has_bowls	1	D	1.000	9	2	visual-form_and_surface	has bowls
+has_brakes	1	D	1.000	10	2	visual-form_and_surface	has brakes
+has_branches	3	ND	0.333	12	2	visual-form_and_surface	has branches
+has_bristles	3	ND	0.333	12	2	visual-form_and_surface	has bristles
+has_bubbles	1	D	1.000	11	2	visual-form_and_surface	has bubbles
+has_buckles	2	D	0.500	11	2	visual-form_and_surface	has buckles
+has_buttons	13	ND	0.077	11	2	visual-form_and_surface	has buttons
+has_cables	1	D	1.000	10	2	visual-form_and_surface	has cables
+has_candles	3	ND	0.333	11	2	encyclopaedic	has candles
+has_carbohydrates	1	D	1.000	17	2	encyclopaedic	has carbohydrates
+has_chairs	1	D	1.000	10	2	encyclopaedic	has chairs
+has_clasps	1	D	1.000	10	2	visual-form_and_surface	has clasps
+has_claws	10	ND	0.100	9	2	visual-form_and_surface	has claws
+has_clergy	2	D	0.500	10	2	encyclopaedic	has clergy
+has_cold_water_(left)	1	D	1.000	21	4	visual-form_and_surface	has cold water (left)
+has_connections	1	D	1.000	15	2	visual-form_and_surface	has connections
+has_cuffs	2	D	0.500	9	2	visual-form_and_surface	has cuffs
+has_cups	1	D	1.000	8	2	visual-form_and_surface	has cups
+has_cushions	2	D	0.500	12	2	visual-form_and_surface	has cushions
+has_cutting_blades	1	D	1.000	18	3	visual-form_and_surface	has cutting blades
+has_decks	1	D	1.000	9	2	visual-form_and_surface	has decks
+has_dials	1	D	1.000	9	2	visual-form_and_surface	has dials
+has_different_heads	2	D	0.500	19	3	visual-form_and_surface	has different heads
+has_different_sized_drill_bits	1	D	1.000	30	5	visual-form_and_surface	has different sized drill bits
+has_different_sizes_of_grains/textures	1	D	1.000	38	5	visual-form_and_surface	has different sizes of grains/textures
+has_dimples	1	D	1.000	11	2	visual-form_and_surface	has dimples
+has_doors	15	ND	0.067	9	2	visual-form_and_surface	has doors
+has_drawers	5	ND	0.200	11	2	visual-form_and_surface	has drawers
+has_ears	5	ND	0.200	8	2	visual-form_and_surface	has ears
+has_edges	1	D	1.000	9	2	visual-form_and_surface	has edges
+has_elastic	1	D	1.000	11	2	visual-form_and_surface	has elastic
+has_elements	2	D	0.500	12	2	visual-form_and_surface	has elements
+has_elevators	2	D	0.500	13	2	visual-form_and_surface	has elevators
+has_engines	2	D	0.500	11	2	visual-form_and_surface	has engines
+has_eyepieces	1	D	1.000	13	2	visual-form_and_surface	has eyepieces
+has_eyes	16	ND	0.063	8	2	visual-form_and_surface	has eyes
+has_fangs	3	ND	0.333	9	2	visual-form_and_surface	has fangs
+has_feather_filling	2	D	0.500	19	3	visual-form_and_surface	has feather filling
+has_feathers	38	ND	0.026	12	2	visual-form_and_surface	has feathers
+has_feet	10	ND	0.100	8	2	visual-form_and_surface	has feet
+has_fibre	1	D	1.000	9	2	encyclopaedic	has fibre
+has_filling	3	ND	0.333	11	2	visual-form_and_surface	has filling
+has_fine_sand_covering_it	1	D	1.000	25	5	visual-form_and_surface	has fine sand covering it
+has_fingers	1	D	1.000	11	2	visual-form_and_surface	has fingers
+has_fins	11	ND	0.091	8	2	visual-form_and_surface	has fins
+has_fireplaces	1	D	1.000	14	2	visual-form_and_surface	has fireplaces
+has_flashing_lights	1	D	1.000	19	3	visual-form_and_surface	has flashing lights
+has_flippers	1	D	1.000	12	2	visual-form_and_surface	has flippers
+has_flowers	2	D	0.500	11	2	visual-form_and_surface	has flowers
+has_foam_filling	2	D	0.500	16	3	visual-form_and_surface	has foam filling
+has_food	1	D	1.000	8	2	encyclopaedic	has food
+has_four-wheel_drive	1	D	1.000	20	3	encyclopaedic	has four-wheel drive
+has_freon	1	D	1.000	9	2	encyclopaedic	has freon
+has_fur	22	ND	0.045	7	2	visual-form_and_surface	has fur
+has_fuzzy_skin	1	D	1.000	14	3	tactile	has fuzzy skin
+has_gears	1	D	1.000	9	2	visual-form_and_surface	has gears
+has_gills	9	ND	0.111	9	2	visual-form_and_surface	has gills
+has_glass	1	D	1.000	9	2	visual-form_and_surface	has glass
+has_glossy_pages	1	D	1.000	16	3	visual-form_and_surface	has glossy pages
+has_graffiti	1	D	1.000	12	2	encyclopaedic	has graffiti
+has_grapes	1	D	1.000	10	2	encyclopaedic	has grapes
+has_green_leaves	4	ND	0.250	16	3	visual-colour	has green leaves
+has_green_skin	1	D	1.000	14	3	visual-colour	has green skin
+has_guns	1	D	1.000	8	2	visual-form_and_surface	has guns
+has_hair	9	ND	0.111	8	2	visual-form_and_surface	has hair
+has_handle_bars	3	ND	0.333	15	3	visual-form_and_surface	has handle bars
+has_handles	7	ND	0.143	11	2	visual-form_and_surface	has handles
+has_handrails	1	D	1.000	13	2	visual-form_and_surface	has handrails
+has_hands	1	D	1.000	9	2	visual-form_and_surface	has hands
+has_hangers	1	D	1.000	11	2	encyclopaedic	has hangers
+has_hanging_bars	1	D	1.000	16	3	visual-form_and_surface	has hanging bars
+has_heels	2	D	0.500	9	2	visual-form_and_surface	has heels
+has_high_heels	1	D	1.000	14	3	visual-form_and_surface	has high heels
+has_hinges	2	D	0.500	10	2	visual-form_and_surface	has hinges
+has_holders	1	D	1.000	11	2	visual-form_and_surface	has holders
+has_holes	6	ND	0.167	9	2	visual-form_and_surface	has holes
+has_honey	1	D	1.000	9	2	visual-form_and_surface	has honey
+has_hooks	1	D	1.000	9	2	visual-form_and_surface	has hooks
+has_hooves	9	ND	0.111	10	2	visual-form_and_surface	has hooves
+has_horns	6	ND	0.167	9	2	visual-form_and_surface	has horns
+has_hot_water_(right)	1	D	1.000	21	4	visual-form_and_surface	has hot water (right)
+has_husks	1	D	1.000	9	2	visual-form_and_surface	has husks
+has_ice_inside	1	D	1.000	14	3	encyclopaedic	has ice inside
+has_information	1	D	1.000	15	2	visual-form_and_surface	has information
+has_ink	1	D	1.000	7	2	visual-form_and_surface	has ink
+has_jaws	1	D	1.000	8	2	visual-form_and_surface	has jaws
+has_jewels	1	D	1.000	10	2	visual-form_and_surface	has jewels
+has_kernels	1	D	1.000	11	2	visual-form_and_surface	has kernels
+has_keys	7	ND	0.143	8	2	visual-form_and_surface	has keys
+has_lace	1	D	1.000	8	2	visual-form_and_surface	has lace
+has_laces	3	ND	0.333	9	2	visual-form_and_surface	has laces
+has_large_ears	1	D	1.000	14	3	visual-form_and_surface	has large ears
+has_large_eyes	1	D	1.000	14	3	visual-form_and_surface	has large eyes
+has_large_teeth	2	D	0.500	15	3	visual-form_and_surface	has large teeth
+has_large_tusks	1	D	1.000	15	3	visual-form_and_surface	has large tusks
+has_large_wheels	2	D	0.500	16	3	visual-form_and_surface	has large wheels
+has_layers	1	D	1.000	10	2	visual-form_and_surface	has layers
+has_leather_seats	1	D	1.000	17	3	visual-form_and_surface	has leather seats
+has_leaves	15	ND	0.067	10	2	visual-form_and_surface	has leaves
+has_legs	44	ND	0.023	8	2	visual-form_and_surface	has legs
+has_lenses	1	D	1.000	10	2	visual-form_and_surface	has lenses
+has_letters	1	D	1.000	11	2	visual-form_and_surface	has letters
+has_levels	1	D	1.000	10	2	visual-form_and_surface	has levels
+has_lightbulbs	2	D	0.500	14	2	visual-form_and_surface	has lightbulbs
+has_links	1	D	1.000	9	2	visual-form_and_surface	has links
+has_lists_of_foods	1	D	1.000	18	4	visual-form_and_surface	has lists of foods
+has_lists_of_prices	1	D	1.000	19	4	visual-form_and_surface	has lists of prices
+has_logos	1	D	1.000	9	2	visual-form_and_surface	has logos
+has_long_legs	6	ND	0.167	13	3	visual-form_and_surface	has long legs
+has_long_sleeves	1	D	1.000	16	3	visual-form_and_surface	has long sleeves
+has_long_tail_feathers	1	D	1.000	22	4	visual-form_and_surface	has long tail feathers
+has_lots_of_water_inside	1	D	1.000	24	5	encyclopaedic	has lots of water inside
+has_many_cars	1	D	1.000	13	3	visual-form_and_surface	has many cars
+has_many_floors	1	D	1.000	15	3	visual-form_and_surface	has many floors
+has_many_legs	2	D	0.500	13	3	visual-form_and_surface	has many legs
+has_many_seats	1	D	1.000	14	3	visual-form_and_surface	has many seats
+has_mercury	1	D	1.000	11	2	visual-form_and_surface	has mercury
+has_metal_bands	1	D	1.000	15	3	visual-form_and_surface	has metal bands
+has_milk	1	D	1.000	8	2	visual-form_and_surface	has milk
+has_minerals	1	D	1.000	12	2	encyclopaedic	has minerals
+has_mirrors	1	D	1.000	11	2	visual-form_and_surface	has mirrors
+has_needles	2	D	0.500	11	2	visual-form_and_surface	has needles
+has_nicotine	1	D	1.000	12	2	encyclopaedic	has nicotine
+has_no_backrest	1	D	1.000	15	3	encyclopaedic	has no backrest
+has_no_fingers	1	D	1.000	14	3	encyclopaedic	has no fingers
+has_no_fuzz	1	D	1.000	11	3	encyclopaedic	has no fuzz
+has_no_roof	1	D	1.000	11	3	encyclopaedic	has no roof
+has_no_seeds	1	D	1.000	12	3	encyclopaedic	has no seeds
+has_no_sleeves	2	D	0.500	14	3	encyclopaedic	has no sleeves
+has_no_straps	1	D	1.000	13	3	encyclopaedic	has no straps
+has_nuclear_missiles	1	D	1.000	20	3	encyclopaedic	has nuclear missiles
+has_numbers	5	ND	0.200	11	2	visual-form_and_surface	has numbers
+has_own_clothes	1	D	1.000	15	3	encyclopaedic	has own clothes
+has_paddles/is_paddled	1	D	1.000	22	3	encyclopaedic	has paddles/is paddled
+has_page_numbers	1	D	1.000	16	3	visual-form_and_surface	has page numbers
+has_pages	2	D	0.500	9	2	visual-form_and_surface	has pages
+has_pants	1	D	1.000	9	2	visual-form_and_surface	has pants
+has_patterns	5	ND	0.200	12	2	visual-form_and_surface	has patterns
+has_paws	2	D	0.500	8	2	visual-form_and_surface	has paws
+has_pearls	1	D	1.000	10	2	visual-form_and_surface	has pearls
+has_pedals	4	ND	0.250	10	2	visual-form_and_surface	has pedals
+has_peel	6	ND	0.167	8	2	visual-form_and_surface	has peel
+has_pictures	3	ND	0.333	12	2	visual-form_and_surface	has pictures
+has_pillows	3	ND	0.333	11	2	encyclopaedic	has pillows
+has_pinchers	1	D	1.000	12	2	visual-form_and_surface	has pinchers
+has_pipes	3	ND	0.333	9	2	encyclopaedic	has pipes
+has_pleats	1	D	1.000	10	2	visual-form_and_surface	has pleats
+has_pockets	6	ND	0.167	11	2	visual-form_and_surface	has pockets
+has_pods	1	D	1.000	8	2	visual-form_and_surface	has pods
+has_poles	1	D	1.000	9	2	visual-form_and_surface	has poles
+has_potato_eyes	1	D	1.000	15	3	visual-form_and_surface	has potato eyes
+has_powerful_jaws	1	D	1.000	17	3	visual-form_and_surface	has powerful jaws
+has_prongs	2	D	0.500	10	2	visual-form_and_surface	has prongs
+has_propellers	2	D	0.500	14	2	visual-form_and_surface	has propellers
+has_protein	1	D	1.000	11	2	encyclopaedic	has protein
+has_pulp	2	D	0.500	8	2	visual-form_and_surface	has pulp
+has_quills	1	D	1.000	10	2	visual-form_and_surface	has quills
+has_racks	2	D	0.500	9	2	visual-form_and_surface	has racks
+has_reeds	2	D	0.500	9	2	visual-form_and_surface	has reeds
+has_ridges	1	D	1.000	10	2	visual-form_and_surface	has ridges
+has_rims	1	D	1.000	8	2	visual-form_and_surface	has rims
+has_rind	1	D	1.000	8	2	visual-form_and_surface	has rind
+has_rips	1	D	1.000	8	2	visual-form_and_surface	has rips
+has_roll_bars	1	D	1.000	13	3	visual-form_and_surface	has roll bars
+has_rooms	3	ND	0.333	9	2	visual-form_and_surface	has rooms
+has_rough_skin	1	D	1.000	14	3	tactile	has rough skin
+has_runs	2	D	0.500	8	2	visual-form_and_surface	has runs
+has_sails	4	ND	0.250	9	2	visual-form_and_surface	has sails
+has_scales	10	ND	0.100	10	2	visual-form_and_surface	has scales
+has_seams	1	D	1.000	9	2	visual-form_and_surface	has seams
+has_seats	4	ND	0.250	9	2	visual-form_and_surface	has seats
+has_sections	3	ND	0.333	12	2	visual-form_and_surface	has sections
+has_seeds	21	ND	0.048	9	2	visual-form_and_surface	has seeds
+has_sentimental_value	1	D	1.000	21	3	encyclopaedic	has sentimental value
+has_shakers_inside	1	D	1.000	18	3	visual-form_and_surface	has shakers inside
+has_sharp_teeth	3	ND	0.333	15	3	visual-form_and_surface	has sharp teeth
+has_sheets	1	D	1.000	10	2	encyclopaedic	has sheets
+has_shelves	6	ND	0.167	11	2	visual-form_and_surface	has shelves
+has_short_sleeves	1	D	1.000	17	3	visual-form_and_surface	has short sleeves
+has_sides	1	D	1.000	9	2	visual-form_and_surface	has sides
+has_skin	16	ND	0.063	8	2	visual-form_and_surface	has skin
+has_sleeves	6	ND	0.167	11	2	visual-form_and_surface	has sleeves
+has_sliding_doors	1	D	1.000	17	3	visual-form_and_surface	has sliding doors
+has_smooth_skin	1	D	1.000	15	3	tactile	has smooth skin
+has_soles	3	ND	0.333	9	2	visual-form_and_surface	has soles
+has_speakers	1	D	1.000	12	2	visual-form_and_surface	has speakers
+has_spokes	1	D	1.000	10	2	visual-form_and_surface	has spokes
+has_spots	3	ND	0.333	9	2	visual-form_and_surface	has spots
+has_springs	1	D	1.000	11	2	visual-form_and_surface	has springs
+has_stained_glass_windows	2	D	0.500	25	4	visual-form_and_surface	has stained glass windows
+has_stairs	1	D	1.000	10	2	visual-form_and_surface	has stairs
+has_stairways	1	D	1.000	13	2	visual-form_and_surface	has stairways
+has_stalks	3	ND	0.333	10	2	visual-form_and_surface	has stalks
+has_stalls	1	D	1.000	10	2	visual-form_and_surface	has stalls
+has_starch	1	D	1.000	10	2	encyclopaedic	has starch
+has_steps	1	D	1.000	9	2	visual-form_and_surface	has steps
+has_stirrups	1	D	1.000	12	2	visual-form_and_surface	has stirrups
+has_stitching	1	D	1.000	13	2	visual-form_and_surface	has stitching
+has_straight_edges	1	D	1.000	18	3	visual-form_and_surface	has straight edges
+has_straps	4	ND	0.250	10	2	visual-form_and_surface	has straps
+has_strings	9	ND	0.111	11	2	visual-form_and_surface	has strings
+has_stripes	4	ND	0.250	11	2	visual-form_and_surface	has stripes
+has_suction_cups	1	D	1.000	16	3	visual-form_and_surface	has suction cups
+has_talons	2	D	0.500	10	2	visual-form_and_surface	has talons
+has_taps	3	ND	0.333	8	2	encyclopaedic	has taps
+has_teeth	14	ND	0.071	9	2	visual-form_and_surface	has teeth
+has_Teflon_coating	1	D	1.000	18	3	visual-form_and_surface	has Teflon coating
+has_tenants	1	D	1.000	11	2	encyclopaedic	has tenants
+has_tentacles	2	D	0.500	13	2	visual-form_and_surface	has tentacles
+has_thin/spaghetti_straps	1	D	1.000	25	3	visual-form_and_surface	has thin/spaghetti straps
+has_threads	2	D	0.500	11	2	visual-form_and_surface	has threads
+has_tinted_windows	1	D	1.000	18	3	visual-form_and_surface	has tinted windows
+has_toes	1	D	1.000	8	2	visual-form_and_surface	has toes
+has_tombs	1	D	1.000	9	2	visual-form_and_surface	has tombs
+has_tracks	1	D	1.000	10	2	visual-form_and_surface	has tracks
+has_training_wheels	1	D	1.000	19	3	visual-form_and_surface	has training wheels
+has_tusks	2	D	0.500	9	2	visual-form_and_surface	has tusks
+has_units	1	D	1.000	9	2	visual-form_and_surface	has units
+has_units_-_cm	1	D	1.000	14	4	encyclopaedic	has units - cm
+has_units_-_inches	1	D	1.000	18	4	encyclopaedic	has units - inches
+has_value	2	D	0.500	9	2	encyclopaedic	has value
+has_valves	1	D	1.000	10	2	visual-form_and_surface	has valves
+has_vitamin_A	1	D	1.000	13	3	encyclopaedic	has vitamin A
+has_vitamin_C	4	ND	0.250	13	3	encyclopaedic	has vitamin C
+has_walls	3	ND	0.333	9	2	visual-form_and_surface	has walls
+has_warheads	1	D	1.000	12	2	visual-form_and_surface	has warheads
+has_warts	1	D	1.000	9	2	visual-form_and_surface	has warts
+has_water	1	D	1.000	9	2	encyclopaedic	has water
+has_water_controls	1	D	1.000	18	3	visual-form_and_surface	has water controls
+has_webbed_feet	6	ND	0.167	15	3	visual-form_and_surface	has webbed feet
+has_wheels	23	ND	0.043	10	2	visual-form_and_surface	has wheels
+has_whiskers	8	ND	0.125	12	2	visual-form_and_surface	has whiskers
+has_white_laces	1	D	1.000	15	3	visual-colour	has white laces
+has_windows	9	ND	0.111	11	2	visual-form_and_surface	has windows
+has_wings	44	ND	0.023	9	2	visual-form_and_surface	has wings
+has_wires	2	D	0.500	9	2	visual-form_and_surface	has wires
+has_wool	2	D	0.500	8	2	visual-form_and_surface	has wool
+has_words_in_it	2	D	0.500	15	4	visual-form_and_surface	has words in it
+has_words_on_it	2	D	0.500	15	4	visual-form_and_surface	has words on it
+has_zippers	3	ND	0.333	11	2	visual-form_and_surface	has zippers
+herded_by_shepherds	1	D	1.000	19	3	function	herded by shepherds
+hunted_by_Eskimos	1	D	1.000	17	3	function	hunted by Eskimos
+hunted_by_people	27	ND	0.037	16	3	function	hunted by people
+inbeh_-_breaks	1	D	1.000	14	3	encyclopaedic	inbeh - breaks
+inbeh_-_burns	1	D	1.000	13	3	visual-motion	inbeh - burns
+inbeh_-_bursts	1	D	1.000	14	3	sound	inbeh - bursts
+inbeh_-_clicks	1	D	1.000	14	3	sound	inbeh - clicks
+inbeh_-_clogs	2	D	0.500	13	3	encyclopaedic	inbeh - clogs
+inbeh_-_crashes	1	D	1.000	15	3	visual-motion	inbeh - crashes
+inbeh_-_dries_quickly	1	D	1.000	21	4	encyclopaedic	inbeh - dries quickly
+inbeh_-_expands	1	D	1.000	15	3	visual-motion	inbeh - expands
+inbeh_-_explodes	3	ND	0.333	16	3	sound	inbeh - explodes
+inbeh_-_fades	1	D	1.000	13	3	visual-colour	inbeh - fades
+inbeh_-_fires	5	ND	0.200	13	3	sound	inbeh - fires
+inbeh_-_fires_bullets	4	ND	0.250	21	4	visual-motion	inbeh - fires bullets
+inbeh_-_fires_cannon_balls	1	D	1.000	26	5	visual-motion	inbeh - fires cannon balls
+inbeh_-_flies	2	D	0.500	13	3	visual-motion	inbeh - flies
+inbeh_-_flies_in_the_wind	1	D	1.000	25	6	visual-motion	inbeh - flies in the wind
+inbeh_-_floats	7	ND	0.143	14	3	visual-motion	inbeh - floats
+inbeh_-_flows_in_the_wind	1	D	1.000	25	6	visual-motion	inbeh - flows in the wind
+inbeh_-_gets_caught	1	D	1.000	19	4	encyclopaedic	inbeh - gets caught
+inbeh_-_gets_hot	3	ND	0.333	16	4	encyclopaedic	inbeh - gets hot
+inbeh_-_gets_wet	1	D	1.000	16	4	encyclopaedic	inbeh - gets wet
+inbeh_-_gives_bad_luck_if_breaks	1	D	1.000	32	7	encyclopaedic	inbeh - gives bad luck if breaks
+inbeh_-_goes_down	2	D	0.500	17	4	visual-motion	inbeh - goes down
+inbeh_-_goes_up	2	D	0.500	15	4	visual-motion	inbeh - goes up
+inbeh_-_holds_water	1	D	1.000	19	4	encyclopaedic	inbeh - holds water
+inbeh_-_hovers	1	D	1.000	14	3	visual-motion	inbeh - hovers
+inbeh_-_leaks	3	ND	0.333	13	3	encyclopaedic	inbeh - leaks
+inbeh_-_makes_high_pitched_noise	1	D	1.000	32	6	sound	inbeh - makes high pitched noise
+inbeh_-_melts	1	D	1.000	13	3	visual-motion	inbeh - melts
+inbeh_-_moves	1	D	1.000	13	3	visual-motion	inbeh - moves
+inbeh_-_pops_up	1	D	1.000	15	4	visual-motion	inbeh - pops up
+inbeh_-_pricks_fingers	1	D	1.000	22	4	encyclopaedic	inbeh - pricks fingers
+inbeh_-_produces_a_loud_noise_when_fired	1	D	1.000	40	8	sound	inbeh - produces a loud noise when fired
+inbeh_-_produces_a_loud_noise_when_popped	1	D	1.000	41	8	sound	inbeh - produces a loud noise when popped
+inbeh_-_produces_bass_notes	1	D	1.000	27	5	sound	inbeh - produces bass notes
+inbeh_-_produces_beats	1	D	1.000	22	4	sound	inbeh - produces beats
+inbeh_-_produces_chords	1	D	1.000	23	4	sound	inbeh - produces chords
+inbeh_-_produces_deep_sounds	1	D	1.000	28	5	sound	inbeh - produces deep sounds
+inbeh_-_produces_different_sounds	1	D	1.000	33	5	sound	inbeh - produces different sounds
+inbeh_-_produces_heat	3	ND	0.333	21	4	encyclopaedic	inbeh - produces heat
+inbeh_-_produces_honey	1	D	1.000	22	4	encyclopaedic	inbeh - produces honey
+inbeh_-_produces_light	1	D	1.000	22	4	encyclopaedic	inbeh - produces light
+inbeh_-_produces_loud_noise	2	D	0.500	27	5	sound	inbeh - produces loud noise
+inbeh_-_produces_music	13	ND	0.077	22	4	sound	inbeh - produces music
+inbeh_-_produces_noise	7	ND	0.143	22	4	sound	inbeh - produces noise
+inbeh_-_produces_notes	2	D	0.500	22	4	sound	inbeh - produces notes
+inbeh_-_produces_radiation	1	D	1.000	26	4	encyclopaedic	inbeh - produces radiation
+inbeh_-_produces_smoke	3	ND	0.333	22	4	encyclopaedic	inbeh - produces smoke
+inbeh_-_produces_sound	4	ND	0.250	22	4	sound	inbeh - produces sound
+inbeh_-_produces_static	1	D	1.000	23	4	sound	inbeh - produces static
+inbeh_-_produces_steam	1	D	1.000	22	4	encyclopaedic	inbeh - produces steam
+inbeh_-_rings	1	D	1.000	13	3	sound	inbeh - rings
+inbeh_-_rolls	2	D	0.500	13	3	visual-motion	inbeh - rolls
+inbeh_-_runs_easily	2	D	0.500	19	4	encyclopaedic	inbeh - runs easily
+inbeh_-_sinks	1	D	1.000	13	3	encyclopaedic	inbeh - sinks
+inbeh_-_sprays_water	1	D	1.000	20	4	encyclopaedic	inbeh - sprays water
+inbeh_-_surrounds_yards	1	D	1.000	23	4	encyclopaedic	inbeh - surrounds yards
+inbeh_-_tells_stories	1	D	1.000	21	4	encyclopaedic	inbeh - tells stories
+inbeh_-_ticks	1	D	1.000	13	3	sound	inbeh - ticks
+inbeh_-_tips	1	D	1.000	12	3	visual-motion	inbeh - tips
+inbeh_-_turns	1	D	1.000	13	3	visual-motion	inbeh - turns
+inbeh_-_water_flows_through_it	1	D	1.000	30	6	encyclopaedic	inbeh - water flows through it
+inbeh_-_water_passes_through	1	D	1.000	28	5	encyclopaedic	inbeh - water passes through
+inbeh_-_whistles	1	D	1.000	16	3	sound	inbeh - whistles
+inbeh_-_wobbles	1	D	1.000	15	3	visual-motion	inbeh - wobbles
+is_1_foot_long	1	D	1.000	14	4	visual-form_and_surface	is 1 foot long
+is_addictive	1	D	1.000	12	2	encyclopaedic	is addictive
+is_adjustable	3	ND	0.333	13	2	function	is adjustable
+is_adorned_with_feathers	1	D	1.000	24	4	visual-form_and_surface	is adorned with feathers
+is_ancient	1	D	1.000	10	2	encyclopaedic	is ancient
+is_annoying	4	ND	0.250	11	2	encyclopaedic	is annoying
+is_attached_by_string	1	D	1.000	21	4	encyclopaedic	is attached by string
+is_attached_to_chains	1	D	1.000	21	4	encyclopaedic	is attached to chains
+is_attached_to_ropes	1	D	1.000	20	4	encyclopaedic	is attached to ropes
+is_bald	2	D	0.500	7	2	visual-form_and_surface	is bald
+is_beautiful	6	ND	0.167	12	2	encyclopaedic	is beautiful
+is_beige	1	D	1.000	8	2	visual-colour	is beige
+is_black	50	ND	0.020	8	2	visual-colour	is black
+is_blind	1	D	1.000	8	2	encyclopaedic	is blind
+is_blue	6	ND	0.167	7	2	visual-colour	is blue
+is_box_shaped	2	D	0.500	13	3	visual-form_and_surface	is box shaped
+is_braided	1	D	1.000	10	2	visual-form_and_surface	is braided
+is_breakable	10	ND	0.100	12	2	encyclopaedic	is breakable
+is_bright	3	ND	0.333	9	2	visual-form_and_surface	is bright
+is_brown	54	ND	0.019	8	2	visual-colour	is brown
+is_bulletproof	2	D	0.500	14	2	encyclopaedic	is bulletproof
+is_businesslike	1	D	1.000	15	2	encyclopaedic	is businesslike
+is_casual	1	D	1.000	9	2	encyclopaedic	is casual
+is_caught_in_nets	2	D	0.500	17	4	function	is caught in nets
+is_cheap	1	D	1.000	8	2	encyclopaedic	is cheap
+is_citrus	5	ND	0.200	9	2	encyclopaedic	is citrus
+is_clear	1	D	1.000	8	2	visual-colour	is clear
+is_climbed	1	D	1.000	10	2	function	is climbed
+is_closed_by_twisting	1	D	1.000	21	4	function	is closed by twisting
+is_cold	6	ND	0.167	7	2	tactile	is cold
+is_colourful	19	ND	0.053	12	2	visual-colour	is colourful
+is_comfortable	15	ND	0.067	14	2	tactile	is comfortable
+is_common	1	D	1.000	9	2	encyclopaedic	is common
+is_convenient	1	D	1.000	13	2	encyclopaedic	is convenient
+is_convertible	1	D	1.000	14	2	encyclopaedic	is convertible
+is_cool	1	D	1.000	7	2	tactile	is cool
+is_cozy	2	D	0.500	7	2	tactile	is cozy
+is_crowded	2	D	0.500	10	2	visual-form_and_surface	is crowded
+is_crunchy	11	ND	0.091	10	2	tactile	is crunchy
+is_cuddly	1	D	1.000	9	2	tactile	is cuddly
+is_curved	3	ND	0.333	9	2	visual-form_and_surface	is curved
+is_cute	9	ND	0.111	7	2	encyclopaedic	is cute
+is_cylindrical	1	D	1.000	14	2	visual-form_and_surface	is cylindrical
+is_damp	2	D	0.500	7	2	tactile	is damp
+is_dangerous	37	ND	0.027	12	2	encyclopaedic	is dangerous
+is_dark	4	ND	0.250	7	2	visual-form_and_surface	is dark
+is_darned	1	D	1.000	9	2	encyclopaedic	is darned
+is_decorative	8	ND	0.125	13	2	encyclopaedic	is decorative
+is_delicate	1	D	1.000	11	2	encyclopaedic	is delicate
+is_delicious	2	D	0.500	12	2	taste	is delicious
+is_destructive	3	ND	0.333	14	2	encyclopaedic	is destructive
+is_dirty	10	ND	0.100	8	2	visual-form_and_surface	is dirty
+is_disposable	1	D	1.000	13	2	encyclopaedic	is disposable
+is_domestic	5	ND	0.200	11	2	encyclopaedic	is domestic
+is_dressy	1	D	1.000	9	2	encyclopaedic	is dressy
+is_dried	2	D	0.500	8	2	visual-form_and_surface	is dried
+is_durable	1	D	1.000	10	2	encyclopaedic	is durable
+is_dusty	1	D	1.000	8	2	visual-form_and_surface	is dusty
+is_easily_lost	2	D	0.500	14	3	encyclopaedic	is easily lost
+is_edible	78	ND	0.013	9	2	function	is edible
+is_efficient	1	D	1.000	12	2	encyclopaedic	is efficient
+is_electrical	22	ND	0.045	13	2	visual-form_and_surface	is electrical
+is_electronic	3	ND	0.333	13	2	visual-form_and_surface	is electronic
+is_elegant	1	D	1.000	10	2	encyclopaedic	is elegant
+is_emptied	1	D	1.000	10	2	function	is emptied
+is_endangered	5	ND	0.200	13	2	encyclopaedic	is endangered
+is_engraved	1	D	1.000	11	2	visual-form_and_surface	is engraved
+is_erasable	1	D	1.000	11	2	encyclopaedic	is erasable
+is_expensive	22	ND	0.045	12	2	encyclopaedic	is expensive
+is_fancy	1	D	1.000	8	2	encyclopaedic	is fancy
+is_fashionable	3	ND	0.333	14	2	encyclopaedic	is fashionable
+is_fast	33	ND	0.030	7	2	visual-motion	is fast
+is_fat	2	D	0.500	6	2	visual-form_and_surface	is fat
+is_feminine	2	D	0.500	11	2	encyclopaedic	is feminine
+is_ferocious	2	D	0.500	12	2	encyclopaedic	is ferocious
+is_flat	10	ND	0.100	7	2	visual-form_and_surface	is flat
+is_fluffy	2	D	0.500	9	2	tactile	is fluffy
+is_formal	2	D	0.500	9	2	encyclopaedic	is formal
+is_friendly	2	D	0.500	11	2	encyclopaedic	is friendly
+is_frightening	3	ND	0.333	14	2	encyclopaedic	is frightening
+is_fun	7	ND	0.143	6	2	encyclopaedic	is fun
+is_furnished	1	D	1.000	12	2	encyclopaedic	is furnished
+is_furry	20	ND	0.050	8	2	tactile	is furry
+is_furry/fuzzy	1	D	1.000	14	2	tactile	is furry/fuzzy
+is_fuzzy/fluffy	3	ND	0.333	15	2	tactile	is fuzzy/fluffy
+is_gentle	1	D	1.000	9	2	encyclopaedic	is gentle
+is_gold	7	ND	0.143	7	2	visual-colour	is gold
+is_graceful	2	D	0.500	11	2	encyclopaedic	is graceful
+is_green	47	ND	0.021	8	2	visual-colour	is green
+is_grey	13	ND	0.077	7	2	visual-colour	is grey
+is_gritty	1	D	1.000	9	2	tactile	is gritty
+is_hairy	1	D	1.000	8	2	tactile	is hairy
+is_hand_held	7	ND	0.143	12	3	function	is hand held
+is_hard	22	ND	0.045	7	2	tactile	is hard
+is_hard_to_kill	1	D	1.000	15	4	encyclopaedic	is hard to kill
+is_harvested	1	D	1.000	12	2	function	is harvested
+is_healthy	3	ND	0.333	10	2	encyclopaedic	is healthy
+is_heavy	27	ND	0.037	8	2	tactile	is heavy
+is_high	2	D	0.500	7	2	visual-form_and_surface	is high
+is_high_in_fat	1	D	1.000	14	4	encyclopaedic	is high in fat
+is_high_off_ground	1	D	1.000	18	4	encyclopaedic	is high off ground
+is_hollow	2	D	0.500	9	2	visual-form_and_surface	is hollow
+is_hot	4	ND	0.250	6	2	tactile	is hot
+is_humorous	1	D	1.000	11	2	encyclopaedic	is humorous
+is_independent	1	D	1.000	14	2	encyclopaedic	is independent
+is_inexpensive	1	D	1.000	14	2	encyclopaedic	is inexpensive
+is_intelligent	2	D	0.500	14	2	encyclopaedic	is intelligent
+is_invented	1	D	1.000	11	2	encyclopaedic	is invented
+is_juicy	21	ND	0.048	8	2	tactile	is juicy
+is_killed	1	D	1.000	9	2	function	is killed
+is_knee_high	1	D	1.000	12	3	encyclopaedic	is knee high
+is_knitted	5	ND	0.200	10	2	encyclopaedic	is knitted
+is_lacy	2	D	0.500	7	2	visual-form_and_surface	is lacy
+is_large	106	ND	0.009	8	2	visual-form_and_surface	is large
+is_launched	1	D	1.000	11	2	function	is launched
+is_leafy	2	D	0.500	8	2	visual-form_and_surface	is leafy
+is_lethal	3	ND	0.333	9	2	encyclopaedic	is lethal
+is_light_weight	1	D	1.000	15	3	tactile	is light weight
+is_lit_by_flames	1	D	1.000	16	4	function	is lit by flames
+is_long	81	ND	0.012	7	2	visual-form_and_surface	is long
+is_long_lived	1	D	1.000	13	3	encyclopaedic	is long lived
+is_long_range	1	D	1.000	13	3	encyclopaedic	is long range
+is_loud	34	ND	0.029	7	2	sound	is loud
+is_luxurious	2	D	0.500	12	2	encyclopaedic	is luxurious
+is_magical	1	D	1.000	10	2	encyclopaedic	is magical
+is_male	1	D	1.000	7	2	encyclopaedic	is male
+is_man's_best_friend	1	D	1.000	20	4	encyclopaedic	is man's best friend
+is_manual	1	D	1.000	9	2	encyclopaedic	is manual
+is_measured_in_degrees_Celsius	1	D	1.000	30	5	function	is measured in degrees Celsius
+is_measured_in_degrees_Fahrenheit	1	D	1.000	33	5	function	is measured in degrees Fahrenheit
+is_mechanical	1	D	1.000	13	2	encyclopaedic	is mechanical
+is_medieval	3	ND	0.333	11	2	encyclopaedic	is medieval
+is_meltable	1	D	1.000	11	2	function	is meltable
+is_melted	1	D	1.000	9	2	function	is melted
+is_messy	1	D	1.000	8	2	visual-form_and_surface	is messy
+is_metric	1	D	1.000	9	2	encyclopaedic	is metric
+is_mobile	1	D	1.000	9	2	encyclopaedic	is mobile
+is_modern	1	D	1.000	9	2	encyclopaedic	is modern
+is_muddy	1	D	1.000	8	2	visual-form_and_surface	is muddy
+is_musty	1	D	1.000	8	2	smell	is musty
+is_mysterious	1	D	1.000	13	2	encyclopaedic	is mysterious
+is_non-stick	1	D	1.000	12	2	encyclopaedic	is non-stick
+is_not_expensive	2	D	0.500	16	3	encyclopaedic	is not expensive
+is_not_healthy	1	D	1.000	14	3	encyclopaedic	is not healthy
+is_not_illegal_to_wear	1	D	1.000	22	5	encyclopaedic	is not illegal to wear
+is_nuclear	2	D	0.500	10	2	taxonomic	is nuclear
+is_nutritious	15	ND	0.067	13	2	encyclopaedic	is nutritious
+is_old	1	D	1.000	6	2	encyclopaedic	is old
+is_old-fashioned	3	ND	0.333	16	2	encyclopaedic	is old-fashioned
+is_open	2	D	0.500	7	2	encyclopaedic	is open
+is_opened_by_twisting	1	D	1.000	21	4	function	is opened by twisting
+is_orange	15	ND	0.067	9	2	visual-colour	is orange
+is_orange_inside	1	D	1.000	16	3	visual-colour	is orange inside
+is_oval	3	ND	0.333	7	2	visual-form_and_surface	is oval
+is_picked	1	D	1.000	9	2	function	is picked
+is_pink	5	ND	0.200	7	2	visual-colour	is pink
+is_placed_on_laps	1	D	1.000	17	4	function	is placed on laps
+is_placed_under_tongues	1	D	1.000	23	4	function	is placed under tongues
+is_plaid	1	D	1.000	8	2	visual-colour	is plaid
+is_plush	1	D	1.000	8	2	tactile	is plush
+is_poisonous	3	ND	0.333	12	2	encyclopaedic	is poisonous
+is_popular	2	D	0.500	10	2	encyclopaedic	is popular
+is_portable	3	ND	0.333	11	2	encyclopaedic	is portable
+is_powerful	3	ND	0.333	11	2	encyclopaedic	is powerful
+is_precious	1	D	1.000	11	2	encyclopaedic	is precious
+is_pretty	7	ND	0.143	9	2	encyclopaedic	is pretty
+is_prickly	2	D	0.500	10	2	tactile	is prickly
+is_primitive	1	D	1.000	12	2	encyclopaedic	is primitive
+is_purple	5	ND	0.200	9	2	visual-colour	is purple
+is_quiet	2	D	0.500	8	2	encyclopaedic	is quiet
+is_rectangular	10	ND	0.100	14	2	visual-form_and_surface	is rectangular
+is_recyclable	1	D	1.000	13	2	encyclopaedic	is recyclable
+is_red	26	ND	0.038	6	2	visual-colour	is red
+is_restricting	1	D	1.000	14	2	encyclopaedic	is restricting
+is_rough	3	ND	0.333	8	2	tactile	is rough
+is_round	76	ND	0.013	8	2	visual-form_and_surface	is round
+is_run-down	1	D	1.000	11	2	encyclopaedic	is run-down
+is_scaly	1	D	1.000	8	2	tactile	is scaly
+is_scary	4	ND	0.250	8	2	encyclopaedic	is scary
+is_scented	1	D	1.000	10	2	smell	is scented
+is_scientific	1	D	1.000	13	2	encyclopaedic	is scientific
+is_serrated	1	D	1.000	11	2	tactile	is serrated
+is_sexy	2	D	0.500	7	2	encyclopaedic	is sexy
+is_shag	1	D	1.000	7	2	tactile	is shag
+is_sharp	18	ND	0.056	8	2	tactile	is sharp
+is_sharpened	1	D	1.000	12	2	function	is sharpened
+is_sheer	1	D	1.000	8	2	visual-form_and_surface	is sheer
+is_shiny	15	ND	0.067	8	2	visual-form_and_surface	is shiny
+is_short	4	ND	0.250	8	2	visual-form_and_surface	is short
+is_short_lived	1	D	1.000	14	3	encyclopaedic	is short lived
+is_short-sighted	1	D	1.000	16	2	encyclopaedic	is short-sighted
+is_silver	8	ND	0.125	9	2	visual-colour	is silver
+is_sinkable	1	D	1.000	11	2	encyclopaedic	is sinkable
+is_sleek	2	D	0.500	8	2	visual-form_and_surface	is sleek
+is_slender	1	D	1.000	10	2	visual-form_and_surface	is slender
+is_slimy	10	ND	0.100	8	2	tactile	is slimy
+is_slow	7	ND	0.143	7	2	visual-motion	is slow
+is_sly	1	D	1.000	6	2	encyclopaedic	is sly
+is_small	121	ND	0.008	8	2	visual-form_and_surface	is small
+is_smart	1	D	1.000	8	2	encyclopaedic	is smart
+is_smelly	16	ND	0.063	9	2	smell	is smelly
+is_smooth	8	ND	0.125	9	2	tactile	is smooth
+is_soft	27	ND	0.037	7	2	tactile	is soft
+is_solid	2	D	0.500	8	2	tactile	is solid
+is_spacious	1	D	1.000	11	2	visual-form_and_surface	is spacious
+is_sparkly	1	D	1.000	10	2	visual-form_and_surface	is sparkly
+is_square	6	ND	0.167	9	2	visual-form_and_surface	is square
+is_sticky	1	D	1.000	9	2	tactile	is sticky
+is_straight	2	D	0.500	11	2	visual-form_and_surface	is straight
+is_strange_looking	1	D	1.000	18	3	encyclopaedic	is strange looking
+is_stretchy	2	D	0.500	11	2	tactile	is stretchy
+is_stringy	1	D	1.000	10	2	visual-form_and_surface	is stringy
+is_strong	8	ND	0.125	9	2	encyclopaedic	is strong
+is_strong_smelling	2	D	0.500	18	3	smell	is strong smelling
+is_stupid	2	D	0.500	9	2	encyclopaedic	is stupid
+is_tall	12	ND	0.083	7	2	visual-form_and_surface	is tall
+is_the_lowest_floor	1	D	1.000	19	4	encyclopaedic	is the lowest floor
+is_thick	3	ND	0.333	8	2	visual-form_and_surface	is thick
+is_thin	16	ND	0.063	7	2	visual-form_and_surface	is thin
+is_tied_together_with_rope	1	D	1.000	26	5	function	is tied together with rope
+is_tight	4	ND	0.250	8	2	tactile	is tight
+is_timid	1	D	1.000	8	2	encyclopaedic	is timid
+is_trainable	1	D	1.000	12	2	encyclopaedic	is trainable
+is_transparent	6	ND	0.167	14	2	visual-colour	is transparent
+is_trapped	1	D	1.000	10	2	function	is trapped
+is_triangular	1	D	1.000	13	2	visual-form_and_surface	is triangular
+is_tropical	3	ND	0.333	11	2	encyclopaedic	is tropical
+is_twisted	1	D	1.000	10	2	visual-form_and_surface	is twisted
+is_ugly	10	ND	0.100	7	2	encyclopaedic	is ugly
+is_uncomfortable	2	D	0.500	16	2	tactile	is uncomfortable
+is_underground	1	D	1.000	14	2	encyclopaedic	is underground
+is_upholstered	2	D	0.500	14	2	encyclopaedic	is upholstered
+is_useful	6	ND	0.167	9	2	encyclopaedic	is useful
+is_vicious	1	D	1.000	10	2	encyclopaedic	is vicious
+is_violent	1	D	1.000	10	2	encyclopaedic	is violent
+is_wall_to_wall	1	D	1.000	15	4	encyclopaedic	is wall to wall
+is_warm	14	ND	0.071	7	2	tactile	is warm
+is_waterproof	2	D	0.500	13	2	encyclopaedic	is waterproof
+is_weaved	1	D	1.000	9	2	encyclopaedic	is weaved
+is_white	51	ND	0.020	8	2	visual-colour	is white
+is_white_inside	5	ND	0.200	15	3	visual-colour	is white inside
+is_wild	3	ND	0.333	7	2	encyclopaedic	is wild
+is_worm_infested	1	D	1.000	16	3	encyclopaedic	is worm infested
+is_wrinkled	2	D	0.500	11	2	visual-form_and_surface	is wrinkled
+is_yellow	27	ND	0.037	9	2	visual-colour	is yellow
+is_yellow_inside	1	D	1.000	16	3	visual-colour	is yellow inside
+is_young	1	D	1.000	8	2	encyclopaedic	is young
+juts_out_into_water	1	D	1.000	19	4	encyclopaedic	juts out into water
+killed_for_fur	1	D	1.000	14	3	function	killed for fur
+king_of_the_beasts	1	D	1.000	18	4	taxonomic	king of the beasts
+king_of_the_jungle	1	D	1.000	18	4	taxonomic	king of the jungle
+launched_from_airplanes	1	D	1.000	23	3	function	launched from airplanes
+like_a_bee	2	D	0.500	10	3	encyclopaedic	like a bee
+like_a_book	1	D	1.000	11	3	encyclopaedic	like a book
+like_a_box	1	D	1.000	10	3	encyclopaedic	like a box
+like_a_buffalo	1	D	1.000	14	3	encyclopaedic	like a buffalo
+like_a_cat	1	D	1.000	10	3	encyclopaedic	like a cat
+like_a_church	1	D	1.000	13	3	encyclopaedic	like a church
+like_a_computer	1	D	1.000	15	3	encyclopaedic	like a computer
+like_a_cookie	1	D	1.000	13	3	encyclopaedic	like a cookie
+like_a_cow	2	D	0.500	10	3	encyclopaedic	like a cow
+like_a_cucumber	1	D	1.000	15	3	encyclopaedic	like a cucumber
+like_a_deer	1	D	1.000	11	3	encyclopaedic	like a deer
+like_a_diamond	1	D	1.000	14	3	encyclopaedic	like a diamond
+like_a_dog	2	D	0.500	10	3	encyclopaedic	like a dog
+like_a_fork	1	D	1.000	11	3	encyclopaedic	like a fork
+like_a_guitar	1	D	1.000	13	3	encyclopaedic	like a guitar
+like_a_horse	1	D	1.000	12	3	encyclopaedic	like a horse
+like_a_house	1	D	1.000	12	3	encyclopaedic	like a house
+like_a_human	1	D	1.000	12	3	encyclopaedic	like a human
+like_a_lemon	1	D	1.000	12	3	encyclopaedic	like a lemon
+like_a_nail	1	D	1.000	11	3	encyclopaedic	like a nail
+like_a_peach	1	D	1.000	12	3	encyclopaedic	like a peach
+like_a_potato	1	D	1.000	13	3	encyclopaedic	like a potato
+like_a_slug	1	D	1.000	11	3	encyclopaedic	like a slug
+like_a_snake	1	D	1.000	12	3	encyclopaedic	like a snake
+like_a_stick	1	D	1.000	12	3	encyclopaedic	like a stick
+like_a_train	1	D	1.000	12	3	encyclopaedic	like a train
+like_an_ostrich	1	D	1.000	15	3	encyclopaedic	like an ostrich
+likes_cheese	1	D	1.000	12	2	encyclopaedic	likes cheese
+likes_mud	1	D	1.000	9	2	encyclopaedic	likes mud
+lives_by_the_beach	1	D	1.000	18	4	encyclopaedic	lives by the beach
+lives_by_the_ocean	2	D	0.500	18	4	encyclopaedic	lives by the ocean
+lives_in_a_colony	1	D	1.000	17	4	encyclopaedic	lives in a colony
+lives_in_a_hill	1	D	1.000	15	4	encyclopaedic	lives in a hill
+lives_in_a_hole	1	D	1.000	15	4	encyclopaedic	lives in a hole
+lives_in_a_nest	3	ND	0.333	15	4	encyclopaedic	lives in a nest
+lives_in_a_shell	1	D	1.000	16	4	encyclopaedic	lives in a shell
+lives_in_Africa	7	ND	0.143	15	3	encyclopaedic	lives in Africa
+lives_in_Antarctic	1	D	1.000	18	3	encyclopaedic	lives in Antarctic
+lives_in_aquariums	2	D	0.500	18	3	encyclopaedic	lives in aquariums
+lives_in_Arctic	2	D	0.500	15	3	encyclopaedic	lives in Arctic
+lives_in_Atlantic	1	D	1.000	17	3	encyclopaedic	lives in Atlantic
+lives_in_Australia	2	D	0.500	18	3	encyclopaedic	lives in Australia
+lives_in_cages	4	ND	0.250	14	3	encyclopaedic	lives in cages
+lives_in_Canada	1	D	1.000	15	3	encyclopaedic	lives in Canada
+lives_in_caves	1	D	1.000	14	3	encyclopaedic	lives in caves
+lives_in_cities	1	D	1.000	15	3	encyclopaedic	lives in cities
+lives_in_cold_climates	2	D	0.500	22	4	encyclopaedic	lives in cold climates
+lives_in_coops	1	D	1.000	14	3	encyclopaedic	lives in coops
+lives_in_dams	1	D	1.000	13	3	encyclopaedic	lives in dams
+lives_in_deserts	6	ND	0.167	16	3	encyclopaedic	lives in deserts
+lives_in_dirt	1	D	1.000	13	3	encyclopaedic	lives in dirt
+lives_in_dirty_places	1	D	1.000	21	4	encyclopaedic	lives in dirty places
+lives_in_fields	1	D	1.000	15	3	encyclopaedic	lives in fields
+lives_in_flocks	1	D	1.000	15	3	encyclopaedic	lives in flocks
+lives_in_Florida	1	D	1.000	16	3	encyclopaedic	lives in Florida
+lives_in_forests	9	ND	0.111	16	3	encyclopaedic	lives in forests
+lives_in_grass	1	D	1.000	14	3	encyclopaedic	lives in grass
+lives_in_ground	5	ND	0.200	15	3	encyclopaedic	lives in ground
+lives_in_herds	2	D	0.500	14	3	encyclopaedic	lives in herds
+lives_in_hot_climates	1	D	1.000	21	4	encyclopaedic	lives in hot climates
+lives_in_houses	2	D	0.500	15	3	encyclopaedic	lives in houses
+lives_in_India	1	D	1.000	14	3	encyclopaedic	lives in India
+lives_in_jungles	7	ND	0.143	16	3	encyclopaedic	lives in jungles
+lives_in_lakes	3	ND	0.333	14	3	encyclopaedic	lives in lakes
+lives_in_marshes	1	D	1.000	16	3	encyclopaedic	lives in marshes
+lives_in_mountains	3	ND	0.333	18	3	encyclopaedic	lives in mountains
+lives_in_nests	1	D	1.000	14	3	encyclopaedic	lives in nests
+lives_in_north	1	D	1.000	14	3	encyclopaedic	lives in north
+lives_in_oceans	10	ND	0.100	15	3	encyclopaedic	lives in oceans
+lives_in_packs	2	D	0.500	14	3	encyclopaedic	lives in packs
+lives_in_parks	1	D	1.000	14	3	encyclopaedic	lives in parks
+lives_in_pear_trees	1	D	1.000	19	4	encyclopaedic	lives in pear trees
+lives_in_ponds	2	D	0.500	14	3	encyclopaedic	lives in ponds
+lives_in_Prairies	1	D	1.000	17	3	encyclopaedic	lives in Prairies
+lives_in_rugs	1	D	1.000	13	3	encyclopaedic	lives in rugs
+lives_in_saltwater	1	D	1.000	18	3	encyclopaedic	lives in saltwater
+lives_in_seas	4	ND	0.250	13	3	encyclopaedic	lives in seas
+lives_in_sewers	1	D	1.000	15	3	encyclopaedic	lives in sewers
+lives_in_Spain	1	D	1.000	14	3	encyclopaedic	lives in Spain
+lives_in_stables	1	D	1.000	16	3	encyclopaedic	lives in stables
+lives_in_swamps	3	ND	0.333	15	3	encyclopaedic	lives in swamps
+lives_in_trees	6	ND	0.167	14	3	encyclopaedic	lives in trees
+lives_in_walls	1	D	1.000	14	3	encyclopaedic	lives in walls
+lives_in_warm_climates	1	D	1.000	22	4	encyclopaedic	lives in warm climates
+lives_in_water	32	ND	0.031	14	3	encyclopaedic	lives in water
+lives_in_wilderness	9	ND	0.111	19	3	encyclopaedic	lives in wilderness
+lives_in_woods	4	ND	0.250	14	3	encyclopaedic	lives in woods
+lives_in_zoos	9	ND	0.111	13	3	encyclopaedic	lives in zoos
+lives_near_water	1	D	1.000	16	3	encyclopaedic	lives near water
+lives_on_animals	1	D	1.000	16	3	encyclopaedic	lives on animals
+lives_on_beaches	1	D	1.000	16	3	encyclopaedic	lives on beaches
+lives_on_cats	1	D	1.000	13	3	encyclopaedic	lives on cats
+lives_on_dogs	1	D	1.000	13	3	encyclopaedic	lives on dogs
+lives_on_farms	12	ND	0.083	14	3	encyclopaedic	lives on farms
+lives_on_land	2	D	0.500	13	3	encyclopaedic	lives on land
+lives_on_lily_pads	1	D	1.000	18	4	encyclopaedic	lives on lily pads
+lives_on_pets	1	D	1.000	13	3	encyclopaedic	lives on pets
+lives_on_ponds	1	D	1.000	14	3	encyclopaedic	lives on ponds
+lives_on_the_sand	1	D	1.000	17	4	encyclopaedic	lives on the sand
+lives_on_water	4	ND	0.250	14	3	encyclopaedic	lives on water
+made_by_bees	1	D	1.000	12	3	encyclopaedic	made by bees
+made_by_Black_and_Decker	1	D	1.000	24	5	encyclopaedic	made by Black and Decker
+made_by_Crayola	1	D	1.000	15	3	encyclopaedic	made by Crayola
+made_by_Egyptians	1	D	1.000	17	3	encyclopaedic	made by Egyptians
+made_by_Hallmark	1	D	1.000	16	3	encyclopaedic	made by Hallmark
+made_by_Harley_Davidson	1	D	1.000	23	4	encyclopaedic	made by Harley Davidson
+made_by_humans	4	ND	0.250	14	3	encyclopaedic	made by humans
+made_by_N.A.S.A.	1	D	1.000	16	3	encyclopaedic	made by N.A.S.A.
+made_by_oysters	1	D	1.000	15	3	encyclopaedic	made by oysters
+made_from_dried_grapes	1	D	1.000	22	4	encyclopaedic	made from dried grapes
+made_from_dried_plums	1	D	1.000	21	4	encyclopaedic	made from dried plums
+made_from_grapes	1	D	1.000	16	3	encyclopaedic	made from grapes
+made_from_milk	1	D	1.000	14	3	encyclopaedic	made from milk
+made_from_plums	1	D	1.000	15	3	encyclopaedic	made from plums
+made_from_wood	1	D	1.000	14	3	encyclopaedic	made from wood
+made_in_Cuba	1	D	1.000	12	3	encyclopaedic	made in Cuba
+made_in_ovens	2	D	0.500	13	3	encyclopaedic	made in ovens
+made_of_animals	1	D	1.000	15	3	visual-form_and_surface	made of animals
+made_of_beads	1	D	1.000	13	3	visual-form_and_surface	made of beads
+made_of_birch_bark	1	D	1.000	18	4	visual-form_and_surface	made of birch bark
+made_of_blocks	1	D	1.000	14	3	visual-form_and_surface	made of blocks
+made_of_brass	5	ND	0.200	13	3	visual-form_and_surface	made of brass
+made_of_brick	5	ND	0.200	13	3	visual-form_and_surface	made of brick
+made_of_bronze	1	D	1.000	14	3	visual-form_and_surface	made of bronze
+made_of_burlap	1	D	1.000	14	3	visual-form_and_surface	made of burlap
+made_of_canvas	1	D	1.000	14	3	visual-form_and_surface	made of canvas
+made_of_cardboard	1	D	1.000	17	3	visual-form_and_surface	made of cardboard
+made_of_cast_iron	1	D	1.000	17	4	visual-form_and_surface	made of cast iron
+made_of_cement	4	ND	0.250	14	3	visual-form_and_surface	made of cement
+made_of_ceramic	7	ND	0.143	15	3	visual-form_and_surface	made of ceramic
+made_of_china	3	ND	0.333	13	3	visual-form_and_surface	made of china
+made_of_chrome	1	D	1.000	14	3	visual-form_and_surface	made of chrome
+made_of_cloth	4	ND	0.250	13	3	visual-form_and_surface	made of cloth
+made_of_concrete	1	D	1.000	16	3	visual-form_and_surface	made of concrete
+made_of_copper	1	D	1.000	14	3	visual-form_and_surface	made of copper
+made_of_cotton	12	ND	0.083	14	3	visual-form_and_surface	made of cotton
+made_of_crystal	1	D	1.000	15	3	visual-form_and_surface	made of crystal
+made_of_cucumbers	1	D	1.000	17	3	encyclopaedic	made of cucumbers
+made_of_denim	1	D	1.000	13	3	visual-form_and_surface	made of denim
+made_of_diamonds	2	D	0.500	16	3	visual-form_and_surface	made of diamonds
+made_of_different_fabrics	1	D	1.000	25	4	visual-form_and_surface	made of different fabrics
+made_of_different_materials	6	ND	0.167	27	4	visual-form_and_surface	made of different materials
+made_of_drywall	1	D	1.000	15	3	visual-form_and_surface	made of drywall
+made_of_enamel	1	D	1.000	14	3	visual-form_and_surface	made of enamel
+made_of_fiberglass	1	D	1.000	18	3	visual-form_and_surface	made of fiberglass
+made_of_fibreglass	1	D	1.000	18	3	visual-form_and_surface	made of fibreglass
+made_of_flour	1	D	1.000	13	3	encyclopaedic	made of flour
+made_of_flowers	1	D	1.000	15	3	visual-form_and_surface	made of flowers
+made_of_fur	3	ND	0.333	11	3	visual-form_and_surface	made of fur
+made_of_glass	14	ND	0.071	13	3	visual-form_and_surface	made of glass
+made_of_gold	6	ND	0.167	12	3	visual-form_and_surface	made of gold
+made_of_graphite	1	D	1.000	16	3	visual-form_and_surface	made of graphite
+made_of_grass	1	D	1.000	13	3	visual-form_and_surface	made of grass
+made_of_iron	3	ND	0.333	12	3	visual-form_and_surface	made of iron
+made_of_ivory	1	D	1.000	13	3	visual-form_and_surface	made of ivory
+made_of_lace	1	D	1.000	12	3	visual-form_and_surface	made of lace
+made_of_lead	2	D	0.500	12	3	visual-form_and_surface	made of lead
+made_of_leather	13	ND	0.077	15	3	visual-form_and_surface	made of leather
+made_of_logs	2	D	0.500	12	3	visual-form_and_surface	made of logs
+made_of_material	18	ND	0.056	16	3	visual-form_and_surface	made of material
+made_of_metal	133	ND	0.008	13	3	visual-form_and_surface	made of metal
+made_of_mink	1	D	1.000	12	3	visual-form_and_surface	made of mink
+made_of_nylon	2	D	0.500	13	3	visual-form_and_surface	made of nylon
+made_of_paper	10	ND	0.100	13	3	visual-form_and_surface	made of paper
+made_of_pearls	1	D	1.000	14	3	visual-form_and_surface	made of pearls
+made_of_pig_skin	1	D	1.000	16	4	visual-form_and_surface	made of pig skin
+made_of_plastic	51	ND	0.020	15	3	visual-form_and_surface	made of plastic
+made_of_porcelain	6	ND	0.167	17	3	visual-form_and_surface	made of porcelain
+made_of_rubber	7	ND	0.143	14	3	visual-form_and_surface	made of rubber
+made_of_sand	1	D	1.000	12	3	visual-form_and_surface	made of sand
+made_of_silk	6	ND	0.167	12	3	visual-form_and_surface	made of silk
+made_of_silver	7	ND	0.143	14	3	visual-form_and_surface	made of silver
+made_of_spandex	1	D	1.000	15	3	visual-form_and_surface	made of spandex
+made_of_stainless_steel	3	ND	0.333	23	4	visual-form_and_surface	made of stainless steel
+made_of_steel	6	ND	0.167	13	3	visual-form_and_surface	made of steel
+made_of_stones	1	D	1.000	14	3	visual-form_and_surface	made of stones
+made_of_straw	2	D	0.500	13	3	visual-form_and_surface	made of straw
+made_of_suede	1	D	1.000	13	3	visual-form_and_surface	made of suede
+made_of_terry_cloth	1	D	1.000	19	4	visual-form_and_surface	made of terry cloth
+made_of_tobacco	2	D	0.500	15	3	visual-form_and_surface	made of tobacco
+made_of_vodka_and_orange_juice	1	D	1.000	30	6	encyclopaedic	made of vodka and orange juice
+made_of_wax	2	D	0.500	11	3	visual-form_and_surface	made of wax
+made_of_wheat	1	D	1.000	13	3	encyclopaedic	made of wheat
+made_of_wicker	1	D	1.000	14	3	visual-form_and_surface	made of wicker
+made_of_wire	1	D	1.000	12	3	visual-form_and_surface	made of wire
+made_of_wood	79	ND	0.013	12	3	visual-form_and_surface	made of wood
+made_of_wool	9	ND	0.111	12	3	visual-form_and_surface	made of wool
+made_with_flour	2	D	0.500	15	3	encyclopaedic	made with flour
+made_with_sugar	1	D	1.000	15	3	encyclopaedic	made with sugar
+made_with_yeast	1	D	1.000	15	3	encyclopaedic	made with yeast
+owned_by_companies	1	D	1.000	18	3	function	owned by companies
+part_of_a_fence	1	D	1.000	15	4	encyclopaedic	part of a fence
+part_of_a_house	2	D	0.500	15	4	encyclopaedic	part of a house
+part_of_a_set_of_dishes	2	D	0.500	23	6	encyclopaedic	part of a set of dishes
+part_of_a_tree	1	D	1.000	14	4	encyclopaedic	part of a tree
+part_of_refrigerators	1	D	1.000	21	3	encyclopaedic	part of refrigerators
+part_of_table_setting	2	D	0.500	21	4	encyclopaedic	part of table setting
+requires_a_bow	1	D	1.000	14	3	encyclopaedic	requires a bow
+requires_a_conductor	1	D	1.000	20	3	encyclopaedic	requires a conductor
+requires_a_crew	2	D	0.500	15	3	encyclopaedic	requires a crew
+requires_a_fare	1	D	1.000	15	3	encyclopaedic	requires a fare
+requires_a_frame	1	D	1.000	16	3	encyclopaedic	requires a frame
+requires_a_hammer	1	D	1.000	17	3	encyclopaedic	requires a hammer
+requires_a_landlord	1	D	1.000	19	3	encyclopaedic	requires a landlord
+requires_a_license	1	D	1.000	18	3	encyclopaedic	requires a license
+requires_a_lighter	1	D	1.000	18	3	encyclopaedic	requires a lighter
+requires_a_lighting_source	1	D	1.000	26	4	encyclopaedic	requires a lighting source
+requires_a_mouse_pad	1	D	1.000	20	4	encyclopaedic	requires a mouse pad
+requires_a_pick	1	D	1.000	15	3	encyclopaedic	requires a pick
+requires_a_screen	1	D	1.000	17	3	encyclopaedic	requires a screen
+requires_a_socket	1	D	1.000	17	3	encyclopaedic	requires a socket
+requires_a_spoon	1	D	1.000	16	3	encyclopaedic	requires a spoon
+requires_a_stamp	1	D	1.000	16	3	encyclopaedic	requires a stamp
+requires_air	4	ND	0.250	12	2	encyclopaedic	requires air
+requires_an_address	1	D	1.000	19	3	encyclopaedic	requires an address
+requires_arrows	2	D	0.500	15	2	encyclopaedic	requires arrows
+requires_baking	1	D	1.000	15	2	function	requires baking
+requires_balance	1	D	1.000	16	2	encyclopaedic	requires balance
+requires_boots	1	D	1.000	14	2	encyclopaedic	requires boots
+requires_bullets	2	D	0.500	16	2	encyclopaedic	requires bullets
+requires_candles	1	D	1.000	16	2	encyclopaedic	requires candles
+requires_captains	1	D	1.000	17	2	encyclopaedic	requires captains
+requires_caregivers	1	D	1.000	19	2	encyclopaedic	requires caregivers
+requires_cleaning	1	D	1.000	17	2	function	requires cleaning
+requires_coal	1	D	1.000	13	2	encyclopaedic	requires coal
+requires_crews	2	D	0.500	14	2	encyclopaedic	requires crews
+requires_detergent	1	D	1.000	18	2	encyclopaedic	requires detergent
+requires_drivers	5	ND	0.200	16	2	encyclopaedic	requires drivers
+requires_electricity	1	D	1.000	20	2	encyclopaedic	requires electricity
+requires_engineers	1	D	1.000	18	2	encyclopaedic	requires engineers
+requires_extermination	1	D	1.000	22	2	encyclopaedic	requires extermination
+requires_fuel	2	D	0.500	13	2	encyclopaedic	requires fuel
+requires_gas	3	ND	0.333	12	2	encyclopaedic	requires gas
+requires_gasoline	6	ND	0.167	17	2	encyclopaedic	requires gasoline
+requires_gunpowder	2	D	0.500	18	2	encyclopaedic	requires gunpowder
+requires_helium	1	D	1.000	15	2	encyclopaedic	requires helium
+requires_hot_air	1	D	1.000	16	3	encyclopaedic	requires hot air
+requires_icing	1	D	1.000	14	2	function	requires icing
+requires_ink	1	D	1.000	12	2	encyclopaedic	requires ink
+requires_ironing	1	D	1.000	16	2	function	requires ironing
+requires_licking	1	D	1.000	16	2	function	requires licking
+requires_money	2	D	0.500	14	2	encyclopaedic	requires money
+requires_nuclear_power	1	D	1.000	22	3	encyclopaedic	requires nuclear power
+requires_oil	2	D	0.500	12	2	encyclopaedic	requires oil
+requires_operators	1	D	1.000	18	2	encyclopaedic	requires operators
+requires_painting	1	D	1.000	17	2	function	requires painting
+requires_paper	1	D	1.000	14	2	encyclopaedic	requires paper
+requires_pilots	3	ND	0.333	15	2	encyclopaedic	requires pilots
+requires_poles	1	D	1.000	14	2	encyclopaedic	requires poles
+requires_rent	1	D	1.000	13	2	encyclopaedic	requires rent
+requires_setting_up	1	D	1.000	19	3	function	requires setting up
+requires_shepherds	1	D	1.000	18	2	encyclopaedic	requires shepherds
+requires_skill	1	D	1.000	14	2	encyclopaedic	requires skill
+requires_slicing	1	D	1.000	16	2	function	requires slicing
+requires_soap	1	D	1.000	13	2	encyclopaedic	requires soap
+requires_sticks	1	D	1.000	15	2	encyclopaedic	requires sticks
+requires_vacuuming	1	D	1.000	18	2	function	requires vacuuming
+requires_washing	2	D	0.500	16	2	function	requires washing
+requires_water	2	D	0.500	14	2	encyclopaedic	requires water
+requires_waxing	1	D	1.000	15	2	function	requires waxing
+requires_wind	2	D	0.500	13	2	encyclopaedic	requires wind
+requires_winding	1	D	1.000	16	2	function	requires winding
+requires_wood	1	D	1.000	13	2	encyclopaedic	requires wood
+smells_bad	1	D	1.000	10	2	smell	smells bad
+smells_distinct	1	D	1.000	15	2	smell	smells distinct
+smells_nice	2	D	0.500	11	2	smell	smells nice
+sounds_great	1	D	1.000	12	2	sound	sounds great
+symbol	2	D	0.500	6	1	encyclopaedic	symbol
+symbol_of_Canada	1	D	1.000	16	3	encyclopaedic	symbol of Canada
+symbol_of_death	2	D	0.500	15	3	encyclopaedic	symbol of death
+symbol_of_freedom	1	D	1.000	17	3	encyclopaedic	symbol of freedom
+symbol_of_marriages	1	D	1.000	19	3	encyclopaedic	symbol of marriages
+symbol_of_peace	1	D	1.000	15	3	encyclopaedic	symbol of peace
+symbol_of_power	1	D	1.000	15	3	encyclopaedic	symbol of power
+symbol_of_royalty	1	D	1.000	17	3	encyclopaedic	symbol of royalty
+symbol_of_spring	2	D	0.500	16	3	encyclopaedic	symbol of spring
+symbol_of_status	1	D	1.000	16	3	encyclopaedic	symbol of status
+symbol_of_U.S.	1	D	1.000	14	3	encyclopaedic	symbol of U.S.
+tastes_bad	3	ND	0.333	10	2	taste	tastes bad
+tastes_bland	1	D	1.000	12	2	taste	tastes bland
+tastes_different_flavours	3	ND	0.333	25	3	taste	tastes different flavours
+tastes_dill	1	D	1.000	11	2	taste	tastes dill
+tastes_good	33	ND	0.030	11	2	taste	tastes good
+tastes_hot/spicy	2	D	0.500	16	2	taste	tastes hot/spicy
+tastes_salty	2	D	0.500	12	2	taste	tastes salty
+tastes_sour	8	ND	0.125	11	2	taste	tastes sour
+tastes_strong	2	D	0.500	13	2	taste	tastes strong
+tastes_sweet	24	ND	0.042	12	2	taste	tastes sweet
+tastes_tart	3	ND	0.333	11	2	taste	tastes tart
+used_a_while_ago	1	D	1.000	16	4	encyclopaedic	used a while ago
+used_as_a_gift	1	D	1.000	14	4	function	used as a gift
+used_as_a_hand	1	D	1.000	14	4	function	used as a hand
+used_as_a_home_by_bees	1	D	1.000	22	6	function	used as a home by bees
+used_as_a_home_by_queen_bees	1	D	1.000	28	7	function	used as a home by queen bees
+used_as_a_house	3	ND	0.333	15	4	function	used as a house
+used_as_a_place_to_stay	1	D	1.000	23	6	function	used as a place to stay
+used_as_a_projectile	1	D	1.000	20	4	function	used as a projectile
+used_as_a_room	1	D	1.000	14	4	function	used as a room
+used_as_Christmas_trees	1	D	1.000	23	4	function	used as Christmas trees
+used_as_drug	1	D	1.000	12	3	function	used as drug
+used_as_home_by_animals	1	D	1.000	23	5	function	used as home by animals
+used_as_money	1	D	1.000	13	3	function	used as money
+used_as_presents	1	D	1.000	16	3	function	used as presents
+used_at_dinners	1	D	1.000	15	3	encyclopaedic	used at dinners
+used_at_Easter	1	D	1.000	14	3	encyclopaedic	used at Easter
+used_at_Hallowe'en	1	D	1.000	18	3	encyclopaedic	used at Hallowe'en
+used_at_Hiroshima	1	D	1.000	17	3	encyclopaedic	used at Hiroshima
+used_at_night	2	D	0.500	13	3	encyclopaedic	used at night
+used_at_parties	1	D	1.000	15	3	encyclopaedic	used at parties
+used_at_restaurants	1	D	1.000	19	3	encyclopaedic	used at restaurants
+used_at_school	1	D	1.000	14	3	encyclopaedic	used at school
+used_at_special_occasions	1	D	1.000	25	4	encyclopaedic	used at special occasions
+used_at_weddings	1	D	1.000	16	3	encyclopaedic	used at weddings
+used_by_1_2_or_3_people	1	D	1.000	23	7	function	used by 1 2 or 3 people
+used_by_1_or_2_people	1	D	1.000	21	6	function	used by 1 or 2 people
+used_by_2_people	2	D	0.500	16	4	function	used by 2 people
+used_by_armies	1	D	1.000	14	3	function	used by armies
+used_by_astronauts	1	D	1.000	18	3	function	used by astronauts
+used_by_babies	2	D	0.500	14	3	function	used by babies
+used_by_blowing_air_through	7	ND	0.143	27	5	function	used by blowing air through
+used_by_bouncing	1	D	1.000	16	3	function	used by bouncing
+used_by_boys	1	D	1.000	12	3	function	used by boys
+used_by_butchers	1	D	1.000	16	3	function	used by butchers
+used_by_carrying	1	D	1.000	16	3	function	used by carrying
+used_by_cars	1	D	1.000	12	3	function	used by cars
+used_by_carving	1	D	1.000	15	3	function	used by carving
+used_by_Catholics	1	D	1.000	17	3	function	used by Catholics
+used_by_cheerleaders	1	D	1.000	20	3	function	used by cheerleaders
+used_by_children	13	ND	0.077	16	3	function	used by children
+used_by_clipping/shearing	2	D	0.500	25	3	function	used by clipping/shearing
+used_by_closing	4	ND	0.250	15	3	function	used by closing
+used_by_closing_at_night	1	D	1.000	24	5	encyclopaedic	used by closing at night
+used_by_clowns	2	D	0.500	14	3	function	used by clowns
+used_by_connecting_to_computers	1	D	1.000	31	5	function	used by connecting to computers
+used_by_connecting_to_pipes	1	D	1.000	27	5	function	used by connecting to pipes
+used_by_criminals	1	D	1.000	17	3	function	used by criminals
+used_by_cutting	1	D	1.000	15	3	function	used by cutting
+used_by_David_on_Goliath	1	D	1.000	24	5	function	used by David on Goliath
+used_by_dropping	1	D	1.000	16	3	function	used by dropping
+used_by_fairies	1	D	1.000	15	3	function	used by fairies
+used_by_filling	1	D	1.000	15	3	function	used by filling
+used_by_firemen	1	D	1.000	15	3	function	used by firemen
+used_by_firing_arrows	1	D	1.000	21	4	function	used by firing arrows
+used_by_firing_from_gun	1	D	1.000	23	5	function	used by firing from gun
+used_by_flushing	1	D	1.000	16	3	function	used by flushing
+used_by_flying	1	D	1.000	14	3	function	used by flying
+used_by_folding/unfolding	1	D	1.000	25	3	function	used by folding/unfolding
+used_by_gardeners	1	D	1.000	17	3	function	used by gardeners
+used_by_girls	1	D	1.000	13	3	function	used by girls
+used_by_hanging	4	ND	0.250	15	3	function	used by hanging
+used_by_hanging_from_ceilings	2	D	0.500	29	5	function	used by hanging from ceilings
+used_by_hanging_in_windows	1	D	1.000	26	5	function	used by hanging in windows
+used_by_hanging_things_on	3	ND	0.333	25	5	function	used by hanging things on
+used_by_Hell's_Angels	1	D	1.000	21	4	function	used by Hell's Angels
+used_by_hitting	1	D	1.000	15	3	function	used by hitting
+used_by_hitting_balls	1	D	1.000	21	4	function	used by hitting balls
+used_by_hospitals	1	D	1.000	17	3	function	used by hospitals
+used_by_humans	2	D	0.500	14	3	function	used by humans
+used_by_hunters	1	D	1.000	15	3	function	used by hunters
+used_by_Indians	2	D	0.500	15	3	function	used by Indians
+used_by_inhaling	1	D	1.000	16	3	function	used by inhaling
+used_by_kicking	1	D	1.000	15	3	function	used by kicking
+used_by_knights	1	D	1.000	15	3	function	used by knights
+used_by_lifeguards	1	D	1.000	18	3	function	used by lifeguards
+used_by_lumberjacks	1	D	1.000	19	3	function	used by lumberjacks
+used_by_magicians	1	D	1.000	17	3	function	used by magicians
+used_by_mailing	1	D	1.000	15	3	function	used by mailing
+used_by_many_passengers	1	D	1.000	23	4	function	used by many passengers
+used_by_men	1	D	1.000	11	3	function	used by men
+used_by_moving_bellows	1	D	1.000	22	4	function	used by moving bellows
+used_by_musicians	1	D	1.000	17	3	function	used by musicians
+used_by_old_men	1	D	1.000	15	4	function	used by old men
+used_by_opening	4	ND	0.250	15	3	function	used by opening
+used_by_opening_into_a_bed	1	D	1.000	26	6	function	used by opening into a bed
+used_by_paramedics	1	D	1.000	18	3	function	used by paramedics
+used_by_people	10	ND	0.100	14	3	function	used by people
+used_by_photographers	1	D	1.000	21	3	function	used by photographers
+used_by_pirates	1	D	1.000	15	3	function	used by pirates
+used_by_playing	1	D	1.000	15	3	function	used by playing
+used_by_plucking	1	D	1.000	16	3	function	used by plucking
+used_by_portaging	1	D	1.000	17	3	function	used by portaging
+used_by_pulling	3	ND	0.333	15	3	function	used by pulling
+used_by_pulling_behind_cars	1	D	1.000	27	5	function	used by pulling behind cars
+used_by_pulling_by_dogs	1	D	1.000	23	5	function	used by pulling by dogs
+used_by_pulling_by_horses	3	ND	0.333	25	5	function	used by pulling by horses
+used_by_pushing	3	ND	0.333	15	3	function	used by pushing
+used_by_reading	1	D	1.000	15	3	function	used by reading
+used_by_rich_people	2	D	0.500	19	4	function	used by rich people
+used_by_riding	7	ND	0.143	14	3	function	used by riding
+used_by_riding_by_children	1	D	1.000	26	5	function	used by riding by children
+used_by_rocking	1	D	1.000	15	3	function	used by rocking
+used_by_sailors	1	D	1.000	15	3	function	used by sailors
+used_by_Santa	1	D	1.000	13	3	function	used by Santa
+used_by_schools	1	D	1.000	15	3	function	used by schools
+used_by_sealing	1	D	1.000	15	3	function	used by sealing
+used_by_shooting	1	D	1.000	16	3	function	used by shooting
+used_by_sick_people	1	D	1.000	19	4	function	used by sick people
+used_by_sitting_on	8	ND	0.125	18	4	function	used by sitting on
+used_by_smokers	1	D	1.000	15	3	function	used by smokers
+used_by_smoking	2	D	0.500	15	3	function	used by smoking
+used_by_soldiers	1	D	1.000	16	3	function	used by soldiers
+used_by_sprinkling	1	D	1.000	18	3	function	used by sprinkling
+used_by_standing_on	1	D	1.000	19	4	function	used by standing on
+used_by_students	1	D	1.000	16	3	function	used by students
+used_by_swinging	1	D	1.000	16	3	function	used by swinging
+used_by_teachers	1	D	1.000	16	3	function	used by teachers
+used_by_the_army	3	ND	0.333	16	4	function	used by the army
+used_by_the_military	1	D	1.000	20	4	function	used by the military
+used_by_the_navy	1	D	1.000	16	4	function	used by the navy
+used_by_the_police	7	ND	0.143	18	4	function	used by the police
+used_by_thieves	1	D	1.000	15	3	function	used by thieves
+used_by_thoughtful_people	1	D	1.000	25	4	function	used by thoughtful people
+used_by_throwing	7	ND	0.143	16	3	function	used by throwing
+used_by_throwing_in_air	1	D	1.000	23	5	function	used by throwing in air
+used_by_tightening	1	D	1.000	18	3	function	used by tightening
+used_by_Tom_Sawyer	1	D	1.000	18	4	function	used by Tom Sawyer
+used_by_trains	1	D	1.000	14	3	function	used by trains
+used_by_turning	3	ND	0.333	15	3	function	used by turning
+used_by_twirling	1	D	1.000	16	3	function	used by twirling
+used_by_twisting	1	D	1.000	16	3	function	used by twisting
+used_by_tying	1	D	1.000	13	3	function	used by tying
+used_by_waitresses	1	D	1.000	18	3	function	used by waitresses
+used_by_waving	1	D	1.000	14	3	function	used by waving
+used_by_witches	1	D	1.000	15	3	function	used by witches
+used_by_women	1	D	1.000	13	3	function	used by women
+used_by_zoos	1	D	1.000	12	3	function	used by zoos
+used_for_accomplishments	1	D	1.000	24	3	function	used for accomplishments
+used_for_achievements	1	D	1.000	21	3	function	used for achievements
+used_for_acquiring/storing_knowledge	1	D	1.000	36	4	function	used for acquiring/storing knowledge
+used_for_advertising	1	D	1.000	20	3	function	used for advertising
+used_for_aerating_soil	1	D	1.000	22	4	function	used for aerating soil
+used_for_alerting	1	D	1.000	17	3	function	used for alerting
+used_for_amusement	1	D	1.000	18	3	function	used for amusement
+used_for_animals	1	D	1.000	16	3	function	used for animals
+used_for_appliances	1	D	1.000	19	3	function	used for appliances
+used_for_archery	1	D	1.000	16	3	function	used for archery
+used_for_art	1	D	1.000	12	3	function	used for art
+used_for_ashes	2	D	0.500	14	3	function	used for ashes
+used_for_attaching_things	1	D	1.000	25	4	function	used for attaching things
+used_for_avoiding_stairs	1	D	1.000	24	4	function	used for avoiding stairs
+used_for_babies	2	D	0.500	15	3	function	used for babies
+used_for_badminton	1	D	1.000	18	3	function	used for badminton
+used_for_bait	1	D	1.000	13	3	function	used for bait
+used_for_baking	4	ND	0.250	15	3	function	used for baking
+used_for_bathing	1	D	1.000	16	3	function	used for bathing
+used_for_battle	1	D	1.000	15	3	function	used for battle
+used_for_birds	1	D	1.000	14	3	function	used for birds
+used_for_birthdays	1	D	1.000	18	3	encyclopaedic	used for birthdays
+used_for_blowing_air	1	D	1.000	20	4	function	used for blowing air
+used_for_boats	1	D	1.000	14	3	function	used for boats
+used_for_bodily_functions	1	D	1.000	25	4	function	used for bodily functions
+used_for_boiling_water	1	D	1.000	22	4	function	used for boiling water
+used_for_breakfast	1	D	1.000	18	3	encyclopaedic	used for breakfast
+used_for_breaking_things	2	D	0.500	24	4	function	used for breaking things
+used_for_broiling	1	D	1.000	17	3	function	used for broiling
+used_for_browning_bread	1	D	1.000	23	4	function	used for browning bread
+used_for_bubble_baths	1	D	1.000	21	4	function	used for bubble baths
+used_for_building	1	D	1.000	17	3	function	used for building
+used_for_building_buildings	1	D	1.000	27	4	function	used for building buildings
+used_for_building_houses	2	D	0.500	24	4	function	used for building houses
+used_for_building_things	2	D	0.500	24	4	function	used for building things
+used_for_bullfighting	1	D	1.000	21	3	function	used for bullfighting
+used_for_burning_bread	1	D	1.000	22	4	function	used for burning bread
+used_for_business	1	D	1.000	17	3	function	used for business
+used_for_butts	1	D	1.000	14	3	function	used for butts
+used_for_buying_items	1	D	1.000	21	4	function	used for buying items
+used_for_calling_people	1	D	1.000	23	4	function	used for calling people
+used_for_camping	4	ND	0.250	16	3	function	used for camping
+used_for_cargo	5	ND	0.200	14	3	function	used for cargo
+used_for_carpentry	8	ND	0.125	18	3	function	used for carpentry
+used_for_carrying_drinks	1	D	1.000	24	4	function	used for carrying drinks
+used_for_carrying_groceries	1	D	1.000	27	4	function	used for carrying groceries
+used_for_carrying_people	1	D	1.000	24	4	function	used for carrying people
+used_for_carrying_things	8	ND	0.125	24	4	function	used for carrying things
+used_for_carrying_water	1	D	1.000	23	4	function	used for carrying water
+used_for_carving	1	D	1.000	16	3	function	used for carving
+used_for_catching	2	D	0.500	17	3	function	used for catching
+used_for_catching_drips	1	D	1.000	23	4	function	used for catching drips
+used_for_celebrating	1	D	1.000	20	3	function	used for celebrating
+used_for_certifying	1	D	1.000	19	3	function	used for certifying
+used_for_chewing_by_dogs	1	D	1.000	24	5	function	used for chewing by dogs
+used_for_chopping	2	D	0.500	17	3	function	used for chopping
+used_for_chopping_food	1	D	1.000	22	4	function	used for chopping food
+used_for_chopping_wood	1	D	1.000	22	4	function	used for chopping wood
+used_for_cider	1	D	1.000	14	3	function	used for cider
+used_for_cigarettes	1	D	1.000	19	3	function	used for cigarettes
+used_for_classical_music	3	ND	0.333	24	4	function	used for classical music
+used_for_cleaning	5	ND	0.200	17	3	function	used for cleaning
+used_for_cleaning_dishes	1	D	1.000	24	4	function	used for cleaning dishes
+used_for_climbing	1	D	1.000	17	3	function	used for climbing
+used_for_closing_doors	1	D	1.000	22	4	function	used for closing doors
+used_for_coats	1	D	1.000	14	3	function	used for coats
+used_for_coffee	2	D	0.500	15	3	function	used for coffee
+used_for_collecting	3	ND	0.333	19	3	function	used for collecting
+used_for_colouring	1	D	1.000	18	3	function	used for colouring
+used_for_colouring_books	1	D	1.000	24	4	function	used for colouring books
+used_for_combing	1	D	1.000	16	3	function	used for combing
+used_for_communication	2	D	0.500	22	3	function	used for communication
+used_for_connecting_land	1	D	1.000	24	4	function	used for connecting land
+used_for_construction	10	ND	0.100	21	3	function	used for construction
+used_for_controlling_the_cursor	1	D	1.000	31	5	function	used for controlling the cursor
+used_for_cooking	13	ND	0.077	16	3	function	used for cooking
+used_for_cooking_bread	1	D	1.000	22	4	function	used for cooking bread
+used_for_cooking_fast	1	D	1.000	21	4	function	used for cooking fast
+used_for_cooling	1	D	1.000	16	3	function	used for cooling
+used_for_cooling_food	1	D	1.000	21	4	function	used for cooling food
+used_for_covering	2	D	0.500	17	3	function	used for covering
+used_for_covering_body	1	D	1.000	22	4	function	used for covering body
+used_for_covering_floors	2	D	0.500	24	4	function	used for covering floors
+used_for_covering_windows	2	D	0.500	25	4	function	used for covering windows
+used_for_cows	1	D	1.000	13	3	function	used for cows
+used_for_crimes	2	D	0.500	15	3	function	used for crimes
+used_for_criminals	1	D	1.000	18	3	function	used for criminals
+used_for_crossing	1	D	1.000	17	3	function	used for crossing
+used_for_cruising	2	D	0.500	17	3	function	used for cruising
+used_for_currency	1	D	1.000	17	3	function	used for currency
+used_for_cutting	9	ND	0.111	16	3	function	used for cutting
+used_for_cutting_paper	1	D	1.000	22	4	function	used for cutting paper
+used_for_decoration	2	D	0.500	19	3	function	used for decoration
+used_for_delivering_babies	1	D	1.000	26	4	function	used for delivering babies
+used_for_delivering_power	1	D	1.000	25	4	function	used for delivering power
+used_for_dentistry	1	D	1.000	18	3	function	used for dentistry
+used_for_destruction	1	D	1.000	20	3	function	used for destruction
+used_for_digging	3	ND	0.333	16	3	function	used for digging
+used_for_digging_holes	1	D	1.000	22	4	function	used for digging holes
+used_for_dispensing_water	1	D	1.000	25	4	function	used for dispensing water
+used_for_dividing_rooms	1	D	1.000	23	4	function	used for dividing rooms
+used_for_diving_boards	1	D	1.000	22	4	function	used for diving boards
+used_for_docking_boats	1	D	1.000	22	4	function	used for docking boats
+used_for_draining	1	D	1.000	17	3	function	used for draining
+used_for_draining_liquids	1	D	1.000	25	4	function	used for draining liquids
+used_for_drawing	3	ND	0.333	16	3	function	used for drawing
+used_for_drawing_blood	1	D	1.000	22	4	function	used for drawing blood
+used_for_drawing_pictures	1	D	1.000	25	4	function	used for drawing pictures
+used_for_drawing_straight_lines	1	D	1.000	31	5	function	used for drawing straight lines
+used_for_drinking	3	ND	0.333	17	3	function	used for drinking
+used_for_drinks	2	D	0.500	15	3	function	used for drinks
+used_for_eating	5	ND	0.200	15	3	function	used for eating
+used_for_eating_cereal	1	D	1.000	22	4	function	used for eating cereal
+used_for_eating_dessert	1	D	1.000	23	4	encyclopaedic	used for eating dessert
+used_for_eating_on	1	D	1.000	18	4	function	used for eating on
+used_for_eating_soup	2	D	0.500	20	4	function	used for eating soup
+used_for_electricity	1	D	1.000	20	3	function	used for electricity
+used_for_emergencies	1	D	1.000	20	3	function	used for emergencies
+used_for_enclosing	1	D	1.000	18	3	function	used for enclosing
+used_for_enlarging_pictures	1	D	1.000	27	4	function	used for enlarging pictures
+used_for_ensuring_freshness	1	D	1.000	27	4	function	used for ensuring freshness
+used_for_entering	2	D	0.500	17	3	function	used for entering
+used_for_events	1	D	1.000	15	3	encyclopaedic	used for events
+used_for_exercising	1	D	1.000	19	3	function	used for exercising
+used_for_exiting	1	D	1.000	16	3	function	used for exiting
+used_for_expelling_water	1	D	1.000	24	4	function	used for expelling water
+used_for_farming	1	D	1.000	16	3	function	used for farming
+used_for_fastening	2	D	0.500	18	3	function	used for fastening
+used_for_feeding_cats	1	D	1.000	21	4	function	used for feeding cats
+used_for_fevers	1	D	1.000	15	3	function	used for fevers
+used_for_finding_gold	1	D	1.000	21	4	function	used for finding gold
+used_for_fishing	5	ND	0.200	16	3	function	used for fishing
+used_for_flavouring	1	D	1.000	19	3	function	used for flavouring
+used_for_flipping	1	D	1.000	17	3	function	used for flipping
+used_for_food	7	ND	0.143	13	3	function	used for food
+used_for_freezing	1	D	1.000	17	3	function	used for freezing
+used_for_freezing_food	1	D	1.000	22	4	function	used for freezing food
+used_for_freight	1	D	1.000	16	3	function	used for freight
+used_for_fruit	1	D	1.000	14	3	function	used for fruit
+used_for_frying	2	D	0.500	15	3	function	used for frying
+used_for_fur	1	D	1.000	12	3	function	used for fur
+used_for_games	3	ND	0.333	14	3	function	used for games
+used_for_gardening	3	ND	0.333	18	3	function	used for gardening
+used_for_garnish	1	D	1.000	16	3	function	used for garnish
+used_for_getting_cold_water	1	D	1.000	27	5	function	used for getting cold water
+used_for_getting_hot_water	1	D	1.000	26	5	function	used for getting hot water
+used_for_gifts	2	D	0.500	14	3	function	used for gifts
+used_for_good_eyesight	1	D	1.000	22	4	function	used for good eyesight
+used_for_grating_cheese	1	D	1.000	23	4	function	used for grating cheese
+used_for_gripping	1	D	1.000	17	3	function	used for gripping
+used_for_grooming	1	D	1.000	17	3	function	used for grooming
+used_for_hair	1	D	1.000	13	3	function	used for hair
+used_for_hangings	1	D	1.000	17	3	function	used for hangings
+used_for_heating	1	D	1.000	16	3	function	used for heating
+used_for_heating_food	1	D	1.000	21	4	function	used for heating food
+used_for_heating_water	1	D	1.000	22	4	function	used for heating water
+used_for_hitting	1	D	1.000	16	3	function	used for hitting
+used_for_hitting_balls	1	D	1.000	22	4	function	used for hitting balls
+used_for_holding	7	ND	0.143	16	3	function	used for holding
+used_for_holding_animals	1	D	1.000	24	4	function	used for holding animals
+used_for_holding_beer	1	D	1.000	21	4	function	used for holding beer
+used_for_holding_boats_still	1	D	1.000	28	5	function	used for holding boats still
+used_for_holding_books	1	D	1.000	22	4	function	used for holding books
+used_for_holding_cameras	1	D	1.000	24	4	function	used for holding cameras
+used_for_holding_food	1	D	1.000	21	4	function	used for holding food
+used_for_holding_garbage	1	D	1.000	24	4	function	used for holding garbage
+used_for_holding_jam	1	D	1.000	20	4	function	used for holding jam
+used_for_holding_liquids	2	D	0.500	24	4	function	used for holding liquids
+used_for_holding_paper	1	D	1.000	22	4	function	used for holding paper
+used_for_holding_pictures	1	D	1.000	25	4	function	used for holding pictures
+used_for_holding_potatoes	1	D	1.000	25	4	function	used for holding potatoes
+used_for_holding_things	14	ND	0.071	23	4	function	used for holding things
+used_for_holding_things_together	4	ND	0.250	32	5	function	used for holding things together
+used_for_holding_water	5	ND	0.200	22	4	function	used for holding water
+used_for_holding_wine	1	D	1.000	21	4	function	used for holding wine
+used_for_hot_chocolate	1	D	1.000	22	4	function	used for hot chocolate
+used_for_hot_drinks	1	D	1.000	19	4	function	used for hot drinks
+used_for_housing_people	1	D	1.000	23	4	function	used for housing people
+used_for_hunting	8	ND	0.125	16	3	function	used for hunting
+used_for_hunting_small_game	1	D	1.000	27	5	function	used for hunting small game
+used_for_inflicting_pain	1	D	1.000	24	4	function	used for inflicting pain
+used_for_injuries	1	D	1.000	17	3	function	used for injuries
+used_for_injuring	2	D	0.500	17	3	function	used for injuring
+used_for_insulation	1	D	1.000	19	3	function	used for insulation
+used_for_Italian_cooking	1	D	1.000	24	4	function	used for Italian cooking
+used_for_Jack_O'Lanterns	1	D	1.000	24	4	function	used for Jack O'Lanterns
+used_for_juice	7	ND	0.143	14	3	function	used for juice
+used_for_jumping	1	D	1.000	16	3	function	used for jumping
+used_for_junk	1	D	1.000	13	3	function	used for junk
+used_for_keeping_dry	1	D	1.000	20	4	function	used for keeping dry
+used_for_keeping_fish	1	D	1.000	21	4	function	used for keeping fish
+used_for_keeping_food_fresh	1	D	1.000	27	5	function	used for keeping food fresh
+used_for_keeping_out_intruders	1	D	1.000	30	5	function	used for keeping out intruders
+used_for_keeping_out_light	2	D	0.500	26	5	function	used for keeping out light
+used_for_keeping_out_light/sun	2	D	0.500	30	5	function	used for keeping out light/sun
+used_for_keeping_out_sun	2	D	0.500	24	5	function	used for keeping out sun
+used_for_keeping_things_in	1	D	1.000	26	5	function	used for keeping things in
+used_for_keeping_things_out	2	D	0.500	27	5	function	used for keeping things out
+used_for_keeping_time	1	D	1.000	21	4	function	used for keeping time
+used_for_killing	20	ND	0.050	16	3	function	used for killing
+used_for_killing_whales	1	D	1.000	23	4	function	used for killing whales
+used_for_launching_objects	1	D	1.000	26	4	function	used for launching objects
+used_for_laundry	1	D	1.000	16	3	function	used for laundry
+used_for_learning	2	D	0.500	17	3	function	used for learning
+used_for_leisure	1	D	1.000	16	3	function	used for leisure
+used_for_lemonade	1	D	1.000	17	3	function	used for lemonade
+used_for_lifting	1	D	1.000	16	3	function	used for lifting
+used_for_light	1	D	1.000	14	3	function	used for light
+used_for_liquids	3	ND	0.333	16	3	function	used for liquids
+used_for_listening	2	D	0.500	18	3	function	used for listening
+used_for_listening_to_music	2	D	0.500	27	5	function	used for listening to music
+used_for_listening_to_news	1	D	1.000	26	5	function	used for listening to news
+used_for_listening_to_talk_shows	1	D	1.000	32	6	function	used for listening to talk shows
+used_for_living_in	4	ND	0.250	18	4	function	used for living in
+used_for_locking/unlocking_cars	1	D	1.000	31	4	function	used for locking/unlocking cars
+used_for_locking/unlocking_doors	2	D	0.500	32	4	function	used for locking/unlocking doors
+used_for_locks	1	D	1.000	14	3	function	used for locks
+used_for_looking	1	D	1.000	16	3	function	used for looking
+used_for_loosening	2	D	0.500	18	3	function	used for loosening
+used_for_loosening_bolts	1	D	1.000	24	4	function	used for loosening bolts
+used_for_loosening_screws	1	D	1.000	25	4	function	used for loosening screws
+used_for_lying_down	1	D	1.000	19	4	function	used for lying down
+used_for_magic	1	D	1.000	14	3	function	used for magic
+used_for_magnifying	1	D	1.000	19	3	function	used for magnifying
+used_for_making_cakes	1	D	1.000	21	4	function	used for making cakes
+used_for_making_coffee	1	D	1.000	22	4	function	used for making coffee
+used_for_making_drinks	1	D	1.000	22	4	function	used for making drinks
+used_for_making_furniture	3	ND	0.333	25	4	function	used for making furniture
+used_for_making_guacamole	1	D	1.000	25	4	function	used for making guacamole
+used_for_making_holes	1	D	1.000	21	4	function	used for making holes
+used_for_making_ice_cubes	1	D	1.000	25	5	function	used for making ice cubes
+used_for_making_jams	1	D	1.000	20	4	function	used for making jams
+used_for_making_light	2	D	0.500	21	4	function	used for making light
+used_for_making_milkshakes	1	D	1.000	26	4	function	used for making milkshakes
+used_for_making_paper	1	D	1.000	21	4	function	used for making paper
+used_for_making_pies	1	D	1.000	20	4	function	used for making pies
+used_for_making_straight_lines	1	D	1.000	30	5	function	used for making straight lines
+used_for_making_tea	1	D	1.000	19	4	function	used for making tea
+used_for_making_things	1	D	1.000	22	4	function	used for making things
+used_for_math	1	D	1.000	13	3	function	used for math
+used_for_measuring	4	ND	0.250	18	3	function	used for measuring
+used_for_measuring_evenness	1	D	1.000	27	4	function	used for measuring evenness
+used_for_measuring_temperatures	1	D	1.000	31	4	function	used for measuring temperatures
+used_for_measuring_weather	1	D	1.000	26	4	function	used for measuring weather
+used_for_message_boards	1	D	1.000	23	4	function	used for message boards
+used_for_metal	1	D	1.000	14	3	function	used for metal
+used_for_mixing	3	ND	0.333	15	3	function	used for mixing
+used_for_mixing_liquids	1	D	1.000	23	4	function	used for mixing liquids
+used_for_mobility	1	D	1.000	17	3	function	used for mobility
+used_for_moving_snow	1	D	1.000	20	4	function	used for moving snow
+used_for_moving_things	5	ND	0.200	22	4	function	used for moving things
+used_for_music	6	ND	0.167	14	3	function	used for music
+used_for_off_roading	1	D	1.000	20	4	function	used for off roading
+used_for_offices	1	D	1.000	16	3	function	used for offices
+used_for_oil	1	D	1.000	12	3	function	used for oil
+used_for_opening_bottles	1	D	1.000	24	4	function	used for opening bottles
+used_for_opening_doors	1	D	1.000	22	4	function	used for opening doors
+used_for_opening_things	2	D	0.500	23	4	function	used for opening things
+used_for_opening_wine_bottles	1	D	1.000	29	5	function	used for opening wine bottles
+used_for_ordering_food	1	D	1.000	22	4	function	used for ordering food
+used_for_organizing	2	D	0.500	19	3	function	used for organizing
+used_for_painting	2	D	0.500	17	3	function	used for painting
+used_for_passengers	9	ND	0.111	19	3	function	used for passengers
+used_for_pasta	1	D	1.000	14	3	function	used for pasta
+used_for_performing_tricks	1	D	1.000	26	4	function	used for performing tricks
+used_for_personal_space	1	D	1.000	23	4	function	used for personal space
+used_for_picking_up_food	1	D	1.000	24	5	function	used for picking up food
+used_for_picking_up_items	1	D	1.000	25	5	function	used for picking up items
+used_for_picnics	1	D	1.000	16	3	function	used for picnics
+used_for_pies	1	D	1.000	13	3	function	used for pies
+used_for_pillow_fights	1	D	1.000	22	4	function	used for pillow fights
+used_for_playing	5	ND	0.200	16	3	function	used for playing
+used_for_playing_AM	1	D	1.000	19	4	function	used for playing AM
+used_for_playing_cassettes	1	D	1.000	26	4	function	used for playing cassettes
+used_for_playing_CD's	1	D	1.000	21	4	function	used for playing CD's
+used_for_playing_different_stations	1	D	1.000	35	5	function	used for playing different stations
+used_for_playing_FM	1	D	1.000	19	4	function	used for playing FM
+used_for_playing_jazz	1	D	1.000	21	4	function	used for playing jazz
+used_for_playing_records	1	D	1.000	24	4	function	used for playing records
+used_for_playing_with_dogs	1	D	1.000	26	5	function	used for playing with dogs
+used_for_ploughing	2	D	0.500	18	3	function	used for ploughing
+used_for_plumbing	2	D	0.500	17	3	function	used for plumbing
+used_for_poking	1	D	1.000	15	3	function	used for poking
+used_for_posting	1	D	1.000	16	3	function	used for posting
+used_for_pounding	1	D	1.000	17	3	function	used for pounding
+used_for_pounding_nails	1	D	1.000	23	4	function	used for pounding nails
+used_for_praying	3	ND	0.333	16	3	function	used for praying
+used_for_predicting_weather	1	D	1.000	27	4	function	used for predicting weather
+used_for_preserves	1	D	1.000	18	3	function	used for preserves
+used_for_preserving_food	1	D	1.000	24	4	function	used for preserving food
+used_for_preventing_biting	1	D	1.000	26	4	function	used for preventing biting
+used_for_preventing_noise	1	D	1.000	25	4	function	used for preventing noise
+used_for_prevention	1	D	1.000	19	3	function	used for prevention
+used_for_privacy	3	ND	0.333	16	3	function	used for privacy
+used_for_producing_cheese	1	D	1.000	25	4	function	used for producing cheese
+used_for_producing_milk	2	D	0.500	23	4	function	used for producing milk
+used_for_producing_rhythm	1	D	1.000	25	4	function	used for producing rhythm
+used_for_projecting	1	D	1.000	19	3	function	used for projecting
+used_for_protecting_things	1	D	1.000	26	4	function	used for protecting things
+used_for_protection	9	ND	0.111	19	3	function	used for protection
+used_for_providing_boundaries	1	D	1.000	29	4	function	used for providing boundaries
+used_for_prying_things_open	1	D	1.000	27	5	function	used for prying things open
+used_for_public_transportation	1	D	1.000	30	4	function	used for public transportation
+used_for_pulling	3	ND	0.333	16	3	function	used for pulling
+used_for_pulling_nails	1	D	1.000	22	4	function	used for pulling nails
+used_for_punishment	1	D	1.000	19	3	function	used for punishment
+used_for_putting_food_on	1	D	1.000	24	5	function	used for putting food on
+used_for_putting_things_on	1	D	1.000	26	5	function	used for putting things on
+used_for_racing	2	D	0.500	15	3	function	used for racing
+used_for_racquet_ball	1	D	1.000	21	4	function	used for racquet ball
+used_for_raisins	1	D	1.000	16	3	function	used for raisins
+used_for_reading	1	D	1.000	16	3	function	used for reading
+used_for_recognition	1	D	1.000	20	3	function	used for recognition
+used_for_recreation	1	D	1.000	19	3	function	used for recreation
+used_for_regulating	1	D	1.000	19	3	function	used for regulating
+used_for_regulating_water	1	D	1.000	25	4	function	used for regulating water
+used_for_relaxing	4	ND	0.250	17	3	function	used for relaxing
+used_for_removing	1	D	1.000	17	3	function	used for removing
+used_for_removing_corks	1	D	1.000	23	4	function	used for removing corks
+used_for_removing_dirt	1	D	1.000	22	4	function	used for removing dirt
+used_for_removing_dust	1	D	1.000	22	4	function	used for removing dust
+used_for_removing_leaves	1	D	1.000	24	4	encyclopaedic	used for removing leaves
+used_for_removing_snow	1	D	1.000	22	4	function	used for removing snow
+used_for_repairs	1	D	1.000	16	3	function	used for repairs
+used_for_repelling	1	D	1.000	18	3	function	used for repelling
+used_for_repelling_dracula	1	D	1.000	26	4	function	used for repelling dracula
+used_for_repelling_vampires	1	D	1.000	27	4	function	used for repelling vampires
+used_for_rescuing	1	D	1.000	17	3	function	used for rescuing
+used_for_residences	1	D	1.000	19	3	function	used for residences
+used_for_resting	1	D	1.000	16	3	function	used for resting
+used_for_resting_head	2	D	0.500	21	4	function	used for resting head
+used_for_restraining	1	D	1.000	20	3	function	used for restraining
+used_for_riding	1	D	1.000	15	3	function	used for riding
+used_for_riding_on_sidewalks	1	D	1.000	28	5	function	used for riding on sidewalks
+used_for_riding_rapids	1	D	1.000	22	4	function	used for riding rapids
+used_for_rocking	1	D	1.000	16	3	function	used for rocking
+used_for_rocks	1	D	1.000	14	3	function	used for rocks
+used_for_romancing	1	D	1.000	18	3	function	used for romancing
+used_for_rugged_terrain	1	D	1.000	23	4	function	used for rugged terrain
+used_for_sailing	1	D	1.000	16	3	function	used for sailing
+used_for_scalping	1	D	1.000	17	3	function	used for scalping
+used_for_science	1	D	1.000	16	3	function	used for science
+used_for_scooping	1	D	1.000	17	3	function	used for scooping
+used_for_sculpting	1	D	1.000	18	3	function	used for sculpting
+used_for_sealing	2	D	0.500	16	3	function	used for sealing
+used_for_sealing_bottles	1	D	1.000	24	4	function	used for sealing bottles
+used_for_sealing_wine_bottles	1	D	1.000	29	5	function	used for sealing wine bottles
+used_for_seating_many_people	1	D	1.000	28	5	function	used for seating many people
+used_for_securing	3	ND	0.333	17	3	function	used for securing
+used_for_seeing_things_close-up	1	D	1.000	31	5	function	used for seeing things close-up
+used_for_selecting_meals	1	D	1.000	24	4	function	used for selecting meals
+used_for_sending_letters	1	D	1.000	24	4	function	used for sending letters
+used_for_separating	2	D	0.500	19	3	function	used for separating
+used_for_sermons	1	D	1.000	16	3	function	used for sermons
+used_for_serving_food	2	D	0.500	21	4	function	used for serving food
+used_for_sewing	2	D	0.500	15	3	function	used for sewing
+used_for_sex	2	D	0.500	12	3	function	used for sex
+used_for_shaving	1	D	1.000	16	3	function	used for shaving
+used_for_shelter	3	ND	0.333	16	3	function	used for shelter
+used_for_shooting	4	ND	0.250	17	3	function	used for shooting
+used_for_shopping	1	D	1.000	17	3	function	used for shopping
+used_for_showers	1	D	1.000	16	3	function	used for showers
+used_for_showing_films	1	D	1.000	22	4	function	used for showing films
+used_for_showing_reflections	1	D	1.000	28	4	function	used for showing reflections
+used_for_shredding_things	1	D	1.000	25	4	function	used for shredding things
+used_for_sleeping	5	ND	0.200	17	3	function	used for sleeping
+used_for_sleeping_in	3	ND	0.333	20	4	function	used for sleeping in
+used_for_slicing	1	D	1.000	16	3	function	used for slicing
+used_for_sliding_down_hills	2	D	0.500	27	5	function	used for sliding down hills
+used_for_smoking_drugs	1	D	1.000	22	4	function	used for smoking drugs
+used_for_smoking_tobacco	1	D	1.000	24	4	function	used for smoking tobacco
+used_for_smoothing	1	D	1.000	18	3	function	used for smoothing
+used_for_smoothing_wood	1	D	1.000	23	4	function	used for smoothing wood
+used_for_soup	2	D	0.500	13	3	function	used for soup
+used_for_special_occasions	1	D	1.000	26	4	function	used for special occasions
+used_for_sports	7	ND	0.143	15	3	function	used for sports
+used_for_squash	1	D	1.000	15	3	function	used for squash
+used_for_stability	1	D	1.000	18	3	function	used for stability
+used_for_starting_fires	2	D	0.500	23	4	function	used for starting fires
+used_for_staying_stationary	1	D	1.000	27	4	function	used for staying stationary
+used_for_stimulating_imagination	1	D	1.000	32	4	function	used for stimulating imagination
+used_for_stirring	2	D	0.500	17	3	function	used for stirring
+used_for_storage	18	ND	0.056	16	3	function	used for storage
+used_for_storing_beer	1	D	1.000	21	4	function	used for storing beer
+used_for_storing_bicycles	1	D	1.000	25	4	function	used for storing bicycles
+used_for_storing_books	1	D	1.000	22	4	function	used for storing books
+used_for_storing_cans	1	D	1.000	21	4	function	used for storing cans
+used_for_storing_cars	1	D	1.000	21	4	function	used for storing cars
+used_for_storing_clothing	3	ND	0.333	25	4	function	used for storing clothing
+used_for_storing_cups	1	D	1.000	21	4	function	used for storing cups
+used_for_storing_dishes	2	D	0.500	23	4	function	used for storing dishes
+used_for_storing_farm_equipment	1	D	1.000	31	5	function	used for storing farm equipment
+used_for_storing_food	4	ND	0.250	21	4	function	used for storing food
+used_for_storing_hay	1	D	1.000	20	4	function	used for storing hay
+used_for_storing_ice_cream	1	D	1.000	26	5	function	used for storing ice cream
+used_for_storing_lawnmowers	1	D	1.000	27	4	function	used for storing lawnmowers
+used_for_storing_meat	1	D	1.000	21	4	function	used for storing meat
+used_for_storing_shoes	1	D	1.000	22	4	function	used for storing shoes
+used_for_storing_tools	3	ND	0.333	22	4	function	used for storing tools
+used_for_storing_tractors	1	D	1.000	25	4	function	used for storing tractors
+used_for_storing_water	1	D	1.000	22	4	function	used for storing water
+used_for_storing_wine	2	D	0.500	21	4	function	used for storing wine
+used_for_straining	2	D	0.500	18	3	function	used for straining
+used_for_styling	1	D	1.000	16	3	function	used for styling
+used_for_support	1	D	1.000	16	3	function	used for support
+used_for_surgery	1	D	1.000	16	3	function	used for surgery
+used_for_sweeping	1	D	1.000	17	3	function	used for sweeping
+used_for_swinging	1	D	1.000	17	3	function	used for swinging
+used_for_sympathy	1	D	1.000	17	3	function	used for sympathy
+used_for_talking	1	D	1.000	16	3	function	used for talking
+used_for_tea	3	ND	0.333	12	3	function	used for tea
+used_for_telling_time	1	D	1.000	21	4	function	used for telling time
+used_for_tennis	1	D	1.000	15	3	function	used for tennis
+used_for_terrorism	1	D	1.000	18	3	function	used for terrorism
+used_for_the_rain	1	D	1.000	17	4	function	used for the rain
+used_for_throwing	2	D	0.500	17	3	function	used for throwing
+used_for_throwing_stones	2	D	0.500	24	4	function	used for throwing stones
+used_for_tightening	2	D	0.500	19	3	function	used for tightening
+used_for_tightening_bolts	1	D	1.000	25	4	function	used for tightening bolts
+used_for_tightening_nuts	1	D	1.000	24	4	function	used for tightening nuts
+used_for_tightening_screws	1	D	1.000	26	4	function	used for tightening screws
+used_for_tilling_soil	1	D	1.000	21	4	function	used for tilling soil
+used_for_tobogganing	1	D	1.000	20	3	function	used for tobogganing
+used_for_torture	1	D	1.000	16	3	function	used for torture
+used_for_transportation	33	ND	0.030	23	3	function	used for transportation
+used_for_transporting_liquids	1	D	1.000	29	4	function	used for transporting liquids
+used_for_trapping	1	D	1.000	17	3	function	used for trapping
+used_for_travel	3	ND	0.333	15	3	function	used for travel
+used_for_traveling_into_space	1	D	1.000	29	5	function	used for traveling into space
+used_for_trucking	1	D	1.000	17	3	function	used for trucking
+used_for_turning	2	D	0.500	16	3	function	used for turning
+used_for_turning_screws	1	D	1.000	23	4	function	used for turning screws
+used_for_tying	1	D	1.000	14	3	function	used for tying
+used_for_typing	1	D	1.000	15	3	function	used for typing
+used_for_unlocking_things	1	D	1.000	25	4	function	used for unlocking things
+used_for_untangling	1	D	1.000	19	3	function	used for untangling
+used_for_vacations	3	ND	0.333	18	3	encyclopaedic	used for vacations
+used_for_vegetables	1	D	1.000	19	3	function	used for vegetables
+used_for_waking_up_people	1	D	1.000	25	5	function	used for waking up people
+used_for_walking	1	D	1.000	16	3	function	used for walking
+used_for_walking_along	1	D	1.000	22	4	function	used for walking along
+used_for_walking_on	1	D	1.000	19	4	function	used for walking on
+used_for_war	12	ND	0.083	12	3	function	used for war
+used_for_warmth	1	D	1.000	15	3	function	used for warmth
+used_for_washing	2	D	0.500	16	3	function	used for washing
+used_for_washing_cars	1	D	1.000	21	4	function	used for washing cars
+used_for_washing_dishes	2	D	0.500	23	4	function	used for washing dishes
+used_for_watching_television	2	D	0.500	28	4	function	used for watching television
+used_for_water	3	ND	0.333	14	3	function	used for water
+used_for_watering_gardens	1	D	1.000	25	4	function	used for watering gardens
+used_for_watering_lawns	1	D	1.000	23	4	function	used for watering lawns
+used_for_weddings	3	ND	0.333	17	3	function	used for weddings
+used_for_weeding	1	D	1.000	16	3	function	used for weeding
+used_for_welcoming	1	D	1.000	18	3	function	used for welcoming
+used_for_wine	2	D	0.500	13	3	function	used for wine
+used_for_wiping_feet	1	D	1.000	20	4	function	used for wiping feet
+used_for_wiping_hands	1	D	1.000	21	4	function	used for wiping hands
+used_for_wiping_mouth	1	D	1.000	21	4	function	used for wiping mouth
+used_for_wiping_shoes	1	D	1.000	21	4	function	used for wiping shoes
+used_for_wood_working	1	D	1.000	21	4	function	used for wood working
+used_for_wool	2	D	0.500	13	3	function	used for wool
+used_for_work	1	D	1.000	13	3	function	used for work
+used_for_working	1	D	1.000	16	3	function	used for working
+used_for_working_on	1	D	1.000	19	4	function	used for working on
+used_for_worshipping	3	ND	0.333	20	3	function	used for worshipping
+used_for_wounding	1	D	1.000	17	3	function	used for wounding
+used_for_writing	4	ND	0.250	16	3	function	used for writing
+used_for_writing_letters	1	D	1.000	24	4	function	used for writing letters
+used_for_writing_on	3	ND	0.333	19	4	function	used for writing on
+used_in_alcoholic_drinks	1	D	1.000	24	4	function	used in alcoholic drinks
+used_in_autumn	2	D	0.500	14	3	encyclopaedic	used in autumn
+used_in_baking	1	D	1.000	14	3	function	used in baking
+used_in_bands	9	ND	0.111	13	3	function	used in bands
+used_in_circuses	5	ND	0.200	16	3	function	used in circuses
+used_in_cooking	2	D	0.500	15	3	function	used in cooking
+used_in_deserts	1	D	1.000	15	3	encyclopaedic	used in deserts
+used_in_desserts	1	D	1.000	16	3	function	used in desserts
+used_in_experiments	3	ND	0.333	19	3	function	used in experiments
+used_in_games	1	D	1.000	13	3	function	used in games
+used_in_guns	1	D	1.000	12	3	function	used in guns
+used_in_MacBeth	1	D	1.000	15	3	function	used in MacBeth
+used_in_marching_bands	2	D	0.500	22	4	function	used in marching bands
+used_in_movies/Jason	1	D	1.000	20	3	function	used in movies/Jason
+used_in_orchestras	6	ND	0.167	18	3	function	used in orchestras
+used_in_relay_races	1	D	1.000	19	4	function	used in relay races
+used_in_sandwiches	1	D	1.000	18	3	function	used in sandwiches
+used_in_sprite	1	D	1.000	14	3	function	used in sprite
+used_in_summer	3	ND	0.333	14	3	encyclopaedic	used in summer
+used_in_symphonies	1	D	1.000	18	3	function	used in symphonies
+used_in_the_cold	1	D	1.000	16	4	function	used in the cold
+used_in_the_wild_west	1	D	1.000	21	5	encyclopaedic	used in the wild west
+used_in_the_winter	1	D	1.000	18	4	encyclopaedic	used in the winter
+used_in_wars	2	D	0.500	12	3	encyclopaedic	used in wars
+used_in_winter	1	D	1.000	14	3	encyclopaedic	used in winter
+used_in_wood	1	D	1.000	12	3	function	used in wood
+used_long_ago	3	ND	0.333	13	3	encyclopaedic	used long ago
+used_on_animals	2	D	0.500	15	3	encyclopaedic	used on animals
+used_on_beaches	1	D	1.000	15	3	encyclopaedic	used on beaches
+used_on_bicycles	2	D	0.500	16	3	encyclopaedic	used on bicycles
+used_on_boards	1	D	1.000	14	3	encyclopaedic	used on boards
+used_on_boats	1	D	1.000	13	3	encyclopaedic	used on boats
+used_on_bottles	1	D	1.000	15	3	encyclopaedic	used on bottles
+used_on_bulletin_boards	1	D	1.000	23	4	encyclopaedic	used on bulletin boards
+used_on_cars	1	D	1.000	12	3	encyclopaedic	used on cars
+used_on_dogs	1	D	1.000	12	3	encyclopaedic	used on dogs
+used_on_farms	1	D	1.000	13	3	encyclopaedic	used on farms
+used_on_floors	1	D	1.000	14	3	function	used on floors
+used_on_hair	1	D	1.000	12	3	encyclopaedic	used on hair
+used_on_horses	2	D	0.500	14	3	encyclopaedic	used on horses
+used_on_lakes	1	D	1.000	13	3	encyclopaedic	used on lakes
+used_on_lawns	1	D	1.000	13	3	function	used on lawns
+used_on_lions	1	D	1.000	13	3	encyclopaedic	used on lions
+used_on_mountains	1	D	1.000	17	3	encyclopaedic	used on mountains
+used_on_oceans	2	D	0.500	14	3	encyclopaedic	used on oceans
+used_on_presents	1	D	1.000	16	3	encyclopaedic	used on presents
+used_on_rail_tracks	1	D	1.000	19	4	encyclopaedic	used on rail tracks
+used_on_rivers	1	D	1.000	14	3	encyclopaedic	used on rivers
+used_on_sand	1	D	1.000	12	3	encyclopaedic	used on sand
+used_on_ships	2	D	0.500	13	3	encyclopaedic	used on ships
+used_on_snow	3	ND	0.333	12	3	encyclopaedic	used on snow
+used_on_stove_tops	4	ND	0.250	18	4	encyclopaedic	used on stove tops
+used_on_Sundays	1	D	1.000	15	3	encyclopaedic	used on Sundays
+used_on_teeth	1	D	1.000	13	3	encyclopaedic	used on teeth
+used_on_tracks	1	D	1.000	14	3	encyclopaedic	used on tracks
+used_on_walls	1	D	1.000	13	3	encyclopaedic	used on walls
+used_on_water	7	ND	0.143	13	3	encyclopaedic	used on water
+used_on_waves	1	D	1.000	13	3	encyclopaedic	used on waves
+used_outdoors	1	D	1.000	13	2	encyclopaedic	used outdoors
+used_underwater	1	D	1.000	15	2	encyclopaedic	used underwater
+used_when_people_are_ill	1	D	1.000	24	5	encyclopaedic	used when people are ill
+used_with_an_outlet	1	D	1.000	19	4	encyclopaedic	used with an outlet
+used_with_chairs	1	D	1.000	16	3	encyclopaedic	used with chairs
+used_with_chalk	1	D	1.000	15	3	encyclopaedic	used with chalk
+used_with_cups	1	D	1.000	14	3	encyclopaedic	used with cups
+used_with_dirt	1	D	1.000	14	3	encyclopaedic	used with dirt
+used_with_fingers	1	D	1.000	17	3	function	used with fingers
+used_with_food	1	D	1.000	14	3	encyclopaedic	used with food
+used_with_forks	1	D	1.000	15	3	encyclopaedic	used with forks
+used_with_helmets	2	D	0.500	17	3	encyclopaedic	used with helmets
+used_with_knives	1	D	1.000	16	3	encyclopaedic	used with knives
+used_with_leather	1	D	1.000	17	3	encyclopaedic	used with leather
+used_with_needles	1	D	1.000	17	3	encyclopaedic	used with needles
+used_with_nuts	1	D	1.000	14	3	encyclopaedic	used with nuts
+used_with_paddles	1	D	1.000	17	3	encyclopaedic	used with paddles
+used_with_paper	1	D	1.000	15	3	encyclopaedic	used with paper
+used_with_poles	1	D	1.000	15	3	encyclopaedic	used with poles
+used_with_rods	1	D	1.000	14	3	encyclopaedic	used with rods
+used_with_salt	1	D	1.000	14	3	encyclopaedic	used with salt
+used_with_saucers	1	D	1.000	17	3	encyclopaedic	used with saucers
+used_with_screwdrivers	1	D	1.000	22	3	encyclopaedic	used with screwdrivers
+used_with_screws	1	D	1.000	16	3	encyclopaedic	used with screws
+used_with_spoons	1	D	1.000	16	3	encyclopaedic	used with spoons
+used_with_sprinklers	1	D	1.000	20	3	encyclopaedic	used with sprinklers
+used_with_tables	1	D	1.000	16	3	encyclopaedic	used with tables
+used_with_tea_cups	1	D	1.000	18	4	encyclopaedic	used with tea cups
+uses_radiation	1	D	1.000	14	2	encyclopaedic	uses radiation
+uses_sound_waves	1	D	1.000	16	3	encyclopaedic	uses sound waves
+worn	1	D	1.000	4	1	function	worn
+worn_around_neck	6	ND	0.167	16	3	function	worn around neck
+worn_around_waist	2	D	0.500	17	3	function	worn around waist
+worn_as_earrings	1	D	1.000	16	3	function	worn as earrings
+worn_as_jewelry	1	D	1.000	15	3	function	worn as jewelry
+worn_as_necklaces	1	D	1.000	17	3	function	worn as necklaces
+worn_at_beaches	2	D	0.500	15	3	encyclopaedic	worn at beaches
+worn_at_night	2	D	0.500	13	3	encyclopaedic	worn at night
+worn_by_brides	1	D	1.000	14	3	function	worn by brides
+worn_by_children	2	D	0.500	16	3	function	worn by children
+worn_by_cooks	1	D	1.000	13	3	function	worn by cooks
+worn_by_girls	1	D	1.000	13	3	function	worn by girls
+worn_by_hockey_players	1	D	1.000	22	4	function	worn by hockey players
+worn_by_Jesus_Christ	1	D	1.000	20	4	function	worn by Jesus Christ
+worn_by_kings	1	D	1.000	13	3	function	worn by kings
+worn_by_knights	1	D	1.000	15	3	function	worn by knights
+worn_by_men	6	ND	0.167	11	3	function	worn by men
+worn_by_men_-_kilt	1	D	1.000	18	5	function	worn by men - kilt
+worn_by_old_women	1	D	1.000	17	4	function	worn by old women
+worn_by_people	2	D	0.500	14	3	function	worn by people
+worn_by_queens	1	D	1.000	14	3	function	worn by queens
+worn_by_rich_people	1	D	1.000	19	4	function	worn by rich people
+worn_by_royalty	1	D	1.000	15	3	function	worn by royalty
+worn_by_sports_teams	1	D	1.000	20	4	function	worn by sports teams
+worn_by_super_heroes	1	D	1.000	20	4	function	worn by super heroes
+worn_by_women	18	ND	0.056	13	3	function	worn by women
+worn_for_aerobics	1	D	1.000	17	3	encyclopaedic	worn for aerobics
+worn_for_ballet	1	D	1.000	15	3	encyclopaedic	worn for ballet
+worn_for_bathing	1	D	1.000	16	3	function	worn for bathing
+worn_for_blocking_the_sun	1	D	1.000	25	5	function	worn for blocking the sun
+worn_for_covering	6	ND	0.167	17	3	function	worn for covering
+worn_for_covering_body	2	D	0.500	22	4	function	worn for covering body
+worn_for_covering_clothes	1	D	1.000	25	4	function	worn for covering clothes
+worn_for_covering_faces	1	D	1.000	23	4	function	worn for covering faces
+worn_for_covering_feet	1	D	1.000	22	4	function	worn for covering feet
+worn_for_covering_legs	3	ND	0.333	22	4	function	worn for covering legs
+worn_for_dancing	1	D	1.000	16	3	function	worn for dancing
+worn_for_evening	1	D	1.000	16	3	encyclopaedic	worn for evening
+worn_for_exercising	1	D	1.000	19	3	encyclopaedic	worn for exercising
+worn_for_exposing_feet	1	D	1.000	22	4	function	worn for exposing feet
+worn_for_fighting	1	D	1.000	17	3	function	worn for fighting
+worn_for_formal_occasions	1	D	1.000	25	4	encyclopaedic	worn for formal occasions
+worn_for_funerals	1	D	1.000	17	3	encyclopaedic	worn for funerals
+worn_for_holding_up_pants	1	D	1.000	25	5	function	worn for holding up pants
+worn_for_keeping_feet_dry	1	D	1.000	25	5	function	worn for keeping feet dry
+worn_for_keeping_feet_warm	3	ND	0.333	26	5	function	worn for keeping feet warm
+worn_for_keeping_hands_warm	2	D	0.500	27	5	function	worn for keeping hands warm
+worn_for_keeping_warm	2	D	0.500	21	4	function	worn for keeping warm
+worn_for_pants	1	D	1.000	14	3	function	worn for pants
+worn_for_protecting_feet	2	D	0.500	24	4	function	worn for protecting feet
+worn_for_protection	8	ND	0.125	19	3	function	worn for protection
+worn_for_riding_bicycles	1	D	1.000	24	4	function	worn for riding bicycles
+worn_for_running	1	D	1.000	16	3	function	worn for running
+worn_for_showers	1	D	1.000	16	3	function	worn for showers
+worn_for_special_occasions	1	D	1.000	26	4	function	worn for special occasions
+worn_for_sports	2	D	0.500	15	3	function	worn for sports
+worn_for_suntanning	1	D	1.000	19	3	function	worn for suntanning
+worn_for_support	1	D	1.000	16	3	function	worn for support
+worn_for_supporting_breasts	1	D	1.000	27	4	function	worn for supporting breasts
+worn_for_surgery	1	D	1.000	16	3	function	worn for surgery
+worn_for_swimming	1	D	1.000	17	3	function	worn for swimming
+worn_for_the_cold	3	ND	0.333	17	4	function	worn for the cold
+worn_for_the_rain	3	ND	0.333	17	4	function	worn for the rain
+worn_for_the_snow	1	D	1.000	17	4	function	worn for the snow
+worn_for_walking	2	D	0.500	16	3	function	worn for walking
+worn_for_walking_in_sand	1	D	1.000	24	5	function	worn for walking in sand
+worn_for_warmth	15	ND	0.067	15	3	function	worn for warmth
+worn_for_weddings	3	ND	0.333	17	3	encyclopaedic	worn for weddings
+worn_for_winter	2	D	0.500	15	3	encyclopaedic	worn for winter
+worn_in_cold_temperatures	3	ND	0.333	25	4	function	worn in cold temperatures
+worn_in_fall	1	D	1.000	12	3	encyclopaedic	worn in fall
+worn_in_hair	1	D	1.000	12	3	function	worn in hair
+worn_in_hot_weather	1	D	1.000	19	4	encyclopaedic	worn in hot weather
+worn_in_houses	1	D	1.000	14	3	encyclopaedic	worn in houses
+worn_in_kitchens	1	D	1.000	16	3	encyclopaedic	worn in kitchens
+worn_in_summer	2	D	0.500	14	3	encyclopaedic	worn in summer
+worn_in_winter	5	ND	0.200	14	3	encyclopaedic	worn in winter
+worn_indoors	1	D	1.000	12	2	encyclopaedic	worn indoors
+worn_on_ankles	1	D	1.000	14	3	function	worn on ankles
+worn_on_back	1	D	1.000	12	3	function	worn on back
+worn_on_chest	1	D	1.000	13	3	function	worn on chest
+worn_on_feet	6	ND	0.167	12	3	function	worn on feet
+worn_on_fingers	2	D	0.500	15	3	function	worn on fingers
+worn_on_hands	2	D	0.500	13	3	function	worn on hands
+worn_on_heads	3	ND	0.333	13	3	function	worn on heads
+worn_on_legs	2	D	0.500	12	3	function	worn on legs
+worn_on_motorcycles	1	D	1.000	19	3	function	worn on motorcycles
+worn_on_necklaces	1	D	1.000	17	3	function	worn on necklaces
+worn_on_rings	1	D	1.000	13	3	function	worn on rings
+worn_on_shoulders	2	D	0.500	17	3	function	worn on shoulders
+worn_on_the_head	1	D	1.000	16	4	function	worn on the head
+worn_on_the_legs	1	D	1.000	16	4	function	worn on the legs
+worn_on_thumbs	1	D	1.000	14	3	function	worn on thumbs
+worn_on_torso	3	ND	0.333	13	3	function	worn on torso
+worn_on_wrists	1	D	1.000	14	3	function	worn on wrists
+worn_over_clothes	2	D	0.500	17	3	function	worn over clothes
+worn_over_ears	1	D	1.000	14	3	function	worn over ears
+worn_over_mouths	1	D	1.000	16	3	function	worn over mouths
+worn_over_pajamas	1	D	1.000	17	3	function	worn over pajamas
+worn_over_shoulder	1	D	1.000	18	3	function	worn over shoulder
+worn_through_pant_loops	1	D	1.000	23	4	function	worn through pant loops
+worn_to_bed	1	D	1.000	11	3	function	worn to bed
+worn_under_dresses	1	D	1.000	18	3	function	worn under dresses
+worn_under_shirts	1	D	1.000	17	3	function	worn under shirts
+worn_under_skirts	1	D	1.000	17	3	function	worn under skirts
+worn_with_belts	2	D	0.500	15	3	encyclopaedic	worn with belts
+worn_with_dresses	1	D	1.000	17	3	encyclopaedic	worn with dresses
+worn_with_skirts	2	D	0.500	16	3	encyclopaedic	worn with skirts
+worn_with_suits	1	D	1.000	15	3	encyclopaedic	worn with suits
+worn_with_suspenders	1	D	1.000	20	3	encyclopaedic	worn with suspenders
+worn_with_ties	1	D	1.000	14	3	encyclopaedic	worn with ties

@@ -1,0 +1,8 @@
+Feature	feature name
+CPF	number of concepts for which the feature was listed by at least 5 of 30 subjects
+Disting	"D=distinguishing (listed for 1 or 2 concepts in norms), ND=nondistinguishing (> 2 concepts)"
+Distinct	distinctiveness; 1/cpf
+Feat_Length_Including_Spaces	number of nonspace characters in the feature name
+BR_Label	"feature type according to Cree & McRae ""brain region"" taxonomy"
+Number_of_words	Number of words used in feature name
+Display	"feature name, as would be presented to human participants"

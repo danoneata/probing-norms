@@ -1,0 +1,34 @@
+Variable	Explanation
+Concept	concept name
+Pronunciation	"pronunciation according to ""neighbourhood watch"" program"
+Phon_1st	initial phoneme of concept name
+KF	Kucera & Francis (1967) frequency: sum of singular and plural
+ln(KF)	natural logarithm of Kucera & Francis (1967) frequency: sum of singular and plural
+BNC	British National Corpus frequency: sum of singular and plural
+ln(BNC)	natural logarithm of British National Corpus frequency: sum of singular and plural
+Familiarity	"mean rated concept familiarity by 20 participants: 1-9 scale, 9= extremely familiar"
+Length_Letters	number of letters in concept name
+Length_Phonemes	number of phonemes in concept name
+Length_Syllables	number of syllables in concept name
+Bigram	"mean position-specific bigram frequency according to ""neighbourhood watch"" program"
+Trigram	"mean position-specific trigram frequency according to ""neighbourhood watch"" program"
+ColtheartN	"Coltheart's N according to ""neighbourhood watch"" program"
+Num_Feats_Tax	"number of features, including taxonomic features"
+Num_Feats_No_Tax	"number of features, excluding taxonomic features"
+Num_Disting_Feats_No_Tax	"number of distinguishing features (those in < 3 concepts in norms), excluding taxonomic features"
+Disting_Feats_%_No_Tax	"percentage of features that are distinguishing features (those in < 3 concepts in norms), excluding taxonomic features"
+Mean_Distinct_No_Tax	"mean distinctiveness of the concept's features (1/number of concepts in which feature occurs), excluding taxonomics"
+Mean_CV_No_Tax	"mean cue validity of the concept's features, excluding taxonomics"
+Density_No_Tax	intercorrelational density: sum of r2 for the concept's significantly correlated feature pairs
+Num_Corred_Pairs_No_Tax	"number of significantly correlated feature pairs, excluding taxonomics"
+%_Corred_Pairs_No_Tax	"percentage of possible feature pairs that are correlated, excluding taxonomics"
+Num_Func	number of functional features
+Num_Vis_Mot	number of visual-motor features
+Num_VisF&S	number of visual form and surface features
+Num_Vis_Col	number of visual colour features
+Num_Sound	number of sound features
+Num_Taste	number of taste features
+Num_Smell	number of smell features
+Num_Tact	number of tactile features
+Num_Ency	number of encyclopedic features
+Num_Tax	number of taxonomic features

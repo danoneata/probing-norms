@@ -19,6 +19,8 @@ from probing_norms.constants import NUM_MIN_CONCEPTS
 from probing_norms.data import (
     DATASETS,
     load_features_metadata,
+    load_mcrae_feature_norms,
+    get_feature_to_concepts,
 )
 from probing_norms.utils import cache_json
 from multiprocess import Pool
@@ -224,11 +226,33 @@ class GPT3NormsLoader(NormsLoader):
         return "{}_{}_{}".format(NORMS_PRIMING, self.norms_model, NORMS_NUM_RUNS)
 
 
+class McRaeNormsLoader(NormsLoader):
+    def __init__(self):
+        self.model = "mcrae"
+
+    def __call__(self, *, num_min_concepts=NUM_MIN_CONCEPTS):
+        concept_feature = load_mcrae_feature_norms()
+        feature_to_concepts = get_feature_to_concepts(concept_feature)
+
+        features = sorted(feature_to_concepts.keys())
+        feature_to_id = {feature: i for i, feature in enumerate(features)}
+
+        features_selected = [
+            feature
+            for feature, concepts in feature_to_concepts.items()
+            if len(concepts) >= num_min_concepts
+        ]
+        return feature_to_concepts, feature_to_id, features_selected
+
+    def get_suffix(self):
+        return str(self.model)
+
+
 class McRaeMappedNormsLoader(NormsLoader):
     def __init__(self):
         self.model = "mcrae-to-gpt35"
 
-    def __call__(self):
+    def __call__(self, *, num_min_concepts=10):
         with open("output/map-{}.json".format(self.model)) as f:
             data = json.load(f)
 
@@ -237,7 +261,7 @@ class McRaeMappedNormsLoader(NormsLoader):
         features_selected = [
             norm
             for norm, concepts in feature_to_concepts.items()
-            if len(concepts) >= 10
+            if len(concepts) >= num_min_concepts
         ]
         return feature_to_concepts, feature_to_id, features_selected
 
@@ -247,9 +271,9 @@ class McRaeMappedNormsLoader(NormsLoader):
 
 NORMS_LOADERS = {
     "generated-gpt35": partial(GPT3NormsLoader, norms_model="chatgpt-gpt3.5-turbo"),
+    "mcrae": McRaeNormsLoader,
     "mcrae-mapped": McRaeMappedNormsLoader,
 }
-
 
 @click.command()
 @click.option(
@@ -263,7 +287,6 @@ NORMS_LOADERS = {
 @click.option("--split-type", "split_type", type=str, required=True)
 def main(embeddings_level, feature_type, norms_type, split_type):
     dataset_name = "things"
-    # feature_type = "pali-gemma-224"
     dataset = DATASETS[dataset_name]()
     embeddings, labels = load_embeddings(dataset_name, feature_type, embeddings_level)
 

@@ -107,10 +107,10 @@ def get_results_levels_and_splits():
 
 def plot_results_per_metacategory(results):
     df = pd.DataFrame(results)
-    st.write(df)
-    dfx = df.pivot_table(index=["metacategory", "feature"], columns="model", values="score")
-    dfx = dfx.reset_index()
-    dfx.to_csv("output/results-per-feature.csv")
+    # st.write(df)
+    # dfx = df.pivot_table(index=["metacategory", "feature"], columns="model", values="score")
+    # dfx = dfx.reset_index()
+    # dfx.to_csv("output/results-per-feature.csv")
     model_performance = df.groupby(["metacategory", "model"])["score"].mean()
     model_performance = model_performance.reset_index()
     order_models = (

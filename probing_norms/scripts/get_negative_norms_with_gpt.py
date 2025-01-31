@@ -4,12 +4,9 @@ import random
 
 from openai import AzureOpenAI
 
-from probing_norms.data import DIR_GPT3_NORMS, load_mcrae_feature_norms
-from probing_norms.utils import read_json, read_file
-
-
-concept_feature = load_mcrae_feature_norms()
-features = list(set([f for c, f in concept_feature]))
+from probing_norms.data import DIR_GPT3_NORMS
+from probing_norms.utils import cache_json, read_json, read_file
+from probing_norms.predict import McRaeNormsLoader, McRaeMappedNormsLoader
 
 
 def normalize_norm(text):
@@ -48,7 +45,7 @@ def normalize_concept(text):
 
 
 concepts = read_file("data/concepts-things.txt")
-concpets_ss = random.sample(concepts, 128)
+concepts = sorted(concepts)
 
 
 QUESTIONS = {
@@ -65,8 +62,8 @@ def get_prompt(question, norm):
             "content": [
                 {
                     "type": "text",
-                    "text": "You are asked to evaluate whether specific attributes can be applied to a list of general-level concepts (to follow). Answer the questions just by listing the attributes, comma separated. Here is the list of concepts: {}".format(
-                        ", ".join(map(normalize_concept, concpets_ss))
+                    "text": "You are asked to evaluate whether specific attributes can be applied to a list of general-level concepts (to follow). Answer the questions just by listing the attributes, comma separated. Here is the list of concepts (one per line):\n{}".format(
+                        "\n".join(map(normalize_concept, concepts))
                     ),
                 }
             ],
@@ -94,37 +91,50 @@ client = AzureOpenAI(
 )
 
 
+def get_path(feature_id, question_type):
+    return "output/gpt4o-annots/{}-{}.json".format(feature_id, question_type)
+
+
 def do1(feature, question_type):
-        question = QUESTIONS[question_type]
-        prompt = get_prompt(question, feature)
+    question = QUESTIONS[question_type]
+    prompt = get_prompt(question, feature)
 
-        response = client.chat.completions.create(
-            model=deployment,
-            messages=prompt,
-            max_tokens=800,
-            temperature=0.7,
-            top_p=0.95,
-            frequency_penalty=0,
-            presence_penalty=0,
-            stop=None,
-            stream=False,
-        )
+    response = client.chat.completions.create(
+        model=deployment,
+        messages=prompt,
+        # max_tokens=800,
+        temperature=0.7,
+        top_p=0.95,
+        frequency_penalty=0,
+        presence_penalty=0,
+        stop=None,
+        stream=False,
+    )
 
-        print(response.choices[0].message.content)
-        # print(response.usage.prompt_tokens)
-        # print(response.usage.completion_tokens)
-        print(response.usage.total_tokens)
-        print()
+    print(prompt)
+    print(feature, question_type)
+    print(response.choices[0].message.content)
+    print(response.usage.prompt_tokens)
+    print(response.usage.completion_tokens)
+    print(response.usage.total_tokens)
+    print()
 
-
-results = [
-    {
+    return {
         "feature": feature,
-        "question-type": t,
-        "response": do1(feature, t),
+        "question-type": question_type,
+        "response": response.choices[0].message.content,
     }
-    for feature in features[:10]
-    for t in "pos neg maybe".split()
-]
 
-print(results)
+
+
+norms_loader = McRaeMappedNormsLoader()
+_, feature_to_id, features = norms_loader()
+
+random.seed(1337)
+features = random.sample(features, 100)
+# print(features)
+# pdb.set_trace()
+
+for feature in features:
+    for t in "pos maybe neg".split():
+        cache_json(get_path(feature_to_id[feature], t), do1, feature, t)

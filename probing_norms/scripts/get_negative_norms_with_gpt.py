@@ -4,20 +4,19 @@ import random
 
 from openai import AzureOpenAI
 
-from probing_norms.data import DATASETS
-from probing_norms.predict import McRaeMappedNormsLoader
-from probing_norms.utils import read_json
+# from probing_norms.data import DATASETS
+# from probing_norms.predict import McRaeMappedNormsLoader
+from probing_norms.utils import read_json, read_file
 
 
-dataset_name = "things"
-dataset = DATASETS[dataset_name]()
+# dataset_name = "things"
+# dataset = DATASETS[dataset_name]()
 
-norm_loader = McRaeMappedNormsLoader()
-feature_to_concepts, feature_to_id, features_selected = norm_loader()
+# norm_loader = McRaeMappedNormsLoader()
+# feature_to_concepts, feature_to_id, features_selected = norm_loader()
 
-concepts = list(dataset.class_to_label.keys())
+concepts = read_file("data/concepts-things.txt")
 concpets_ss = random.sample(concepts, 128)
-
 
 endpoint = os.getenv("ENDPOINT_URL", "https://dano.openai.azure.com/")
 deployment = os.getenv("DEPLOYMENT_NAME", "gpt-4o")
@@ -59,10 +58,10 @@ def get_prompt(question, norm):
         },
     ]
 
-
+feature = "a_boat"
 for t in "pos neg maybe".split():
     question = QUESTIONS[t]
-    prompt = get_prompt(question, features_selected[1])
+    prompt = get_prompt(question, feature)
     print(prompt)
 
     response = client.chat.completions.create(

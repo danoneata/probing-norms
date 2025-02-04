@@ -127,14 +127,15 @@ def do1(feature, question_type):
 
 
 
-norms_loader = McRaeMappedNormsLoader()
-_, feature_to_id, features = norms_loader()
+if __name__ == "__main__":
+    norms_loader = McRaeMappedNormsLoader()
+    _, feature_to_id, features = norms_loader()
 
-random.seed(1337)
-features = random.sample(features, 100)
-# print(features)
-# pdb.set_trace()
+    random.seed(1337)
+    features = random.sample(features, 100)
+    # print(features)
+    # pdb.set_trace()
 
-for feature in features:
-    for t in "pos maybe neg".split():
-        cache_json(get_path(feature_to_id[feature], t), do1, feature, t)
+    for feature in features:
+        for t in "pos maybe neg".split():
+            cache_json(get_path(feature_to_id[feature], t), do1, feature, t)

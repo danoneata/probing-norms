@@ -10,6 +10,7 @@ from typing import Dict, List
 
 import click
 import numpy as np
+import pandas as pd
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split, RepeatedStratifiedKFold
@@ -18,11 +19,13 @@ from tqdm import tqdm
 from probing_norms.constants import NUM_MIN_CONCEPTS
 from probing_norms.data import (
     DATASETS,
+    filter_by_things_concepts,
     load_features_metadata,
+    load_binder_feature_norms,
     load_mcrae_feature_norms,
     get_feature_to_concepts,
 )
-from probing_norms.utils import cache_json
+from probing_norms.utils import cache_json, read_file
 from multiprocess import Pool
 
 
@@ -49,7 +52,7 @@ def load_embeddings(dataset_name, feature_type, embeddings_level):
     path = "output/features-image/{}-{}.npz".format(dataset_name, feature_type)
     output = np.load(path, allow_pickle=True)
     embeddings = output["X"]
-    labels = output["y"]
+    labels = output["y"].astype(np.int32)
     embeddings, labels = AGGREGATE_EMBEDDINGS[embeddings_level](embeddings, labels)
     return embeddings, labels
 
@@ -208,6 +211,9 @@ class NormsLoader:
     def get_suffix(self) -> str:
         raise NotImplementedError
 
+    def load_concepts(self):
+        return read_file("data/concepts-things.txt")
+
 
 class GPT3NormsLoader(NormsLoader):
     def __init__(self, norms_model):
@@ -269,10 +275,43 @@ class McRaeMappedNormsLoader(NormsLoader):
         return str(self.model)
 
 
+class BinderNormsLoader(NormsLoader):
+    def __init__(self, thresh):
+        self.model = "binder"
+        self.thresh = thresh
+
+    def load_concepts(self):
+        df = pd.read_excel("data/binder-norms.xlsx")
+        df = filter_by_things_concepts(df)
+        return df["Word"].tolist()
+
+    def __call__(self):
+        concept_feature = load_binder_feature_norms(self.thresh)
+        feature_to_concepts = get_feature_to_concepts(concept_feature)
+
+        features = sorted(feature_to_concepts.keys())
+        feature_to_id = {feature: i for i, feature in enumerate(features)}
+
+        features_selected = [
+            norm
+            for norm, concepts in feature_to_concepts.items()
+            if len(concepts) >= 5
+        ]
+        # features_selected = features
+
+        return feature_to_concepts, feature_to_id, features_selected
+
+    def get_suffix(self):
+        return "{}-{}".format(self.model, self.thresh)
+
+
 NORMS_LOADERS = {
     "generated-gpt35": partial(GPT3NormsLoader, norms_model="chatgpt-gpt3.5-turbo"),
     "mcrae": McRaeNormsLoader,
     "mcrae-mapped": McRaeMappedNormsLoader,
+    "binder-3": partial(BinderNormsLoader, thresh=3),
+    "binder-4": partial(BinderNormsLoader, thresh=4),
+    "binder-5": partial(BinderNormsLoader, thresh=5),
 }
 
 @click.command()
@@ -288,10 +327,16 @@ NORMS_LOADERS = {
 def main(embeddings_level, feature_type, norms_type, split_type):
     dataset_name = "things"
     dataset = DATASETS[dataset_name]()
-    embeddings, labels = load_embeddings(dataset_name, feature_type, embeddings_level)
 
     norm_loader = NORMS_LOADERS[norms_type]()
     feature_to_concepts, feature_to_id, features_selected = norm_loader()
+    selected_concepts = norm_loader.load_concepts()
+    selected_labels = [dataset.class_to_label[c] for c in selected_concepts]
+
+    embeddings, labels = load_embeddings(dataset_name, feature_type, embeddings_level)
+    idxs = np.isin(labels, selected_labels)
+    embeddings = embeddings[idxs]
+    labels = labels[idxs]
 
     def get_path(feature):
         feature_norm = norm_loader.get_suffix()

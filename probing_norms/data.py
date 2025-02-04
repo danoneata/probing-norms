@@ -68,6 +68,51 @@ def load_mcrae_feature_norms():
     return concept_feature
 
 
+def filter_by_things_concepts(df):
+    concepts_things = read_file("data/concepts-things.txt")
+    supercats = [
+        "living object",
+        "artifact",
+        "natural object",
+    ]
+
+    idxs = df["Super Category"].isin(supercats)
+    df = df[idxs]
+
+    idxs = df["Word"].isin(concepts_things)
+    df = df[idxs]
+
+    return df
+
+
+def load_binder_dense():
+    df = pd.read_excel("data/binder-norms.xlsx")
+    df = filter_by_things_concepts(df)
+
+    cols = df.columns[5: 70]
+    df = df.set_index("Word")
+    df = df[cols]
+
+    df = df.unstack()
+    df = df.reset_index()
+    df = df.rename(columns={"level_0": "Feature", 0: "Value"})
+
+    return df
+
+
+def load_binder_feature_norms(thresh):
+    assert 0 < thresh < 6
+
+    df = load_binder_dense()
+    idxs = df["Value"] >= thresh
+    df = df[idxs]
+
+    cols = ["Word", "Feature"]
+    df = df.drop_duplicates()
+    concept_feature = df[cols].values.tolist()
+    return concept_feature
+
+
 def get_feature_to_concepts(concept_feature):
     concept_feature = sorted(concept_feature, key=second)
     feature_groups = groupby(concept_feature, key=second)

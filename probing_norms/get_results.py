@@ -9,7 +9,7 @@ import seaborn as sns
 import streamlit as st
 
 from matplotlib import pyplot as plt
-from sklearn.metrics import f1_score, accuracy_score
+from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
 from tqdm import tqdm
 
 from probing_norms.utils import read_json, multimap
@@ -21,6 +21,7 @@ DATASET_NAME = "things"
 SCORE_FUNCS = {
     "leave-one-concept-out": accuracy_score,
     "repeated-k-fold": f1_score,
+    # "repeated-k-fold": roc_auc_score,
 }
 
 FEATURE_TYPES = [
@@ -241,7 +242,51 @@ def get_results_per_metacategory_mcrae_mapped():
     plot_results_per_metacategory(results)
 
 
+def get_results_binder_norms():
+    level = "concept"
+    split = "repeated-k-fold"
+
+    norms_loader = NORMS_LOADERS["binder-4"]()
+    feature_to_concepts, feature_to_id, features_selected = norms_loader()
+    results = [
+        {
+            **load_result(
+                level,
+                split,
+                feature_type,
+                feature,
+                {
+                    "feature_norm_str": f"binder-{thresh}",
+                    "feature_id": feature_to_id[feature],
+                },
+            ),
+            "thresh": thresh,
+        }
+        for thresh in [4, 5]
+        for feature in tqdm(features_selected)
+        for feature_type in FEATURE_TYPES
+    ]
+    df = pd.DataFrame(results)
+    order_models = (
+        df.groupby("model")["score"].mean().sort_values().index
+    )
+
+    fig = sns.catplot(
+        data=df,
+        x="score",
+        y="feature",
+        hue="model",
+        row="thresh",
+        kind="bar",
+        hue_order=order_models,
+        height=16,
+        aspect=0.5,
+    )
+    st.pyplot(fig)
+
+
 if __name__ == "__main__":
     # get_results_levels_and_splits()
     # get_results_per_metacategory("concept", "repeated-k-fold")
-    get_results_per_metacategory_mcrae_mapped()
+    # get_results_per_metacategory_mcrae_mapped()
+    get_results_binder_norms()

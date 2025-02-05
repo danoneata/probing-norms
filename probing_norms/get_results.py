@@ -314,16 +314,12 @@ def get_classifiers_agreement_binder_norms():
             norm2 = np.linalg.norm(c2)
             return np.dot(c1, c2) / (norm1 * norm2)
 
-        try:
-            path = get_path(**kwargs_path) + ".pkl"
-            with open(path, "rb") as f:
-                outputs = pickle.load(f)
+        path = get_path(**kwargs_path) + ".pkl"
+        with open(path, "rb") as f:
+            outputs = pickle.load(f)
 
-            coefs = [output["clf"].coef_.squeeze() for output in outputs]
-            sims = [cossim(c1, c2) for c1, c2 in combinations(coefs, 2)]
-
-        except FileNotFoundError:
-            sims = [np.nan]
+        coefs = [output["clf"].coef_.squeeze() for output in outputs]
+        sims = [cossim(c1, c2) for c1, c2 in combinations(coefs, 2)]
 
         sims_mean = np.mean(sims)
         sims_std = np.std(sims)

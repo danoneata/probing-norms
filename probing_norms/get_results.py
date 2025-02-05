@@ -1,6 +1,8 @@
 import csv
+import pickle
 import pdb
 
+from itertools import combinations
 from collections import Counter
 
 import numpy as np
@@ -35,6 +37,9 @@ FEATURE_TYPES = [
 ]
 
 
+OUTPUT_PATH = "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}"
+
+
 def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path):
     def evaluate(data):
         true = np.array([datum["true"] for datum in data])
@@ -42,8 +47,8 @@ def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path
         pred = (pred > 0.5).astype(int)
         return SCORE_FUNCS[split_type](true, pred)
 
-    def get_path(feature, *, feature_norm_str, feature_id):
-        return "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}".format(
+    def get_path(feature_type, *, feature_norm_str, feature_id):
+        return OUTPUT_PATH.format(
             embeddings_level,
             split_type,
             DATASET_NAME,
@@ -285,8 +290,78 @@ def get_results_binder_norms():
     st.pyplot(fig)
 
 
+def get_classifiers_agreement_binder_norms():
+    level = "concept"
+    split = "repeated-k-fold"
+
+    thresh = 4
+    norms_loader = NORMS_LOADERS[f"binder-{thresh}"]()
+    feature_to_concepts, feature_to_id, features_selected = norms_loader()
+
+    def get_agreement(level, split, feature_type, feature, kwargs_path):
+        def get_path(*, feature_norm_str, feature_id):
+            return OUTPUT_PATH.format(
+                level,
+                split,
+                DATASET_NAME,
+                feature_type,
+                feature_norm_str,
+                feature_id,
+            )
+
+        def cossim(c1, c2):
+            norm1 = np.linalg.norm(c1)
+            norm2 = np.linalg.norm(c2)
+            return np.dot(c1, c2) / (norm1 * norm2)
+
+        try:
+            path = get_path(**kwargs_path) + ".pkl"
+            with open(path, "rb") as f:
+                outputs = pickle.load(f)
+
+            coefs = [output["clf"].coef_.squeeze() for output in outputs]
+            sims = [cossim(c1, c2) for c1, c2 in combinations(coefs, 2)]
+
+        except FileNotFoundError:
+            sims = [np.nan]
+
+        sims_mean = np.mean(sims)
+        sims_std = np.std(sims)
+
+        return {
+            "feature": feature,
+            "level": level,
+            "model": feature_type,
+            "split": split,
+            "sim-mean": sims_mean,
+            "sim-std": sims_std,
+            "sim": "{:.2f}±{:.1f}".format(sims_mean, 2 * sims_std),
+        }
+    
+    results = [
+        get_agreement(
+            level,
+            split,
+            feature_type,
+            feature,
+            {
+                "feature_norm_str": norms_loader.get_suffix(),
+                "feature_id": feature_to_id[feature],
+            },
+        )
+        for feature in tqdm(features_selected)
+        for feature_type in FEATURE_TYPES
+    ]
+    df = pd.DataFrame(results)
+    df = df.pivot_table(index="feature", columns="model", values="sim-mean")
+    df = df.reset_index()
+    df["num-concepts"] = df["feature"].apply(lambda x: len(feature_to_concepts[x]))
+    df.to_csv("output/classifier-agreement-binder-norms.csv")
+
+
 if __name__ == "__main__":
     # get_results_levels_and_splits()
     # get_results_per_metacategory("concept", "repeated-k-fold")
     # get_results_per_metacategory_mcrae_mapped()
-    get_results_binder_norms()
+    # get_results_binder_norms()
+    get_classifiers_agreement_binder_norms()

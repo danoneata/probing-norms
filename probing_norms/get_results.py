@@ -1,9 +1,11 @@
 import csv
 import pickle
 import pdb
+import sys
 
-from itertools import combinations
 from collections import Counter
+from functools import partial
+from itertools import combinations
 
 import numpy as np
 import pandas as pd
@@ -47,7 +49,7 @@ def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path
         pred = (pred > 0.5).astype(int)
         return SCORE_FUNCS[split_type](true, pred)
 
-    def get_path(feature_type, *, feature_norm_str, feature_id):
+    def get_path(*, feature_norm_str, feature_id):
         return OUTPUT_PATH.format(
             embeddings_level,
             split_type,
@@ -58,7 +60,7 @@ def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path
         )
 
     try:
-        path = get_path(feature, **kwargs_path) + ".json"
+        path = get_path(**kwargs_path) + ".json"
         results = read_json(path)
         scores = [evaluate(result["preds"]) for result in results]
     except FileNotFoundError:
@@ -355,9 +357,67 @@ def get_classifiers_agreement_binder_norms():
     df.to_csv("output/classifier-agreement-binder-norms.csv")
 
 
+def get_results_paper_tabel_main():
+    level = "concept"
+    split = "repeated-k-fold"
+    
+    FEATURE_NAMES = {
+        "pali-gemma-224": "PaliGemma",
+        "siglip-224": "SigLIP",
+        "vit-mae-large": "ViT-MAE",
+        "dino-v2": "DINO",
+        "swin-v2": "Swin",
+        "max-vit-large": "Max ViT",
+        "random-siglip": "Random SigLIP",
+    }
+    NORMS_NAMES = {
+        "mcrae-mapped": "McRae++",
+        "binder-4": "Binder",
+    }
+
+    def get_results(norms_type):
+        norms_loader = NORMS_LOADERS[norms_type]()
+        _, feature_to_id, features_selected = norms_loader()
+
+        results = [
+            load_result(
+                level,
+                split,
+                feature_type,
+                feature,
+                {
+                    "feature_norm_str": norms_loader.get_suffix(),
+                    "feature_id": feature_to_id[feature],
+                },
+            )
+            for feature in tqdm(features_selected)
+            for feature_type in FEATURE_TYPES
+        ]
+        df = pd.DataFrame(results)
+        df = df.groupby(["model"])["score"].mean()
+        return df
+
+    dfs = {
+        NORMS_NAMES[norms_type]: get_results(norms_type)
+        for norms_type in ["mcrae-mapped", "binder-4"]
+    }
+    df = pd.concat(dfs, axis=1)
+    df = df.sort_values("mcrae-mapped", ascending=False)
+    df = df.reset_index()
+    df["model"] = df["model"].map(FEATURE_NAMES)
+    print(df.to_latex(float_format="%.2f"))
+
+
+FUNCS = {
+    "levels-and-splits": get_results_levels_and_splits,
+    "per-metacategory": partial(get_results_per_metacategory, "concept", "repeated-k-fold"),
+    "per-metacategory-mcrae-mapped": get_results_per_metacategory_mcrae_mapped,
+    "binder-norms": get_results_binder_norms,
+    "classifier-agreement-binder-norms": get_classifiers_agreement_binder_norms,
+    "paper-table-main": get_results_paper_tabel_main,
+}
+
+
 if __name__ == "__main__":
-    # get_results_levels_and_splits()
-    # get_results_per_metacategory("concept", "repeated-k-fold")
-    # get_results_per_metacategory_mcrae_mapped()
-    # get_results_binder_norms()
-    get_classifiers_agreement_binder_norms()
+    what = sys.argv[1]
+    FUNCS[what]()

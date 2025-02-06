@@ -16,7 +16,7 @@ from matplotlib import pyplot as plt
 from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
 from tqdm import tqdm
 
-from probing_norms.utils import read_json, multimap
+from probing_norms.utils import cache_df, cache_json, read_json, multimap
 from probing_norms.predict import NORMS_LOADERS
 
 NORMS_MODEL = "chatgpt-gpt3.5-turbo"
@@ -40,6 +40,28 @@ FEATURE_TYPES = [
 
 
 OUTPUT_PATH = "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}"
+
+
+METACATEGORY_NAMES = {
+    "visual-colour": "visual: color",
+    "visual-form_and_surface": "visual: form & surface",
+    "visual-motion": "visual: motion",
+}
+
+FEATURE_NAMES = {
+    "pali-gemma-224": "PaliGemma",
+    "siglip-224": "SigLIP",
+    "vit-mae-large": "ViT-MAE",
+    "dino-v2": "DINO",
+    "swin-v2": "Swin",
+    "max-vit-large": "Max ViT",
+    "random-siglip": "Random SigLIP",
+}
+
+NORMS_NAMES = {
+    "mcrae-mapped": "McRae++",
+    "binder-4": "Binder",
+}
 
 
 def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path):
@@ -119,6 +141,9 @@ def plot_results_per_metacategory(results):
     # dfx = df.pivot_table(index=["metacategory", "feature"], columns="model", values="score")
     # dfx = dfx.reset_index()
     # dfx.to_csv("output/results-per-feature.csv")
+    df["model"] = df["model"].map(FEATURE_NAMES)
+    df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_NAMES.get(x, x))
+
     model_performance = df.groupby(["metacategory", "model"])["score"].mean()
     model_performance = model_performance.reset_index()
     order_models = (
@@ -138,10 +163,12 @@ def plot_results_per_metacategory(results):
         errorbar=None,
         ax=ax,
     )
-    sns.move_legend(ax, "upper left", bbox_to_anchor=(1, 1))
+    sns.move_legend(ax, "lower right", bbox_to_anchor=(1, 1), ncol=2, title="")
     ax.set_ylabel("")
+    ax.set_xlabel("F1 score")
     fig.set_tight_layout(True)
     st.pyplot(fig)
+    return fig
 
 
 def get_results_per_metacategory(level, split):
@@ -228,25 +255,28 @@ def get_results_per_metacategory_mcrae_mapped():
     level = "concept"
     split = "repeated-k-fold"
 
-    results = [
-        {
-            **load_result(
-                level,
-                split,
-                feature_type,
-                feature,
-                {
-                    "feature_norm_str": norms_loader.get_suffix(),
-                    "feature_id": feature_to_id[feature],
-                },
-            ),
-            "metacategory": taxonomy[feature],
-        }
-        for feature in tqdm(features_selected)
-        for feature_type in FEATURE_TYPES
-    ]
+    def load_results():
+        return [
+            {
+                **load_result(
+                    level,
+                    split,
+                    feature_type,
+                    feature,
+                    {
+                        "feature_norm_str": norms_loader.get_suffix(),
+                        "feature_id": feature_to_id[feature],
+                    },
+                ),
+                "metacategory": taxonomy[feature],
+            }
+            for feature in tqdm(features_selected)
+            for feature_type in FEATURE_TYPES
+        ]
 
-    plot_results_per_metacategory(results)
+    results = cache_json("/tmp/per-metacategory-mcrae-mapped.json", load_results)
+    fig = plot_results_per_metacategory(results)
+    fig.savefig("output/plots/per-metacategory-mcrae-mapped.pdf", bbox_inches="tight")
 
 
 def get_results_binder_norms():
@@ -274,9 +304,7 @@ def get_results_binder_norms():
         for feature_type in FEATURE_TYPES
     ]
     df = pd.DataFrame(results)
-    order_models = (
-        df.groupby("model")["score"].mean().sort_values().index
-    )
+    order_models = df.groupby("model")["score"].mean().sort_values().index
 
     fig = sns.catplot(
         data=df,
@@ -335,7 +363,7 @@ def get_classifiers_agreement_binder_norms():
             "sim-std": sims_std,
             "sim": "{:.2f}±{:.1f}".format(sims_mean, 2 * sims_std),
         }
-    
+
     results = [
         get_agreement(
             level,
@@ -360,20 +388,6 @@ def get_classifiers_agreement_binder_norms():
 def get_results_paper_tabel_main():
     level = "concept"
     split = "repeated-k-fold"
-    
-    FEATURE_NAMES = {
-        "pali-gemma-224": "PaliGemma",
-        "siglip-224": "SigLIP",
-        "vit-mae-large": "ViT-MAE",
-        "dino-v2": "DINO",
-        "swin-v2": "Swin",
-        "max-vit-large": "Max ViT",
-        "random-siglip": "Random SigLIP",
-    }
-    NORMS_NAMES = {
-        "mcrae-mapped": "McRae++",
-        "binder-4": "Binder",
-    }
 
     def get_results(norms_type):
         norms_loader = NORMS_LOADERS[norms_type]()
@@ -398,11 +412,15 @@ def get_results_paper_tabel_main():
         return df
 
     dfs = {
-        NORMS_NAMES[norms_type]: get_results(norms_type)
+        NORMS_NAMES[norms_type]: cache_df(
+            f"/tmp/paper-main-table-{norms_type}.json",
+            get_results,
+            norms_type,
+        )
         for norms_type in ["mcrae-mapped", "binder-4"]
     }
     df = pd.concat(dfs, axis=1)
-    df = df.sort_values("mcrae-mapped", ascending=False)
+    df = df.sort_values("McRae++", ascending=False)
     df = df.reset_index()
     df["model"] = df["model"].map(FEATURE_NAMES)
     print(df.to_latex(float_format="%.2f"))
@@ -410,7 +428,11 @@ def get_results_paper_tabel_main():
 
 FUNCS = {
     "levels-and-splits": get_results_levels_and_splits,
-    "per-metacategory": partial(get_results_per_metacategory, "concept", "repeated-k-fold"),
+    "per-metacategory": partial(
+        get_results_per_metacategory,
+        "concept",
+        "repeated-k-fold",
+    ),
     "per-metacategory-mcrae-mapped": get_results_per_metacategory_mcrae_mapped,
     "binder-norms": get_results_binder_norms,
     "classifier-agreement-binder-norms": get_classifiers_agreement_binder_norms,

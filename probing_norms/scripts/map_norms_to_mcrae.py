@@ -113,6 +113,18 @@ with open("output/map-mcrae-to-gpt35.tsv", "w") as f:
         )
         f.write(out + "\n")
 
+        if norm_mcrae == "has_seeds":
+            print("McRae")
+            print("{} ({}) → {}".format(norm_mcrae, len(concepts_mcrae), ", ".join(sorted(concepts_mcrae))))
+            print("Hansen")
+            for i in idxs:
+                print("{} ({}) → {}".format(norms_gpt35[i], len(norms_gpt35.norm_to_concepts[norms_gpt35[i]]), ", ".join(sorted(norms_gpt35.norm_to_concepts[norms_gpt35[i]]))))
+            print("McRae++")
+            extended = set(concepts_gpt35) | set(concepts_mcrae_common)
+            print("{} ({}) → {}".format(norm_mcrae, len(extended), ", ".join(sorted(extended))))
+            pdb.set_trace()
+
+
         datum = {
             "norm": norm_mcrae,
             "concepts": concepts_gpt35 + list(concepts_mcrae_common - concepts_gpt35_common),
@@ -123,6 +135,6 @@ with open("output/map-mcrae-to-gpt35.tsv", "w") as f:
 print(has_match_total)
 print(len(norms_mcrae))
 
-import json
-with open("output/map-mcrae-to-gpt35.json", "w") as f:
-    json.dump(data, f, indent=4)
+# import json
+# with open("output/map-mcrae-to-gpt35.json", "w") as f:
+#     json.dump(data, f, indent=4)

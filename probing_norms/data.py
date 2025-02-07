@@ -182,6 +182,19 @@ class THINGS(Dataset):
         }
 
 
+def load_things_concept_mapping():
+    def parse(line):
+        line = line.strip()
+        word, *_, word_with_category = line.split(",")
+        if not word_with_category:
+            word_with_category = word.replace("_", " ")
+        return word, word_with_category
+
+
+    path = DIR_GPT3_NORMS / "data" / "things" / "words.csv"
+    return dict(read_file(str(path), parse)[1:])
+
+
 DATASETS = {
     "imagenet12": partial(ImageNet, root=DIR_IMAGENET, split="val"),
     "things": partial(THINGS, root=DIR_THINGS),

@@ -14,9 +14,13 @@ import torch.nn as nn
 from transformers import (
     AutoModel,
     AutoProcessor,
+    CLIPModel,
+    CLIPProcessor,
     PaliGemmaForConditionalGeneration,
     ViTMAEModel,
 )
+from transformers.models.siglip import SiglipVisionModel
+
 from torch.utils.data import DataLoader
 
 import torchvision.transforms as T
@@ -55,6 +59,29 @@ class ImageBackboneDINO(nn.Module):
         return features
 
 
+class CLIP(nn.Module):
+    def __init__(self):
+        super(CLIP, self).__init__()
+        model_id = "openai/clip-vit-large-patch14"
+        model = CLIPModel.from_pretrained(model_id).eval()
+        self.feature_dim = model.config.vision_config.hidden_size
+        self.model = model.vision_model
+        self.processor = CLIPProcessor.from_pretrained(model_id)
+
+    def transform(self, x):
+        output = self.processor(images=x, return_tensors="pt")
+        output = output["pixel_values"]
+        output = output.squeeze(0)
+        return output
+
+    def forward(self, x):
+        features = self.model(x)
+        pdb.set_trace()
+        features = features.last_hidden_state.mean(1)
+        return features
+
+
+
 class SigLIP(nn.Module):
     def __init__(self, use_random_weights=False):
         super(SigLIP, self).__init__()
@@ -63,9 +90,8 @@ class SigLIP(nn.Module):
         self.feature_dim = model.config.vision_config.hidden_size
 
         if use_random_weights:
-            from transformers.models.siglip import SiglipVisionModel
-
             model = SiglipVisionModel(model.config.vision_config)
+            model = model.eval()
 
         self.model = model.vision_model
         self.model.head = nn.Identity()
@@ -159,6 +185,7 @@ class DINOV2(nn.Module):
         return features
 
 
+
 FEATURE_EXTRACTORS = {
     # fmt: off
     # Self supervised models
@@ -166,6 +193,7 @@ FEATURE_EXTRACTORS = {
     "dino-v2": DINOV2,
     "vit-mae-large": VITMAE,
     # Image-text models
+    "clip": CLIP,
     "siglip-224": SigLIP,
     "pali-gemma-224": PaliGemma,
     # Supervised models

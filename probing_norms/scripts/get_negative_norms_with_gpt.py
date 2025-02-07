@@ -4,7 +4,7 @@ import random
 
 from openai import AzureOpenAI
 
-from probing_norms.data import DIR_GPT3_NORMS
+from probing_norms.data import load_things_concept_mapping
 from probing_norms.utils import cache_json, read_json, read_file
 from probing_norms.predict import McRaeNormsLoader, McRaeMappedNormsLoader
 
@@ -28,24 +28,14 @@ def normalize_norm(text):
     return text
 
 
-def parse(line):
-    line = line.strip()
-    word, *_, word_with_category = line.split(",")
-    if not word_with_category:
-        word_with_category = word.replace("_", " ")
-    return word, word_with_category
+concepts = read_file("data/concepts-things.txt")
+concepts = sorted(concepts)
 
-
-path = DIR_GPT3_NORMS / "data" / "things" / "words.csv"
-concept_mapping = dict(read_file(str(path), parse)[1:])
+concept_mapping = load_things_concept_mapping()
 
 
 def normalize_concept(text):
     return concept_mapping[text]
-
-
-concepts = read_file("data/concepts-things.txt")
-concepts = sorted(concepts)
 
 
 QUESTIONS = {

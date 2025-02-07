@@ -6,6 +6,7 @@ import pickle
 
 from dataclasses import dataclass
 from functools import partial
+from multiprocess import Pool
 from typing import Dict, List
 
 import click
@@ -26,7 +27,8 @@ from probing_norms.data import (
     get_feature_to_concepts,
 )
 from probing_norms.utils import cache_json, read_file
-from multiprocess import Pool
+from probing_norms.extract_features_image import FEATURE_EXTRACTORS as FEATURE_EXTRACTORS_IMAGE
+from probing_norms.extract_features_text import FEATURE_EXTRACTORS as FEATURE_EXTRACTORS_TEXT, MAPPING_TYPES
 
 
 NORMS_PRIMING = "mcrae"
@@ -48,12 +50,20 @@ AGGREGATE_EMBEDDINGS = {
 }
 
 
+FEATURE_TYPE_TO_MODALITY = {
+    **{k: "image" for k in FEATURE_EXTRACTORS_IMAGE.keys()},
+    **{k + "-" + m: "text" for k in FEATURE_EXTRACTORS_TEXT.keys() for m in MAPPING_TYPES},
+}
+
+
 def load_embeddings(dataset_name, feature_type, embeddings_level):
-    path = "output/features-image/{}-{}.npz".format(dataset_name, feature_type)
+    modality = FEATURE_TYPE_TO_MODALITY[feature_type]
+    path = "output/features-{}/{}-{}.npz".format(modality, dataset_name, feature_type)
     output = np.load(path, allow_pickle=True)
     embeddings = output["X"]
     labels = output["y"].astype(np.int32)
-    embeddings, labels = AGGREGATE_EMBEDDINGS[embeddings_level](embeddings, labels)
+    if modality == "image":
+        embeddings, labels = AGGREGATE_EMBEDDINGS[embeddings_level](embeddings, labels)
     return embeddings, labels
 
 

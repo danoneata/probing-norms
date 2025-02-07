@@ -42,6 +42,7 @@ FEATURE_TYPES = [
 OUTPUT_PATH = "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}"
 
 
+# Names used for plotting or other output.
 METACATEGORY_NAMES = {
     "visual-colour": "visual: color",
     "visual-form_and_surface": "visual: form & surface",
@@ -49,6 +50,8 @@ METACATEGORY_NAMES = {
 }
 
 FEATURE_NAMES = {
+    # "fasttext-word": "fastText",
+    "gemma-2b": "Gemma",
     "pali-gemma-224": "PaliGemma",
     "siglip-224": "SigLIP",
     "vit-mae-large": "ViT-MAE",
@@ -100,7 +103,6 @@ def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path
 
 
 def get_results_levels_and_splits():
-
     norms_loader = NORMS_LOADERS["generated-gpt35"]()
     _, feature_to_id, features_selected = norms_loader()
 
@@ -204,20 +206,6 @@ def get_results_per_metacategory(level, split):
 
     norms_loader = NORMS_LOADERS["generated-gpt35"]()
     _, feature_to_id, features_selected = norms_loader()
-
-    # import random
-    # # metacategory_to_features = multimap([(m, f) for f, m in taxonomy.items() if f in features_selected])
-    # metacategory_to_features = multimap([(m, f) for f, m in taxonomy.items()])
-    # n = 5
-    # for metacategory in sorted(metacategory_to_features.keys()):
-    #     features = metacategory_to_features[metacategory]
-    #     if len(features) > n:
-    #         features_ss = random.sample(features, n)
-    #     else:
-    #         features_ss = features
-    #     print("{};{};{}".format(metacategory, len(features), ", ".join(sorted(features_ss))))
-
-    # return
 
     results = [
         {
@@ -413,7 +401,7 @@ def get_results_paper_tabel_main():
 
     dfs = {
         NORMS_NAMES[norms_type]: cache_df(
-            f"/tmp/paper-main-table-{norms_type}.json",
+            f"/tmp/paper-main-table-{norms_type}.pkl",
             get_results,
             norms_type,
         )
@@ -424,6 +412,38 @@ def get_results_paper_tabel_main():
     df = df.reset_index()
     df["model"] = df["model"].map(FEATURE_NAMES)
     print(df.to_latex(float_format="%.2f"))
+
+
+def get_results_text_models():
+    level = "concept"
+    split = "repeated-k-fold"
+
+    def get_results(norms_type):
+        norms_loader = NORMS_LOADERS[norms_type]()
+        _, feature_to_id, features_selected = norms_loader()
+
+        results = [
+            load_result(
+                level,
+                split,
+                f"{f}-{m}",
+                feature,
+                {
+                    "feature_norm_str": norms_loader.get_suffix(),
+                    "feature_id": feature_to_id[feature],
+                },
+            )
+            for feature in tqdm(features_selected)
+            for f in ["fasttext", "gemma-2b", "gemma-2b-last"]
+            for m in ["word", "word-and-category"]
+        ]
+        df = pd.DataFrame(results)
+        df = df.groupby(["model"])["score"].mean()
+        return df
+
+    # df = cache_df(f"/tmp/text-models-mcrae-mapped.pkl", get_results, "mcrae-mapped")
+    df = get_results("mcrae-mapped")
+    print(df)
 
 
 FUNCS = {
@@ -437,6 +457,7 @@ FUNCS = {
     "binder-norms": get_results_binder_norms,
     "classifier-agreement-binder-norms": get_classifiers_agreement_binder_norms,
     "paper-table-main": get_results_paper_tabel_main,
+    "text-models": get_results_text_models,
 }
 
 

@@ -182,15 +182,23 @@ class THINGS(Dataset):
         }
 
 
-def load_things_concept_mapping():
+def load_things_concept_mapping(type_="word-and-category"):
+    MAP_TYPE = {
+        "word": 0,
+        "category": 1,
+        "word-and-category": 2,
+    }
+
     def parse(line):
         line = line.strip()
-        word, *_, word_with_category = line.split(",")
-        if not word_with_category:
-            word_with_category = word.replace("_", " ")
-        return word, word_with_category
+        key, *rest = line.split(",")
+        value = rest[MAP_TYPE[type_]]
+        if not value:
+            value = rest[0]
+        return key, value
 
 
+    assert type_ in MAP_TYPE
     path = DIR_GPT3_NORMS / "data" / "things" / "words.csv"
     return dict(read_file(str(path), parse)[1:])
 

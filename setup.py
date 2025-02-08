@@ -8,5 +8,5 @@ setup(
     author_email="dan.oneata@gmail.com",
     description="Understanding deep learning models by probing feature norms",
     packages=find_packages(),
-    install_requires=["black", "click", "streamlit", "ruff"],
+    install_requires=["black", "click", "streamlit", "ruff", "tqdm", "transformers", "timm"],
 )

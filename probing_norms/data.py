@@ -199,7 +199,7 @@ def load_things_concept_mapping(type_="word-and-category"):
 
 
     assert type_ in MAP_TYPE
-    path = DIR_GPT3_NORMS / "data" / "things" / "words.csv"
+    path = "data/things/words.csv"
     return dict(read_file(str(path), parse)[1:])
 
 

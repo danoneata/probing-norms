@@ -436,7 +436,7 @@ def get_results_text_models():
             for feature in tqdm(features_selected)
             # for f in ["fasttext", "gemma-2b", "gemma-2b-last"]
             # for m in ["word", "word-and-category"]
-            for f in ["fasttext", "gemma-2b"]
+            for f in ["fasttext", "gemma-2b", "glove-6b-300d", "glove-840b-300d"]
             for m in ["word"]
         ]
         df = pd.DataFrame(results)
@@ -444,11 +444,65 @@ def get_results_text_models():
         return df
 
     # df = cache_df(f"/tmp/text-models-mcrae-mapped.pkl", get_results, "mcrae-mapped")
-    df = get_results("mcrae-mapped")
-    print(df)
+    dfs = {
+        NORMS_NAMES[norms_type]: get_results(norms_type)
+        for norms_type in ["mcrae-mapped", "binder-4"]
+    }
+    df = pd.concat(dfs, axis=1)
+    df = df.reset_index()
+    print(df.to_latex(float_format="%.2f", index=False))
 
-    df = get_results("binder-4")
-    print(df)
+
+def get_results_per_feature_norm():
+    level = "concept"
+    split = "repeated-k-fold"
+    EMBS = ["siglip-224", "fasttext-word", "glove-840b-300d-word", "gemma-2b-word"]
+
+    norms_type = "mcrae-mapped"
+    norms_loader = NORMS_LOADERS[norms_type]()
+    feature_to_concepts, feature_to_id, features_selected = norms_loader()
+
+    def get_results_1():
+        return [
+            load_result(
+                level,
+                split,
+                emb,
+                feature,
+                {
+                    "feature_norm_str": norms_loader.get_suffix(),
+                    "feature_id": feature_to_id[feature],
+                },
+            )
+            for feature in tqdm(features_selected)
+            for emb in EMBS
+        ]
+
+    def random_f1(feature):
+        n = len(feature_to_concepts[feature])
+        total_num_concepts = 1854
+        pred = np.random.randint(0, 2, total_num_concepts)
+        true = np.zeros(total_num_concepts)
+        true[:n] = 1
+        return f1_score(true, pred)
+
+    results = cache_json("/tmp/per-feature-norm.json", get_results_1)
+    df = pd.DataFrame(results)
+    df = df.pivot_table(index="feature", columns="model", values="score")
+    df = df.reset_index()
+    df["num-concepts"] = df["feature"].apply(lambda x: len(feature_to_concepts[x]))
+    df["f1-random-pred"] = df["feature"].apply(random_f1)
+    cols = ["feature", "num-concepts", "f1-random-pred"] + EMBS
+    df = df[cols]
+    df.to_csv("output/results-per-feature-2.csv")
+
+    fig, ax = plt.subplots()
+    # sns.scatterplot(data=df, x="siglip-224", y="fasttext-word", ax=ax)
+    # ax.plot([0, 100], [0, 100], color="gray", linestyle="--")
+    # ax.set_aspect("equal", adjustable="box")
+    fig = sns.lmplot(data=df, x="num-concepts", y="gemma-2b-word")
+    fig.set_axis_labels("Number of concepts", "F1 score")
+    st.pyplot(fig)
 
 
 FUNCS = {
@@ -463,6 +517,7 @@ FUNCS = {
     "classifier-agreement-binder-norms": get_classifiers_agreement_binder_norms,
     "paper-table-main": get_results_paper_tabel_main,
     "text-models": get_results_text_models,
+    "per-feature-norm": get_results_per_feature_norm,
 }
 
 

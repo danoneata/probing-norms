@@ -6,7 +6,6 @@ import pickle
 
 from dataclasses import dataclass
 from functools import partial
-from multiprocess import Pool
 from typing import Dict, List
 
 import click
@@ -74,7 +73,7 @@ def predict1(X, y, split):
     X_tr, y_tr = X[idxs_tr], y[idxs_tr]
     X_te, y_te = X[idxs_te], y[idxs_te]
 
-    clf = LogisticRegression(max_iter=1_000, verbose=False)
+    clf = LogisticRegression(penalty=None, max_iter=1_000, verbose=False)
     clf.fit(X_tr, y_tr)
 
     y_pr = clf.predict_proba(X_te)[:, 1]

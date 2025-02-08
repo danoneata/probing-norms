@@ -1,11 +1,13 @@
+import csv
 import pdb
-import click
 
 from functools import partial
 from tqdm import tqdm
 
+import click
 import fasttext
 import numpy as np
+import pandas as pd
 import torch
 
 from huggingface_hub import hf_hub_download
@@ -57,10 +59,65 @@ class Gemma:
             return self.get_embeddings(input_ids)
 
 
+class Glove:
+    def __init__(self, n_tokens, dim=300):
+        assert dim in {50, 100, 200, 300}
+        assert n_tokens in {"6B", "840B"}
+        path = f"data/glove/glove.{n_tokens}.{dim}d.txt"
+        self.dim = dim
+        self.words = pd.read_table(
+            path,
+            sep=" ",
+            index_col=0,
+            header=None,
+            quoting=csv.QUOTE_NONE,
+        )
+        self.CONCEPTS_TO_SPLIT = {
+            "backscratcher": "back scratcher",
+            "bathmat": "bath mat",
+            "bunkbed": "bunk bed",
+            "cornhusk": "corn husk",
+            "cufflink": "cuff link",
+            "dogfood": "dog food",
+            "doorhandle": "door handle",
+            "doorknocker": "door knocker",
+            "fencepost": "fence post",
+            "footbath": "foot bath",
+            "hotplate": "hot plate",
+            "icemaker": "ice maker",
+            "iceskate": "ice skate",
+            "kneepad": "knee pad",
+            "oilcan": "oil can",
+            "roadsweeper": "road sweeper",
+            "saltshaker": "salt shaker",
+            "ticktacktoe": "tick tack toe",
+        }
+
+    def get_subwords(self, word):
+        return self.CONCEPTS_TO_SPLIT[word].split()
+
+    def __call__(self, text):
+        def get1(word):
+            return self.words.loc[word].values
+
+        words = text.split()
+        try:
+            embs = [get1(word) for word in words]
+        except KeyError:
+            embs = [
+                get1(subword)
+                for word in words
+                for subword in self.get_subwords(word)
+            ]
+        return np.mean(embs, axis=0)
+
+
 FEATURE_EXTRACTORS = {
     "fasttext": FastText,
     "gemma-2b": Gemma,
     "gemma-2b-last": partial(Gemma, layer="last"),
+    "glove-6b-300d": partial(Glove, n_tokens="6B"),
+    "glove-840b-300d": partial(Glove, n_tokens="840B"),
 }
 
 MAPPING_TYPES = ["word", "word-and-category"]

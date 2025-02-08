@@ -27,8 +27,8 @@ def main():
     # SELECTED = ["dino-v2", "pali-gemma-224", "siglip-224", "fasttext-word", "random-siglip", "gemma-2b-word"]
     SELECTED = [
         "siglip-224",
-        "glove-6b-300d-word",
         "fasttext-word",
+        "glove-840b-300d-word",
         "gemma-2b-word",
     ]
     data = {f: load_embeddings(dataset_name, f, "concept") for f in SELECTED}

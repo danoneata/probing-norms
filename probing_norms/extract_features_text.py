@@ -25,7 +25,8 @@ class FastText:
         self.dim = self.model.get_dimension()
 
     def __call__(self, text):
-        return self.model.get_word_vector(text)
+        # return self.model.get_word_vector(text)
+        return self.model.get_sentence_vector(text)
 
 
 class Gemma:

@@ -408,10 +408,10 @@ def get_results_paper_tabel_main():
         for norms_type in ["mcrae-mapped", "binder-4"]
     }
     df = pd.concat(dfs, axis=1)
-    df = df.sort_values("McRae++", ascending=False)
+    df = df.sort_values("McRae++", ascending=True)
     df = df.reset_index()
     df["model"] = df["model"].map(FEATURE_NAMES)
-    print(df.to_latex(float_format="%.2f"))
+    print(df.to_latex(float_format="%.2f", index=False))
 
 
 def get_results_text_models():
@@ -434,8 +434,10 @@ def get_results_text_models():
                 },
             )
             for feature in tqdm(features_selected)
-            for f in ["fasttext", "gemma-2b", "gemma-2b-last"]
-            for m in ["word", "word-and-category"]
+            # for f in ["fasttext", "gemma-2b", "gemma-2b-last"]
+            # for m in ["word", "word-and-category"]
+            for f in ["fasttext", "gemma-2b"]
+            for m in ["word"]
         ]
         df = pd.DataFrame(results)
         df = df.groupby(["model"])["score"].mean()
@@ -443,6 +445,9 @@ def get_results_text_models():
 
     # df = cache_df(f"/tmp/text-models-mcrae-mapped.pkl", get_results, "mcrae-mapped")
     df = get_results("mcrae-mapped")
+    print(df)
+
+    df = get_results("binder-4")
     print(df)
 
 

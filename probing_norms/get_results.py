@@ -12,6 +12,7 @@ import pandas as pd
 import seaborn as sns
 import streamlit as st
 
+from adjustText import adjust_text
 from matplotlib import pyplot as plt
 from sklearn.metrics import (
     f1_score,
@@ -163,6 +164,43 @@ def load_result_random_predictor(norms_loader):
     ]
 
 
+def load_taxonomy_mcrae():
+    cols = ["Feature", "BR_Label"]
+    df = pd.read_csv("data/norms/mcrae/CONCS_FEATS_concstats_brm.txt", sep="\t")
+    df = df[cols]
+    df = df.drop_duplicates()
+    feature_metacategory = df.values.tolist()
+    return dict(feature_metacategory)
+
+
+def load_taxonomy_ours():
+    def get_majority(annotations):
+        counts = Counter(annotations)
+        top_elem, *_ = counts.most_common(1)
+        metacategory, count = top_elem
+        assert count >= 2
+        return metacategory
+
+    def get1(row):
+        feature, _, annot1, annot2, annot3, *_ = row
+        metacategory = get_majority([annot1, annot2, annot3])
+        return feature, metacategory
+        # return {
+        #     "feature": feature,
+        #     "metacategory": metacategory,
+        # }
+
+    path = "data/gpt-feature-norms-taxonomy.csv"
+    with open(path, "r") as f:
+        reader = csv.reader(f, delimiter=",")
+        _ = next(reader)
+        _ = next(reader)
+        results = [get1(row) for i, row in enumerate(reader) if i <= 99]
+        results = dict(results)
+
+    return results
+
+
 def get_results_levels_and_splits():
     norms_loader = NORMS_LOADERS["generated-gpt35"]()
     _, feature_to_id, features_selected = norms_loader()
@@ -236,34 +274,7 @@ def plot_results_per_metacategory(results):
 
 
 def get_results_per_metacategory(level, split):
-    def load_taxonomy():
-        def get_majority(annotations):
-            counts = Counter(annotations)
-            top_elem, *_ = counts.most_common(1)
-            metacategory, count = top_elem
-            assert count >= 2
-            return metacategory
-
-        def get1(row):
-            feature, _, annot1, annot2, annot3, *_ = row
-            metacategory = get_majority([annot1, annot2, annot3])
-            return feature, metacategory
-            # return {
-            #     "feature": feature,
-            #     "metacategory": metacategory,
-            # }
-
-        path = "data/gpt-feature-norms-taxonomy.csv"
-        with open(path, "r") as f:
-            reader = csv.reader(f, delimiter=",")
-            _ = next(reader)
-            _ = next(reader)
-            results = [get1(row) for i, row in enumerate(reader) if i <= 99]
-            results = dict(results)
-
-        return results
-
-    taxonomy = load_taxonomy()
+    taxonomy = load_taxonomy_ours()
     features = list(taxonomy.keys())
 
     norms_loader = NORMS_LOADERS["generated-gpt35"]()
@@ -291,17 +302,9 @@ def get_results_per_metacategory(level, split):
 
 
 def get_results_per_metacategory_mcrae_mapped():
-    def load_taxonomy():
-        cols = ["Feature", "BR_Label"]
-        df = pd.read_csv("data/norms/mcrae/CONCS_FEATS_concstats_brm.txt", sep="\t")
-        df = df[cols]
-        df = df.drop_duplicates()
-        feature_metacategory = df.values.tolist()
-        return dict(feature_metacategory)
-
     norms_loader = NORMS_LOADERS["mcrae-mapped"]()
     feature_to_concepts, feature_to_id, features_selected = norms_loader()
-    taxonomy = load_taxonomy()
+    taxonomy = load_taxonomy_mcrae()
     level = "concept"
     split = "repeated-k-fold"
     MODELS = FEATURE_TYPES + ["fasttext-word", "glove-840b-300d-word"]
@@ -602,6 +605,118 @@ def get_results_random_predictor():
     print(df.to_latex(float_format="%.1f", index=False))
 
 
+def compare_two_models_scatterplot():
+    norms_loader = NORMS_LOADERS["mcrae-mapped"]()
+    feature_to_concepts, feature_to_id, features_selected = norms_loader()
+    taxonomy = load_taxonomy_mcrae()
+    level = "concept"
+    split = "repeated-k-fold"
+    model1 = "fasttext-word"
+    model2 = "siglip-224"
+
+    def load_results(model):
+        return [
+            load_result(
+                level,
+                split,
+                model,
+                feature,
+                {
+                    "feature_norm_str": norms_loader.get_suffix(),
+                    "feature_id": feature_to_id[feature],
+                },
+            )
+            for feature in tqdm(features_selected)
+        ]
+
+    results = cache_json(
+        f"/tmp/{model1}-{model2}.json",
+        lambda: load_results(model1) + load_results(model2),
+    )
+    df = pd.DataFrame(results)
+    df["metacategory"] = df["feature"].map(taxonomy)
+    df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_NAMES.get(x, x))
+    cols = ["feature", "metacategory", "model", "score-f1"]
+    df = df[cols]
+    df = df.set_index(["feature", "metacategory", "model"]).unstack(-1)
+    df = df.reset_index()
+    df.columns = ["-".join(c for c in cols if c).strip() for cols in df.columns.values]
+
+    st.write(df)
+
+    def pareto_front(points, dominates):
+        return [
+            p1
+            for p1 in points
+            if not any(dominates(p2, p1) for p2 in points if p2 != p1)
+        ]
+
+    def add_texts(ax, df):
+        cols = [f"score-f1-{model1}", f"score-f1-{model2}", "feature"]
+        points = df[cols].values.tolist()
+        xs = [x for x, _, _ in points]
+        ys = [y for _, y, _ in points]
+        # points = sorted(points, key=lambda x: x[0] - x[1])
+        points1 = [
+            (x, y, word)
+            for x, y, word in pareto_front(
+                points,
+                dominates=lambda x, y: x[0] >= y[0] and x[1] <= y[1],
+            )
+            if x >= 30
+        ]
+        points2 = [
+            (x, y, word)
+            for x, y, word in pareto_front(
+                points,
+                dominates=lambda x, y: x[0] <= y[0] and x[1] >= y[1],
+            )
+            if y >= 30
+        ]
+        points = points1 + points2
+        points = list(set(points))
+        texts = [
+            ax.text(
+                x,
+                y,
+                word.replace("_", " ").replace("beh - ", ""),
+                ha="center",
+                va="center",
+                size=8,
+            )
+            for x, y, word in points
+        ]
+        adjust_text(
+            texts,
+            x=xs,
+            y=ys,
+            ax=ax,
+            expand=(1.2, 2.1),
+            # force_points=1.0,
+            arrowprops=dict(arrowstyle="-", color="b", alpha=0.5),
+        )
+
+    fig, ax = plt.subplots()
+    sns.set(style="whitegrid", font="Arial")
+    sns.scatterplot(
+        df,
+        x=f"score-f1-{model1}",
+        y=f"score-f1-{model2}",
+        hue="metacategory",
+        # marker="metacategory",
+        ax=ax,
+    )
+    add_texts(ax, df)
+    sns.move_legend(ax, "lower right", bbox_to_anchor=(1, 1), ncol=2, title="")
+    ax.plot([0, 100], [0, 100], color="gray", linestyle="--")
+    ax.set_xlabel("F1 score · {}".format(FEATURE_NAMES[model1]))
+    ax.set_ylabel("F1 score · {}".format(FEATURE_NAMES[model2]))
+    ax.set_aspect("equal", adjustable="box")
+    st.pyplot(fig)
+
+    fig.savefig(f"output/plots/scatterplot-{model1}-vs-{model2}.pdf", bbox_inches="tight")
+
+
 FUNCS = {
     "levels-and-splits": get_results_levels_and_splits,
     "per-metacategory": partial(
@@ -616,6 +731,7 @@ FUNCS = {
     "text-models": get_results_text_models,
     "per-feature-norm": get_results_per_feature_norm,
     "random-predictor": get_results_random_predictor,
+    "compare-two-models-scatterplot": compare_two_models_scatterplot,
 }
 
 

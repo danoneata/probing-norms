@@ -2,6 +2,7 @@ import os
 import pdb
 import random
 import json
+import sys
 
 from openai import OpenAI
 
@@ -105,7 +106,7 @@ def get_word_with_category_parenthesis(concept):
 
 
 if __name__ == "__main__":
-    concepts_file = "data/things/words.csv"
+    concepts_file = sys.argv[1]
     concepts = read_file(concepts_file)
     concepts = sorted(concepts)
     print(f"Read {len(concepts)} concepts from {concepts_file}")

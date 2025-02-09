@@ -19,7 +19,7 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from probing_norms.data import DATASETS, load_things_concept_mapping
-from probing_norms.utils import read_file
+from probing_norms.utils import implies, read_file
 
 
 class FastText:
@@ -49,19 +49,18 @@ class Gemma:
         self.get_embeddings = GET_EMBEDDINGS[layer]
 
     def get_embeddings_first(self, inp):
-        out = self.model.model.embed_tokens(inp["input_ids"])
-        return out.mean(dim=[0, 1]).numpy()
+        return self.model.model.embed_tokens(inp["input_ids"])
 
     def get_embeddings_last(self, inp):
-        out = self.model.model(**inp).last_hidden_state
-        return out.mean(dim=[0, 1]).numpy()
+        return self.model.model(**inp).last_hidden_state
 
     def __call__(self, text, **_):
         with torch.no_grad():
             input_ids = self.tokenizer(" " + text, return_tensors="pt")
             # Remove BOS token.
             # input_ids["input_ids"] = input_ids["input_ids"][:, 1:]
-            return self.get_embeddings(input_ids)
+            embs = self.get_embeddings(input_ids)
+            return embs.mean(dim=[0, 1]).numpy()
 
 
 class GemmaContextual(Gemma):
@@ -83,10 +82,7 @@ class GemmaContextual(Gemma):
             sentence = sentence.strip()
             num, *words = sentence.split()
             num = num.replace(".", "")
-            try:
-                assert num.isdigit()
-            except AssertionError:
-                pdb.set_trace()
+            assert num.isdigit()
             return " ".join(words)
 
         def parse_line(line):
@@ -103,7 +99,7 @@ class GemmaContextual(Gemma):
     def generate_word_variants(self, word):
         """Generate multiple variants of a word as it can appear in various forms in the context sentences.
         For example, "aardvark" can appear in "Aardvarks are nice animals."
-        
+
         """
 
         def all_combinations(xs):
@@ -157,24 +153,27 @@ class GemmaContextual(Gemma):
         return None
 
     def __call__(self, word, *, word_id):
+        variants = self.generate_word_variants(word)
+        tokens_variants = [self.tokenizer.encode(word)[1:] for word in variants]
+
         def get_emb(sentence):
-            input_ids = self.tokenizer(sentence, return_tensors="pt")
-            result = self.find_first_variant(variants, sentence)
+            tokens_sentence = self.tokenizer.encode(sentence)
+            result = self.find_first_variant(tokens_variants, tokens_sentence)
             if result is not None:
                 s, e = result["range"]
+                input_ids = self.tokenizer(sentence, return_tensors="pt")
                 sentence_embeddings = self.get_embeddings(input_ids)
-                sentence_embeddings[s:e].mean(dim=0)
+                assert sentence_embeddings.shape[1] == len(tokens_sentence)
+                return sentence_embeddings[0, s:e].mean(dim=0).numpy()
             else:
                 return None
 
-        variants = self.generate_word_variants(word)
         with torch.no_grad():
             embs = [get_emb(sent) for sent in self.contexts[word_id]]
             embs = [emb for emb in embs if emb is not None]
-            print(word_id, len(embs))
-            pdb.set_trace()
-            emb = np.mean(embs, axis=0)
-            return emb.numpy()
+            # print(word_id, len(embs))
+            tqdm.write(f"{word_id}: {len(embs)}")
+            return np.mean(embs, axis=0)
 
 
 class Glove:
@@ -232,7 +231,7 @@ FEATURE_EXTRACTORS = {
     "fasttext": FastText,
     "gemma-2b": Gemma,
     "gemma-2b-last": partial(Gemma, layer="last"),
-    "gemma-2b-context-last": partial(GemmaContextual, layer="last"),
+    "gemma-2b-contextual-last": partial(GemmaContextual, layer="last"),
     "glove-6b-300d": partial(Glove, n_tokens="6B"),
     "glove-840b-300d": partial(Glove, n_tokens="840B"),
 }
@@ -246,6 +245,11 @@ MAPPING_TYPES = ["word", "word-and-category"]
 @click.option("-m", "--mapping-type", "mapping_type", type=str, required=True)
 def main(dataset_name, feature_type, mapping_type):
     assert dataset_name == "things"
+    assert implies(
+        feature_type == "gemma-2b-contextual-last",
+        mapping_type == "word",
+    ), "The contextual Gemma embedding supports only original concept words."
+
     dataset = DATASETS[dataset_name]()
     concepts = read_file("data/concepts-things.txt")
     concept_mapping = load_things_concept_mapping(mapping_type)
@@ -260,14 +264,6 @@ def main(dataset_name, feature_type, mapping_type):
 
     for i, concept in enumerate(tqdm(concepts)):
         concept1 = concept_mapping[concept]
-        # if concept != concept1: print(concept, concept1)
-        # if concept.endswith("1"):
-        #     pdb.set_trace()
-        # word, sentences = contexts[i]
-        # try:
-        #     assert word == concept1
-        # except AssertionError:
-        #     pdb.set_trace()
         X[i] = feature_extractor(concept1, word_id=concept)
         y[i] = dataset.class_to_label[concept]
 

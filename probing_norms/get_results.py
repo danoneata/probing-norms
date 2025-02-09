@@ -13,7 +13,13 @@ import seaborn as sns
 import streamlit as st
 
 from matplotlib import pyplot as plt
-from sklearn.metrics import f1_score, accuracy_score, roc_auc_score
+from sklearn.metrics import (
+    f1_score,
+    accuracy_score,
+    roc_auc_score,
+    recall_score,
+    precision_score,
+)
 from tqdm import tqdm
 
 from probing_norms.utils import cache_df, cache_json, read_json, multimap
@@ -23,9 +29,16 @@ NORMS_MODEL = "chatgpt-gpt3.5-turbo"
 DATASET_NAME = "things"
 
 SCORE_FUNCS = {
-    "leave-one-concept-out": accuracy_score,
-    "repeated-k-fold": f1_score,
-    # "repeated-k-fold": roc_auc_score,
+    "score-accuracy": accuracy_score,
+    "score-precision": partial(precision_score, zero_division=0),
+    "score-recall": recall_score,
+    "score-f1": f1_score,
+    "score-roc-auc": roc_auc_score,
+}
+
+SPLIT_TO_SCORE_FUNCS = {
+    "leave-one-concept-out": ["score-accuracy"],
+    "repeated-k-fold": ["score-precision", "score-recall", "score-f1"],
 }
 
 FEATURE_TYPES = [
@@ -50,15 +63,18 @@ METACATEGORY_NAMES = {
 }
 
 FEATURE_NAMES = {
-    # "fasttext-word": "fastText",
-    "gemma-2b": "Gemma",
+    "fasttext-word": "FastText",
+    "gemma-2b-word": "Gemma",
+    "glove-6b-300d-word": "GloVe 6B",
+    "glove-840b-300d-word": "GloVe 840B",
     "pali-gemma-224": "PaliGemma",
     "siglip-224": "SigLIP",
     "vit-mae-large": "ViT-MAE",
-    "dino-v2": "DINO",
-    "swin-v2": "Swin",
+    "dino-v2": "DINO v2",
+    "swin-v2": "Swin-V2",
     "max-vit-large": "Max ViT",
     "random-siglip": "Random SigLIP",
+    "random-predictor": "Random predictor",
 }
 
 NORMS_NAMES = {
@@ -72,7 +88,13 @@ def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path
         true = np.array([datum["true"] for datum in data])
         pred = np.array([datum["pred"] for datum in data])
         pred = (pred > 0.5).astype(int)
-        return SCORE_FUNCS[split_type](true, pred)
+        return [
+            {
+                "score-type": score_type,
+                "score": 100 * SCORE_FUNCS[score_type](true, pred),
+            }
+            for score_type in SPLIT_TO_SCORE_FUNCS[split_type]
+        ]
 
     def get_path(*, feature_norm_str, feature_id):
         return OUTPUT_PATH.format(
@@ -84,22 +106,61 @@ def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path
             feature_id,
         )
 
-    try:
-        path = get_path(**kwargs_path) + ".json"
-        results = read_json(path)
-        scores = [evaluate(result["preds"]) for result in results]
-    except FileNotFoundError:
-        scores = [np.nan]
+    path = get_path(**kwargs_path) + ".json"
+    results = read_json(path)
+    scores = [score for result in results for score in evaluate(result["preds"])]
 
-    score = 100 * np.mean(scores)
-    score = score.item()
+    df = pd.DataFrame(scores)
+    df = df.groupby("score-type")["score"].mean()
+    scores_dict = df.to_dict()
+
     return {
         "feature": feature,
         "level": embeddings_level,
         "model": feature_type,
         "split": split_type,
-        "score": score,
+        **scores_dict,
     }
+
+
+def load_result_random_predictor(norms_loader):
+    level = "concept"
+    split = "repeated-k-fold"
+
+    def get_random_vector(n, p):
+        return np.random.choice([0, 1], size=n, p=[1 - p, p])
+
+    def evaluate_feature(num_total, num_pos):
+        n = num_total
+        p = num_pos / n
+        true = get_random_vector(n, p)
+        pred = get_random_vector(n, p)
+        return [
+            {
+                "score-type": score_type,
+                "score": 100 * SCORE_FUNCS[score_type](true, pred),
+            }
+            for score_type in SPLIT_TO_SCORE_FUNCS[split]
+        ]
+
+    feature_to_concepts, _, features_selected = norms_loader()
+    selected_concepts = norms_loader.load_concepts()
+    num_concepts = len(selected_concepts)
+    return [
+        {
+            "model": "random-predictor",
+            "split": split,
+            "level": level,
+            "feature": feature,
+            **{
+                result["score-type"]: result["score"]
+                for result in evaluate_feature(
+                    num_concepts, len(feature_to_concepts[feature])
+                )
+            },
+        }
+        for feature in tqdm(features_selected)
+    ]
 
 
 def get_results_levels_and_splits():
@@ -145,19 +206,20 @@ def plot_results_per_metacategory(results):
     # dfx.to_csv("output/results-per-feature.csv")
     df["model"] = df["model"].map(FEATURE_NAMES)
     df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_NAMES.get(x, x))
+    st.write(df)
 
-    model_performance = df.groupby(["metacategory", "model"])["score"].mean()
+    model_performance = df.groupby(["metacategory", "model"])["score-f1"].mean()
     model_performance = model_performance.reset_index()
     order_models = (
-        model_performance.groupby("model")["score"].mean().sort_values().index
+        model_performance.groupby("model")["score-f1"].mean().sort_values().index
     )
     order_metacategory = sorted(df["metacategory"].unique())
 
-    fig, ax = plt.subplots(figsize=(4, 14))
+    fig, ax = plt.subplots(figsize=(3.75, 20))
     sns.set(style="whitegrid", context="poster", font="Arial")
     sns.barplot(
         data=df,
-        x="score",
+        x="score-f1",
         y="metacategory",
         hue="model",
         hue_order=order_models,
@@ -168,7 +230,7 @@ def plot_results_per_metacategory(results):
     sns.move_legend(ax, "lower right", bbox_to_anchor=(1, 1), ncol=2, title="")
     ax.set_ylabel("")
     ax.set_xlabel("F1 score")
-    fig.set_tight_layout(True)
+    # fig.set_tight_layout(True)
     st.pyplot(fig)
     return fig
 
@@ -242,27 +304,31 @@ def get_results_per_metacategory_mcrae_mapped():
     taxonomy = load_taxonomy()
     level = "concept"
     split = "repeated-k-fold"
+    MODELS = FEATURE_TYPES + ["fasttext-word", "glove-840b-300d-word"]
 
     def load_results():
         return [
-            {
-                **load_result(
-                    level,
-                    split,
-                    feature_type,
-                    feature,
-                    {
-                        "feature_norm_str": norms_loader.get_suffix(),
-                        "feature_id": feature_to_id[feature],
-                    },
-                ),
-                "metacategory": taxonomy[feature],
-            }
+            load_result(
+                level,
+                split,
+                feature_type,
+                feature,
+                {
+                    "feature_norm_str": norms_loader.get_suffix(),
+                    "feature_id": feature_to_id[feature],
+                },
+            )
             for feature in tqdm(features_selected)
-            for feature_type in FEATURE_TYPES
+            for feature_type in MODELS
         ]
 
-    results = cache_json("/tmp/per-metacategory-mcrae-mapped.json", load_results)
+    results1 = cache_json("/tmp/per-metacategory-mcrae-mapped-text.json", load_results)
+    results2 = load_result_random_predictor(norms_loader)
+    results = results1 + results2
+
+    for r in results:
+        r["metacategory"] = taxonomy[r["feature"]]
+
     fig = plot_results_per_metacategory(results)
     fig.savefig("output/plots/per-metacategory-mcrae-mapped.pdf", bbox_inches="tight")
 
@@ -395,23 +461,24 @@ def get_results_paper_tabel_main():
             for feature in tqdm(features_selected)
             for feature_type in FEATURE_TYPES
         ]
+        cols_score = SPLIT_TO_SCORE_FUNCS[split]
         df = pd.DataFrame(results)
-        df = df.groupby(["model"])["score"].mean()
+        df = df.groupby(["model"])[cols_score].mean()
         return df
 
     dfs = {
         NORMS_NAMES[norms_type]: cache_df(
-            f"/tmp/paper-main-table-{norms_type}.pkl",
+            f"/tmp/paper-main-table-{norms_type}-all-scores.pkl",
             get_results,
             norms_type,
         )
         for norms_type in ["mcrae-mapped", "binder-4"]
     }
     df = pd.concat(dfs, axis=1)
-    df = df.sort_values("McRae++", ascending=True)
+    df = df.sort_values(("McRae++", "score-f1"), ascending=True)
     df = df.reset_index()
     df["model"] = df["model"].map(FEATURE_NAMES)
-    print(df.to_latex(float_format="%.2f", index=False))
+    print(df.to_latex(float_format="%.1f", index=False))
 
 
 def get_results_text_models():
@@ -434,13 +501,12 @@ def get_results_text_models():
                 },
             )
             for feature in tqdm(features_selected)
-            # for f in ["fasttext", "gemma-2b", "gemma-2b-last"]
-            # for m in ["word", "word-and-category"]
-            for f in ["fasttext", "gemma-2b", "glove-6b-300d", "glove-840b-300d"]
+            for f in ["fasttext", "gemma-2b", "glove-840b-300d"]
             for m in ["word"]
         ]
+        cols_score = SPLIT_TO_SCORE_FUNCS[split]
         df = pd.DataFrame(results)
-        df = df.groupby(["model"])["score"].mean()
+        df = df.groupby(["model"])[cols_score].mean()
         return df
 
     # df = cache_df(f"/tmp/text-models-mcrae-mapped.pkl", get_results, "mcrae-mapped")
@@ -449,8 +515,10 @@ def get_results_text_models():
         for norms_type in ["mcrae-mapped", "binder-4"]
     }
     df = pd.concat(dfs, axis=1)
+    df = df.sort_values(("McRae++", "score-f1"), ascending=True)
     df = df.reset_index()
-    print(df.to_latex(float_format="%.2f", index=False))
+    df["model"] = df["model"].map(FEATURE_NAMES)
+    print(df.to_latex(float_format="%.1f", index=False))
 
 
 def get_results_per_feature_norm():
@@ -478,31 +546,60 @@ def get_results_per_feature_norm():
             for emb in EMBS
         ]
 
-    def random_f1(feature):
+    import random
+
+    def random_score(feature, score_func):
         n = len(feature_to_concepts[feature])
         total_num_concepts = 1854
-        pred = np.random.randint(0, 2, total_num_concepts)
+        pred = [random.random() <= 0.2 for _ in range(total_num_concepts)]
         true = np.zeros(total_num_concepts)
         true[:n] = 1
-        return f1_score(true, pred)
+        return score_func(true, pred)
 
-    results = cache_json("/tmp/per-feature-norm.json", get_results_1)
+    results = cache_json("/tmp/per-feature-norm-xx.json", get_results_1)
     df = pd.DataFrame(results)
     df = df.pivot_table(index="feature", columns="model", values="score")
     df = df.reset_index()
     df["num-concepts"] = df["feature"].apply(lambda x: len(feature_to_concepts[x]))
-    df["f1-random-pred"] = df["feature"].apply(random_f1)
-    cols = ["feature", "num-concepts", "f1-random-pred"] + EMBS
-    df = df[cols]
-    df.to_csv("output/results-per-feature-2.csv")
+    df["f1-random-pred"] = df["feature"].apply(
+        partial(random_score, score_func=f1_score)
+    )
+    df["recall-random-pred"] = df["feature"].apply(
+        partial(random_score, score_func=recall_score)
+    )
+    # cols = ["feature", "num-concepts", "f1-random-pred"] + EMBS
+    # df = df[cols]
+    # df.to_csv("output/results-per-feature-2.csv")
 
     fig, ax = plt.subplots()
     # sns.scatterplot(data=df, x="siglip-224", y="fasttext-word", ax=ax)
     # ax.plot([0, 100], [0, 100], color="gray", linestyle="--")
     # ax.set_aspect("equal", adjustable="box")
     fig = sns.lmplot(data=df, x="num-concepts", y="gemma-2b-word")
-    fig.set_axis_labels("Number of concepts", "F1 score")
+    # fig = sns.lmplot(data=df, x="num-concepts", y="recall-random-pred")
+    fig.set_axis_labels("Number of concepts", "Score")
     st.pyplot(fig)
+
+
+def get_results_random_predictor():
+    split = "repeated-k-fold"
+
+    def load_results(norms_type):
+        norms_loader = NORMS_LOADERS[norms_type]()
+        results = load_result_random_predictor(norms_loader)
+        df = pd.DataFrame(results)
+        cols_score = SPLIT_TO_SCORE_FUNCS[split]
+        df = df.groupby("model")[cols_score].mean()
+        return df
+
+    dfs = {
+        NORMS_NAMES[norms_type]: load_results(norms_type)
+        for norms_type in ["mcrae-mapped", "binder-4"]
+    }
+    df = pd.concat(dfs, axis=1)
+    df = df.reset_index()
+    df["model"] = df["model"].map(FEATURE_NAMES)
+    print(df.to_latex(float_format="%.1f", index=False))
 
 
 FUNCS = {
@@ -518,6 +615,7 @@ FUNCS = {
     "paper-table-main": get_results_paper_tabel_main,
     "text-models": get_results_text_models,
     "per-feature-norm": get_results_per_feature_norm,
+    "random-predictor": get_results_random_predictor,
 }
 
 

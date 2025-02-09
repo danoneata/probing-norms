@@ -98,7 +98,7 @@ class GemmaContextual(Gemma):
 
     def generate_word_variants(self, word):
         """Generate multiple variants of a word as it can appear in various forms in the context sentences.
-        For example, "aardvark" can appear in "Aardvarks are nice animals."
+        For example, "aardvark" can appear as "Aardvarks": "Aardvarks are nice animals."
 
         """
 
@@ -134,7 +134,11 @@ class GemmaContextual(Gemma):
         return [word] + [compose(*ts)(word) for ts in all_combinations(transformations)]
 
     @staticmethod
-    def find_first_variant(variants, sentence):
+    def find_location(variants, sentence):
+        """Finds the location of a concept variant ("Aardvark", "aardvarks", etc.) in the sentence.
+        Stops at the first match.
+
+        """
         def find1(query, sentence):
             n = len(query)
             for s in range(len(sentence)):
@@ -153,12 +157,17 @@ class GemmaContextual(Gemma):
         return None
 
     def __call__(self, word, *, word_id):
+        def drop_bos(tokens):
+            bos, *rest = tokens[1:]
+            assert bos == self.tokenizer.bos_token_id
+            return rest
+
         variants = self.generate_word_variants(word)
-        tokens_variants = [self.tokenizer.encode(word)[1:] for word in variants]
+        tokens_variants = [drop_bos(self.tokenizer.encode(word)) for word in variants]
 
         def get_emb(sentence):
             tokens_sentence = self.tokenizer.encode(sentence)
-            result = self.find_first_variant(tokens_variants, tokens_sentence)
+            result = self.find_location(tokens_variants, tokens_sentence)
             if result is not None:
                 s, e = result["range"]
                 input_ids = self.tokenizer(sentence, return_tensors="pt")

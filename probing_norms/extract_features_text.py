@@ -2,16 +2,20 @@ import csv
 import json
 import pdb
 
+from itertools import combinations
 from functools import partial
-from tqdm import tqdm
+from typing import List, Optional, Tuple
 
 import click
 import fasttext
+import inflect
 import numpy as np
 import pandas as pd
 import torch
 
 from huggingface_hub import hf_hub_download
+from toolz import compose
+from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from probing_norms.data import DATASETS, load_things_concept_mapping
@@ -27,13 +31,13 @@ class FastText:
         self.model = fasttext.load_model(model_path)
         self.dim = self.model.get_dimension()
 
-    def __call__(self, text):
+    def __call__(self, text, **_):
         # return self.model.get_word_vector(text)
         return self.model.get_sentence_vector(text)
 
 
 class Gemma:
-    def __init__(self, type_="first"):
+    def __init__(self, layer="first"):
         self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
         self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
         self.model.eval()
@@ -41,9 +45,8 @@ class Gemma:
         GET_EMBEDDINGS = {
             "first": self.get_embeddings_first,
             "last": self.get_embeddings_last,
-            "context-last": self.get_embeddings_last,
         }
-        self.get_embeddings = GET_EMBEDDINGS[type_]
+        self.get_embeddings = GET_EMBEDDINGS[layer]
 
     def get_embeddings_first(self, inp):
         out = self.model.model.embed_tokens(inp["input_ids"])
@@ -53,13 +56,125 @@ class Gemma:
         out = self.model.model(**inp).last_hidden_state
         return out.mean(dim=[0, 1]).numpy()
 
-    def __call__(self, text, context=None):
+    def __call__(self, text, **_):
         with torch.no_grad():
-            pdb.set_trace()
-            input_ids = self.tokenizer(text, return_tensors="pt")
+            input_ids = self.tokenizer(" " + text, return_tensors="pt")
             # Remove BOS token.
-            input_ids["input_ids"] = input_ids["input_ids"][:, 1:]
+            # input_ids["input_ids"] = input_ids["input_ids"][:, 1:]
             return self.get_embeddings(input_ids)
+
+
+class GemmaContextual(Gemma):
+    def __init__(self, layer="first"):
+        self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
+        self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
+        self.model.eval()
+        self.dim = self.model.config.hidden_size
+        GET_EMBEDDINGS = {
+            "first": self.get_embeddings_first,
+            "last": self.get_embeddings_last,
+        }
+        self.get_embeddings = GET_EMBEDDINGS[layer]
+        self.contexts = self.load_context()
+        self.inflect_engine = inflect.engine()
+
+    def load_context(self):
+        def remove_starting_number(sentence):
+            sentence = sentence.strip()
+            num, *words = sentence.split()
+            num = num.replace(".", "")
+            try:
+                assert num.isdigit()
+            except AssertionError:
+                pdb.set_trace()
+            return " ".join(words)
+
+        def parse_line(line):
+            data = json.loads(line)
+            id_ = data["id"]
+            sentences = data["response"]
+            sentences = sentences.split("\n")
+            sentences = [remove_starting_number(s) for s in sentences]
+            return id_, sentences
+
+        path = "data/things/gpt4o_concept_context_sentences.jsonl"
+        return dict(read_file(path, parse_line))
+
+    def generate_word_variants(self, word):
+        """Generate multiple variants of a word as it can appear in various forms in the context sentences.
+        For example, "aardvark" can appear in "Aardvarks are nice animals."
+        
+        """
+
+        def all_combinations(xs):
+            n = len(xs)
+            return [comb for i in range(1, n + 1) for comb in combinations(xs, i)]
+
+        def prepend_space(word):
+            return " " + word
+
+        def pluralize(word):
+            SPECIAL = {
+                "antenna": "antennae",
+                "flamingo": "flamingos",
+            }
+            try:
+                return SPECIAL[word]
+            except KeyError:
+                return self.inflect_engine.plural(word)
+
+        def capitalize(word):
+            SPECIAL = {
+                "cd player": "CD player",
+                "sim card": "SIM card",
+                "sim cards": "SIM cards",
+            }
+            try:
+                return SPECIAL[word]
+            except KeyError:
+                return word.capitalize()
+
+        transformations = [prepend_space, capitalize, pluralize]
+        return [word] + [compose(*ts)(word) for ts in all_combinations(transformations)]
+
+    @staticmethod
+    def find_first_variant(variants, sentence):
+        def find1(query, sentence):
+            n = len(query)
+            for s in range(len(sentence)):
+                e = s + n
+                if query == sentence[s:e]:
+                    return s, e
+            return None
+
+        for word in variants:
+            result = find1(word, sentence)
+            if result is not None:
+                return {
+                    "range": result,
+                    "word": word,
+                }
+        return None
+
+    def __call__(self, word, *, word_id):
+        def get_emb(sentence):
+            input_ids = self.tokenizer(sentence, return_tensors="pt")
+            result = self.find_first_variant(variants, sentence)
+            if result is not None:
+                s, e = result["range"]
+                sentence_embeddings = self.get_embeddings(input_ids)
+                sentence_embeddings[s:e].mean(dim=0)
+            else:
+                return None
+
+        variants = self.generate_word_variants(word)
+        with torch.no_grad():
+            embs = [get_emb(sent) for sent in self.contexts[word_id]]
+            embs = [emb for emb in embs if emb is not None]
+            print(word_id, len(embs))
+            pdb.set_trace()
+            emb = np.mean(embs, axis=0)
+            return emb.numpy()
 
 
 class Glove:
@@ -99,7 +214,7 @@ class Glove:
     def get_subwords(self, word):
         return self.CONCEPTS_TO_SPLIT[word].split()
 
-    def __call__(self, text):
+    def __call__(self, text, **_):
         def get1(word):
             return self.words.loc[word].values
 
@@ -108,9 +223,7 @@ class Glove:
             embs = [get1(word) for word in words]
         except KeyError:
             embs = [
-                get1(subword)
-                for word in words
-                for subword in self.get_subwords(word)
+                get1(subword) for word in words for subword in self.get_subwords(word)
             ]
         return np.mean(embs, axis=0)
 
@@ -118,32 +231,13 @@ class Glove:
 FEATURE_EXTRACTORS = {
     "fasttext": FastText,
     "gemma-2b": Gemma,
-    "gemma-2b-last": partial(Gemma, type_="last"),
-    "gemma-2b-context-last": partial(Gemma, type_="context-last"),
+    "gemma-2b-last": partial(Gemma, layer="last"),
+    "gemma-2b-context-last": partial(GemmaContextual, layer="last"),
     "glove-6b-300d": partial(Glove, n_tokens="6B"),
     "glove-840b-300d": partial(Glove, n_tokens="840B"),
 }
 
 MAPPING_TYPES = ["word", "word-and-category"]
-
-
-def load_context():
-    def remove_starting_number(sentence):
-        num, *words = sentence.split()
-        num = num.replace(".", "")
-        assert num.isdigit()
-        return " ".join(words)
-
-    def parse_line(line):
-        data = json.reads(line)
-        word = data["id"]
-        sentences = data["response"]
-        sentences = sentences.split("\n")
-        sentences = [remove_starting_number(s) for s in sentences]
-        return word, sentences
-
-    path = "data/things/gpt4o_concept_context_sentences.jsonl"
-    return read_file(path, parse_line)
 
 
 @click.command()
@@ -164,16 +258,17 @@ def main(dataset_name, feature_type, mapping_type):
     X = np.zeros((num_concepts, feature_dim))
     y = np.zeros(num_concepts)
 
-    contexts = load_context()
-
     for i, concept in enumerate(tqdm(concepts)):
         concept1 = concept_mapping[concept]
         # if concept != concept1: print(concept, concept1)
-        if concept.endswith("1"):
-            pdb.set_trace()
-        word, sentences = contexts[i]
-        assert word == concept1
-        X[i] = feature_extractor(concept1, context=sentences)
+        # if concept.endswith("1"):
+        #     pdb.set_trace()
+        # word, sentences = contexts[i]
+        # try:
+        #     assert word == concept1
+        # except AssertionError:
+        #     pdb.set_trace()
+        X[i] = feature_extractor(concept1, word_id=concept)
         y[i] = dataset.class_to_label[concept]
 
     path_np = f"output/features-text/{dataset_name}-{feature_type}-{mapping_type}.npz"

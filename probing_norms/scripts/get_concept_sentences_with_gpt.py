@@ -37,10 +37,12 @@ def get_prompt(question, word, word_with_category_parenthesis):
 
 deployment = "gpt-4o"
 subscription_key = read_json("openai-api-key.json")["OPENAI_API_KEY"]
+ORG = read_json("openai-api-key.json")["ORG"]
+PROJ = read_json("openai-api-key.json")["PROJECT"]
 
 client = OpenAI(
-    organization="org-rkidQ0JkgkvB1xMy8UNoagm5",
-    project="proj_oL240PrHxkHdgGmQQZr61txM",
+    organization=ORG,
+    project=PROJ,
     api_key=subscription_key,
 )
 

@@ -65,9 +65,11 @@ class Gemma:
 
 class GemmaContextual(Gemma):
     def __init__(self, layer="first"):
+        self.device = "cuda"
         self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
         self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
         self.model.eval()
+        self.model.to(self.device)
         self.dim = self.model.config.hidden_size
         GET_EMBEDDINGS = {
             "first": self.get_embeddings_first,
@@ -77,7 +79,8 @@ class GemmaContextual(Gemma):
         self.contexts = self.load_context()
         self.inflect_engine = inflect.engine()
 
-    def load_context(self):
+    @staticmethod
+    def load_context():
         def remove_starting_number(sentence):
             sentence = sentence.strip()
             num, *words = sentence.split()
@@ -158,7 +161,7 @@ class GemmaContextual(Gemma):
 
     def __call__(self, word, *, word_id):
         def drop_bos(tokens):
-            bos, *rest = tokens[1:]
+            bos, *rest = tokens
             assert bos == self.tokenizer.bos_token_id
             return rest
 
@@ -171,9 +174,10 @@ class GemmaContextual(Gemma):
             if result is not None:
                 s, e = result["range"]
                 input_ids = self.tokenizer(sentence, return_tensors="pt")
+                input_ids = input_ids.to(self.device)
                 sentence_embeddings = self.get_embeddings(input_ids)
                 assert sentence_embeddings.shape[1] == len(tokens_sentence)
-                return sentence_embeddings[0, s:e].mean(dim=0).numpy()
+                return sentence_embeddings[0, s:e].mean(dim=0).cpu().numpy()
             else:
                 return None
 

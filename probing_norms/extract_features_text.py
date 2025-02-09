@@ -1,4 +1,5 @@
 import csv
+import json
 import pdb
 
 from functools import partial
@@ -32,7 +33,7 @@ class FastText:
 
 
 class Gemma:
-    def __init__(self, layer="first"):
+    def __init__(self, type_="first"):
         self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
         self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
         self.model.eval()
@@ -40,8 +41,9 @@ class Gemma:
         GET_EMBEDDINGS = {
             "first": self.get_embeddings_first,
             "last": self.get_embeddings_last,
+            "context-last": self.get_embeddings_last,
         }
-        self.get_embeddings = GET_EMBEDDINGS[layer]
+        self.get_embeddings = GET_EMBEDDINGS[type_]
 
     def get_embeddings_first(self, inp):
         out = self.model.model.embed_tokens(inp["input_ids"])
@@ -51,8 +53,9 @@ class Gemma:
         out = self.model.model(**inp).last_hidden_state
         return out.mean(dim=[0, 1]).numpy()
 
-    def __call__(self, text):
+    def __call__(self, text, context=None):
         with torch.no_grad():
+            pdb.set_trace()
             input_ids = self.tokenizer(text, return_tensors="pt")
             # Remove BOS token.
             input_ids["input_ids"] = input_ids["input_ids"][:, 1:]
@@ -115,12 +118,32 @@ class Glove:
 FEATURE_EXTRACTORS = {
     "fasttext": FastText,
     "gemma-2b": Gemma,
-    "gemma-2b-last": partial(Gemma, layer="last"),
+    "gemma-2b-last": partial(Gemma, type_="last"),
+    "gemma-2b-context-last": partial(Gemma, type_="context-last"),
     "glove-6b-300d": partial(Glove, n_tokens="6B"),
     "glove-840b-300d": partial(Glove, n_tokens="840B"),
 }
 
 MAPPING_TYPES = ["word", "word-and-category"]
+
+
+def load_context():
+    def remove_starting_number(sentence):
+        num, *words = sentence.split()
+        num = num.replace(".", "")
+        assert num.isdigit()
+        return " ".join(words)
+
+    def parse_line(line):
+        data = json.reads(line)
+        word = data["id"]
+        sentences = data["response"]
+        sentences = sentences.split("\n")
+        sentences = [remove_starting_number(s) for s in sentences]
+        return word, sentences
+
+    path = "data/things/gpt4o_concept_context_sentences.jsonl"
+    return read_file(path, parse_line)
 
 
 @click.command()
@@ -141,10 +164,16 @@ def main(dataset_name, feature_type, mapping_type):
     X = np.zeros((num_concepts, feature_dim))
     y = np.zeros(num_concepts)
 
+    contexts = load_context()
+
     for i, concept in enumerate(tqdm(concepts)):
         concept1 = concept_mapping[concept]
         # if concept != concept1: print(concept, concept1)
-        X[i] = feature_extractor(concept1)
+        if concept.endswith("1"):
+            pdb.set_trace()
+        word, sentences = contexts[i]
+        assert word == concept1
+        X[i] = feature_extractor(concept1, context=sentences)
         y[i] = dataset.class_to_label[concept]
 
     path_np = f"output/features-text/{dataset_name}-{feature_type}-{mapping_type}.npz"

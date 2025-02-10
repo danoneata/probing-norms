@@ -512,7 +512,8 @@ def get_results_text_models():
                 },
             )
             for feature in tqdm(features_selected)
-            for f in ["fasttext", "gemma-2b", "glove-840b-300d"]
+            # for f in ["fasttext", "gemma-2b", "glove-840b-300d"]
+            for f in ["gemma-2b-contextual-layer-1"]
             for m in ["word"]
         ]
         cols_score = SPLIT_TO_SCORE_FUNCS[split]
@@ -741,6 +742,54 @@ def compare_two_models_scatterplot():
     )
 
 
+def prepare_results_for_stella():
+    norms_type = "mcrae-mapped"
+    norms_loader = NORMS_LOADERS[norms_type]()
+    feature_to_concepts, feature_to_id, features_selected = norms_loader()
+    taxonomy = load_taxonomy_mcrae()
+    level = "concept"
+    split = "repeated-k-fold"
+    models = ["dino-v2", "gemma-2b-contextual-last-word"]
+
+    def get_results_model(model):
+        return [
+            load_result(
+                level,
+                split,
+                model,
+                feature,
+                {
+                    "feature_norm_str": norms_loader.get_suffix(),
+                    "feature_id": feature_to_id[feature],
+                },
+            )
+            for feature in tqdm(features_selected)
+        ]
+
+    results = [
+        {
+            "model": model,
+            **result,
+        }
+        for model in models
+        for result in cache_json(
+            f"/tmp/{norms_type}-{model}.json",
+            lambda: get_results_model(model),
+        )
+    ]
+
+    # Add metacategory
+    for r in results:
+        concepts = sorted(set(feature_to_concepts[r["feature"]]))
+        r["concepts"] = concepts
+        r["metacategory"] = taxonomy[r["feature"]]
+        r["score-random"] = get_score_random(norms_loader, r["feature"])
+        r["score-f1-selectivity"] = r["score-f1"] - r["score-random"]
+
+    with open("output/results-for-stella.json", "w") as f:
+        json.dump(results, f, indent=2)
+
+
 FUNCS = {
     "levels-and-splits": get_results_levels_and_splits,
     "per-metacategory": partial(
@@ -756,6 +805,7 @@ FUNCS = {
     "per-feature-norm": get_results_per_feature_norm,
     "random-predictor": get_results_random_predictor,
     "compare-two-models-scatterplot": compare_two_models_scatterplot,
+    "prepare-results-for-stella": prepare_results_for_stella,
 }
 
 

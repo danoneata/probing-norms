@@ -16,7 +16,7 @@ import torch
 from huggingface_hub import hf_hub_download
 from toolz import compose
 from tqdm import tqdm
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, CLIPModel
 
 from probing_norms.data import DATASETS, load_things_concept_mapping
 from probing_norms.utils import implies, read_file
@@ -248,15 +248,29 @@ class Glove:
         return np.mean(embs, axis=0)
 
 
+class CLIP:
+    def __init__(self) -> None:
+        model_id = "openai/clip-vit-large-patch14"
+        self.model = CLIPModel.from_pretrained(model_id).eval()
+        self.tokenizer = AutoTokenizer.from_pretrained(model_id)
+        self.dim = self.model.config.projection_dim
+
+    def __call__(self, text, **_):
+        inputs = self.tokenizer(text, return_tensors="pt")
+        output = self.model.get_text_features(**inputs)
+        return output[0].cpu().numpy()
+
+
 FEATURE_EXTRACTORS = {
     "fasttext": FastText,
+    "glove-6b-300d": partial(Glove, n_tokens="6B"),
+    "glove-840b-300d": partial(Glove, n_tokens="840B"),
     "gemma-2b": Gemma,
     "gemma-2b-last": partial(Gemma, layer="last"),
     "gemma-2b-contextual-last": partial(GemmaContextual, layer="last"),
     "gemma-2b-contextual-layer-1": partial(GemmaContextual, layer="layer-1"),
     "gemma-2b-contextual-layer-2": partial(GemmaContextual, layer="layer-2"),
-    "glove-6b-300d": partial(Glove, n_tokens="6B"),
-    "glove-840b-300d": partial(Glove, n_tokens="840B"),
+    "clip": CLIP,
 }
 
 MAPPING_TYPES = ["word", "word-and-category"]

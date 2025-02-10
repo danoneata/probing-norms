@@ -28,6 +28,10 @@ import torchvision.transforms as T
 from probing_norms.data import DATASETS
 
 
+def count_params(model):
+    return sum(p.numel() for p in model.parameters())
+
+
 class ImageBackboneDINO(nn.Module):
     def __init__(self, type_):
         assert type_ == "resnet50"
@@ -63,9 +67,8 @@ class CLIP(nn.Module):
     def __init__(self):
         super(CLIP, self).__init__()
         model_id = "openai/clip-vit-large-patch14"
-        model = CLIPModel.from_pretrained(model_id).eval()
-        self.feature_dim = model.config.vision_config.hidden_size
-        self.model = model.vision_model
+        self.model = CLIPModel.from_pretrained(model_id).eval()
+        self.feature_dim = self.model.config.projection_dim
         self.processor = CLIPProcessor.from_pretrained(model_id)
 
     def transform(self, x):
@@ -75,11 +78,7 @@ class CLIP(nn.Module):
         return output
 
     def forward(self, x):
-        features = self.model(x)
-        pdb.set_trace()
-        features = features.last_hidden_state.mean(1)
-        return features
-
+        return self.model.get_image_features(x)
 
 
 class SigLIP(nn.Module):

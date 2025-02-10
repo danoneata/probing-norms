@@ -256,9 +256,10 @@ class CLIP:
         self.dim = self.model.config.projection_dim
 
     def __call__(self, text, **_):
-        inputs = self.tokenizer(text, return_tensors="pt")
-        output = self.model.get_text_features(**inputs)
-        return output[0].cpu().numpy()
+        with torch.no_grad():
+            inputs = self.tokenizer(text, return_tensors="pt")
+            output = self.model.get_text_features(**inputs)
+            return output[0].cpu().numpy()
 
 
 FEATURE_EXTRACTORS = {

@@ -69,8 +69,10 @@ FEATURE_NAMES = {
     "gemma-2b-word": "Gemma",
     "glove-6b-300d-word": "GloVe 6B",
     "glove-840b-300d-word": "GloVe 840B",
+    "clip-word": "CLIP (text)",
     "pali-gemma-224": "PaliGemma",
     "siglip-224": "SigLIP",
+    "clip": "CLIP (image)",
     "vit-mae-large": "ViT-MAE",
     "dino-v2": "DINO v2",
     "swin-v2": "Swin-V2",
@@ -123,6 +125,36 @@ def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path
         "split": split_type,
         **scores_dict,
     }
+
+
+def load_result_model(norms_type, model):
+    """Simplified function given the current experimental settings."""
+
+    def do():
+        level = "concept"
+        split = "repeated-k-fold"
+
+        norms_loader = NORMS_LOADERS[norms_type]()
+        _, feature_to_id, features_selected = norms_loader()
+
+        return [
+            {
+                "norms-type": norms_type,
+                **load_result(
+                    level,
+                    split,
+                    model,
+                    feature,
+                    {
+                        "feature_norm_str": norms_loader.get_suffix(),
+                        "feature_id": feature_to_id[feature],
+                    },
+                ),
+            }
+            for feature in tqdm(features_selected)
+        ]
+
+    return cache_json(f"/tmp/{norms_type}-{model}.json", do)
 
 
 def load_result_random_predictor(norms_loader):
@@ -310,30 +342,15 @@ def get_results_per_metacategory(level, split):
 
 
 def get_results_per_metacategory_mcrae_mapped():
-    norms_loader = NORMS_LOADERS["mcrae-mapped"]()
+    norms_type = "mcrae-mapped"
+    norms_loader = NORMS_LOADERS[norms_type]()
     feature_to_concepts, feature_to_id, features_selected = norms_loader()
     taxonomy = load_taxonomy_mcrae()
     level = "concept"
     split = "repeated-k-fold"
     MODELS = FEATURE_TYPES + ["fasttext-word", "glove-840b-300d-word"]
 
-    def load_results():
-        return [
-            load_result(
-                level,
-                split,
-                feature_type,
-                feature,
-                {
-                    "feature_norm_str": norms_loader.get_suffix(),
-                    "feature_id": feature_to_id[feature],
-                },
-            )
-            for feature in tqdm(features_selected)
-            for feature_type in MODELS
-        ]
-
-    results1 = cache_json("/tmp/per-metacategory-mcrae-mapped-text.json", load_results)
+    results1 = [r for m in MODELS for r in load_result_model(norms_type, m)]
     results2 = load_result_random_predictor(norms_loader)
     results = results1 + results2
 
@@ -450,86 +467,24 @@ def get_classifiers_agreement_binder_norms():
     df.to_csv("output/classifier-agreement-binder-norms.csv")
 
 
-def get_results_paper_tabel_main():
-    level = "concept"
-    split = "repeated-k-fold"
-
-    def get_results(norms_type):
-        norms_loader = NORMS_LOADERS[norms_type]()
-        _, feature_to_id, features_selected = norms_loader()
-
-        results = [
-            load_result(
-                level,
-                split,
-                feature_type,
-                feature,
-                {
-                    "feature_norm_str": norms_loader.get_suffix(),
-                    "feature_id": feature_to_id[feature],
-                },
-            )
-            for feature in tqdm(features_selected)
-            for feature_type in FEATURE_TYPES
-        ]
-        cols_score = SPLIT_TO_SCORE_FUNCS[split]
-        df = pd.DataFrame(results)
-        df = df.groupby(["model"])[cols_score].mean()
-        return df
-
-    dfs = {
-        NORMS_NAMES[norms_type]: cache_df(
-            f"/tmp/paper-main-table-{norms_type}-all-scores.pkl",
-            get_results,
-            norms_type,
-        )
-        for norms_type in ["mcrae-mapped", "binder-4"]
-    }
-    df = pd.concat(dfs, axis=1)
-    df = df.sort_values(("McRae++", "score-f1"), ascending=True)
+def get_results_paper_tabel_main(model):
+    results = [
+        r for n in ["mcrae-mapped", "binder-4"] for r in load_result_model(n, model)
+    ]
+    cols = ["model", "norms-type", "score-f1", "score-precision", "score-recall"]
+    df = pd.DataFrame(results)
+    df = df[cols]
+    df["model"] = df["model"].map(lambda x: FEATURE_NAMES.get(x, x))
+    df = df.groupby(["norms-type", "model"]).mean()
     df = df.reset_index()
-    df["model"] = df["model"].map(FEATURE_NAMES)
-    print(df.to_latex(float_format="%.1f", index=False))
-
-
-def get_results_text_models():
-    level = "concept"
-    split = "repeated-k-fold"
-
-    def get_results(norms_type):
-        norms_loader = NORMS_LOADERS[norms_type]()
-        _, feature_to_id, features_selected = norms_loader()
-
-        results = [
-            load_result(
-                level,
-                split,
-                f"{f}-{m}",
-                feature,
-                {
-                    "feature_norm_str": norms_loader.get_suffix(),
-                    "feature_id": feature_to_id[feature],
-                },
-            )
-            for feature in tqdm(features_selected)
-            # for f in ["fasttext", "gemma-2b", "glove-840b-300d"]
-            for f in ["gemma-2b-contextual-layer-1"]
-            for m in ["word"]
-        ]
-        cols_score = SPLIT_TO_SCORE_FUNCS[split]
-        df = pd.DataFrame(results)
-        df = df.groupby(["model"])[cols_score].mean()
-        return df
-
-    # df = cache_df(f"/tmp/text-models-mcrae-mapped.pkl", get_results, "mcrae-mapped")
-    dfs = {
-        NORMS_NAMES[norms_type]: get_results(norms_type)
-        for norms_type in ["mcrae-mapped", "binder-4"]
-    }
-    df = pd.concat(dfs, axis=1)
-    df = df.sort_values(("McRae++", "score-f1"), ascending=True)
+    df = df.pivot_table(index="model", columns="norms-type")
+    cols = [
+        (s, n)
+        for n in ["mcrae-mapped", "binder-4"]
+        for s in ["score-precision", "score-recall", "score-f1"]
+    ]
+    df = df[cols]
     df = df.reset_index()
-    df["model"] = df["model"].map(FEATURE_NAMES)
     print(df.to_latex(float_format="%.1f", index=False))
 
 
@@ -614,35 +569,17 @@ def get_results_random_predictor():
     print(df.to_latex(float_format="%.1f", index=False))
 
 
-def compare_two_models_scatterplot():
+def compare_two_models_scatterplot(model1, model2):
     norms_type = "mcrae-mapped"
     norms_loader = NORMS_LOADERS[norms_type]()
-    _, feature_to_id, features_selected = norms_loader()
     taxonomy = load_taxonomy_mcrae()
-    level = "concept"
-    split = "repeated-k-fold"
-    model1 = "fasttext-word"
-    model2 = "dino-v2"
-
-    def load_results(model):
-        return [
-            load_result(
-                level,
-                split,
-                model,
-                feature,
-                {
-                    "feature_norm_str": norms_loader.get_suffix(),
-                    "feature_id": feature_to_id[feature],
-                },
-            )
-            for feature in tqdm(features_selected)
-        ]
 
     results = [
         r
         for m in [model1, model2]
-        for r in cache_json(f"/tmp/{norms_type}-{m}.json", load_results, m)
+        for r in cache_json(
+            f"/tmp/{norms_type}-{m}.json", load_result_model, norms_type, m
+        )
     ]
 
     for r in results:
@@ -801,7 +738,6 @@ FUNCS = {
     "binder-norms": get_results_binder_norms,
     "classifier-agreement-binder-norms": get_classifiers_agreement_binder_norms,
     "paper-table-main": get_results_paper_tabel_main,
-    "text-models": get_results_text_models,
     "per-feature-norm": get_results_per_feature_norm,
     "random-predictor": get_results_random_predictor,
     "compare-two-models-scatterplot": compare_two_models_scatterplot,
@@ -811,4 +747,5 @@ FUNCS = {
 
 if __name__ == "__main__":
     what = sys.argv[1]
-    FUNCS[what]()
+    what, *args = what.split(":")
+    FUNCS[what](*args)

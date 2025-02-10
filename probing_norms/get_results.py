@@ -1,4 +1,5 @@
 import csv
+import json
 import pickle
 import pdb
 import sys
@@ -162,6 +163,13 @@ def load_result_random_predictor(norms_loader):
         }
         for feature in tqdm(features_selected)
     ]
+
+
+def get_score_random(norms_loader, feature):
+    feature_to_concepts, _, _ = norms_loader()
+    num_concepts_total = len(norms_loader.load_concepts())
+    num_concepts = len(set(feature_to_concepts[feature]))
+    return 100 * num_concepts / num_concepts_total
 
 
 def load_taxonomy_mcrae():
@@ -606,13 +614,14 @@ def get_results_random_predictor():
 
 
 def compare_two_models_scatterplot():
-    norms_loader = NORMS_LOADERS["mcrae-mapped"]()
-    feature_to_concepts, feature_to_id, features_selected = norms_loader()
+    norms_type = "mcrae-mapped"
+    norms_loader = NORMS_LOADERS[norms_type]()
+    _, feature_to_id, features_selected = norms_loader()
     taxonomy = load_taxonomy_mcrae()
     level = "concept"
     split = "repeated-k-fold"
     model1 = "fasttext-word"
-    model2 = "siglip-224"
+    model2 = "dino-v2"
 
     def load_results(model):
         return [
@@ -629,14 +638,20 @@ def compare_two_models_scatterplot():
             for feature in tqdm(features_selected)
         ]
 
-    results = cache_json(
-        f"/tmp/{model1}-{model2}.json",
-        lambda: load_results(model1) + load_results(model2),
-    )
+    results = [
+        r
+        for m in [model1, model2]
+        for r in cache_json(f"/tmp/{norms_type}-{m}.json", load_results, m)
+    ]
+
+    for r in results:
+        score_random = get_score_random(norms_loader, r["feature"])
+        r["score-f1-selectivity"] = r["score-f1"] - score_random
+
     df = pd.DataFrame(results)
     df["metacategory"] = df["feature"].map(taxonomy)
     df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_NAMES.get(x, x))
-    cols = ["feature", "metacategory", "model", "score-f1"]
+    cols = ["feature", "metacategory", "model", "score-f1-selectivity"]
     df = df[cols]
     df = df.set_index(["feature", "metacategory", "model"]).unstack(-1)
     df = df.reset_index()
@@ -648,38 +663,44 @@ def compare_two_models_scatterplot():
         return [
             p1
             for p1 in points
-            if not any(dominates(p2, p1) for p2 in points if p2 != p1)
+            if not any(dominates(p2, p1) for p2 in points if p1 != p2)
         ]
 
+    def normalize_feature_name(text):
+        SEP = "_-_"
+        if SEP in text:
+            prefix, text = text.split(SEP)
+            assert prefix in {"beh", "inbeh", "eg", "has_units", "worn_by_men"}, prefix
+        text = text.replace("_", " ").strip()
+        return text
+
     def add_texts(ax, df):
-        cols = [f"score-f1-{model1}", f"score-f1-{model2}", "feature"]
+        cols = [
+            f"score-f1-selectivity-{model1}",
+            f"score-f1-selectivity-{model2}",
+            "feature",
+        ]
         points = df[cols].values.tolist()
+        points = [tuple(p) for p in points]
         xs = [x for x, _, _ in points]
         ys = [y for _, y, _ in points]
-        # points = sorted(points, key=lambda x: x[0] - x[1])
-        points1 = [
-            (x, y, word)
-            for x, y, word in pareto_front(
-                points,
-                dominates=lambda x, y: x[0] >= y[0] and x[1] <= y[1],
-            )
-            if x >= 30
-        ]
-        points2 = [
-            (x, y, word)
-            for x, y, word in pareto_front(
-                points,
-                dominates=lambda x, y: x[0] <= y[0] and x[1] >= y[1],
-            )
-            if y >= 30
-        ]
+        points1 = pareto_front(
+            points,
+            dominates=lambda p, q: p[0] > q[0] and p[1] < q[1],
+        )
+        points1 = [p for p in points1 if p[0] >= 30]
+        points2 = pareto_front(
+            points,
+            dominates=lambda p, q: p[0] < q[0] and p[1] > q[1],
+        )
+        points2 = [p for p in points2 if p[1] >= 30]
         points = points1 + points2
         points = list(set(points))
         texts = [
             ax.text(
                 x,
                 y,
-                word.replace("_", " ").replace("beh - ", ""),
+                normalize_feature_name(word),
                 ha="center",
                 va="center",
                 size=8,
@@ -692,6 +713,7 @@ def compare_two_models_scatterplot():
             y=ys,
             ax=ax,
             expand=(1.2, 2.1),
+            force_text=(0.2, 0.6),
             # force_points=1.0,
             arrowprops=dict(arrowstyle="-", color="b", alpha=0.5),
         )
@@ -700,8 +722,8 @@ def compare_two_models_scatterplot():
     sns.set(style="whitegrid", font="Arial")
     sns.scatterplot(
         df,
-        x=f"score-f1-{model1}",
-        y=f"score-f1-{model2}",
+        x=f"score-f1-selectivity-{model1}",
+        y=f"score-f1-selectivity-{model2}",
         hue="metacategory",
         # marker="metacategory",
         ax=ax,
@@ -709,12 +731,14 @@ def compare_two_models_scatterplot():
     add_texts(ax, df)
     sns.move_legend(ax, "lower right", bbox_to_anchor=(1, 1), ncol=2, title="")
     ax.plot([0, 100], [0, 100], color="gray", linestyle="--")
-    ax.set_xlabel("F1 score · {}".format(FEATURE_NAMES[model1]))
-    ax.set_ylabel("F1 score · {}".format(FEATURE_NAMES[model2]))
+    ax.set_xlabel("F1 selectivity · {}".format(FEATURE_NAMES[model1]))
+    ax.set_ylabel("F1 selectivity · {}".format(FEATURE_NAMES[model2]))
     ax.set_aspect("equal", adjustable="box")
     st.pyplot(fig)
 
-    fig.savefig(f"output/plots/scatterplot-{model1}-vs-{model2}.pdf", bbox_inches="tight")
+    fig.savefig(
+        f"output/plots/scatterplot-{model1}-vs-{model2}.pdf", bbox_inches="tight"
+    )
 
 
 FUNCS = {

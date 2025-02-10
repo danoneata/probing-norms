@@ -37,13 +37,13 @@ class FastText:
 
 
 class Gemma:
-    def __init__(self, layer="first"):
+    def __init__(self, layer="zero"):
         self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
         self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
         self.model.eval()
         self.dim = self.model.config.hidden_size
         GET_EMBEDDINGS = {
-            "first": self.get_embeddings_first,
+            "zero": self.get_embeddings_first,
             "last": self.get_embeddings_last,
         }
         self.get_embeddings = GET_EMBEDDINGS[layer]
@@ -64,20 +64,27 @@ class Gemma:
 
 
 class GemmaContextual(Gemma):
-    def __init__(self, layer="first"):
+    def __init__(self, layer="zero"):
         self.device = "cuda"
         self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
         self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
+        # self.model = self.model.model
         self.model.eval()
         self.model.to(self.device)
         self.dim = self.model.config.hidden_size
         GET_EMBEDDINGS = {
-            "first": self.get_embeddings_first,
+            "zero": self.get_embeddings_first,
             "last": self.get_embeddings_last,
+            "layer-1": partial(self.get_embeddings_layer, layer=1),
+            "layer-2": partial(self.get_embeddings_layer, layer=2),
         }
         self.get_embeddings = GET_EMBEDDINGS[layer]
         self.contexts = self.load_context()
         self.inflect_engine = inflect.engine()
+
+    def get_embeddings_layer(self, inp, layer):
+        output = self.model.model(**inp, output_hidden_states=True)
+        return output.hidden_states[layer]
 
     @staticmethod
     def load_context():
@@ -142,6 +149,7 @@ class GemmaContextual(Gemma):
         Stops at the first match.
 
         """
+
         def find1(query, sentence):
             n = len(query)
             for s in range(len(sentence)):
@@ -245,6 +253,8 @@ FEATURE_EXTRACTORS = {
     "gemma-2b": Gemma,
     "gemma-2b-last": partial(Gemma, layer="last"),
     "gemma-2b-contextual-last": partial(GemmaContextual, layer="last"),
+    "gemma-2b-contextual-layer-1": partial(GemmaContextual, layer="layer-1"),
+    "gemma-2b-contextual-layer-2": partial(GemmaContextual, layer="layer-2"),
     "glove-6b-300d": partial(Glove, n_tokens="6B"),
     "glove-840b-300d": partial(Glove, n_tokens="840B"),
 }

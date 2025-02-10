@@ -11,7 +11,7 @@ from probing_norms.utils import cache_json, read_json, read_file
 from probing_norms.predict import McRaeNormsLoader, McRaeMappedNormsLoader
 
 
-QUESTION = "Write 10 short sentences about {}. You must use {} in each sentence."
+QUESTION = "Write 50 short sentences about {}. You must use {} as a noun in each sentence."
 
 def get_prompt(question, word, word_with_category_parenthesis):
     return [
@@ -20,7 +20,7 @@ def get_prompt(question, word, word_with_category_parenthesis):
             "content": [
                 {
                     "type": "text",
-                    "text": "You are asked to wrote 10 short sentences about a word (to follow). Answer the request by returning a list of numbered sentences, 1--10. ",
+                    "text": "You are asked to write 10 short sentences about a word (to follow). Answer the request by returning a list of numbered sentences, 1--50. ",
                 }
             ],
         },
@@ -38,15 +38,17 @@ def get_prompt(question, word, word_with_category_parenthesis):
 
 deployment = "gpt-4o"
 subscription_key = read_json("openai-api-key.json")["OPENAI_API_KEY"]
+org = read_json("openai-api-key.json")["ORG"]
+proj = read_json("openai-api-key.json")["PROJECT"]
 
 client = OpenAI(
-    organization="org-rkidQ0JkgkvB1xMy8UNoagm5",
-    project="proj_oL240PrHxkHdgGmQQZr61txM",
+    organization=org,
+    project=proj,
     api_key=subscription_key,
 )
 
 
-def do1(word, word_with_category_parenthesis):
+def do1(id, word, word_with_category_parenthesis):
     question = QUESTION
     prompt = get_prompt(question, word, word_with_category_parenthesis)
 
@@ -71,7 +73,7 @@ def do1(word, word_with_category_parenthesis):
     print()
 
     return {
-        "id": word,
+        "id": id,
         "response": response.choices[0].message.content,
     }
 
@@ -82,6 +84,13 @@ def make_useful(concept_string):
     '''
     return concept_string.split(",")
 
+
+def get_id(concept):
+    '''
+       concept: ["aluminum_foil", "aluminum foil", "food packaging", "aluminum foil (food packaging)"]
+       We want the second element of the list
+    '''
+    return concept[0]
 
 def get_word(concept):
     '''
@@ -113,12 +122,8 @@ if __name__ == "__main__":
 
     output = {}
 
-    for c in concepts:
-        cc = make_useful(c)
-        response = do1(get_word(cc), get_word_with_category_parenthesis(cc))
-        output[get_word(cc)] = response
-
-    # DE: this would be better if I understood JSONL
-    with open('concept_sentences.jsonl', 'w') as f:
-        for x in output.keys():
-            f.write(json.dumps(output[x]) + "\n")
+    with open('concept_sentences.jsonl', 'w', buffering=1) as f:
+        for c in concepts:
+            cc = make_useful(c)
+            response = do1(get_id(cc), get_word(cc), get_word_with_category_parenthesis(cc))
+            f.write(json.dumps(response) + "\n")

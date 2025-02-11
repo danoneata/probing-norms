@@ -203,9 +203,10 @@ class HFModelContextual(HFModel):
             "eclair": ["éclair"],
             "souffle": ["soufflé"],
         }
-        return [
+        variants = [
             variant for w in [word] + OTHER_FORMS.get(word, []) for variant in do(w)
         ]
+        return list(set(variants))
 
     @staticmethod
     def find_location(variants, sentence):

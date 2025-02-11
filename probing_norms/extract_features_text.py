@@ -64,7 +64,7 @@ class Gemma:
 
 
 class GemmaContextual(Gemma):
-    def __init__(self, layer="zero"):
+    def __init__(self, layer="zero", context_type="gpt4o_concept"):
         self.device = "cuda"
         self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
         self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
@@ -79,7 +79,7 @@ class GemmaContextual(Gemma):
             "layer-2": partial(self.get_embeddings_layer, layer=2),
         }
         self.get_embeddings = GET_EMBEDDINGS[layer]
-        self.contexts = self.load_context()
+        self.contexts = self.load_context(context_type)
         self.inflect_engine = inflect.engine()
 
     def get_embeddings_layer(self, inp, layer):
@@ -87,7 +87,7 @@ class GemmaContextual(Gemma):
         return output.hidden_states[layer]
 
     @staticmethod
-    def load_context():
+    def load_context(type_):
         def remove_starting_number(sentence):
             sentence = sentence.strip()
             num, *words = sentence.split()
@@ -100,10 +100,16 @@ class GemmaContextual(Gemma):
             id_ = data["id"]
             sentences = data["response"]
             sentences = sentences.split("\n")
+            sentences = [s for s in sentences if s]
             sentences = [remove_starting_number(s) for s in sentences]
             return id_, sentences
 
-        path = "data/things/gpt4o_concept_context_sentences.jsonl"
+        assert type_ in {
+            "gpt4o_concept",
+            "gpt4o_50_concept",
+            "gpt4o_50_constrained_concept",
+        }
+        path = f"data/things/{type_}_context_sentences.jsonl"
         return dict(read_file(path, parse_line))
 
     def generate_word_variants(self, word):
@@ -121,8 +127,10 @@ class GemmaContextual(Gemma):
 
         def pluralize(word):
             SPECIAL = {
+                "banjo": "banjos",
                 "antenna": "antennae",
                 "flamingo": "flamingos",
+                "hovercraft": "hovercrafts",
             }
             try:
                 return SPECIAL[word]
@@ -140,8 +148,20 @@ class GemmaContextual(Gemma):
             except KeyError:
                 return word.capitalize()
 
-        transformations = [prepend_space, capitalize, pluralize]
-        return [word] + [compose(*ts)(word) for ts in all_combinations(transformations)]
+        def do(word):
+            transformations = [prepend_space, capitalize, pluralize]
+            return [word] + [
+                compose(*ts)(word) for ts in all_combinations(transformations)
+            ]
+
+        OTHER_FORMS = {
+            "christmas tree": ["Christmas Tree"],
+            "eclair": ["éclair"],
+            "souffle": ["soufflé"],
+        }
+        return [
+            variant for w in [word] + OTHER_FORMS.get(word, []) for variant in do(w)
+        ]
 
     @staticmethod
     def find_location(variants, sentence):
@@ -266,12 +286,22 @@ FEATURE_EXTRACTORS = {
     "fasttext": FastText,
     "glove-6b-300d": partial(Glove, n_tokens="6B"),
     "glove-840b-300d": partial(Glove, n_tokens="840B"),
+    "clip": CLIP,
     "gemma-2b": Gemma,
     "gemma-2b-last": partial(Gemma, layer="last"),
     "gemma-2b-contextual-last": partial(GemmaContextual, layer="last"),
     "gemma-2b-contextual-layer-1": partial(GemmaContextual, layer="layer-1"),
     "gemma-2b-contextual-layer-2": partial(GemmaContextual, layer="layer-2"),
-    "clip": CLIP,
+    "gemma-2b-contextual-50-last": partial(
+        GemmaContextual,
+        layer="last",
+        context_type="gpt4o_50_concept",
+    ),
+    "gemma-2b-contextual-50-constrained-last": partial(
+        GemmaContextual,
+        layer="last",
+        context_type="gpt4o_50_constrained_concept",
+    ),
 }
 
 MAPPING_TYPES = ["word", "word-and-category"]

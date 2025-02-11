@@ -88,7 +88,7 @@ NORMS_NAMES = {
 }
 
 
-def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path):
+def load_result_path(path, score_types):
     def evaluate(data):
         true = np.array([datum["true"] for datum in data])
         pred = np.array([datum["pred"] for datum in data])
@@ -98,29 +98,28 @@ def load_result(embeddings_level, split_type, feature_type, feature, kwargs_path
                 "score-type": score_type,
                 "score": 100 * SCORE_FUNCS[score_type](true, pred),
             }
-            for score_type in SPLIT_TO_SCORE_FUNCS[split_type]
+            for score_type in score_types
         ]
 
-    def get_path(*, feature_norm_str, feature_id):
-        return OUTPUT_PATH.format(
-            embeddings_level,
-            split_type,
-            DATASET_NAME,
-            feature_type,
-            feature_norm_str,
-            feature_id,
-        )
-
-    path = get_path(**kwargs_path) + ".json"
     results = read_json(path)
     scores = [score for result in results for score in evaluate(result["preds"])]
 
     df = pd.DataFrame(scores)
     df = df.groupby("score-type")["score"].mean()
-    scores_dict = df.to_dict()
+    return df.to_dict()
 
+
+def load_result(embeddings_level, split_type, feature_type, feature_norm_str, feature_id):
+    path = OUTPUT_PATH.format(
+        embeddings_level,
+        split_type,
+        DATASET_NAME,
+        feature_type,
+        feature_norm_str,
+        feature_id,
+    ) + ".json"
+    scores_dict = load_result_path(path, SPLIT_TO_SCORE_FUNCS[split_type])
     return {
-        "feature": feature,
         "level": embeddings_level,
         "model": feature_type,
         "split": split_type,
@@ -141,15 +140,13 @@ def load_result_model(norms_type, model):
         return [
             {
                 "norms-type": norms_type,
+                "feature": feature,
                 **load_result(
                     level,
                     split,
                     model,
-                    feature,
-                    {
-                        "feature_norm_str": norms_loader.get_suffix(),
-                        "feature_id": feature_to_id[feature],
-                    },
+                    norms_loader.get_suffix(),
+                    feature_to_id[feature],
                 ),
             }
             for feature in tqdm(features_selected)
@@ -252,16 +249,16 @@ def get_results_levels_and_splits():
         ("concept", "repeated-k-fold"),
     ]
     results = [
-        load_result(
-            level,
-            split,
-            feature_type,
-            feature,
-            {
-                "feature_norm_str": norms_loader.get_suffix(),
-                "feature_id": feature_to_id[feature],
-            },
-        )
+        {
+            "feature": feature,
+            **load_result(
+                level,
+                split,
+                feature_type,
+                norms_loader.get_suffix(),
+                feature_to_id[feature],
+            )
+        }
         for feature in tqdm(features_selected)
         for level, split in levels_and_splits
         for feature_type in FEATURE_TYPES
@@ -323,17 +320,15 @@ def get_results_per_metacategory(level, split):
 
     results = [
         {
+            "metacategory": taxonomy[feature],
+            "feature": feature,
             **load_result(
                 level,
                 split,
                 feature_type,
-                feature,
-                {
-                    "feature_norm_str": norms_loader.get_suffix(),
-                    "feature_id": feature_to_id[feature],
-                },
+                norms_loader.get_suffix(),
+                feature_to_id[feature],
             ),
-            "metacategory": taxonomy[feature],
         }
         for feature in tqdm(features)
         for feature_type in FEATURE_TYPES
@@ -370,17 +365,15 @@ def get_results_binder_norms():
     feature_to_concepts, feature_to_id, features_selected = norms_loader()
     results = [
         {
+            "feature": feature,
+            "thresh": thresh,
             **load_result(
                 level,
                 split,
                 feature_type,
-                feature,
-                {
-                    "feature_norm_str": f"binder-{thresh}",
-                    "feature_id": feature_to_id[feature],
-                },
+                f"binder-{thresh}",
+                feature_to_id[feature],
             ),
-            "thresh": thresh,
         }
         for thresh in [4, 5]
         for feature in tqdm(features_selected)
@@ -490,29 +483,11 @@ def get_results_paper_tabel_main(model):
 
 
 def get_results_per_feature_norm():
-    level = "concept"
-    split = "repeated-k-fold"
     EMBS = ["siglip-224", "fasttext-word", "glove-840b-300d-word", "gemma-2b-word"]
 
     norms_type = "mcrae-mapped"
     norms_loader = NORMS_LOADERS[norms_type]()
     feature_to_concepts, feature_to_id, features_selected = norms_loader()
-
-    def get_results_1():
-        return [
-            load_result(
-                level,
-                split,
-                emb,
-                feature,
-                {
-                    "feature_norm_str": norms_loader.get_suffix(),
-                    "feature_id": feature_to_id[feature],
-                },
-            )
-            for feature in tqdm(features_selected)
-            for emb in EMBS
-        ]
 
     import random
 
@@ -524,7 +499,11 @@ def get_results_per_feature_norm():
         true[:n] = 1
         return score_func(true, pred)
 
-    results = cache_json("/tmp/per-feature-norm-xx.json", get_results_1)
+    results = [
+        result
+        for model in EMBS
+        for result in load_result_model(norms_type, model)
+    ]
     df = pd.DataFrame(results)
     df = df.pivot_table(index="feature", columns="model", values="score")
     df = df.reset_index()
@@ -699,7 +678,10 @@ def get_correlation_between_models(norms_type):
     ]
     results = [r for model in models for r in load_result_model(norms_type, model)]
     cols = ["feature", "model", "score-f1"]
-    feature_to_random_score = {feature: get_score_random(norms_loader, feature) for feature in norms_loader.load_concepts()}
+    feature_to_random_score = {
+        feature: get_score_random(norms_loader, feature)
+        for feature in norms_loader.load_concepts()
+    }
 
     df = pd.DataFrame(results)
     df = df[cols]
@@ -726,7 +708,9 @@ def get_correlation_between_models(norms_type):
     ax.set_ylabel("")
     st.pyplot(fig)
 
-    fig.savefig(f"output/plots/correlation-between-models-{norms_type}.pdf", bbox_inches="tight")
+    fig.savefig(
+        f"output/plots/correlation-between-models-{norms_type}.pdf", bbox_inches="tight"
+    )
 
 
 def prepare_results_for_stella():
@@ -738,31 +722,13 @@ def prepare_results_for_stella():
     split = "repeated-k-fold"
     models = ["dino-v2", "gemma-2b-contextual-last-word"]
 
-    def get_results_model(model):
-        return [
-            load_result(
-                level,
-                split,
-                model,
-                feature,
-                {
-                    "feature_norm_str": norms_loader.get_suffix(),
-                    "feature_id": feature_to_id[feature],
-                },
-            )
-            for feature in tqdm(features_selected)
-        ]
-
     results = [
         {
             "model": model,
             **result,
         }
         for model in models
-        for result in cache_json(
-            f"/tmp/{norms_type}-{model}.json",
-            lambda: get_results_model(model),
-        )
+        for result in load_result_model(norms_type, model)
     ]
 
     # Add metacategory
@@ -828,6 +794,7 @@ FUNCS = {
     "random-predictor": get_results_random_predictor,
     "compare-two-models-scatterplot": compare_two_models_scatterplot,
     "get-correlation-between-models": get_correlation_between_models,
+    "get-results-multiple-classifiers": get_results_multiple_classifiers,
     "prepare-results-for-stella": prepare_results_for_stella,
     "prepare-classifiers-for-stella": prepare_classifiers_for_stella,
 }

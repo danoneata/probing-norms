@@ -16,7 +16,7 @@ import torch
 from huggingface_hub import hf_hub_download
 from toolz import compose
 from tqdm import tqdm
-from transformers import AutoTokenizer, AutoModelForCausalLM, CLIPModel
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel, CLIPModel
 
 from probing_norms.data import DATASETS, load_things_concept_mapping
 from probing_norms.utils import implies, read_file
@@ -37,22 +37,83 @@ class FastText:
 
 
 class Gemma:
-    def __init__(self, layer="zero"):
-        self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
-        self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
+    def __init__(self):
+        self.model_class = AutoModelForCausalLM
+
+    def get_backbone(self, model):
+        return model.model
+
+    def get_tokens(self, word, tokenizer):
+        tokens = tokenizer.encode(word)
+        bos, *rest = tokens
+        assert bos == tokenizer.bos_token_id
+        return rest
+
+
+class GPT2:
+    def __init__(self):
+        self.model_class = AutoModelForCausalLM
+
+    def get_backbone(self, model):
+        return model.transformer
+
+    def get_tokens(self, word, tokenizer):
+        return tokenizer.encode(word)
+
+
+class DeBERTa:
+    def __init__(self):
+        self.model_class = AutoModel
+
+    def get_backbone(self, model):
+        return model
+
+    def get_tokens(self, word, tokenizer):
+        tokens = tokenizer.encode(word)
+        bos, *rest, eos = tokens
+        assert bos == tokenizer.vocab["[CLS]"]
+        assert eos == tokenizer.vocab["[SEP]"]
+        return rest
+
+
+BASE_HF_MODELS = {
+    "gemma": Gemma,
+    "gpt2": GPT2,
+    "deberta": DeBERTa,
+}
+
+
+class HFModel:
+    def __init__(self, model_type, model_id, layer):
+        self.base_model = BASE_HF_MODELS[model_type]()
+        self.device = "cuda"
+
+        model_class = self.base_model.model_class
+        self.model = model_class.from_pretrained(model_id)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_id)
+
         self.model.eval()
+        self.model.to(self.device)
         self.dim = self.model.config.hidden_size
+        self.model = self.base_model.get_backbone(self.model)
+
         GET_EMBEDDINGS = {
             "zero": self.get_embeddings_first,
             "last": self.get_embeddings_last,
+            "layer-1": partial(self.get_embeddings_layer, layer=1),
+            "layer-2": partial(self.get_embeddings_layer, layer=2),
         }
         self.get_embeddings = GET_EMBEDDINGS[layer]
 
+    def get_embeddings_layer(self, inp, layer):
+        output = self.model(**inp, output_hidden_states=True)
+        return output.hidden_states[layer]
+
     def get_embeddings_first(self, inp):
-        return self.model.model.embed_tokens(inp["input_ids"])
+        return self.model.embed_tokens(inp["input_ids"])
 
     def get_embeddings_last(self, inp):
-        return self.model.model(**inp).last_hidden_state
+        return self.model(**inp).last_hidden_state
 
     def __call__(self, text, **_):
         with torch.no_grad():
@@ -63,28 +124,11 @@ class Gemma:
             return embs.mean(dim=[0, 1]).numpy()
 
 
-class GemmaContextual(Gemma):
-    def __init__(self, layer="zero", context_type="gpt4o_concept"):
-        self.device = "cuda"
-        self.tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b")
-        self.model = AutoModelForCausalLM.from_pretrained("google/gemma-2b")
-        # self.model = self.model.model
-        self.model.eval()
-        self.model.to(self.device)
-        self.dim = self.model.config.hidden_size
-        GET_EMBEDDINGS = {
-            "zero": self.get_embeddings_first,
-            "last": self.get_embeddings_last,
-            "layer-1": partial(self.get_embeddings_layer, layer=1),
-            "layer-2": partial(self.get_embeddings_layer, layer=2),
-        }
-        self.get_embeddings = GET_EMBEDDINGS[layer]
+class HFModelContextual(HFModel):
+    def __init__(self, model_type, model_id, layer, context_type):
+        super().__init__(model_type, model_id, layer)
         self.contexts = self.load_context(context_type)
         self.inflect_engine = inflect.engine()
-
-    def get_embeddings_layer(self, inp, layer):
-        output = self.model.model(**inp, output_hidden_states=True)
-        return output.hidden_states[layer]
 
     @staticmethod
     def load_context(type_):
@@ -188,13 +232,10 @@ class GemmaContextual(Gemma):
         return None
 
     def __call__(self, word, *, word_id):
-        def drop_bos(tokens):
-            bos, *rest = tokens
-            assert bos == self.tokenizer.bos_token_id
-            return rest
-
         variants = self.generate_word_variants(word)
-        tokens_variants = [drop_bos(self.tokenizer.encode(word)) for word in variants]
+        tokens_variants = [
+            self.base_model.get_tokens(word, self.tokenizer) for word in variants
+        ]
 
         def get_emb(sentence):
             tokens_sentence = self.tokenizer.encode(sentence)
@@ -287,20 +328,72 @@ FEATURE_EXTRACTORS = {
     "glove-6b-300d": partial(Glove, n_tokens="6B"),
     "glove-840b-300d": partial(Glove, n_tokens="840B"),
     "clip": CLIP,
-    "gemma-2b": Gemma,
-    "gemma-2b-last": partial(Gemma, layer="last"),
-    "gemma-2b-contextual-last": partial(GemmaContextual, layer="last"),
-    "gemma-2b-contextual-layer-1": partial(GemmaContextual, layer="layer-1"),
-    "gemma-2b-contextual-layer-2": partial(GemmaContextual, layer="layer-2"),
+    "gemma-2b": partial(
+        HFModel,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="zero",
+    ),
+    "gemma-2b-last": partial(
+        HFModel,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="last",
+    ),
+    "gemma-2b-contextual-last": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="last",
+        context_type="gpt4o_concept",
+    ),
+    "gemma-2b-contextual-layer-1": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="layer-1",
+        context_type="gpt4o_concept",
+    ),
+    "gemma-2b-contextual-layer-2": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="layer-2",
+        context_type="gpt4o_concept",
+    ),
     "gemma-2b-contextual-50-last": partial(
-        GemmaContextual,
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
         layer="last",
         context_type="gpt4o_50_concept",
     ),
     "gemma-2b-contextual-50-constrained-last": partial(
-        GemmaContextual,
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
         layer="last",
         context_type="gpt4o_50_constrained_concept",
+    ),
+    "llama-3.1-8b-contextual-last": partial(
+        HFModelContextual,
+        model_id="meta-llama/Llama-3.1-8b",
+        layer="last",
+        context_type="gpt4o_concept",
+    ),
+    "gpt2-contextual-last": partial(
+        HFModelContextual,
+        model_type="gpt2",
+        model_id="openai-community/gpt2",
+        layer="last",
+        context_type="gpt4o_concept",
+    ),
+    "deberta-v3-contextual-last": partial(
+        HFModelContextual,
+        model_type="deberta",
+        model_id="microsoft/deberta-v3-base",
+        layer="last",
+        context_type="gpt4o_concept",
     ),
 }
 

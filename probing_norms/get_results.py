@@ -51,6 +51,7 @@ FEATURE_TYPES = [
     "swin-v2",
     "max-vit-large",
     "random-siglip",
+    "clip",
 ]
 
 
@@ -87,6 +88,14 @@ NORMS_NAMES = {
     "binder-4": "Binder",
 }
 
+SCORE_NAMES = {
+    "score-accuracy": "Accuracy",
+    "score-precision": "Precision",
+    "score-recall": "Recall",
+    "score-f1": "F1",
+    "score-f1-selectivity": "F1 selectivity",
+    "score-roc-auc": "ROC AUC",
+}
 
 def load_result_path(path, score_types):
     def evaluate(data):
@@ -201,6 +210,17 @@ def get_score_random(norms_loader, feature):
     return 100 * num_concepts / num_concepts_total
 
 
+def get_score_random_features(norms_type):
+    norms_loader = NORMS_LOADERS[norms_type]()
+    _, _, features_selected = norms_loader()
+    def do():
+        return {
+            feature: get_score_random(norms_loader, feature)
+            for feature in features_selected
+        }
+    return cache_json(f"/tmp/score-random-{norms_type}.json", do)
+
+
 def load_taxonomy_mcrae():
     cols = ["Feature", "BR_Label"]
     df = pd.read_csv("data/norms/mcrae/CONCS_FEATS_concstats_brm.txt", sep="\t")
@@ -276,38 +296,47 @@ def get_results_levels_and_splits():
 
 
 def plot_results_per_metacategory(results):
-    df = pd.DataFrame(results)
-    # st.write(df)
-    # dfx = df.pivot_table(index=["metacategory", "feature"], columns="model", values="score")
-    # dfx = dfx.reset_index()
-    # dfx.to_csv("output/results-per-feature.csv")
-    df["model"] = df["model"].map(FEATURE_NAMES)
-    df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_NAMES.get(x, x))
-    st.write(df)
+    from predict import FEATURE_TYPE_TO_MODALITY
+    metric = "score-f1-selectivity"
 
-    model_performance = df.groupby(["metacategory", "model"])["score-f1"].mean()
+    df = pd.DataFrame(results)
+    df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_NAMES.get(x, x))
+    df["modality"] = df["model"].map(FEATURE_TYPE_TO_MODALITY)
+    df["model"] = df["model"].map(FEATURE_NAMES)
+
+    model_performance = df.groupby(["model", "modality"])[metric].mean()
     model_performance = model_performance.reset_index()
-    order_models = (
-        model_performance.groupby("model")["score-f1"].mean().sort_values().index
-    )
+    order_models = model_performance.sort_values(["modality", metric])["model"]
     order_metacategory = sorted(df["metacategory"].unique())
+
+    modalities = ["image", "text"]
+    modality_to_color = {
+        "image": "rocket_r",
+        "text": "mako_r",
+    }
+    num_models = Counter(model_performance["modality"])
+    palette = [
+        c
+        for m in modalities
+        for c in sns.color_palette(modality_to_color[m], n_colors=num_models[m])
+    ]
 
     fig, ax = plt.subplots(figsize=(3.75, 20))
     sns.set(style="whitegrid", context="poster", font="Arial")
     sns.barplot(
         data=df,
-        x="score-f1",
+        x=metric,
         y="metacategory",
         hue="model",
         hue_order=order_models,
         order=order_metacategory,
+        palette=palette,
         errorbar=None,
         ax=ax,
     )
     sns.move_legend(ax, "lower right", bbox_to_anchor=(1, 1), ncol=2, title="")
     ax.set_ylabel("")
-    ax.set_xlabel("F1 score")
-    # fig.set_tight_layout(True)
+    ax.set_xlabel(SCORE_NAMES[metric])
     st.pyplot(fig)
     return fig
 
@@ -343,18 +372,30 @@ def get_results_per_metacategory(level, split):
 def get_results_per_metacategory_mcrae_mapped():
     classifier_type = "linear-probe"
     norms_type = "mcrae-mapped"
-    norms_loader = NORMS_LOADERS[norms_type]()
     taxonomy = load_taxonomy_mcrae()
     level = "concept"
     split = "repeated-k-fold"
-    MODELS = FEATURE_TYPES + ["fasttext-word", "glove-840b-300d-word"]
+    MODELS = [
+        "pali-gemma-224",
+        "siglip-224",
+        "vit-mae-large",
+        "dino-v2",
+        # "swin-v2",
+        # "max-vit-large",
+        "random-siglip",
+        "clip",
+        "fasttext-word",
+        "glove-840b-300d-word",
+        "gemma-2b-contextual-last-word",
+        "clip-word",
+    ]
 
-    results1 = [r for m in MODELS for r in load_result_features(classifier_type, level, split, m, norms_type)]
-    results2 = load_result_random_predictor(norms_loader)
-    results = results1 + results2
+    scores_random = get_score_random_features(norms_type)
+    results = [r for m in MODELS for r in load_result_features(classifier_type, level, split, m, norms_type)]
 
     for r in results:
         r["metacategory"] = taxonomy[r["feature"]]
+        r["score-f1-selectivity"] = r["score-f1"] - scores_random[r["feature"]]
 
     fig = plot_results_per_metacategory(results)
     fig.savefig("output/plots/per-metacategory-mcrae-mapped.pdf", bbox_inches="tight")

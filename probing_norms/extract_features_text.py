@@ -247,6 +247,7 @@ class HFModelContextual(HFModel):
                 input_ids = input_ids.to(self.device)
                 sentence_embeddings = self.get_embeddings(input_ids)
                 assert sentence_embeddings.shape[1] == len(tokens_sentence)
+                assert self.tokenizer.decode(tokens_sentence[s:e]) in variants
                 return sentence_embeddings[0, s:e].mean(dim=0).cpu().numpy()
             else:
                 return None

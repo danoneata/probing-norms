@@ -14,6 +14,11 @@ import pandas as pd
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split, RepeatedStratifiedKFold
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler, Normalizer
+
 from tqdm import tqdm
 
 from probing_norms.constants import NUM_MIN_CONCEPTS
@@ -26,8 +31,13 @@ from probing_norms.data import (
     get_feature_to_concepts,
 )
 from probing_norms.utils import cache_json, read_file
-from probing_norms.extract_features_image import FEATURE_EXTRACTORS as FEATURE_EXTRACTORS_IMAGE
-from probing_norms.extract_features_text import FEATURE_EXTRACTORS as FEATURE_EXTRACTORS_TEXT, MAPPING_TYPES
+from probing_norms.extract_features_image import (
+    FEATURE_EXTRACTORS as FEATURE_EXTRACTORS_IMAGE,
+)
+from probing_norms.extract_features_text import (
+    FEATURE_EXTRACTORS as FEATURE_EXTRACTORS_TEXT,
+    MAPPING_TYPES,
+)
 
 
 NORMS_PRIMING = "mcrae"
@@ -51,7 +61,11 @@ AGGREGATE_EMBEDDINGS = {
 
 FEATURE_TYPE_TO_MODALITY = {
     **{k: "image" for k in FEATURE_EXTRACTORS_IMAGE.keys()},
-    **{k + "-" + m: "text" for k in FEATURE_EXTRACTORS_TEXT.keys() for m in MAPPING_TYPES},
+    **{
+        k + "-" + m: "text"
+        for k in FEATURE_EXTRACTORS_TEXT.keys()
+        for m in MAPPING_TYPES
+    },
 }
 
 
@@ -66,14 +80,14 @@ def load_embeddings(dataset_name, feature_type, embeddings_level):
     return embeddings, labels
 
 
-def predict1(X, y, split):
+def predict1(make_classifier, X, y, split):
     idxs_tr = split.tr_idxs
     idxs_te = split.te_idxs
 
     X_tr, y_tr = X[idxs_tr], y[idxs_tr]
     X_te, y_te = X[idxs_te], y[idxs_te]
 
-    clf = LogisticRegression(penalty=None, max_iter=1_000, verbose=False)
+    clf = make_classifier()
     clf.fit(X_tr, y_tr)
 
     y_pr = clf.predict_proba(X_te)[:, 1]
@@ -94,11 +108,11 @@ def predict1(X, y, split):
     }
 
 
-def predict_splits(X, y, splits):
+def predict_splits(make_classifier, X, y, splits):
     return [
         {
             "split": split.metadata,
-            **predict1(X, y, split),
+            **predict1(make_classifier, X, y, split),
         }
         for split in tqdm(splits, leave=False)
     ]
@@ -302,9 +316,7 @@ class BinderNormsLoader(NormsLoader):
         feature_to_id = {feature: i for i, feature in enumerate(features)}
 
         features_selected = [
-            norm
-            for norm, concepts in feature_to_concepts.items()
-            if len(concepts) >= 5
+            norm for norm, concepts in feature_to_concepts.items() if len(concepts) >= 5
         ]
         # features_selected = features
 
@@ -323,17 +335,62 @@ NORMS_LOADERS = {
     "binder-5": partial(BinderNormsLoader, thresh=5),
 }
 
+
+CLASSIFIERS = {
+    "linear-probe": partial(
+        LogisticRegression,
+        penalty=None,
+        max_iter=1_000,
+    ),
+    "linear-probe-std": lambda: make_pipeline(
+        StandardScaler(),
+        LogisticRegression(max_iter=1_000),
+    ),
+    "knn-3": lambda: make_pipeline(
+        Normalizer(norm="l2"),
+        KNeighborsClassifier(n_neighbors=3),
+    ),
+    "mlp": lambda: make_pipeline(
+        StandardScaler(),
+        MLPClassifier(hidden_layer_sizes=(1024, 512)),
+    ),
+}
+
+
 @click.command()
+@click.option(
+    "-c",
+    "--classifier-type",
+    "classifier_type",
+    type=click.Choice(CLASSIFIERS),
+    required=True,
+)
 @click.option(
     "--embeddings-level",
     "embeddings_level",
-    type=click.Choice(AGGREGATE_EMBEDDINGS.keys()),
+    type=click.Choice(AGGREGATE_EMBEDDINGS),
     required=True,
 )
-@click.option("--feature-type", "feature_type", type=str, required=True)
-@click.option("--norms-type", "norms_type", type=str, required=True)
-@click.option("--split-type", "split_type", type=str, required=True)
-def main(embeddings_level, feature_type, norms_type, split_type):
+@click.option(
+    "-f",
+    "--feature-type",
+    "feature_type",
+    type=click.Choice(FEATURE_TYPE_TO_MODALITY),
+    required=True,
+)
+@click.option(
+    "--norms-type",
+    "norms_type",
+    type=click.Choice(NORMS_LOADERS),
+    required=True,
+)
+@click.option(
+    "--split-type",
+    "split_type",
+    type=click.Choice(GET_TRAIN_TEST_SPLIT),
+    required=True,
+)
+def main(classifier_type, embeddings_level, feature_type, norms_type, split_type):
     dataset_name = "things"
     dataset = DATASETS[dataset_name]()
 
@@ -347,12 +404,16 @@ def main(embeddings_level, feature_type, norms_type, split_type):
     embeddings = embeddings[idxs]
     labels = labels[idxs]
 
+    FOLDER = "output/{}-predictions/{}/{}".format(
+        classifier_type, embeddings_level, split_type
+    )
+    os.makedirs(FOLDER, exist_ok=True)
+
     def get_path(feature):
         feature_norm = norm_loader.get_suffix()
         feature_id = feature_to_id[feature]
-        return "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}".format(
-            embeddings_level,
-            split_type,
+        return "{}/{}-{}-{}-{}".format(
+            FOLDER,
             dataset_name,
             feature_type,
             feature_norm,
@@ -366,28 +427,40 @@ def main(embeddings_level, feature_type, norms_type, split_type):
         class_to_label=dataset.class_to_label,
     )
 
+    make_classifier = CLASSIFIERS[classifier_type]
+
+    def save_preds(path, results):
+        data = [{k: r[k] for k in ("split", "preds")} for r in results]
+        with open(path, "w") as f:
+            json.dump(data, f, indent=4)
+ 
+    def save_clfs(path, results):
+        data = [{k: r[k] for k in ("split", "clf")} for r in results]
+        with open(path, "wb") as f:
+            pickle.dump(data, f)
+
     def cache_clf_and_preds(path, func, *args):
         path_json = path + ".json"
-        path_pkl = path + ".pkl"
-        paths_exist = os.path.exists(path_json) and os.path.exists(path_pkl)
-        if not paths_exist:
+        if os.path.exists(path_json):
+            return
+        else:
             results = func(*args)
-
-            data1 = [{k: r[k] for k in ("split", "preds")} for r in results]
-            with open(path_json, "w") as f:
-                json.dump(data1, f, indent=4)
-
-            data2 = [{k: r[k] for k in ("split", "clf")} for r in results]
-            with open(path_pkl, "wb") as f:
-                pickle.dump(data2, f)
+            save_preds(path_json, results)
+            # Avoid saving classifiers for KNN since it stores the whole data!
+            if classifier_type != "knn-3":
+                save_clfs(path, results)
 
     def process_feature(feature):
         binary_labels = get_binary_labels(
-            labels, feature, feature_to_concepts, dataset.class_to_label
+            labels,
+            feature,
+            feature_to_concepts,
+            dataset.class_to_label,
         )
         cache_clf_and_preds(
             get_path(feature),
             predict_splits,
+            make_classifier,
             embeddings,
             binary_labels,
             splits[feature],

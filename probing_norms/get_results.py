@@ -54,7 +54,7 @@ FEATURE_TYPES = [
 ]
 
 
-OUTPUT_PATH = "output/linear-probe-predictions/{}/{}/{}-{}-{}-{}"
+OUTPUT_PATH = "output/{}-predictions/{}/{}/{}-{}-{}-{}"
 
 
 # Names used for plotting or other output.
@@ -109,8 +109,9 @@ def load_result_path(path, score_types):
     return df.to_dict()
 
 
-def load_result(embeddings_level, split_type, feature_type, feature_norm_str, feature_id):
+def load_result(classifier_type, embeddings_level, split_type, feature_type, feature_norm_str, feature_id):
     path = OUTPUT_PATH.format(
+        classifier_type,
         embeddings_level,
         split_type,
         DATASET_NAME,
@@ -127,32 +128,30 @@ def load_result(embeddings_level, split_type, feature_type, feature_norm_str, fe
     }
 
 
-def load_result_model(norms_type, model):
-    """Simplified function given the current experimental settings."""
-
+def load_result_features(classifier_type, embeddings_level, split_type, feature_type, norms_type):
+    """Aggregates results for all features."""
     def do():
-        level = "concept"
-        split = "repeated-k-fold"
-
         norms_loader = NORMS_LOADERS[norms_type]()
         _, feature_to_id, features_selected = norms_loader()
-
         return [
             {
                 "norms-type": norms_type,
                 "feature": feature,
                 **load_result(
-                    level,
-                    split,
-                    model,
+                    classifier_type,
+                    embeddings_level,
+                    split_type,
+                    feature_type,
                     norms_loader.get_suffix(),
                     feature_to_id[feature],
                 ),
             }
             for feature in tqdm(features_selected)
         ]
-
-    return cache_json(f"/tmp/{norms_type}-{model}.json", do)
+    path = "/tmp/{}-{}-{}-{}-{}.json".format(
+        classifier_type, embeddings_level, split_type, feature_type, norms_type,
+    )
+    return cache_json(path, do)
 
 
 def load_result_random_predictor(norms_loader):
@@ -240,6 +239,7 @@ def load_taxonomy_ours():
 
 
 def get_results_levels_and_splits():
+    classifier_type = "linear-probe"
     norms_loader = NORMS_LOADERS["generated-gpt35"]()
     _, feature_to_id, features_selected = norms_loader()
 
@@ -252,6 +252,7 @@ def get_results_levels_and_splits():
         {
             "feature": feature,
             **load_result(
+                classifier_type,
                 level,
                 split,
                 feature_type,
@@ -312,6 +313,7 @@ def plot_results_per_metacategory(results):
 
 
 def get_results_per_metacategory(level, split):
+    classifier_type = "linear-probe"
     taxonomy = load_taxonomy_ours()
     features = list(taxonomy.keys())
 
@@ -323,6 +325,7 @@ def get_results_per_metacategory(level, split):
             "metacategory": taxonomy[feature],
             "feature": feature,
             **load_result(
+                classifier_type,
                 level,
                 split,
                 feature_type,
@@ -338,15 +341,15 @@ def get_results_per_metacategory(level, split):
 
 
 def get_results_per_metacategory_mcrae_mapped():
+    classifier_type = "linear-probe"
     norms_type = "mcrae-mapped"
     norms_loader = NORMS_LOADERS[norms_type]()
-    feature_to_concepts, feature_to_id, features_selected = norms_loader()
     taxonomy = load_taxonomy_mcrae()
     level = "concept"
     split = "repeated-k-fold"
     MODELS = FEATURE_TYPES + ["fasttext-word", "glove-840b-300d-word"]
 
-    results1 = [r for m in MODELS for r in load_result_model(norms_type, m)]
+    results1 = [r for m in MODELS for r in load_result_features(classifier_type, level, split, m, norms_type)]
     results2 = load_result_random_predictor(norms_loader)
     results = results1 + results2
 
@@ -358,6 +361,7 @@ def get_results_per_metacategory_mcrae_mapped():
 
 
 def get_results_binder_norms():
+    classifier_type = "linear-probe"
     level = "concept"
     split = "repeated-k-fold"
 
@@ -368,6 +372,7 @@ def get_results_binder_norms():
             "feature": feature,
             "thresh": thresh,
             **load_result(
+                classifier_type,
                 level,
                 split,
                 feature_type,
@@ -407,6 +412,7 @@ def get_classifiers_agreement_binder_norms():
     def get_agreement(level, split, feature_type, feature, kwargs_path):
         def get_path(*, feature_norm_str, feature_id):
             return OUTPUT_PATH.format(
+                "linear-probe",
                 level,
                 split,
                 DATASET_NAME,
@@ -462,8 +468,13 @@ def get_classifiers_agreement_binder_norms():
 
 
 def get_results_paper_tabel_main(model):
+    classifier_type = "linear-probe"
+    embeddings_level = "concept"
+    split_type = "repeated-k-fold"
     results = [
-        r for n in ["mcrae-mapped", "binder-4"] for r in load_result_model(n, model)
+        r
+        for n in ["mcrae-mapped", "binder-4"]
+        for r in load_result_features(classifier_type, embeddings_level, split_type, model, n)
     ]
     cols = ["model", "norms-type", "score-f1", "score-precision", "score-recall"]
     df = pd.DataFrame(results)
@@ -484,7 +495,9 @@ def get_results_paper_tabel_main(model):
 
 def get_results_per_feature_norm():
     EMBS = ["siglip-224", "fasttext-word", "glove-840b-300d-word", "gemma-2b-word"]
-
+    classifier_type = "linear-probe"
+    embeddings_level = "concept"
+    splits_type = "repeated-k-fold"
     norms_type = "mcrae-mapped"
     norms_loader = NORMS_LOADERS[norms_type]()
     feature_to_concepts, feature_to_id, features_selected = norms_loader()
@@ -501,8 +514,8 @@ def get_results_per_feature_norm():
 
     results = [
         result
-        for model in EMBS
-        for result in load_result_model(norms_type, model)
+        for m in EMBS
+        for result in load_result_features(classifier_type, embeddings_level, splits_type, m, norms_type)
     ]
     df = pd.DataFrame(results)
     df = df.pivot_table(index="feature", columns="model", values="score")
@@ -550,6 +563,9 @@ def get_results_random_predictor():
 
 
 def compare_two_models_scatterplot(model1, model2):
+    classifier_type = "linear-probe"
+    embeddings_level = "concept"
+    splits_type = "repeated-k-fold"
     norms_type = "mcrae-mapped"
     norms_loader = NORMS_LOADERS[norms_type]()
     taxonomy = load_taxonomy_mcrae()
@@ -557,9 +573,7 @@ def compare_two_models_scatterplot(model1, model2):
     results = [
         r
         for m in [model1, model2]
-        for r in cache_json(
-            f"/tmp/{norms_type}-{m}.json", load_result_model, norms_type, m
-        )
+        for r in load_result_features(classifier_type, embeddings_level, splits_type, m, norms_type)
     ]
 
     for r in results:
@@ -660,8 +674,10 @@ def compare_two_models_scatterplot(model1, model2):
 
 
 def get_correlation_between_models(norms_type):
+    classifier_type = "linear-probe"
+    embeddings_level = "concept"
+    splits_type = "repeated-k-fold"
     norms_loader = NORMS_LOADERS[norms_type]()
-    _, _, features_selected = norms_loader()
     models = [
         "random-siglip",
         "max-vit-large",
@@ -676,7 +692,7 @@ def get_correlation_between_models(norms_type):
         "gemma-2b-contextual-last-word",
         "clip-word",
     ]
-    results = [r for model in models for r in load_result_model(norms_type, model)]
+    results = [r for m in models for r in load_result_features(classifier_type, embeddings_level, splits_type, m, norms_type)]
     cols = ["feature", "model", "score-f1"]
     feature_to_random_score = {
         feature: get_score_random(norms_loader, feature)
@@ -714,21 +730,23 @@ def get_correlation_between_models(norms_type):
 
 
 def prepare_results_for_stella():
+    classifier_type = "linear-probe"
+    embeddings_level = "concept"
+    splits_type = "repeated-k-fold"
     norms_type = "mcrae-mapped"
     norms_loader = NORMS_LOADERS[norms_type]()
-    feature_to_concepts, feature_to_id, features_selected = norms_loader()
-    taxonomy = load_taxonomy_mcrae()
-    level = "concept"
-    split = "repeated-k-fold"
     models = ["dino-v2", "gemma-2b-contextual-last-word"]
+
+    feature_to_concepts, _, _ = norms_loader()
+    taxonomy = load_taxonomy_mcrae()
 
     results = [
         {
-            "model": model,
+            "model": m,
             **result,
         }
-        for model in models
-        for result in load_result_model(norms_type, model)
+        for m in models
+        for result in load_result_features(classifier_type, embeddings_level, splits_type, m, norms_type)
     ]
 
     # Add metacategory
@@ -753,6 +771,7 @@ def prepare_classifiers_for_stella(model):
     def get_path(feature):
         feature_id = feature_to_id[feature]
         return OUTPUT_PATH.format(
+            "linear-probe",
             level,
             split,
             DATASET_NAME,
@@ -773,10 +792,35 @@ def prepare_classifiers_for_stella(model):
         for feature in tqdm(features_selected)
     }
 
-    print(len(data))
-
     with open(f"output/classifiers-for-stella-{model}.pkl", "wb") as f:
         pickle.dump(data, f)
+
+
+def get_results_multiple_classifiers():
+    embeddings_level = "concept"
+    split_type = "repeated-k-fold"
+    feature_type = "gemma-2b-contextual-last-word"
+    feature_norm_str = "mcrae-mapped"
+    classifiers = [
+        "linear-probe",
+        "linear-probe-std",
+        "knn-3",
+    ]
+
+    results = [
+        {
+            "classifier": c,
+            **r,
+        }
+        for c in classifiers
+        for r in load_result_features(c, embeddings_level, split_type, feature_type, feature_norm_str)
+    ]
+    df = pd.DataFrame(results)
+    cols = ["classifier", "score-f1", "score-precision", "score-recall"]
+    df = df[cols]
+    df = df.groupby("classifier").mean()
+    print(df)
+
 
 
 FUNCS = {

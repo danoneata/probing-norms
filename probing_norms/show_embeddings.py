@@ -1,5 +1,7 @@
 from functools import partial
 
+import math
+
 import altair as alt
 import streamlit as st
 import pandas as pd
@@ -28,8 +30,11 @@ def main():
     SELECTED = [
         "siglip-224",
         "fasttext-word",
-        "gemma-2b-contextual-last-word",
         "clip-word",
+        "gemma-2b-contextual-last-word",
+        "gemma-2b-contextual-50-last-word",
+        "gemma-2b-contextual-50-constrained-last-word",
+        "gpt2-contextual-last-word",
     ]
     data = {f: load_embeddings(dataset_name, f, "concept") for f in SELECTED}
 
@@ -69,8 +74,8 @@ def main():
         # col.write(describe(embs.flatten()))
         col.altair_chart(scatter, use_container_width=True)
 
-    num_rows = 3
     num_cols = 2
+    num_rows = int(math.ceil(len(SELECTED) / num_cols))
     table = [st.columns(num_cols) for _ in range(num_rows)]
     for i, f in enumerate(SELECTED):
         r = i // num_cols

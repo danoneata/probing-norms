@@ -67,6 +67,7 @@ METACATEGORY_NAMES = {
 FEATURE_NAMES = {
     "fasttext-word": "FastText",
     "gemma-2b-word": "Gemma",
+    "gemma-2b-contextual-last-word": "Gemma",
     "glove-6b-300d-word": "GloVe 6B",
     "glove-840b-300d-word": "GloVe 840B",
     "clip-word": "CLIP (text)",
@@ -464,7 +465,7 @@ def get_classifiers_agreement_binder_norms():
     df = df.pivot_table(index="feature", columns="model", values="sim-mean")
     df = df.reset_index()
     df["num-concepts"] = df["feature"].apply(lambda x: len(feature_to_concepts[x]))
-    df.to_csv("output/classifier-agreement-binder-norms.csv")
+    df.to_csv("output/classifier-agreement-binder-norms-2.csv")
 
 
 def get_results_paper_tabel_main(model):
@@ -679,6 +680,55 @@ def compare_two_models_scatterplot(model1, model2):
     )
 
 
+def get_correlation_between_models(norms_type):
+    norms_loader = NORMS_LOADERS[norms_type]()
+    _, _, features_selected = norms_loader()
+    models = [
+        "random-siglip",
+        "max-vit-large",
+        "vit-mae-large",
+        "swin-v2",
+        "dino-v2",
+        "pali-gemma-224",
+        "siglip-224",
+        "clip",
+        "fasttext-word",
+        "glove-840b-300d-word",
+        "gemma-2b-contextual-last-word",
+        "clip-word",
+    ]
+    results = [r for model in models for r in load_result_model(norms_type, model)]
+    cols = ["feature", "model", "score-f1"]
+    feature_to_random_score = {feature: get_score_random(norms_loader, feature) for feature in norms_loader.load_concepts()}
+
+    df = pd.DataFrame(results)
+    df = df[cols]
+    df["model"] = df["model"].map(lambda x: FEATURE_NAMES.get(x, x))
+    # df["score-random"] = df["feature"].map(lambda x: get_score_random(norms_loader, x))
+    # df["score-f1-selectivity"] = df["score-f1"] - df["score-random"]
+    df = df.pivot_table(index="feature", columns="model", values="score-f1")
+    corr_matrix = df.corr()
+
+    sns.set(style="whitegrid", font="Arial")
+    fig, ax = plt.subplots(figsize=(7, 7))
+    models_names = [FEATURE_NAMES[m] for m in models]
+    corr_matrix = corr_matrix.loc[models_names, models_names]
+    sns.heatmap(
+        corr_matrix,
+        annot=True,
+        fmt=".2f",
+        square=True,
+        cbar=False,
+        cmap=sns.cm.rocket_r,
+        ax=ax,
+    )
+    ax.set_xlabel("")
+    ax.set_ylabel("")
+    st.pyplot(fig)
+
+    fig.savefig(f"output/plots/correlation-between-models-{norms_type}.pdf", bbox_inches="tight")
+
+
 def prepare_results_for_stella():
     norms_type = "mcrae-mapped"
     norms_loader = NORMS_LOADERS[norms_type]()
@@ -727,6 +777,42 @@ def prepare_results_for_stella():
         json.dump(results, f, indent=2)
 
 
+def prepare_classifiers_for_stella(model):
+    norms_type = "mcrae-mapped"
+    norms_loader = NORMS_LOADERS[norms_type]()
+    _, feature_to_id, features_selected = norms_loader()
+    level = "concept"
+    split = "repeated-k-fold"
+
+    def get_path(feature):
+        feature_id = feature_to_id[feature]
+        return OUTPUT_PATH.format(
+            level,
+            split,
+            DATASET_NAME,
+            model,
+            norms_loader.get_suffix(),
+            feature_id,
+        )
+
+    def load_pickle(path):
+        with open(path + ".pkl", "rb") as f:
+            return pickle.load(f)
+
+    def get_clfs(data):
+        return [output["clf"] for output in data]
+
+    data = {
+        feature: get_clfs(load_pickle(get_path(feature)))
+        for feature in tqdm(features_selected)
+    }
+
+    print(len(data))
+
+    with open(f"output/classifiers-for-stella-{model}.pkl", "wb") as f:
+        pickle.dump(data, f)
+
+
 FUNCS = {
     "levels-and-splits": get_results_levels_and_splits,
     "per-metacategory": partial(
@@ -741,7 +827,9 @@ FUNCS = {
     "per-feature-norm": get_results_per_feature_norm,
     "random-predictor": get_results_random_predictor,
     "compare-two-models-scatterplot": compare_two_models_scatterplot,
+    "get-correlation-between-models": get_correlation_between_models,
     "prepare-results-for-stella": prepare_results_for_stella,
+    "prepare-classifiers-for-stella": prepare_classifiers_for_stella,
 }
 
 

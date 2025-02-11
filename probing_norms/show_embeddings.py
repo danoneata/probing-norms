@@ -28,8 +28,8 @@ def main():
     SELECTED = [
         "siglip-224",
         "fasttext-word",
-        "glove-840b-300d-word",
-        "gemma-2b-word",
+        "gemma-2b-contextual-last-word",
+        "clip-word",
     ]
     data = {f: load_embeddings(dataset_name, f, "concept") for f in SELECTED}
 
@@ -78,9 +78,13 @@ def main():
         table[r][c].markdown(f)
         show(*data[f], table[r][c])
 
+    def l2_norm(embs):
+        return embs / np.linalg.norm(embs, axis=1, keepdims=True)
+
     def get_closest_concepts(embs, labels):
         binary_labels = get_binary_labels_1(labels)
         idxs, *_ = np.where(binary_labels)
+        # embs = l2_norm(embs)
         dists = squareform(pdist(embs))
         np.fill_diagonal(dists, np.inf)
         return [

@@ -268,7 +268,7 @@ class McRaeMappedNormsLoader(NormsLoader):
         self.model = "mcrae-to-gpt35"
 
     def __call__(self, *, num_min_concepts=10):
-        with open("output/map-{}.json".format(self.model)) as f:
+        with open("data/mcrae++.json".format(self.model)) as f:
             data = json.load(f)
 
         feature_to_concepts = {d["norm"]: d["concepts"] for d in data}

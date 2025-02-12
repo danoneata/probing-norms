@@ -6,16 +6,18 @@ import seaborn as sns
 import streamlit as st
 
 from sklearn.metrics import f1_score
+from toolz import first
 
 from probing_norms.data import DIR_THINGS
 from probing_norms.utils import cache_df, cache_json, read_json, multimap
 from probing_norms.predict import NORMS_LOADERS, DATASETS
-from probing_norms.get_results import OUTPUT_PATH, FEATURE_NAMES
+from probing_norms.get_results import OUTPUT_PATH, FEATURE_NAMES, normalize_feature_name, load_taxonomy_mcrae, METACATEGORY_NAMES
 
 st.set_page_config(layout="wide")
 
 
 def main():
+    CLASSIFIER_TYPE = "linear-probe"
     EMBEDDINGS_LEVEL = "concept"
     SPLIT_TYPE = "repeated-k-fold"
     DATASET_NAME = "things"
@@ -35,6 +37,7 @@ def main():
 
     num_concepts_total = len(norms_loader.load_concepts())
     labels = np.arange(num_concepts_total)
+    taxonomy = load_taxonomy_mcrae()
 
     with st.sidebar:
         feature = st.selectbox("Feature norm:", features_selected)
@@ -56,6 +59,7 @@ def main():
     def get_path(model):
         feature_id = feature_to_id[feature]
         path = OUTPUT_PATH.format(
+            CLASSIFIER_TYPE,
             EMBEDDINGS_LEVEL,
             SPLIT_TYPE,
             DATASET_NAME,
@@ -65,19 +69,26 @@ def main():
         )
         return path + ".json"
 
+    def get_five_folds(results):
+        return [
+            datum
+            for fold in range(5)
+            for datum in results[fold]["preds"]
+        ]
+
     def prepare_results(results):
         true = np.zeros(num_concepts_total)
         pred = np.zeros(num_concepts_total)
-        for fold in range(5):
-            for datum in results[fold]["preds"]:
-                i = datum["i"]
-                true[i] = datum["true"]
-                pred[i] = datum["pred"] > 0.5
+        for datum in get_five_folds(results):
+            i = datum["i"]
+            true[i] = datum["true"]
+            pred[i] = datum["pred"] > 0.5
         return true, pred
 
     def get_tp_fp_fn(true, pred):
         def mapc(idxs):
             return [dataset.label_to_class[label] for label in idxs]
+
         tp, *_ = np.where([t and p for t, p in zip(true, pred)])
         fp, *_ = np.where([not t and p for t, p in zip(true, pred)])
         fn, *_ = np.where([t and not p for t, p in zip(true, pred)])
@@ -89,7 +100,9 @@ def main():
 
     results = {model: read_json(get_path(model)) for model in MODELS}
     scores = {m: evaluate(r) for m, r in results.items()}
-    results_tp_fp_fn = {m: get_tp_fp_fn(*prepare_results(r)) for m, r in results.items()}
+    results_tp_fp_fn = {
+        m: get_tp_fp_fn(*prepare_results(r)) for m, r in results.items()
+    }
 
     num_models = len(MODELS)
     num_categories = 3
@@ -108,7 +121,7 @@ def main():
         for category in ["tp", "fp", "fn"]
         for concept in results_tp_fp_fn[model][category]
     ]
-    predicted_concepts = set(predicted_concepts)
+    predicted_concepts = sorted(set(predicted_concepts))
 
     def get_image_path(concept):
         return DIR_THINGS / "object_images_CC0" / (concept + ".jpg")
@@ -139,43 +152,132 @@ def main():
     #     for i in range(num_models):
     #         cols[i + 1].markdown(get_pred_type(results_tp_fp_fn[MODELS[i]], c))
 
+    r = [
+        {
+            "concept": c,
+            "model": m,
+            "type": get_pred_type(results_tp_fp_fn[m], c),
+        }
+        for m in MODELS
+        for c in predicted_concepts
+    ]
+    df = pd.DataFrame(r)
+    df = df.pivot_table(
+        index="concept",
+        columns="model",
+        values="type",
+        aggfunc=lambda x: x,
+    )
+    st.write(df)
+
     def transpose(table):
         return list(zip(*table))
 
     def get_image_block(concept):
         path = "images/qualitative-results/{}.jpg".format(concept)
-        return r"\multirow{4}{*}{\includegraphics[width=0.1\textwidth]{" + path + r"}}"
+        return r"\multirow{4}{*}{\includegraphics[width=\ww]{" + path + r"}}"
+
+    def get_pred_and_true(results, concept):
+        label = dataset.class_to_label[concept]
+        pred = first(r for r in get_five_folds(results) if r["i"] == label)
+        p = pred["pred"] > 0.5
+        t = pred["true"]
+        return p, t
+
+    def pred_to_str(pred_true):
+        pred, true = pred_true
+        if pred:
+            s = r"\yes"
+        else:
+            s = r"\no"
+        if true == pred:
+            s = macro("correct", s)
+        else:
+            s = macro("wrong", s)
+        return s
 
     def generate_table(concept):
         block_image = [get_image_block(concept)]
-        block_preds = [get_pred_type(results_tp_fp_fn[m], concept) for m in MODELS]
-        block_preds = ["\\" + p for p in block_preds]
+        block_preds = [get_pred_and_true(results[m], concept) for m in MODELS]
+        # block_preds = ["\\" + p for p in block_preds]
+        block_preds = [pred_to_str(p) for p in block_preds]
         block_image = block_image + (num_models - 1) * [""]
         table = list(zip(block_image, block_preds))
         return table
 
     def vcat(tables):
         return [row for table in tables for row in table]
-    
+
     def hcat(tables):
         table = vcat(map(transpose, tables))
         return transpose(table)
 
-    def to_emph(s):
-        return r"\emph{" + s + r"}"
+    def macro(name, arg):
+        return "\\" + name + r"{" + arg + r"}"
 
     def table_to_latex(table):
         return "\n".join(" & ".join(row) + r" \\" for row in table)
 
-    predicted_concepts = list(predicted_concepts)[:5]
-    st.write(" ".join(predicted_concepts))
+    import random
 
-    blocks = [generate_table(c) for c in predicted_concepts]
+    random.seed(1337)
+
+    SCORES = {
+        "TP": 3,
+        "FP": 2,
+        "FN": 1,
+        "TN": 0,
+    }
+
+    CONCEPTS_SELECTED = {
+        "has_4_legs": ["anteater", "mole", "goat", "stool", "dog"],
+        "is_dangerous": ["razor", "dynamite", "axe", "tumbleweed", "mole"],
+        "made_of_wood": ["bow3", "dynamite", "axe", "loveseat", "ski"],
+    }
+
+    def score_concept(concept):
+        return sum(
+            [SCORES[get_pred_type(results_tp_fp_fn[m], concept)] for m in MODELS]
+        )
+
+    def is_positive_str(concept):
+        if concept in feature_to_concepts[feature]:
+            return r"\cyes"
+        else:
+            return r"\cno"
+
+    # predicted_concepts_ss = list(predicted_concepts)[:5]
+    try:
+        predicted_concepts_ss = CONCEPTS_SELECTED[feature]
+    except KeyError:
+        predicted_concepts_ss = random.sample(predicted_concepts, 5)
+    predicted_concepts_ss = sorted(
+        predicted_concepts_ss,
+        key=score_concept,
+        reverse=True,
+    )
+    st.write(" ".join(predicted_concepts_ss))
+
+    blocks = [generate_table(c) for c in predicted_concepts_ss]
     header_left = [[FEATURE_NAMES[m], "{:.1f}".format(scores[m])] for m in MODELS]
-    header_top = [["Model", "F1 sel"] + [e for elem in predicted_concepts for e in [to_emph(elem), ""]]]
+    header_top = [
+        ["", ""]
+        + [e for elem in predicted_concepts_ss for e in [macro("concept", elem), is_positive_str(elem)]]
+    ]
     table = hcat([header_left] + blocks)
     table = vcat([header_top] + [table])
-    first_row = r"& & \multicolumn{10}{c}{\texttt{" + feature + r"}} \\" + "\n"
+    metacategory = METACATEGORY_NAMES.get(taxonomy[feature], taxonomy[feature])
+    metacategory = metacategory.replace("&", "\&")
+    first_row = (
+        r"& & \multicolumn{10}{c}{"
+        + macro("attribute", normalize_feature_name(feature))
+        + " "
+        + "("
+        + metacategory
+        + ")"
+        + r"} \\"
+        + "\n"
+    )
     table_latex = first_row + table_to_latex(table)
     st.code(table_latex)
 

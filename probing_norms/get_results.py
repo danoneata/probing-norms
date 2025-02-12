@@ -25,7 +25,7 @@ from sklearn.metrics import (
 from tqdm import tqdm
 
 from probing_norms.utils import cache_df, cache_json, read_json, multimap
-from probing_norms.predict import NORMS_LOADERS
+from probing_norms.predict import NORMS_LOADERS, FEATURE_TYPE_TO_MODALITY
 
 NORMS_MODEL = "chatgpt-gpt3.5-turbo"
 DATASET_NAME = "things"
@@ -69,6 +69,7 @@ FEATURE_NAMES = {
     "fasttext-word": "FastText",
     "gemma-2b-word": "Gemma",
     "gemma-2b-contextual-last-word": "Gemma",
+    "deberta-v3-contextual-last-word": "DeBERTa v3",
     "glove-6b-300d-word": "GloVe 6B",
     "glove-840b-300d-word": "GloVe 840B",
     "clip-word": "CLIP (text)",
@@ -79,6 +80,7 @@ FEATURE_NAMES = {
     "dino-v2": "DINO v2",
     "swin-v2": "Swin-V2",
     "max-vit-large": "Max ViT",
+    "max-vit-large-in21k": "Max ViT (IN21k)",
     "random-siglip": "Random SigLIP",
     "random-predictor": "Random predictor",
 }
@@ -96,6 +98,16 @@ SCORE_NAMES = {
     "score-f1-selectivity": "F1 selectivity",
     "score-roc-auc": "ROC AUC",
 }
+
+
+def normalize_feature_name(text):
+    SEP = "_-_"
+    if SEP in text:
+        prefix, text = text.split(SEP)
+        assert prefix in {"beh", "inbeh", "eg", "has_units", "worn_by_men"}, prefix
+    text = text.replace("_", " ").strip()
+    return text
+
 
 def load_result_path(path, score_types):
     def evaluate(data):
@@ -296,7 +308,6 @@ def get_results_levels_and_splits():
 
 
 def plot_results_per_metacategory(results):
-    from predict import FEATURE_TYPE_TO_MODALITY
     metric = "score-f1-selectivity"
 
     df = pd.DataFrame(results)
@@ -405,41 +416,55 @@ def get_results_binder_norms():
     classifier_type = "linear-probe"
     level = "concept"
     split = "repeated-k-fold"
+    norm_type = "binder-4"
+    metric = "score-f1-selectivity"
 
-    norms_loader = NORMS_LOADERS["binder-4"]()
-    feature_to_concepts, feature_to_id, features_selected = norms_loader()
+    MODELS = [
+        "pali-gemma-224",
+        "siglip-224",
+        "vit-mae-large",
+        "dino-v2",
+        # "swin-v2",
+        # "max-vit-large",
+        "random-siglip",
+        "clip",
+        "fasttext-word",
+        "glove-840b-300d-word",
+        "gemma-2b-contextual-last-word",
+        "clip-word",
+    ]
+
     results = [
         {
-            "feature": feature,
-            "thresh": thresh,
-            **load_result(
-                classifier_type,
-                level,
-                split,
-                feature_type,
-                f"binder-{thresh}",
-                feature_to_id[feature],
-            ),
+            "model": model,
+            **result,
         }
-        for thresh in [4, 5]
-        for feature in tqdm(features_selected)
-        for feature_type in FEATURE_TYPES
+        for model in MODELS
+        for result in load_result_features(classifier_type, level, split, model, norm_type)
     ]
+    score_random = get_score_random_features(norm_type)
     df = pd.DataFrame(results)
-    order_models = df.groupby("model")["score"].mean().sort_values().index
+    df["score-f1-selectivity"] = df["score-f1"] - df["feature"].map(score_random)
+    df["modality"] = df["model"].map(FEATURE_TYPE_TO_MODALITY)
+    df["model"] = df["model"].map(FEATURE_NAMES)
 
-    fig = sns.catplot(
-        data=df,
-        x="score",
-        y="feature",
-        hue="model",
-        row="thresh",
-        kind="bar",
-        hue_order=order_models,
-        height=16,
-        aspect=0.5,
-    )
+    model_performance = df.groupby(["model", "modality"])[metric].mean()
+    model_performance = model_performance.reset_index()
+    order_models = model_performance.sort_values(["modality", metric])["model"]
+
+    df = df.pivot_table(index="model", columns="feature", values=metric)
+    df = df.loc[order_models]
+
+    sns.set(style="whitegrid", font="Arial")
+    fig, ax = plt.subplots(figsize=(13, 13))
+    st.write(df)
+    sns.heatmap(df, annot=True, square=True, cbar=False, fmt=".0f", cmap="rocket_r", ax=ax)
+    ax.set_xlabel("")
+    ax.set_ylabel("")
+    ax.xaxis.tick_top()
+    plt.xticks(rotation=90)
     st.pyplot(fig)
+    fig.savefig("output/plots/binder-results-per-norm.pdf", bbox_inches="tight")
 
 
 def get_classifiers_agreement_binder_norms():
@@ -638,14 +663,6 @@ def compare_two_models_scatterplot(model1, model2):
             for p1 in points
             if not any(dominates(p2, p1) for p2 in points if p1 != p2)
         ]
-
-    def normalize_feature_name(text):
-        SEP = "_-_"
-        if SEP in text:
-            prefix, text = text.split(SEP)
-            assert prefix in {"beh", "inbeh", "eg", "has_units", "worn_by_men"}, prefix
-        text = text.replace("_", " ").strip()
-        return text
 
     def add_texts(ax, df):
         cols = [

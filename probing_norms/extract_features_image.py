@@ -198,6 +198,7 @@ FEATURE_EXTRACTORS = {
     # Supervised models
     "swin-v2": partial(TimmModel, model_id="swinv2_large_window12to24_192to384.ms_in22k_ft_in1k"),
     "max-vit-large": partial(TimmModel, model_id="maxvit_large_tf_384.in1k"),
+    "max-vit-large-in21k": partial(TimmModel, model_id="maxvit_large_tf_224.in21k"),
     # Random models
     "random-siglip": partial(SigLIP, use_random_weights=True),
     # fmt: on

@@ -100,14 +100,20 @@ class HFModel:
         GET_EMBEDDINGS = {
             "zero": self.get_embeddings_first,
             "last": self.get_embeddings_last,
-            "layer-1": partial(self.get_embeddings_layer, layer=1),
-            "layer-2": partial(self.get_embeddings_layer, layer=2),
+            "layer-1": partial(self.get_embeddings_layer, layers=slice(1, 2)),
+            "layer-2": partial(self.get_embeddings_layer, layers=slice(2, 3)),
+            "layers-0-to-4": partial(self.get_embeddings_layer, layers=slice(0, 5)),
+            "layers-0-to-6": partial(self.get_embeddings_layer, layers=slice(0, 7)),
+            "layers-0-to-8": partial(self.get_embeddings_layer, layers=slice(0, 9)),
+            "layers-0-to-9": partial(self.get_embeddings_layer, layers=slice(0, 10)),
         }
         self.get_embeddings = GET_EMBEDDINGS[layer]
 
-    def get_embeddings_layer(self, inp, layer):
+    def get_embeddings_layer(self, inp, layers):
         output = self.model(**inp, output_hidden_states=True)
-        return output.hidden_states[layer]
+        output = output.hidden_states[layers]
+        output = torch.stack(output, dim=0)
+        return output.mean(dim=0)
 
     def get_embeddings_first(self, inp):
         return self.model.embed_tokens(inp["input_ids"])
@@ -363,6 +369,27 @@ FEATURE_EXTRACTORS = {
         layer="layer-2",
         context_type="gpt4o_concept",
     ),
+    "gemma-2b-contextual-layers-0-to-4": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="layers-0-to-4",
+        context_type="gpt4o_concept",
+    ),
+    "gemma-2b-contextual-layers-0-to-6": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="layers-0-to-6",
+        context_type="gpt4o_concept",
+    ),
+    "gemma-2b-contextual-layers-0-to-9": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="layers-0-to-9",
+        context_type="gpt4o_concept",
+    ),
     "gemma-2b-contextual-50-last": partial(
         HFModelContextual,
         model_type="gemma",
@@ -395,6 +422,20 @@ FEATURE_EXTRACTORS = {
         model_type="deberta",
         model_id="microsoft/deberta-v3-base",
         layer="last",
+        context_type="gpt4o_concept",
+    ),
+    "deberta-v3-contextual-layers-0-to-4": partial(
+        HFModelContextual,
+        model_type="deberta",
+        model_id="microsoft/deberta-v3-base",
+        layer="layers-0-to-4",
+        context_type="gpt4o_concept",
+    ),
+    "deberta-v3-contextual-layers-0-to-6": partial(
+        HFModelContextual,
+        model_type="deberta",
+        model_id="microsoft/deberta-v3-base",
+        layer="layers-0-to-6",
         context_type="gpt4o_concept",
     ),
 }

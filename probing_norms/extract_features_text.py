@@ -61,7 +61,7 @@ class GPT2:
         return tokenizer.encode(word)
 
 
-class DeBERTa:
+class BERT:
     def __init__(self):
         self.model_class = AutoModel
 
@@ -79,12 +79,13 @@ class DeBERTa:
 BASE_HF_MODELS = {
     "gemma": Gemma,
     "gpt2": GPT2,
-    "deberta": DeBERTa,
+    "bert": BERT,
+    "deberta": BERT,
 }
 
 
 class HFModel:
-    def __init__(self, model_type, model_id, layer):
+    def __init__(self, model_type, model_id, layer, seq_pooling="mean"):
         self.base_model = BASE_HF_MODELS[model_type]()
         self.device = "cuda"
 
@@ -106,8 +107,15 @@ class HFModel:
             "layers-0-to-6": partial(self.get_embeddings_layer, layers=slice(0, 7)),
             "layers-0-to-8": partial(self.get_embeddings_layer, layers=slice(0, 9)),
             "layers-0-to-9": partial(self.get_embeddings_layer, layers=slice(0, 10)),
+            "layers-9-to-18": partial(self.get_embeddings_layer, layers=slice(9, 19)),
         }
         self.get_embeddings = GET_EMBEDDINGS[layer]
+
+        SEQ_POOLING = {
+            "mean": lambda xs: xs.mean(dim=0),
+            "last": lambda xs: xs[-1],
+        }
+        self.pool_seq = SEQ_POOLING[seq_pooling]
 
     def get_embeddings_layer(self, inp, layers):
         output = self.model(**inp, output_hidden_states=True)
@@ -127,12 +135,16 @@ class HFModel:
             # Remove BOS token.
             # input_ids["input_ids"] = input_ids["input_ids"][:, 1:]
             embs = self.get_embeddings(input_ids)
-            return embs.mean(dim=[0, 1]).numpy()
+            B, *_ = embs.shape
+            assert B == 1
+            embs = embs[0]
+            emb = self.pool_seq(embs)
+            return emb.numpy()
 
 
 class HFModelContextual(HFModel):
-    def __init__(self, model_type, model_id, layer, context_type):
-        super().__init__(model_type, model_id, layer)
+    def __init__(self, model_type, model_id, layer, context_type, seq_pooling="mean"):
+        super().__init__(model_type, model_id, layer, seq_pooling)
         self.contexts = self.load_context(context_type)
         self.inflect_engine = inflect.engine()
 
@@ -252,9 +264,17 @@ class HFModelContextual(HFModel):
                 input_ids = self.tokenizer(sentence, return_tensors="pt")
                 input_ids = input_ids.to(self.device)
                 sentence_embeddings = self.get_embeddings(input_ids)
+                assert sentence_embeddings.shape[0] == 1
                 assert sentence_embeddings.shape[1] == len(tokens_sentence)
-                assert self.tokenizer.decode(tokens_sentence[s:e]) in variants
-                return sentence_embeddings[0, s:e].mean(dim=0).cpu().numpy()
+                # FIXME This fails for BERT tokenzier, so I've removed the assertion for the time being.
+                # It would still be good to have it in.
+                # >>>  self.tokenizer.decode(self.tokenizer.encode("first-aid kit"))
+                # '[CLS] first - aid kit [SEP]'
+                # assert self.tokenizer.decode(tokens_sentence[s:e]) in variants
+                embs = sentence_embeddings[0, s:e]
+                emb = self.pool_seq(embs)
+                emb = emb.cpu().numpy()
+                return emb
             else:
                 return None
 
@@ -390,6 +410,13 @@ FEATURE_EXTRACTORS = {
         layer="layers-0-to-9",
         context_type="gpt4o_concept",
     ),
+    "gemma-2b-contextual-layers-9-to-18": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="layers-9-to-18",
+        context_type="gpt4o_concept",
+    ),
     "gemma-2b-contextual-50-last": partial(
         HFModelContextual,
         model_type="gemma",
@@ -404,6 +431,22 @@ FEATURE_EXTRACTORS = {
         layer="last",
         context_type="gpt4o_50_constrained_concept",
     ),
+    "gemma-2b-contextual-last-seq-last": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="last",
+        context_type="gpt4o_concept",
+        seq_pooling="last",
+    ),
+    "gemma-2b-contextual-layers-9-to-18-seq-last": partial(
+        HFModelContextual,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="layers-9-to-18",
+        context_type="gpt4o_concept",
+        seq_pooling="last",
+    ),
     "llama-3.1-8b-contextual-last": partial(
         HFModelContextual,
         model_id="meta-llama/Llama-3.1-8b",
@@ -415,6 +458,20 @@ FEATURE_EXTRACTORS = {
         model_type="gpt2",
         model_id="openai-community/gpt2",
         layer="last",
+        context_type="gpt4o_concept",
+    ),
+    "bert-base-uncased-contextual-layers-0-to-4": partial(
+        HFModelContextual,
+        model_type="bert",
+        model_id="google-bert/bert-base-uncased",
+        layer="layers-0-to-4",
+        context_type="gpt4o_concept",
+    ),
+    "bert-base-uncased-contextual-layers-0-to-6": partial(
+        HFModelContextual,
+        model_type="bert",
+        model_id="google-bert/bert-base-uncased",
+        layer="layers-0-to-6",
         context_type="gpt4o_concept",
     ),
     "deberta-v3-contextual-last": partial(

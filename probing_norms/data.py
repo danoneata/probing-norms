@@ -100,6 +100,20 @@ def load_binder_dense():
     return df
 
 
+def load_binder_feature_norms_median():
+    df = load_binder_dense()
+    median = df.groupby("Feature")["Value"].median()
+    df["Median"] = df["Feature"].map(median)
+
+    idxs = df["Value"] >= df["Median"]
+    cols = ["Word", "Feature"]
+
+    df = df[idxs]
+    df = df.drop_duplicates()
+    concept_feature = df[cols].values.tolist()
+    return concept_feature
+
+
 def load_binder_feature_norms(thresh):
     assert 0 < thresh < 6
 

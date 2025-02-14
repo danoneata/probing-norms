@@ -27,6 +27,7 @@ from probing_norms.data import (
     filter_by_things_concepts,
     load_features_metadata,
     load_binder_feature_norms,
+    load_binder_feature_norms_median,
     load_mcrae_feature_norms,
     get_feature_to_concepts,
 )
@@ -302,6 +303,13 @@ class BinderNormsLoader(NormsLoader):
     def __init__(self, thresh):
         self.model = "binder"
         self.thresh = thresh
+        if isinstance(thresh, str):
+            assert thresh == "median"
+            self.load_feature_norms = load_binder_feature_norms_median
+        elif isinstance(thresh, int):
+            self.load_feature_norms = partial(load_binder_feature_norms, thresh=thresh)
+        else:
+            assert False
 
     def load_concepts(self):
         df = pd.read_excel("data/binder-norms.xlsx")
@@ -309,7 +317,7 @@ class BinderNormsLoader(NormsLoader):
         return df["Word"].tolist()
 
     def __call__(self):
-        concept_feature = load_binder_feature_norms(self.thresh)
+        concept_feature = self.load_feature_norms()
         feature_to_concepts = get_feature_to_concepts(concept_feature)
 
         features = sorted(feature_to_concepts.keys())
@@ -333,6 +341,7 @@ NORMS_LOADERS = {
     "binder-3": partial(BinderNormsLoader, thresh=3),
     "binder-4": partial(BinderNormsLoader, thresh=4),
     "binder-5": partial(BinderNormsLoader, thresh=5),
+    "binder-median": partial(BinderNormsLoader, thresh="median"),
 }
 
 

@@ -60,6 +60,7 @@ OUTPUT_PATH = "output/{}-predictions/{}/{}/{}-{}-{}-{}"
 
 # Names used for plotting or other output.
 METACATEGORY_NAMES = {
+    "encyclopaedic": "encycl.",
     "visual-colour": "visual: color",
     "visual-form_and_surface": "visual: form & surface",
     "visual-motion": "visual: motion",
@@ -312,8 +313,13 @@ def plot_results_per_metacategory(results):
 
     df = pd.DataFrame(results)
     df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_NAMES.get(x, x))
+    df["metacategory"] = df["metacategory"].map(lambda x: x.replace(": ", "\n"))
     df["modality"] = df["model"].map(FEATURE_TYPE_TO_MODALITY)
     df["model"] = df["model"].map(FEATURE_NAMES)
+
+    idxs = df["model"] == df["model"].iloc[0]
+    count_metacategory = Counter(df[idxs]["metacategory"])
+    df["metacategory"] = df["metacategory"].map(lambda x: x + f"\n({count_metacategory[x]})")
 
     model_performance = df.groupby(["model", "modality"])[metric].mean()
     model_performance = model_performance.reset_index()
@@ -332,20 +338,22 @@ def plot_results_per_metacategory(results):
         for c in sns.color_palette(modality_to_color[m], n_colors=num_models[m])
     ]
 
-    fig, ax = plt.subplots(figsize=(3.75, 20))
+    # fig, ax = plt.subplots(figsize=(3.75, 20))
+    fig, ax = plt.subplots(figsize=(22, 3.75))
     sns.set(style="whitegrid", context="poster", font="Arial")
     sns.barplot(
         data=df,
-        x=metric,
-        y="metacategory",
+        y=metric,
+        x="metacategory",
         hue="model",
         hue_order=order_models,
         order=order_metacategory,
         palette=palette,
-        errorbar=None,
+        # errorbar=None,
+        err_kws={"linewidth": 1},
         ax=ax,
     )
-    sns.move_legend(ax, "lower right", bbox_to_anchor=(1, 1), ncol=2, title="")
+    sns.move_legend(ax, "lower center", bbox_to_anchor=(0.5, 1), ncol=5, title="")
     ax.set_ylabel("")
     ax.set_xlabel(SCORE_NAMES[metric])
     st.pyplot(fig)
@@ -793,7 +801,22 @@ def prepare_results_for_stella():
     splits_type = "repeated-k-fold"
     norms_type = "mcrae-mapped"
     norms_loader = NORMS_LOADERS[norms_type]()
-    models = ["dino-v2", "gemma-2b-contextual-last-word"]
+    # models = ["dino-v2", "gemma-2b-contextual-last-word"]
+    models = [
+        "pali-gemma-224",
+        "siglip-224",
+        "vit-mae-large",
+        "dino-v2",
+        "swin-v2",
+        "max-vit-large",
+        "max-vit-large-in21k",
+        "random-siglip",
+        "clip",
+        "fasttext-word",
+        "glove-840b-300d-word",
+        "gemma-2b-contextual-last-word",
+        "clip-word",
+    ]
 
     feature_to_concepts, _, _ = norms_loader()
     taxonomy = load_taxonomy_mcrae()
@@ -895,10 +918,10 @@ FUNCS = {
     "per-feature-norm": get_results_per_feature_norm,
     "random-predictor": get_results_random_predictor,
     "compare-two-models-scatterplot": compare_two_models_scatterplot,
-    "get-correlation-between-models": get_correlation_between_models,
-    "get-results-multiple-classifiers": get_results_multiple_classifiers,
-    "prepare-results-for-stella": prepare_results_for_stella,
-    "prepare-classifiers-for-stella": prepare_classifiers_for_stella,
+    "correlation-between-models": get_correlation_between_models,
+    "results-multiple-classifiers": get_results_multiple_classifiers,
+    "results-for-stella": prepare_results_for_stella,
+    "classifiers-for-stella": prepare_classifiers_for_stella,
 }
 
 

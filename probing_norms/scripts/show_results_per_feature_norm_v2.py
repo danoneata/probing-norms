@@ -26,7 +26,8 @@ def main():
 
     MODELS = [
         "dino-v2",
-        "fasttext-word",
+        # "fasttext-word",
+        "gemma-2b-contextual-layers-9-to-18-seq-last-word",
         "clip",
         "clip-word",
     ]
@@ -233,6 +234,7 @@ def main():
         "has_4_legs": ["anteater", "mole", "goat", "stool", "dog"],
         "is_dangerous": ["razor", "dynamite", "axe", "tumbleweed", "mole"],
         "made_of_wood": ["bow3", "dynamite", "axe", "loveseat", "ski"],
+        "tastes_sweet": ["plum", "raisin", "watermelon", "pineapple", "lavender"],
     }
 
     def score_concept(concept):

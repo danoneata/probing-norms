@@ -15,6 +15,7 @@ import seaborn as sns
 import streamlit as st
 
 from adjustText import adjust_text
+from matplotlib import gridspec
 from matplotlib import pyplot as plt
 from sklearn.metrics import (
     f1_score,
@@ -25,7 +26,7 @@ from sklearn.metrics import (
 )
 from tqdm import tqdm
 
-from probing_norms.utils import cache_df, cache_json, read_json, multimap
+from probing_norms.utils import cache_df, cache_json, read_json, read_file, multimap
 from probing_norms.predict import NORMS_LOADERS, FEATURE_TYPE_TO_MODALITY
 
 NORMS_MODEL = "chatgpt-gpt3.5-turbo"
@@ -127,6 +128,25 @@ SCORE_NAMES = {
     "score-f1": "F1",
     "score-f1-selectivity": "F1 selectivity",
     "score-roc-auc": "ROC AUC",
+}
+
+
+# Second level of type aggregation.
+BINDER_METACATEGORIES_2 = {
+    "Vision": "Sensory",
+    "Audition": "Sensory",
+    "Somatic": "Sensory",
+    "Gustation": "Sensory",
+    "Olfaction": "Sensory",
+    "Motor": "Motor",
+    "Spatial": "Space",
+    "Temporal": "Time",
+    "Causal": "Time",
+    "Social": "Social",
+    "Cognition": "Social",
+    "Emotion": "Emotion",
+    "Drive": "Drive",
+    "Attention": "Drive",
 }
 
 
@@ -322,6 +342,13 @@ def load_taxonomy_ours():
     return results
 
 
+def load_taxonomy_binder():
+    def parse_line(line):
+        metacategory, feature, *_ = line.split(" ")
+        return feature, metacategory
+    return dict(read_file("data/binder-types.txt", parse_line))
+
+
 def get_results_levels_and_splits():
     classifier_type = "linear-probe"
     norms_loader = NORMS_LOADERS["generated-gpt35"]()
@@ -363,7 +390,7 @@ def plot_results_per_metacategory(results, order_models=None):
     metric = "score-f1-selectivity"
 
     df = pd.DataFrame(results)
-    df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_NAMES_SHORT.get(x, x))
+    df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_SHORT_NAMES.get(x, x))
     df["metacategory"] = df["metacategory"].map(lambda x: x.replace(": ", "\n"))
     df["modality"] = df["model"].map(FEATURE_TYPE_TO_MODALITY)
     df["model"] = df["model"].map(FEATURE_NAMES)
@@ -395,8 +422,8 @@ def plot_results_per_metacategory(results, order_models=None):
     ]
 
     # fig, ax = plt.subplots(figsize=(3.75, 20))
-    fig, ax = plt.subplots(figsize=(24, 3.75))
     sns.set(style="whitegrid", context="poster", font="Arial")
+    fig, ax = plt.subplots(figsize=(24, 3.75))
     sns.barplot(
         data=df,
         y=metric,
@@ -410,8 +437,8 @@ def plot_results_per_metacategory(results, order_models=None):
         ax=ax,
     )
     sns.move_legend(ax, "lower center", bbox_to_anchor=(0.5, 1), ncol=6, title="")
-    ax.set_ylabel("")
-    ax.set_xlabel(SCORE_NAMES[metric])
+    ax.set_xlabel("")
+    ax.set_ylabel(SCORE_NAMES[metric])
     st.pyplot(fig)
     return fig
 
@@ -450,7 +477,7 @@ def get_results_per_metacategory_mcrae_mapped():
     taxonomy = load_taxonomy_mcrae()
     level = "concept"
     split = "repeated-k-fold"
-    MODELS = [
+    models = [
         "random-siglip",
         "vit-mae-large",
         "max-vit-large-in21k",
@@ -469,7 +496,7 @@ def get_results_per_metacategory_mcrae_mapped():
     scores_random = get_score_random_features(norms_type)
     results = [
         r
-        for m in MODELS
+        for m in models
         for r in load_result_features(classifier_type, level, split, m, norms_type)
     ]
 
@@ -477,8 +504,45 @@ def get_results_per_metacategory_mcrae_mapped():
         r["metacategory"] = taxonomy[r["feature"]]
         r["score-f1-selectivity"] = r["score-f1"] - scores_random[r["feature"]]
 
-    fig = plot_results_per_metacategory(results, MODELS)
+    fig = plot_results_per_metacategory(results, models)
     fig.savefig("output/plots/per-metacategory-mcrae-mapped.pdf", bbox_inches="tight")
+
+
+def get_results_per_metacategory_binder():
+    classifier_type = "linear-probe"
+    norms_type = "binder-median"
+    taxonomy = load_taxonomy_binder()
+    level = "concept"
+    split = "repeated-k-fold"
+    models = [
+        "random-siglip",
+        "vit-mae-large",
+        "max-vit-large-in21k",
+        "dino-v2",
+        "siglip-224",
+        "pali-gemma-224",
+        "clip",
+        # "swin-v2",
+        "glove-840b-300d-word",
+        "fasttext-word",
+        "deberta-v3-contextual-layers-0-to-6-word",
+        "clip-word",
+        "gemma-2b-contextual-layers-9-to-18-seq-last-word",
+    ]
+
+    scores_random = get_score_random_features(norms_type)
+    results = [
+        r
+        for m in models
+        for r in load_result_features(classifier_type, level, split, m, norms_type)
+    ]
+
+    for r in results:
+        r["metacategory"] = BINDER_METACATEGORIES_2[taxonomy[r["feature"]]]
+        r["score-f1-selectivity"] = r["score-f1"] - scores_random[r["feature"]]
+
+    fig = plot_results_per_metacategory(results, models)
+    fig.savefig("output/plots/per-metacategory-binder.pdf", bbox_inches="tight")
 
 
 def get_results_binder_norms():
@@ -525,45 +589,86 @@ def get_results_binder_norms():
     model_performance = model_performance.reset_index()
     # order_models = model_performance.sort_values(["modality", metric])["model"]
     order_models = [FEATURE_NAMES[m] for m in MODELS]
+    order_features = read_file("data/binder-types.txt", lambda x: x.split()[1])
 
+    taxonomy1 = load_taxonomy_binder()
+    taxonomy2 = {k: BINDER_METACATEGORIES_2[v] for k, v in taxonomy1.items()}
+
+    counts_taxonomy2 = Counter(taxonomy2.values())
+
+    # df["metacategory-1"] = df["feature"].map(taxonomy)
+    # df["metacategory-2"] = df["metacategory-1"].map(METACATEOGY_GROUPS)
     df = df.pivot_table(index="model", columns="feature", values=metric)
-    df = df.loc[order_models]
+    df = df[order_features]
+    df = df.reindex(order_models)
 
-    sns.set(style="whitegrid", font="Arial")
-    fig, axs = plt.subplots(figsize=(14, 8), nrows=2, ncols=1)
+    rows = [
+        ["Sensory", "Motor"],
+        ["Space", "Time", "Social", "Emotion", "Drive"],
+    ]
+
+    rows_sizes = [
+        [counts_taxonomy2[elem] for elem in row]
+        for row in rows
+    ]
 
     st.write(df)
-    half = len(df.columns) // 2
-    cols = df.columns[:half]
-    sns.heatmap(
-        df[cols],
-        annot=True,
-        square=True,
-        cbar=False,
-        fmt=".0f",
-        cmap="rocket_r",
-        ax=axs[0],
-    )
-    axs[0].set_xlabel("")
-    axs[0].set_ylabel("")
-    # axs[0].set_xticklabels(cols, rotation=90)
-    # axs[0].xaxis.tick_top()
-    # plt.xticks(rotation=90)
 
-    cols = df.columns[half:]
-    sns.heatmap(
-        df[cols],
-        annot=True,
-        square=True,
-        cbar=False,
-        fmt=".0f",
-        cmap="rocket_r",
-        ax=axs[1],
-    )
-    axs[1].set_xlabel("")
-    axs[1].set_ylabel("")
+    def make_row(ax, df, metacategories):
+        cols = [c for c in df.columns if taxonomy2[c] in metacategories]
+        sns.heatmap(
+            df[cols],
+            annot=True,
+            square=True,
+            cbar=False,
+            fmt=".0f",
+            cmap="rocket_r",
+            ax=ax,
+        )
+        ax.set_xlabel("")
+        ax.set_ylabel("")
 
-    fig.tight_layout()
+    def make1(ax, df, metacategory, to_hide_y):
+        cols = [c for c in df.columns if taxonomy2[c] == metacategory]
+        sns.heatmap(
+            df[cols],
+            annot=True,
+            square=True,
+            cbar=False,
+            fmt=".0f",
+            cmap="rocket_r",
+            ax=ax,
+        )
+        ax.set_xlabel("")
+        ax.set_ylabel("")
+        ax.set_title(metacategory)
+        if to_hide_y:
+            ax.set_yticks([])
+            ax.set_yticklabels([])
+
+    # def annotate_axes(fig):
+    #     for i, ax in enumerate(fig.axes):
+    #         ax.text(0.5, 0.5, "ax%d" % (i+1), va="center", ha="center")
+    #         ax.tick_params(labelbottom=False, labelleft=False)
+
+    sns.set(style="whitegrid", font="Arial")
+
+    fig = plt.figure(figsize=(11, 9.5))
+    gs = gridspec.GridSpec(2, sum(rows_sizes[0]))
+    for i, row in enumerate(rows):
+        s = 0
+        for j, elem in enumerate(row):
+            e = s + rows_sizes[i][j]
+            fig.add_subplot(gs[i, s: e])
+            s = e
+
+    i = 0
+    for row in rows:
+        for j, elem in enumerate(row):
+            make1(fig.axes[i], df, elem, j > 0)
+            i += 1
+
+    # fig.tight_layout()
     st.pyplot(fig)
     fig.savefig("output/plots/binder-results-per-norm.pdf", bbox_inches="tight")
 
@@ -1175,6 +1280,7 @@ FUNCS = {
         "repeated-k-fold",
     ),
     "per-metacategory-mcrae-mapped": get_results_per_metacategory_mcrae_mapped,
+    "per-metacategory-binder": get_results_per_metacategory_binder,
     "binder-norms": get_results_binder_norms,
     "classifier-agreement-binder-norms": get_classifiers_agreement_binder_norms,
     "paper-table-main-row": get_results_paper_table_main_row,

@@ -196,6 +196,7 @@ FEATURE_EXTRACTORS = {
     "siglip-224": SigLIP,
     "pali-gemma-224": PaliGemma,
     # Supervised models
+    "swin-v2-ssl": partial(TimmModel, model_id="swinv2_large_window12_192.ms_in22k"),
     "swin-v2": partial(TimmModel, model_id="swinv2_large_window12to24_192to384.ms_in22k_ft_in1k"),
     "max-vit-large": partial(TimmModel, model_id="maxvit_large_tf_384.in1k"),
     "max-vit-large-in21k": partial(TimmModel, model_id="maxvit_large_tf_224.in21k"),

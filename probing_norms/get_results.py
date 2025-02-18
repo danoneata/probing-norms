@@ -64,7 +64,7 @@ MAIN_TABLE_MODELS = [
     "vit-mae-large",
     "max-vit-large",
     "max-vit-large-in21k",
-    "swin-v2",
+    "swin-v2-ssl",
     "dino-v2",
     #
     "siglip-224",
@@ -74,14 +74,14 @@ MAIN_TABLE_MODELS = [
     "glove-840b-300d-word",
     "fasttext-word",
     "deberta-v3-contextual-layers-0-to-6-word",
-    "gemma-2b-contextual-layers-9-to-18-seq-last-word",
     "clip-word",
+    "gemma-2b-contextual-layers-9-to-18-seq-last-word",
 ]
 
 
 # Names used for plotting or other output.
 METACATEGORY_SHORT_NAMES = {
-    "encyclopaedic": "encycl.",
+    # "encyclopaedic": "encycl.",
     "visual-colour": "visual: color",
     "visual-form_and_surface": "visual: form & surface",
     "visual-motion": "visual: motion",
@@ -97,10 +97,11 @@ FEATURE_NAMES = {
     "random-predictor": "Random predictor",
     "random-siglip": "Random SigLIP",
     "vit-mae-large": "ViT-MAE",
-    "max-vit-large": "Max ViT (IN1k)",
-    "max-vit-large-in21k": "Max ViT (IN21k)",
-    "swin-v2": "Swin-V2",
-    "dino-v2": "DINO v2",
+    "max-vit-large": "Max ViT (IN-1K)",
+    "max-vit-large-in21k": "Max ViT (IN-21K)",
+    "swin-v2": "Swin-V2 (FT)",
+    "swin-v2-ssl": "Swin-V2",
+    "dino-v2": "DINOv2",
     "siglip-224": "SigLIP",
     "pali-gemma-224": "PaliGemma",
     "clip": "CLIP (image)",
@@ -233,7 +234,7 @@ def load_result_features(
             for feature in tqdm(features_selected)
         ]
 
-    path = "/tmp/{}-{}-{}-{}-{}.json".format(
+    path = "tmp/{}-{}-{}-{}-{}.json".format(
         classifier_type,
         embeddings_level,
         split_type,
@@ -291,7 +292,7 @@ def get_score_random(norms_loader, feature):
 
 
 def get_score_random_features(norms_type):
-    path = f"/tmp/score-random-{norms_type}.json"
+    path = f"tmp/score-random-{norms_type}.json"
     if not os.path.exists(path):
         norms_loader = NORMS_LOADERS[norms_type]()
         _, _, features_selected = norms_loader()
@@ -349,6 +350,11 @@ def load_taxonomy_binder():
     return dict(read_file("data/binder-types.txt", parse_line))
 
 
+def load_taxonomy_binder_2():
+    taxonomy = load_taxonomy_binder()
+    return {k: BINDER_METACATEGORIES_2[v] for k, v in taxonomy.items()}
+
+
 def get_results_levels_and_splits():
     classifier_type = "linear-probe"
     norms_loader = NORMS_LOADERS["generated-gpt35"]()
@@ -386,28 +392,35 @@ def get_results_levels_and_splits():
     print(df.to_csv())
 
 
-def plot_results_per_metacategory(results, order_models=None):
+def plot_results_per_metacategory(results, order_models=None, order_metacategory=None):
     metric = "score-f1-selectivity"
 
     df = pd.DataFrame(results)
-    df["metacategory"] = df["metacategory"].map(lambda x: METACATEGORY_SHORT_NAMES.get(x, x))
-    df["metacategory"] = df["metacategory"].map(lambda x: x.replace(": ", "\n"))
     df["modality"] = df["model"].map(FEATURE_TYPE_TO_MODALITY)
     df["model"] = df["model"].map(FEATURE_NAMES)
 
     idxs = df["model"] == df["model"].iloc[0]
-    count_metacategory = Counter(df[idxs]["metacategory"])
-    df["metacategory"] = df["metacategory"].map(
-        lambda x: x + f"\n({count_metacategory[x]})"
-    )
 
     model_performance = df.groupby(["model", "modality"])[metric].mean()
     model_performance = model_performance.reset_index()
+
     if order_models:
         order_models = [FEATURE_NAMES[m] for m in order_models]
     else:
         order_models = model_performance.sort_values(["modality", metric])["model"]
-    order_metacategory = sorted(df["metacategory"].unique())
+
+    if not order_metacategory:
+        order_metacategory = sorted(df["metacategory"].unique())
+
+    def update_metacategory(name_orig):
+        name = METACATEGORY_SHORT_NAMES.get(name_orig, name_orig)
+        name = name.replace(": ", "\n")
+        name = name + f"\n({count_metacategory[name_orig]})"
+        return name
+
+    count_metacategory = Counter(df[idxs]["metacategory"])
+    df["metacategory"] = df["metacategory"].map(update_metacategory)
+    order_metacategory = [update_metacategory(m) for m in order_metacategory]
 
     modalities = ["image", "text"]
     modality_to_color = {
@@ -481,11 +494,11 @@ def get_results_per_metacategory_mcrae_mapped():
         "random-siglip",
         "vit-mae-large",
         "max-vit-large-in21k",
+        "swin-v2-ssl",
         "dino-v2",
-        "siglip-224",
+        # "siglip-224",
         "pali-gemma-224",
         "clip",
-        # "swin-v2",
         "glove-840b-300d-word",
         "fasttext-word",
         "deberta-v3-contextual-layers-0-to-6-word",
@@ -518,11 +531,11 @@ def get_results_per_metacategory_binder():
         "random-siglip",
         "vit-mae-large",
         "max-vit-large-in21k",
+        "swin-v2-ssl",
         "dino-v2",
-        "siglip-224",
+        # "siglip-224",
         "pali-gemma-224",
         "clip",
-        # "swin-v2",
         "glove-840b-300d-word",
         "fasttext-word",
         "deberta-v3-contextual-layers-0-to-6-word",
@@ -541,7 +554,8 @@ def get_results_per_metacategory_binder():
         r["metacategory"] = BINDER_METACATEGORIES_2[taxonomy[r["feature"]]]
         r["score-f1-selectivity"] = r["score-f1"] - scores_random[r["feature"]]
 
-    fig = plot_results_per_metacategory(results, models)
+    order_metacategory = ["Sensory", "Motor", "Space", "Time", "Social", "Emotion", "Drive"]
+    fig = plot_results_per_metacategory(results, models, order_metacategory)
     fig.savefig("output/plots/per-metacategory-binder.pdf", bbox_inches="tight")
 
 
@@ -555,18 +569,18 @@ def get_results_binder_norms():
     MODELS = [
         "random-siglip",
         "vit-mae-large",
+        "max-vit-large-in21k",
+        "swin-v2-ssl",
         "dino-v2",
-        # "swin-v2",
-        # "max-vit-large",
-        #
-        "siglip-224",
+        # "siglip-224",
         "pali-gemma-224",
         "clip",
         #
         "glove-840b-300d-word",
         "fasttext-word",
-        "gemma-2b-contextual-layers-9-to-18-seq-last-word",
+        "deberta-v3-contextual-layers-0-to-6-word",
         "clip-word",
+        "gemma-2b-contextual-layers-9-to-18-seq-last-word",
     ]
 
     results = [
@@ -614,26 +628,12 @@ def get_results_binder_norms():
 
     st.write(df)
 
-    def make_row(ax, df, metacategories):
-        cols = [c for c in df.columns if taxonomy2[c] in metacategories]
-        sns.heatmap(
-            df[cols],
-            annot=True,
-            square=True,
-            cbar=False,
-            fmt=".0f",
-            cmap="rocket_r",
-            ax=ax,
-        )
-        ax.set_xlabel("")
-        ax.set_ylabel("")
-
     def make1(ax, df, metacategory, to_hide_y):
         cols = [c for c in df.columns if taxonomy2[c] == metacategory]
         sns.heatmap(
             df[cols],
             annot=True,
-            square=True,
+            # square=True,
             cbar=False,
             fmt=".0f",
             cmap="rocket_r",
@@ -645,16 +645,17 @@ def get_results_binder_norms():
         if to_hide_y:
             ax.set_yticks([])
             ax.set_yticklabels([])
+        # ax.set_yticklabels([])
+        # ax.set_xticklabels([])
 
-    # def annotate_axes(fig):
-    #     for i, ax in enumerate(fig.axes):
-    #         ax.text(0.5, 0.5, "ax%d" % (i+1), va="center", ha="center")
-    #         ax.tick_params(labelbottom=False, labelleft=False)
+    def annotate_ax(ax):
+        ax.text(0.5, 0.5, "ax%d" % (i+1), va="center", ha="center")
+        ax.tick_params(labelbottom=False, labelleft=False)
 
     sns.set(style="whitegrid", font="Arial")
 
-    fig = plt.figure(figsize=(11, 9.5))
-    gs = gridspec.GridSpec(2, sum(rows_sizes[0]))
+    fig = plt.figure(figsize=(11, 10))
+    gs = gridspec.GridSpec(2, sum(rows_sizes[0]), hspace=0.4)
     for i, row in enumerate(rows):
         s = 0
         for j, elem in enumerate(row):
@@ -666,6 +667,7 @@ def get_results_binder_norms():
     for row in rows:
         for j, elem in enumerate(row):
             make1(fig.axes[i], df, elem, j > 0)
+            # annotate_ax(fig.axes[i])
             i += 1
 
     # fig.tight_layout()
@@ -1090,7 +1092,8 @@ def get_correlation_between_models_2():
         "vit-mae-large",
         "max-vit-large",
         "max-vit-large-in21k",
-        "swin-v2",
+        # "swin-v2",
+        "swin-v2-ssl",
         "dino-v2",
         "pali-gemma-224",
         "siglip-224",
@@ -1172,6 +1175,7 @@ def prepare_results_for_stella():
         "vit-mae-large",
         "dino-v2",
         "swin-v2",
+        "swin-v2-ssl",
         "max-vit-large",
         "max-vit-large-in21k",
         "random-siglip",
@@ -1272,6 +1276,32 @@ def get_results_multiple_classifiers():
     print(df)
 
 
+def get_norm_completeness():
+    NAMES = {
+        "mcrae": "McRae",
+        "generated-gpt35": "Hansen",
+        "mcrae-mapped": "McRae++",
+    }
+
+    def do1(norm_type, use_selected):
+        norm_loader = NORMS_LOADERS[norm_type]()
+        feature_to_concepts, _, features_selected = norm_loader()
+        if use_selected:
+            features = features_selected
+        else:
+            features = feature_to_concepts.keys()
+        num_norms = len(features) 
+        num_norms_with_n_concepts = sum(1 for f in features if len(feature_to_concepts[f]) >= 10)
+        use_selected_str = "✓" if use_selected else "✗"
+        print("{:10s} {:s} → {:5d} ({:.1f}%)".format(NAMES[norm_type], use_selected_str, num_norms_with_n_concepts, 100 * num_norms_with_n_concepts / num_norms))
+
+    do1("mcrae", False)
+    do1("generated-gpt35", False)
+    do1("mcrae-mapped", False)
+    do1("mcrae-mapped", True)
+
+
+
 FUNCS = {
     "levels-and-splits": get_results_levels_and_splits,
     "per-metacategory": partial(
@@ -1295,6 +1325,7 @@ FUNCS = {
     "results-multiple-classifiers": get_results_multiple_classifiers,
     "results-for-stella": prepare_results_for_stella,
     "classifiers-for-stella": prepare_classifiers_for_stella,
+    "get-norm-completeness": get_norm_completeness,
 }
 
 

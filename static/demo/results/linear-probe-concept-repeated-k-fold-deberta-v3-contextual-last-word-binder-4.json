@@ -1,0 +1,372 @@
+[
+    {
+        "norms-type": "binder-4",
+        "feature": "Attention",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.36507936507936,
+        "score-precision": 35.0,
+        "score-recall": 35.83333333333333
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Audition",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 61.27862333744687,
+        "score-precision": 65.58333333333333,
+        "score-recall": 58.57142857142857
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Benefit",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.0,
+        "score-precision": 34.166666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Biomotion",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 86.11102133160958,
+        "score-precision": 88.98809523809524,
+        "score-recall": 84.10714285714286
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Body",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 69.80952380952381,
+        "score-precision": 85.0,
+        "score-recall": 65.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Color",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 79.36994000151894,
+        "score-precision": 79.40656565656566,
+        "score-recall": 80.55555555555556
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Communication",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.0,
+        "score-precision": 36.666666666666664,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Face",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 68.33333333333333,
+        "score-precision": 63.333333333333336,
+        "score-recall": 80.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Fast",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.3015873015873,
+        "score-precision": 30.666666666666664,
+        "score-recall": 22.5
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Happy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Harm",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.666666666666664,
+        "score-precision": 40.0,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Head",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.72127872127872,
+        "score-precision": 54.73015873015872,
+        "score-recall": 45.95238095238095
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "High",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Large",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.19336219336219,
+        "score-precision": 65.71428571428571,
+        "score-recall": 55.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Loud",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 47.05555555555556,
+        "score-precision": 62.83333333333333,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "LowerLimb",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.0,
+        "score-precision": 20.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Motion",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.286491286491284,
+        "score-precision": 46.77777777777778,
+        "score-recall": 42.61904761904761
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Music",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 81.42857142857142,
+        "score-precision": 93.33333333333333,
+        "score-recall": 74.16666666666666
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Near",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 75.98834498834499,
+        "score-precision": 82.97619047619048,
+        "score-recall": 73.33333333333334
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Needs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.666666666666664,
+        "score-precision": 73.33333333333333,
+        "score-recall": 49.99999999999999
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Path",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.0,
+        "score-precision": 32.5,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Pattern",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.619047619047617,
+        "score-precision": 20.833333333333332,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Pleasant",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.33233433233433,
+        "score-precision": 36.857142857142854,
+        "score-recall": 30.999999999999993
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Practice",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 74.36001903588111,
+        "score-precision": 77.40016927516928,
+        "score-recall": 72.58241758241759
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Scene",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.714285714285715,
+        "score-precision": 35.0,
+        "score-recall": 19.999999999999996
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Shape",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 90.64700648909016,
+        "score-precision": 90.13302597785356,
+        "score-recall": 91.62393162393163
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Small",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.19408369408369,
+        "score-precision": 61.666666666666664,
+        "score-recall": 38.09523809523809
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Smell",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 50.30952380952381,
+        "score-precision": 60.0,
+        "score-recall": 46.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Sound",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 61.85056146124257,
+        "score-precision": 65.51839826839827,
+        "score-recall": 61.25
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Speech",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 80.0,
+        "score-precision": 80.0,
+        "score-recall": 80.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Taste",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 81.83589613001377,
+        "score-precision": 85.37698412698413,
+        "score-recall": 80.89285714285714
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Temperature",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Texture",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.41269841269841,
+        "score-precision": 18.666666666666664,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Touch",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.472194472194474,
+        "score-precision": 55.23809523809524,
+        "score-recall": 46.19047619047619
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "UpperLimb",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 72.30315092544194,
+        "score-precision": 80.12004662004662,
+        "score-recall": 68.88888888888889
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Vision",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 96.29330305672394,
+        "score-precision": 95.68594734890618,
+        "score-recall": 96.96551724137932
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Weight",
+        "level": "concept",
+        "model": "deberta-v3-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.08278758278758,
+        "score-precision": 45.15216727716728,
+        "score-recall": 45.769230769230774
+    }
+]

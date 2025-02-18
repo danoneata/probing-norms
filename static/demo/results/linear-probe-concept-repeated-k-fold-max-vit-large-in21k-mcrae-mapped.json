@@ -1,0 +1,5332 @@
+[
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_bird",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 81.96969696969697,
+        "score-precision": 91.33333333333334,
+        "score-recall": 76.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_boat",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.38095238095238,
+        "score-precision": 41.666666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_carnivore",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 66.47274294333118,
+        "score-precision": 83.33333333333334,
+        "score-recall": 56.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_colour",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 3.916666666666667,
+        "score-precision": 4.345238095238095,
+        "score-recall": 3.6111111111111116
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_container",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 59.833211764135015,
+        "score-precision": 67.96574993633817,
+        "score-recall": 55.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_dessert",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 49.75298231180584,
+        "score-precision": 71.88888888888889,
+        "score-recall": 41.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_dish",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.54600301659126,
+        "score-precision": 54.689075630252105,
+        "score-recall": 38.27272727272727
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_drink",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 70.38095238095238,
+        "score-precision": 82.5,
+        "score-recall": 65.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fashion_accessory",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 39.91142191142191,
+        "score-precision": 48.0,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fish",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 25.0,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_food",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 60.41262215446018,
+        "score-precision": 65.11100300665518,
+        "score-recall": 57.06153846153846
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_footwear",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.0,
+        "score-precision": 61.666666666666664,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fruit",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 62.98303167420814,
+        "score-precision": 74.11904761904762,
+        "score-recall": 56.11111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_herbivore",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 68.72771088560562,
+        "score-precision": 80.3896103896104,
+        "score-recall": 63.45454545454545
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_machine",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.507196185457055,
+        "score-precision": 59.44660894660895,
+        "score-recall": 32.857142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_mammal",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 95.72922502334266,
+        "score-precision": 98.30065359477125,
+        "score-recall": 93.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_musical_instrument",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.040309106098576,
+        "score-precision": 77.53968253968254,
+        "score-recall": 45.45454545454545
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_pest",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 29.0,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_pet",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.52380952380952,
+        "score-precision": 91.66666666666666,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_plant",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 50.137549756744804,
+        "score-precision": 62.532051282051285,
+        "score-recall": 42.95454545454545
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_predator",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.64856711915536,
+        "score-precision": 82.44444444444444,
+        "score-recall": 45.972222222222214
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_rock",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 26.333333333333332,
+        "score-precision": 31.666666666666664,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_rodent",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 70.0,
+        "score-precision": 80.0,
+        "score-recall": 65.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_scavenger",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.0,
+        "score-precision": 30.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_seafood",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 10.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_stick",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.0,
+        "score-precision": 79.0,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_tool",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 50.87888236032328,
+        "score-precision": 55.215279722775975,
+        "score-recall": 47.56628787878788
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_toy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 49.95204795204795,
+        "score-precision": 61.47619047619047,
+        "score-recall": 44.52380952380952
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_treat",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 61.06532356532356,
+        "score-precision": 61.96428571428571,
+        "score-recall": 63.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_tube",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_utensil",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 46.26190476190476,
+        "score-precision": 50.83333333333333,
+        "score-recall": 44.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_vegetable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.45198592257416,
+        "score-precision": 85.77777777777779,
+        "score-recall": 52.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_vehicle",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 66.62607712802894,
+        "score-precision": 80.38492063492063,
+        "score-recall": 58.090909090909086
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_weapon",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 48.97036297036297,
+        "score-precision": 57.47619047619048,
+        "score-recall": 44.285714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_animal",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 76.98101112050979,
+        "score-precision": 80.45554115494146,
+        "score-recall": 74.28774928774928
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_appliance",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 67.03296703296704,
+        "score-precision": 77.9047619047619,
+        "score-recall": 59.642857142857146
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_evergreen",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.0,
+        "score-precision": 36.666666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_explosive",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.666666666666664,
+        "score-precision": 76.66666666666666,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_insect",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.07142857142857,
+        "score-precision": 75.16666666666666,
+        "score-recall": 47.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_instrument",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.040309106098576,
+        "score-precision": 77.53968253968254,
+        "score-recall": 45.45454545454545
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_builds_nests",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_climbs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 38.33333333333333,
+        "score-precision": 45.0,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_climbs_trees",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.003607503607505,
+        "score-precision": 54.0,
+        "score-recall": 29.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 21.049062049062048,
+        "score-precision": 35.666666666666664,
+        "score-recall": 16.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_fish",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.333333333333332,
+        "score-precision": 30.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_fish_food",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.333333333333332,
+        "score-precision": 30.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_grass",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.93650793650793,
+        "score-precision": 88.0,
+        "score-recall": 58.333333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_hay",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 60.0,
+        "score-precision": 85.0,
+        "score-recall": 49.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_insects",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 36.84987234987235,
+        "score-precision": 63.33333333333333,
+        "score-recall": 27.857142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_leaves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 26.666666666666664,
+        "score-precision": 50.0,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_flies",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.06485671191554,
+        "score-precision": 80.29761904761905,
+        "score-recall": 54.16666666666667
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_is_nocturnal",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 57.45920745920746,
+        "score-precision": 82.30952380952381,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_jumps",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_lays_eggs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 49.420168067226896,
+        "score-precision": 59.17460317460317,
+        "score-recall": 45.892857142857146
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_makes_loud_noises",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_makes_noises",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.222222222222222,
+        "score-precision": 11.666666666666666,
+        "score-recall": 4.285714285714286
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_runs_fast",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.892496392496394,
+        "score-precision": 39.166666666666664,
+        "score-recall": 19.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_swims",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 54.886480908152734,
+        "score-precision": 77.0,
+        "score-recall": 44.54545454545455
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "clothing",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.86724386724386,
+        "score-precision": 44.61904761904762,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_from_trees",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.0,
+        "score-precision": 80.0,
+        "score-recall": 55.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_in_pairs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 14.666666666666666,
+        "score-precision": 20.0,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_in_rolls",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_colours",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.448179271708684,
+        "score-precision": 6.388888888888888,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_designs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 12.381774141364932,
+        "score-precision": 15.297979797979798,
+        "score-recall": 10.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_sizes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_speeds",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 38.09523809523809,
+        "score-precision": 53.333333333333336,
+        "score-recall": 30.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_as_food",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_as_meat",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.666666666666664,
+        "score-precision": 25.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_animals",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_cooking",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.666666666666666,
+        "score-precision": 21.666666666666664,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_people",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 26.333333333333332,
+        "score-precision": 36.666666666666664,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_for_breakfast",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 37.33333333333333,
+        "score-precision": 45.0,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_in_salads",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_in_summer",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 46.666666666666664,
+        "score-precision": 60.0,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_raw",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.98980143336719,
+        "score-precision": 65.62770562770564,
+        "score-recall": 45.68181818181818
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_bathrooms",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 47.15512265512265,
+        "score-precision": 64.66666666666666,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_bedrooms",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 22.333333333333332,
+        "score-precision": 28.333333333333332,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_buildings",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_cars",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.666666666666664,
+        "score-precision": 50.0,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_forests",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 14.88095238095238,
+        "score-precision": 33.33333333333333,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_gardens",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 27.574314574314577,
+        "score-precision": 44.666666666666664,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_kitchens",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 58.25766627175923,
+        "score-precision": 70.95221445221446,
+        "score-recall": 50.76923076923077
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_oceans",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.428571428571427,
+        "score-precision": 46.666666666666664,
+        "score-recall": 18.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_offices",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.04761904761905,
+        "score-precision": 49.0,
+        "score-recall": 27.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_parks",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_seas",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_toolboxes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 29.666666666666664,
+        "score-precision": 38.33333333333333,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_outdoors",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_fields",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.0,
+        "score-precision": 35.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_gardens",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 67.12928153717627,
+        "score-precision": 81.37301587301587,
+        "score-recall": 59.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_the_ground",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.325396825396826,
+        "score-precision": 24.833333333333332,
+        "score-recall": 17.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_the_summer",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_tropical_climates",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_warm_climates",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.66883116883117,
+        "score-precision": 41.0,
+        "score-recall": 16.428571428571427
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_bushes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.0,
+        "score-precision": 35.0,
+        "score-recall": 19.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_plants",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 11.071428571428571,
+        "score-precision": 12.499999999999998,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_the_ground",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_trees",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 54.22435897435897,
+        "score-precision": 69.8452380952381,
+        "score-recall": 45.71428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_vines",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.769841269841265,
+        "score-precision": 72.66666666666666,
+        "score-recall": 51.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_underground",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 30.0,
+        "score-precision": 40.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_arms",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 26.666666666666664,
+        "score-precision": 36.666666666666664,
+        "score-recall": 22.499999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_blades",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.999999999999996,
+        "score-precision": 30.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_handles",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 30.0,
+        "score-precision": 35.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_prongs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 14.666666666666666,
+        "score-precision": 23.333333333333332,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_3_prongs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 14.666666666666666,
+        "score-precision": 23.333333333333332,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_3_wheels",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 43.38095238095238,
+        "score-precision": 67.5,
+        "score-recall": 33.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_4_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 69.9593593855054,
+        "score-precision": 75.996558996559,
+        "score-recall": 66.41666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_4_wheels",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 48.83549783549783,
+        "score-precision": 67.30952380952381,
+        "score-recall": 41.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_6_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.07142857142857,
+        "score-precision": 74.16666666666666,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_8_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 67.38095238095238,
+        "score-precision": 91.0,
+        "score-recall": 58.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_barrel",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 37.0,
+        "score-precision": 57.5,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_beak",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 79.78932178932179,
+        "score-precision": 91.25,
+        "score-recall": 74.66666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_bell",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 26.666666666666664,
+        "score-precision": 40.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_blade",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.23015873015873,
+        "score-precision": 45.416666666666664,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_bushy_tail",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 27.333333333333332,
+        "score-precision": 48.33333333333333,
+        "score-recall": 19.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cap",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 23.96825396825397,
+        "score-precision": 30.666666666666664,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_clasp",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 37.666666666666664,
+        "score-precision": 52.5,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_collar",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 69.07936507936508,
+        "score-precision": 86.33333333333333,
+        "score-recall": 62.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cord",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 50.21428571428571,
+        "score-precision": 67.5,
+        "score-recall": 42.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cover",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 40.54761904761905,
+        "score-precision": 64.83333333333333,
+        "score-recall": 32.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_door",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.070707070707066,
+        "score-precision": 53.5,
+        "score-recall": 34.285714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_face",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_filter",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 23.333333333333332,
+        "score-precision": 40.0,
+        "score-recall": 16.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_flat_head",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 46.666666666666664,
+        "score-precision": 50.0,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_flat_surface",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 49.51516491584403,
+        "score-precision": 56.24879600963193,
+        "score-recall": 45.23684210526316
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_frame",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.100233100233101,
+        "score-precision": 16.833333333333332,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_green_stem",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hand_grip",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.629148629148627,
+        "score-precision": 18.785714285714285,
+        "score-recall": 11.428571428571427
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_handle",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 54.7166292443009,
+        "score-precision": 57.287317891743996,
+        "score-recall": 52.72727272727273
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hard_shell",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 44.70995670995671,
+        "score-precision": 64.16666666666666,
+        "score-recall": 35.892857142857146
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_head",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.843822843822842,
+        "score-precision": 21.416666666666664,
+        "score-recall": 14.642857142857142
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hood",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 66.47619047619047,
+        "score-precision": 86.66666666666666,
+        "score-recall": 58.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_knob",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 17.29365079365079,
+        "score-precision": 21.5,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_latch",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 48.33333333333333,
+        "score-precision": 66.66666666666666,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_lid",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.77166914986715,
+        "score-precision": 61.47478991596638,
+        "score-recall": 49.142857142857146
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_lock",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.904761904761905,
+        "score-precision": 32.5,
+        "score-recall": 16.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_barrel",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 37.0,
+        "score-precision": 57.5,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_handle",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 47.368686868686865,
+        "score-precision": 66.5,
+        "score-recall": 41.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_neck",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.04761904761905,
+        "score-precision": 51.666666666666664,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_tail",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 49.70883449981816,
+        "score-precision": 56.827865761689296,
+        "score-recall": 45.07352941176471
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_motor",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 50.24157383425118,
+        "score-precision": 68.97619047619047,
+        "score-recall": 42.54545454545455
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_mouth",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_mouthpiece",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 43.801587301587304,
+        "score-precision": 68.16666666666666,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_neck",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.0,
+        "score-precision": 55.0,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_nose",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 26.666666666666664,
+        "score-precision": 38.33333333333333,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_nozzle",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 43.857142857142854,
+        "score-precision": 80.0,
+        "score-recall": 32.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_plug",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_pointed_end",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 47.03558897243107,
+        "score-precision": 60.210622710622715,
+        "score-recall": 39.42307692307692
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_roof",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 43.166666666666664,
+        "score-precision": 79.83333333333334,
+        "score-recall": 32.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_seat",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 51.13891663891663,
+        "score-precision": 64.33333333333333,
+        "score-recall": 44.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_shell",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 32.45238095238095,
+        "score-precision": 54.166666666666664,
+        "score-recall": 25.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_skin",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.355866355866354,
+        "score-precision": 42.38095238095238,
+        "score-recall": 32.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_snout",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.666666666666664,
+        "score-precision": 55.0,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_spout",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 44.357142857142854,
+        "score-precision": 50.83333333333333,
+        "score-recall": 39.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_steering_wheel",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.71428571428571,
+        "score-precision": 36.666666666666664,
+        "score-recall": 22.499999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_stem",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 40.28601953601954,
+        "score-precision": 52.61111111111111,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_strap",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 8.333333333333332,
+        "score-precision": 10.0,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_surface",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_switch",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 14.666666666666666,
+        "score-precision": 25.0,
+        "score-recall": 10.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_tail",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 54.520693865521444,
+        "score-precision": 63.50187312687312,
+        "score-recall": 48.088235294117645
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_temperature_control",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 43.84920634920635,
+        "score-precision": 69.33333333333333,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_timer",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 36.269841269841265,
+        "score-precision": 56.666666666666664,
+        "score-recall": 28.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_trigger",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.38095238095238,
+        "score-precision": 47.666666666666664,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_wooden_handle",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.33333333333333,
+        "score-precision": 70.0,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_zipper",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 61.70143745143745,
+        "score-precision": 64.80952380952381,
+        "score-recall": 61.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_an_engine",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 47.337107337107334,
+        "score-precision": 60.642857142857146,
+        "score-recall": 40.71428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_an_inside",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_antennae",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.21428571428571,
+        "score-precision": 66.66666666666666,
+        "score-recall": 33.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_armrests",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 51.0,
+        "score-precision": 70.0,
+        "score-recall": 41.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_bars",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_big_ears",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 10.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_blades",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.992063492063494,
+        "score-precision": 76.66666666666666,
+        "score-recall": 41.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_brakes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 48.66089466089466,
+        "score-precision": 67.0,
+        "score-recall": 42.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_branches",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 46.238095238095234,
+        "score-precision": 57.666666666666664,
+        "score-recall": 40.83333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_bristles",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 60.33333333333333,
+        "score-precision": 65.0,
+        "score-recall": 60.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_buckles",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 30.190476190476186,
+        "score-precision": 45.83333333333333,
+        "score-recall": 24.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_buttons",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 40.536641534083984,
+        "score-precision": 49.070707070707066,
+        "score-recall": 35.38461538461539
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_clasps",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 51.33333333333333,
+        "score-precision": 83.33333333333333,
+        "score-recall": 39.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_claws",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.451465201465204,
+        "score-precision": 67.4047619047619,
+        "score-recall": 45.416666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_doors",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 46.186868686868685,
+        "score-precision": 62.83333333333333,
+        "score-recall": 38.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_drawers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 44.33333333333333,
+        "score-precision": 67.66666666666666,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_ears",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 31.0,
+        "score-precision": 45.0,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_edges",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 15.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_engines",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.666666666666664,
+        "score-precision": 35.0,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_eyes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.023809523809526,
+        "score-precision": 35.0,
+        "score-recall": 10.714285714285714
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_feathers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 82.48285048285048,
+        "score-precision": 93.21428571428571,
+        "score-recall": 75.95238095238095
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_filling",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.113386613386616,
+        "score-precision": 50.0,
+        "score-recall": 30.47619047619047
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_fins",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.666666666666664,
+        "score-precision": 45.0,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_flashing_lights",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 20.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_flowers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.166666666666664,
+        "score-precision": 60.83333333333333,
+        "score-recall": 34.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_fur",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 88.17485818778923,
+        "score-precision": 91.32393341952165,
+        "score-recall": 85.625
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_gills",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_green_leaves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.21428571428571,
+        "score-precision": 62.5,
+        "score-recall": 26.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hair",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.833333333333332,
+        "score-precision": 36.666666666666664,
+        "score-recall": 22.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_handles",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 42.95279299304067,
+        "score-precision": 52.351010101010104,
+        "score-recall": 38.888888888888886
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hands",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 30.0,
+        "score-precision": 40.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hinges",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.333333333333332,
+        "score-precision": 35.0,
+        "score-recall": 10.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_holes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 8.0,
+        "score-precision": 15.0,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hooks",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.5,
+        "score-precision": 22.5,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hooves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 88.51010101010101,
+        "score-precision": 96.66666666666667,
+        "score-recall": 84.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_horns",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.928571428571427,
+        "score-precision": 33.33333333333333,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_keys",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.71428571428571,
+        "score-precision": 32.33333333333333,
+        "score-recall": 24.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_lace",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.33333333333333,
+        "score-precision": 40.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_laces",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.33333333333333,
+        "score-precision": 40.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_large_ears",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 10.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_large_eyes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.19047619047619,
+        "score-precision": 18.333333333333332,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_layers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_leaves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.73135713615589,
+        "score-precision": 75.22474747474747,
+        "score-recall": 47.348484848484844
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 39.85898674594326,
+        "score-precision": 51.990675990675996,
+        "score-recall": 33.80952380952381
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_lenses",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 64.33333333333333,
+        "score-precision": 86.66666666666666,
+        "score-recall": 55.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_long_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 54.43939393939394,
+        "score-precision": 79.47619047619048,
+        "score-recall": 45.71428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_long_sleeves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.04761904761905,
+        "score-precision": 70.0,
+        "score-recall": 47.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_many_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 20.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_many_seats",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 42.16017316017316,
+        "score-precision": 74.33333333333333,
+        "score-recall": 33.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_no_sleeves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.23232323232323,
+        "score-precision": 57.21428571428571,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_no_straps",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.932400932400935,
+        "score-precision": 45.595238095238095,
+        "score-recall": 19.523809523809522
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_numbers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.88095238095238,
+        "score-precision": 49.166666666666664,
+        "score-recall": 27.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_patterns",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 50.56340640036292,
+        "score-precision": 56.06920856920857,
+        "score-recall": 47.637362637362635
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_pedals",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 3.333333333333333,
+        "score-precision": 3.333333333333333,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_pockets",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 64.59960137901314,
+        "score-precision": 73.21428571428571,
+        "score-recall": 58.472222222222214
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_poles",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 20.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_scales",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.0,
+        "score-precision": 40.0,
+        "score-recall": 12.499999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_seats",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.91269841269841,
+        "score-precision": 27.833333333333332,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sections",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 9.999999999999998,
+        "score-precision": 12.5,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_seeds",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 61.18436917100937,
+        "score-precision": 72.80921855921856,
+        "score-recall": 55.333333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sharp_teeth",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 70.80882352941175,
+        "score-precision": 86.9047619047619,
+        "score-recall": 61.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_shelves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 39.873015873015866,
+        "score-precision": 50.666666666666664,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_short_sleeves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 59.19047619047619,
+        "score-precision": 79.16666666666666,
+        "score-recall": 52.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_skin",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.93939393939394,
+        "score-precision": 43.22222222222222,
+        "score-recall": 32.61904761904761
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sleeves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.23232323232323,
+        "score-precision": 57.21428571428571,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_smooth_skin",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.0,
+        "score-precision": 13.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_speakers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 59.23809523809524,
+        "score-precision": 65.83333333333333,
+        "score-recall": 60.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_straps",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.932400932400935,
+        "score-precision": 45.595238095238095,
+        "score-recall": 19.523809523809522
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_strings",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 42.38095238095238,
+        "score-precision": 56.666666666666664,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_stripes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_teeth",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.68614718614719,
+        "score-precision": 32.0,
+        "score-recall": 12.083333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_tracks",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.0,
+        "score-precision": 20.0,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_value",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 31.666666666666664,
+        "score-precision": 35.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_valves",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.33333333333333,
+        "score-precision": 66.66666666666666,
+        "score-recall": 44.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_vitamin_C",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 8.722222222222223,
+        "score-precision": 14.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_webbed_feet",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.666666666666664,
+        "score-precision": 90.0,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wheels",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.028392087215614,
+        "score-precision": 67.75732600732601,
+        "score-recall": 49.175824175824175
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_whiskers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.04761904761905,
+        "score-precision": 76.66666666666666,
+        "score-recall": 44.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_windows",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.81890331890332,
+        "score-precision": 63.166666666666664,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wings",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 61.11156567890314,
+        "score-precision": 74.72222222222221,
+        "score-recall": 52.63636363636364
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wires",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 17.523809523809526,
+        "score-precision": 19.166666666666664,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_zippers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 64.37529137529137,
+        "score-precision": 71.36904761904762,
+        "score-recall": 61.42857142857142
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "hunted_by_people",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.047619047619047,
+        "score-precision": 21.666666666666664,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_dries_quickly",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_flies",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 57.07317682317682,
+        "score-precision": 72.79761904761905,
+        "score-recall": 49.58333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_floats",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.666666666666664,
+        "score-precision": 30.833333333333332,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_holds_water",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_melts",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.97619047619047,
+        "score-precision": 52.5,
+        "score-recall": 35.83333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_deep_sounds",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_heat",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.03751803751803,
+        "score-precision": 71.83333333333333,
+        "score-recall": 43.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_light",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 39.44444444444444,
+        "score-precision": 51.666666666666664,
+        "score-recall": 35.83333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_loud_noise",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 9.357142857142858,
+        "score-precision": 17.5,
+        "score-recall": 7.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_music",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 23.333333333333332,
+        "score-precision": 30.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_noise",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.996336996336996,
+        "score-precision": 20.166666666666664,
+        "score-recall": 11.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_smoke",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.71428571428571,
+        "score-precision": 43.33333333333333,
+        "score-recall": 31.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_sound",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 61.36632811632812,
+        "score-precision": 71.9484126984127,
+        "score-recall": 56.52777777777777
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_addictive",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 10.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_adjustable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.732675311089785,
+        "score-precision": 43.91021575678326,
+        "score-recall": 40.35
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_ancient",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_beautiful",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 6.666666666666666,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_black",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.73171195769823,
+        "score-precision": 43.93688579110574,
+        "score-recall": 29.23809523809524
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_breakable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 17.0,
+        "score-precision": 15.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_brown",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 43.81291549225519,
+        "score-precision": 49.612579662451786,
+        "score-recall": 39.75806451612903
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_casual",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 54.19047619047619,
+        "score-precision": 67.60317460317461,
+        "score-recall": 54.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_clear",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 7.523809523809524,
+        "score-precision": 8.69047619047619,
+        "score-recall": 7.1428571428571415
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cold",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.616541353383454,
+        "score-precision": 37.71969696969697,
+        "score-recall": 31.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_colourful",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.3532990410471,
+        "score-precision": 40.72334428856168,
+        "score-recall": 32.22906403940887
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_comfortable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 54.28296247208618,
+        "score-precision": 66.32570207570208,
+        "score-recall": 48.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_common",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_convenient",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_crunchy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.401902483481432,
+        "score-precision": 39.45238095238095,
+        "score-recall": 23.076923076923077
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_curved",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.857142857142856,
+        "score-precision": 25.119047619047617,
+        "score-recall": 12.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cute",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 44.41622103386809,
+        "score-precision": 62.11111111111111,
+        "score-recall": 38.035714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cylindrical",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 45.89609033080948,
+        "score-precision": 50.80357142857143,
+        "score-recall": 42.173913043478265
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dangerous",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 36.48650132038334,
+        "score-precision": 40.05608932795308,
+        "score-recall": 34.31666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_decorative",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 48.744605766691684,
+        "score-precision": 49.64262742573344,
+        "score-recall": 48.44268476621418
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_delicate",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.141136641136644,
+        "score-precision": 52.5,
+        "score-recall": 20.714285714285715
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dirty",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_disposable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.552393753200203,
+        "score-precision": 32.743506493506494,
+        "score-recall": 21.568627450980394
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_domestic",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 17.333333333333332,
+        "score-precision": 25.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dressy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dried",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 40.96825396825396,
+        "score-precision": 63.333333333333336,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_durable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 31.448254447608825,
+        "score-precision": 31.900796729744098,
+        "score-recall": 31.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_edible",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 69.8150334665772,
+        "score-precision": 73.5609854598281,
+        "score-recall": 66.82624113475177
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_electrical",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 48.037864922280605,
+        "score-precision": 60.09565434565434,
+        "score-recall": 41.04761904761905
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_electronic",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.037588890994094,
+        "score-precision": 63.46248196248197,
+        "score-recall": 49.473684210526315
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_endangered",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.5,
+        "score-precision": 42.0,
+        "score-recall": 19.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_engraved",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 44.19047619047619,
+        "score-precision": 65.83333333333333,
+        "score-recall": 37.49999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_expensive",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 21.602003354125593,
+        "score-precision": 31.024509803921568,
+        "score-recall": 17.747252747252748
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fashionable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.71428571428571,
+        "score-precision": 46.666666666666664,
+        "score-recall": 30.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fast",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 36.254651975206556,
+        "score-precision": 58.57142857142857,
+        "score-recall": 27.820512820512818
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fat",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 21.833333333333332,
+        "score-precision": 32.5,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_flat",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.980795350473194,
+        "score-precision": 39.08806707262508,
+        "score-recall": 31.296296296296294
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fluffy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 29.58946608946609,
+        "score-precision": 54.166666666666664,
+        "score-recall": 23.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_formal",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 54.86796536796537,
+        "score-precision": 75.33333333333333,
+        "score-recall": 49.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_friendly",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 57.0,
+        "score-precision": 80.0,
+        "score-recall": 44.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fun",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_furry",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 40.53069153069153,
+        "score-precision": 50.857142857142854,
+        "score-recall": 34.52380952380952
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_gold",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.666666666666664,
+        "score-precision": 25.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_green",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.819630819630824,
+        "score-precision": 66.69444444444444,
+        "score-recall": 48.57142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_grey",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.630790777849604,
+        "score-precision": 61.54761904761905,
+        "score-recall": 25.11111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hairy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 29.71428571428571,
+        "score-precision": 40.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hand_held",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 17.77777777777778,
+        "score-precision": 21.5,
+        "score-recall": 16.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hard",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 31.98715706004709,
+        "score-precision": 36.39681371260319,
+        "score-recall": 29.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_harvested",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 40.0,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_healthy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.454545454545457,
+        "score-precision": 37.916666666666664,
+        "score-recall": 23.57142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_heavy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 32.93046959902077,
+        "score-precision": 33.2686801477124,
+        "score-recall": 32.90322580645161
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_high_in_fat",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hollow",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hot",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.096695358305265,
+        "score-precision": 24.66269841269841,
+        "score-recall": 16.38888888888889
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_inexpensive",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.100250626566414,
+        "score-precision": 33.44444444444444,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_intelligent",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 31.606060606060606,
+        "score-precision": 42.166666666666664,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_juicy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.307907778496016,
+        "score-precision": 77.45238095238095,
+        "score-recall": 56.607142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_large",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.692614432193594,
+        "score-precision": 33.242063148828514,
+        "score-recall": 36.49801587301587
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_lethal",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 26.666666666666664,
+        "score-precision": 37.5,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_light_weight",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_long",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 42.29706616382896,
+        "score-precision": 44.31295299058457,
+        "score-recall": 40.6827880512091
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_loud",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.640866873065013,
+        "score-precision": 17.535714285714285,
+        "score-recall": 11.363636363636363
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_male",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 23.0,
+        "score-precision": 35.0,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_manual",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 31.09256597375792,
+        "score-precision": 37.34999430394167,
+        "score-recall": 27.05263157894737
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_mechanical",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 32.82411836529484,
+        "score-precision": 39.650920974450386,
+        "score-recall": 28.75
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_melted",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.666666666666664,
+        "score-precision": 23.333333333333332,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_messy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_mobile",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_modern",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_nutritious",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.03494042189694,
+        "score-precision": 57.28787878787879,
+        "score-recall": 48.333333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_open",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_orange",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.38239538239538,
+        "score-precision": 34.0,
+        "score-recall": 14.523809523809522
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_oval",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.444444444444445,
+        "score-precision": 10.833333333333332,
+        "score-recall": 4.761904761904761
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_pink",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 27.666666666666664,
+        "score-precision": 50.0,
+        "score-recall": 20.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_poisonous",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_popular",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.85858585858586,
+        "score-precision": 26.0,
+        "score-recall": 12.857142857142856
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_portable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 50.72226016759647,
+        "score-precision": 52.46753103587448,
+        "score-recall": 49.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_powerful",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.404761904761905,
+        "score-precision": 37.5,
+        "score-recall": 19.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_prickly",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_purple",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 14.666666666666666,
+        "score-precision": 20.0,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_rectangular",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.43456701410271,
+        "score-precision": 42.19483591359376,
+        "score-recall": 41.03174603174603
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_red",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.528443337670687,
+        "score-precision": 44.45670995670996,
+        "score-recall": 22.69230769230769
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_rough",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 26.834998334998335,
+        "score-precision": 40.61904761904761,
+        "score-recall": 21.964285714285715
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_round",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 40.4426438562268,
+        "score-precision": 41.1844907974338,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_scented",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 37.12698412698413,
+        "score-precision": 60.666666666666664,
+        "score-recall": 29.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sharp",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 60.9221523454933,
+        "score-precision": 67.86854811854812,
+        "score-recall": 56.969696969696976
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sharpened",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.42857142857143,
+        "score-precision": 55.83333333333333,
+        "score-recall": 28.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_shiny",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 23.512820512820515,
+        "score-precision": 31.0,
+        "score-recall": 19.86111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_short",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.97767257809202,
+        "score-precision": 27.3961254865145,
+        "score-recall": 24.913419913419915
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_silver",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 22.0,
+        "score-precision": 33.33333333333333,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sleek",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slender",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 29.01875901875902,
+        "score-precision": 51.33333333333333,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slimy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 43.95238095238095,
+        "score-precision": 81.66666666666666,
+        "score-recall": 32.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slow",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_small",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 49.64437912735274,
+        "score-precision": 47.79040348651056,
+        "score-recall": 51.77550485182271
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_smelly",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 33.666666666666664,
+        "score-precision": 56.666666666666664,
+        "score-recall": 25.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_smooth",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.3708600277247,
+        "score-precision": 22.711875081440297,
+        "score-recall": 18.986928104575163
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_soft",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.87098375895483,
+        "score-precision": 37.23946706887883,
+        "score-recall": 33.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_solid",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.1882430435062,
+        "score-precision": 21.97763347763348,
+        "score-recall": 16.805555555555554
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_square",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.017683841213252,
+        "score-precision": 19.92929292929293,
+        "score-recall": 12.65151515151515
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sticky",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 40.893217893217894,
+        "score-precision": 60.71428571428571,
+        "score-recall": 32.67857142857143
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_straight",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.359246532621146,
+        "score-precision": 24.24206349206349,
+        "score-recall": 13.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_stretchy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 48.25396825396825,
+        "score-precision": 73.33333333333334,
+        "score-recall": 38.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_strong",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.494652406417112,
+        "score-precision": 9.107142857142858,
+        "score-recall": 4.444444444444445
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_tall",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.32964043180762,
+        "score-precision": 48.168192918192915,
+        "score-recall": 27.820512820512818
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_thick",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 22.288052489739147,
+        "score-precision": 26.47822207032733,
+        "score-recall": 20.857142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_thin",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 30.092769327489503,
+        "score-precision": 32.62107848697114,
+        "score-recall": 28.47782258064516
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_transparent",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 44.74300125343768,
+        "score-precision": 52.05333555333556,
+        "score-recall": 40.11029411764706
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_twisted",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_ugly",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_uncomfortable",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 12.499999999999998,
+        "score-precision": 14.166666666666666,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_upholstered",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.33333333333333,
+        "score-precision": 60.0,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_warm",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.55283605283605,
+        "score-precision": 36.29761904761905,
+        "score-recall": 25.71428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_waterproof",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 27.618908868908868,
+        "score-precision": 39.595238095238095,
+        "score-recall": 22.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_white",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 29.35780062075594,
+        "score-precision": 32.18582878959781,
+        "score-recall": 27.69230769230769
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_wild",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.98412698412698,
+        "score-precision": 53.666666666666664,
+        "score-recall": 29.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_yellow",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.5431202784144,
+        "score-precision": 54.88888888888889,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_Africa",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 31.333333333333332,
+        "score-precision": 45.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_a_colony",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_cold_climates",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 15.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_deserts",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_forests",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 21.428571428571427,
+        "score-precision": 38.33333333333333,
+        "score-recall": 16.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_herds",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.333333333333332,
+        "score-precision": 35.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_hot_climates",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_nests",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_oceans",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.09523809523809,
+        "score-precision": 76.66666666666666,
+        "score-recall": 30.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_saltwater",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_trees",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.333333333333332,
+        "score-precision": 45.0,
+        "score-recall": 12.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_warm_climates",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 20.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_water",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.15326340326341,
+        "score-precision": 80.75,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_near_water",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.0,
+        "score-precision": 55.0,
+        "score-recall": 19.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_on_farms",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 48.04761904761905,
+        "score-precision": 53.333333333333336,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_on_water",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.420079920079914,
+        "score-precision": 81.33333333333333,
+        "score-recall": 45.535714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_brass",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 39.666666666666664,
+        "score-precision": 70.0,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_cardboard",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.357142857142854,
+        "score-precision": 34.5,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_ceramic",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 47.19372294372294,
+        "score-precision": 67.10714285714286,
+        "score-recall": 38.392857142857146
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_concrete",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 36.33333333333333,
+        "score-precision": 51.666666666666664,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_cotton",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 58.07915845764143,
+        "score-precision": 64.92640692640693,
+        "score-recall": 54.11111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_different_fabrics",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 36.095238095238095,
+        "score-precision": 46.666666666666664,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_different_materials",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.13596004772557,
+        "score-precision": 34.224532416133364,
+        "score-recall": 36.2962962962963
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_fiberglass",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.645021645021643,
+        "score-precision": 22.619047619047617,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_fibreglass",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.166666666666664,
+        "score-precision": 27.5,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_flour",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 62.86881977671451,
+        "score-precision": 65.32936507936509,
+        "score-recall": 63.80952380952381
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_glass",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.6342913411699,
+        "score-precision": 62.089466089466086,
+        "score-recall": 48.20261437908497
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_gold",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_leather",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 43.752476110061245,
+        "score-precision": 54.6031746031746,
+        "score-recall": 37.42424242424242
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_material",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.0,
+        "score-precision": 13.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_metal",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 65.56212590038974,
+        "score-precision": 63.712313258064285,
+        "score-recall": 67.60611328407938
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_nylon",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 23.57142857142857,
+        "score-precision": 29.166666666666664,
+        "score-recall": 20.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_paper",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 47.54999575587811,
+        "score-precision": 67.4594017094017,
+        "score-recall": 39.09090909090909
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_plastic",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.35165023992388,
+        "score-precision": 53.58790410451942,
+        "score-recall": 57.4
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_porcelain",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 46.33333333333333,
+        "score-precision": 53.33333333333333,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_rubber",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 22.57096171802054,
+        "score-precision": 31.797619047619047,
+        "score-recall": 18.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_silk",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 38.61111111111111,
+        "score-precision": 70.0,
+        "score-recall": 28.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_silver",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 8.333333333333332,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_stainless_steel",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_steel",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.676767676767675,
+        "score-precision": 30.166666666666664,
+        "score-recall": 12.857142857142856
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_stones",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 32.0,
+        "score-precision": 75.0,
+        "score-recall": 21.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wax",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 14.666666666666666,
+        "score-precision": 18.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wire",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.0,
+        "score-precision": 50.0,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wood",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 62.41975296297189,
+        "score-precision": 64.37756570713393,
+        "score-recall": 60.784313725490186
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wool",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 52.142857142857146,
+        "score-precision": 65.33333333333333,
+        "score-recall": 46.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_with_flour",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 46.89682539682539,
+        "score-precision": 55.54761904761905,
+        "score-recall": 44.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_with_sugar",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 16.666666666666664,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "part_of_a_tree",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 51.33333333333333,
+        "score-precision": 56.666666666666664,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_balance",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 29.666666666666664,
+        "score-precision": 41.666666666666664,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_cleaning",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 9.175324675324676,
+        "score-precision": 20.833333333333332,
+        "score-recall": 6.19047619047619
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_drivers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.333333333333332,
+        "score-precision": 25.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_electricity",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 38.804878696183046,
+        "score-precision": 47.11052836052836,
+        "score-recall": 34.35897435897436
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_fuel",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.427572427572425,
+        "score-precision": 44.357142857142854,
+        "score-recall": 22.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_gasoline",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 29.33694083694084,
+        "score-precision": 41.666666666666664,
+        "score-recall": 25.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_skill",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.310499957558783,
+        "score-precision": 29.178571428571427,
+        "score-recall": 14.555555555555554
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_water",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.079365079365079,
+        "score-precision": 11.999999999999998,
+        "score-recall": 9.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "symbol_of_power",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "tastes_good",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 2.8571428571428568,
+        "score-precision": 5.0,
+        "score-recall": 2.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "tastes_sweet",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 17.714285714285715,
+        "score-precision": 25.333333333333332,
+        "score-recall": 14.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_restaurants",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_special_occasions",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.7063492063492,
+        "score-precision": 55.666666666666664,
+        "score-recall": 27.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_weddings",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 30.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_babies",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.0,
+        "score-precision": 46.666666666666664,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_children",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.61111111111111,
+        "score-precision": 56.83333333333333,
+        "score-recall": 25.476190476190474
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_cutting",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.79365079365079,
+        "score-precision": 34.166666666666664,
+        "score-recall": 21.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_schools",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.38095238095238,
+        "score-precision": 46.666666666666664,
+        "score-recall": 29.999999999999993
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_the_military",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 31.333333333333332,
+        "score-precision": 50.0,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_throwing",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 15.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_women",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.42857142857142,
+        "score-precision": 83.33333333333333,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_art",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.912698412698413,
+        "score-precision": 12.833333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_babies",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_baking",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 45.13084179301545,
+        "score-precision": 53.6292735042735,
+        "score-recall": 39.6078431372549
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_boats",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 27.333333333333332,
+        "score-precision": 28.333333333333332,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_building_buildings",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.88888888888889,
+        "score-precision": 21.428571428571427,
+        "score-recall": 12.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_camping",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_carpentry",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 8.0,
+        "score-precision": 8.333333333333332,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_climbing",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_communication",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.858585858585858,
+        "score-precision": 28.555555555555554,
+        "score-recall": 17.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_construction",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 45.9621885303754,
+        "score-precision": 56.2977022977023,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_cooking",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 51.66625066550355,
+        "score-precision": 59.64918620737035,
+        "score-recall": 46.267806267806264
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_cutting",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 42.78643578643578,
+        "score-precision": 57.83333333333333,
+        "score-recall": 37.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_decoration",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 38.721484887802944,
+        "score-precision": 39.8196883703285,
+        "score-recall": 37.92792792792793
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_eating_dessert",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_emergencies",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 23.0,
+        "score-precision": 38.33333333333333,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_exercising",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.31168831168831,
+        "score-precision": 33.857142857142854,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_fishing",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.04761904761905,
+        "score-precision": 66.66666666666666,
+        "score-recall": 32.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_food",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 17.737595737595736,
+        "score-precision": 25.76190476190476,
+        "score-recall": 14.285714285714286
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_games",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.61904761904761,
+        "score-precision": 51.666666666666664,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_gardening",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 50.666666666666664,
+        "score-precision": 56.666666666666664,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_garnish",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 45.666666666666664,
+        "score-precision": 58.333333333333336,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_heating",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.0,
+        "score-precision": 43.33333333333333,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_heating_food",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_holding_liquids",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.0,
+        "score-precision": 20.0,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_holding_things",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_hunting",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 28.333333333333332,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_insulation",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 20.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_killing",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 23.333333333333332,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_leisure",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_making_paper",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_making_tea",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_offices",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.82572982572982,
+        "score-precision": 64.0,
+        "score-recall": 32.32142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_passengers",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 10.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_pies",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_plumbing",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_privacy",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 53.23809523809524,
+        "score-precision": 84.16666666666666,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_protection",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.642357642357645,
+        "score-precision": 40.166666666666664,
+        "score-recall": 19.86111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_recreation",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 56.28346636163974,
+        "score-precision": 72.84126984126985,
+        "score-recall": 48.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_serving_food",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.38095238095239,
+        "score-precision": 77.33333333333333,
+        "score-recall": 47.49999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_sewing",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 20.0,
+        "score-precision": 30.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_soup",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.715728715728716,
+        "score-precision": 24.833333333333332,
+        "score-recall": 14.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_special_occasions",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 28.904761904761905,
+        "score-precision": 50.0,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_sports",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 42.34324499030381,
+        "score-precision": 57.54761904761905,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storage",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 45.10690943043884,
+        "score-precision": 63.527777777777786,
+        "score-recall": 38.63636363636364
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storing_clothing",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 36.666666666666664,
+        "score-precision": 35.0,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storing_food",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 30.333333333333332,
+        "score-precision": 41.666666666666664,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_support",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 19.357142857142854,
+        "score-precision": 37.33333333333333,
+        "score-recall": 14.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_transportation",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 47.8491238642387,
+        "score-precision": 53.60284924913408,
+        "score-recall": 43.88888888888889
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_transporting_liquids",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 30.0,
+        "score-precision": 40.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_travel",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 25.857142857142854,
+        "score-precision": 39.166666666666664,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_war",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 14.0,
+        "score-precision": 13.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_warmth",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 37.79509379509379,
+        "score-precision": 54.0,
+        "score-recall": 31.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_weddings",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 30.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_baking",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.05387789447856,
+        "score-precision": 51.44730707888603,
+        "score-recall": 35.326797385620914
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_bands",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 39.54761904761905,
+        "score-precision": 54.33333333333333,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_cooking",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.110912516118916,
+        "score-precision": 66.4110644257703,
+        "score-recall": 48.03333333333334
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_desserts",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 34.73596828008593,
+        "score-precision": 45.722222222222214,
+        "score-recall": 31.607142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_experiments",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 41.666666666666664,
+        "score-precision": 60.0,
+        "score-recall": 34.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_games",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 32.57142857142857,
+        "score-precision": 50.666666666666664,
+        "score-recall": 27.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_orchestras",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 55.30952380952381,
+        "score-precision": 68.5,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_sandwiches",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 30.119047619047613,
+        "score-precision": 55.833333333333336,
+        "score-recall": 22.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_on_boats",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 27.333333333333332,
+        "score-precision": 28.333333333333332,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_on_ships",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_outdoors",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_with_food",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 9.555555555555554,
+        "score-precision": 15.0,
+        "score-recall": 7.619047619047618
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_around_neck",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 18.0,
+        "score-precision": 30.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_around_waist",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_men",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 35.017082590612,
+        "score-precision": 53.13888888888889,
+        "score-recall": 29.285714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_people",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_women",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 59.69470621831941,
+        "score-precision": 68.34087481146305,
+        "score-recall": 54.583333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_formal_occasions",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 10.357142857142858,
+        "score-precision": 15.833333333333332,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_keeping_warm",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.06637806637807,
+        "score-precision": 73.71428571428571,
+        "score-recall": 62.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_protection",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 39.460317460317455,
+        "score-precision": 68.0,
+        "score-recall": 31.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_special_occasions",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 40.33333333333333,
+        "score-precision": 61.666666666666664,
+        "score-recall": 31.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_warmth",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 58.95526695526695,
+        "score-precision": 68.0,
+        "score-recall": 56.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_in_cold_temperatures",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 45.666666666666664,
+        "score-precision": 50.0,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_indoors",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 50.666666666666664,
+        "score-precision": 63.333333333333336,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_feet",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 67.33333333333333,
+        "score-precision": 80.0,
+        "score-recall": 61.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_hands",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 20.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_heads",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 57.40981240981241,
+        "score-precision": 72.16666666666666,
+        "score-recall": 49.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.33333333333333,
+        "score-precision": 65.0,
+        "score-recall": 65.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_the_head",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 59.22766122766122,
+        "score-precision": 77.97619047619048,
+        "score-recall": 51.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_the_legs",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 63.33333333333333,
+        "score-precision": 65.0,
+        "score-recall": 65.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_over_clothes",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 59.5,
+        "score-precision": 83.16666666666666,
+        "score-recall": 50.83333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_with_skirts",
+        "level": "concept",
+        "model": "max-vit-large-in21k",
+        "split": "repeated-k-fold",
+        "score-f1": 49.666666666666664,
+        "score-precision": 61.666666666666664,
+        "score-recall": 45.0
+    }
+]

@@ -1,0 +1,5332 @@
+[
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_bird",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 80.09812409812409,
+        "score-precision": 96.33333333333334,
+        "score-recall": 71.33333333333334
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_boat",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.38095238095237,
+        "score-precision": 45.0,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_carnivore",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.35225885225886,
+        "score-precision": 81.97619047619048,
+        "score-recall": 57.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_colour",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.217032967032967,
+        "score-precision": 5.095238095238095,
+        "score-recall": 3.6111111111111116
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_container",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.0283301010776,
+        "score-precision": 70.5556943056943,
+        "score-recall": 63.76190476190476
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_dessert",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.83275058275058,
+        "score-precision": 69.13888888888889,
+        "score-recall": 51.607142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_dish",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.922217531350654,
+        "score-precision": 62.819264069264065,
+        "score-recall": 46.090909090909086
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_drink",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 73.5,
+        "score-precision": 84.33333333333334,
+        "score-recall": 68.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fashion_accessory",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 31.247474747474747,
+        "score-precision": 44.0,
+        "score-recall": 26.428571428571427
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fish",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_food",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.04274703631663,
+        "score-precision": 70.48929358179338,
+        "score-recall": 64.75384615384615
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_footwear",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.666666666666664,
+        "score-precision": 50.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fruit",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 73.6578210231461,
+        "score-precision": 82.61904761904762,
+        "score-recall": 68.05555555555556
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_herbivore",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 70.84650574743453,
+        "score-precision": 75.58225108225108,
+        "score-recall": 67.45454545454545
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_machine",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.5941778651456,
+        "score-precision": 50.088935574229694,
+        "score-recall": 37.857142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_mammal",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 93.73785550256139,
+        "score-precision": 96.15862573099415,
+        "score-recall": 91.66666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_musical_instrument",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.72235669387372,
+        "score-precision": 80.47077922077922,
+        "score-recall": 60.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_pest",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 20.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_pet",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 59.71428571428571,
+        "score-precision": 81.0,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_plant",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 62.82084565051317,
+        "score-precision": 76.45587745587746,
+        "score-recall": 56.8939393939394
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_predator",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 62.82805429864253,
+        "score-precision": 84.02272727272728,
+        "score-recall": 54.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_rock",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 50.0,
+        "score-precision": 60.0,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_rodent",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_scavenger",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_seafood",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 62.666666666666664,
+        "score-precision": 80.0,
+        "score-recall": 56.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_stick",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.666666666666664,
+        "score-precision": 75.0,
+        "score-recall": 38.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_tool",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 58.310845147299496,
+        "score-precision": 64.37158513788948,
+        "score-recall": 53.75
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_toy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.96825396825397,
+        "score-precision": 55.0,
+        "score-recall": 22.619047619047613
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_treat",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.507936507936506,
+        "score-precision": 62.666666666666664,
+        "score-recall": 44.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_tube",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_utensil",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.21428571428571,
+        "score-precision": 38.33333333333333,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_vegetable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 75.60475944763871,
+        "score-precision": 85.5952380952381,
+        "score-recall": 68.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_vehicle",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.84642188475141,
+        "score-precision": 77.60717060717062,
+        "score-recall": 62.81818181818181
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_weapon",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.68255274137627,
+        "score-precision": 82.80952380952381,
+        "score-recall": 60.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_animal",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 79.56999257846562,
+        "score-precision": 81.82142925096448,
+        "score-recall": 77.96296296296296
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_appliance",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.03479853479853,
+        "score-precision": 64.78571428571429,
+        "score-recall": 47.32142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_evergreen",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_explosive",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.33333333333333,
+        "score-precision": 80.0,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_insect",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 69.57142857142857,
+        "score-precision": 88.83333333333333,
+        "score-recall": 61.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_instrument",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.72235669387372,
+        "score-precision": 80.47077922077922,
+        "score-recall": 60.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_builds_nests",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_climbs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_climbs_trees",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.38095238095237,
+        "score-precision": 100.0,
+        "score-recall": 40.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.57142857142857,
+        "score-precision": 44.166666666666664,
+        "score-recall": 18.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_fish",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.333333333333332,
+        "score-precision": 30.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_fish_food",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.333333333333332,
+        "score-precision": 30.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_grass",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.71428571428571,
+        "score-precision": 63.33333333333333,
+        "score-recall": 44.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_hay",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 53.0,
+        "score-precision": 74.0,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_insects",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.617327117327118,
+        "score-precision": 50.666666666666664,
+        "score-recall": 14.642857142857142
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_leaves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_flies",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.42226890756302,
+        "score-precision": 90.0,
+        "score-recall": 57.22222222222223
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_is_nocturnal",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.567298714357534,
+        "score-precision": 61.277777777777786,
+        "score-recall": 30.357142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_jumps",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_lays_eggs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 61.98370489159963,
+        "score-precision": 84.84343434343434,
+        "score-recall": 53.03571428571429
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_makes_loud_noises",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.047619047619047,
+        "score-precision": 36.666666666666664,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_makes_noises",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.928571428571427,
+        "score-precision": 40.42857142857143,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_runs_fast",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.52020202020202,
+        "score-precision": 62.416666666666664,
+        "score-recall": 31.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_swims",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.88778765094554,
+        "score-precision": 65.74242424242424,
+        "score-recall": 45.45454545454545
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "clothing",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.77777777777778,
+        "score-precision": 55.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_from_trees",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_in_pairs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_in_rolls",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 17.5,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_colours",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.554556554556555,
+        "score-precision": 43.83333333333333,
+        "score-recall": 15.416666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_designs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.028941788532582,
+        "score-precision": 19.15909090909091,
+        "score-recall": 4.999999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_sizes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_speeds",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.023809523809522,
+        "score-precision": 12.666666666666666,
+        "score-recall": 12.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_as_food",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 8.333333333333332,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_as_meat",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_animals",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 20.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_cooking",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.0,
+        "score-precision": 60.0,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_people",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.666666666666664,
+        "score-precision": 58.33333333333333,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_for_breakfast",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_in_salads",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 15.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_in_summer",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_raw",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.8346883250908,
+        "score-precision": 65.76290376290376,
+        "score-recall": 49.015151515151516
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_bathrooms",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.95454545454545,
+        "score-precision": 73.66666666666666,
+        "score-recall": 44.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_bedrooms",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.666666666666664,
+        "score-precision": 25.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_buildings",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_cars",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.88095238095238,
+        "score-precision": 39.166666666666664,
+        "score-recall": 37.49999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_forests",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.38095238095238,
+        "score-precision": 40.0,
+        "score-recall": 10.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_gardens",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.150793650793652,
+        "score-precision": 53.333333333333336,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_kitchens",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 61.353846153846156,
+        "score-precision": 73.45165945165945,
+        "score-recall": 53.62637362637363
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_oceans",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.21428571428571,
+        "score-precision": 55.833333333333336,
+        "score-recall": 26.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_offices",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.055555555555554,
+        "score-precision": 15.833333333333332,
+        "score-recall": 6.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_parks",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 15.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_seas",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_toolboxes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.714285714285714,
+        "score-precision": 10.0,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_outdoors",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_fields",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.666666666666664,
+        "score-precision": 50.0,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_gardens",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 71.72256621947024,
+        "score-precision": 77.18253968253968,
+        "score-recall": 68.66666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_the_ground",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.595238095238095,
+        "score-precision": 40.0,
+        "score-recall": 18.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_the_summer",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.999999999999996,
+        "score-precision": 30.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_tropical_climates",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.333333333333332,
+        "score-precision": 13.333333333333332,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_warm_climates",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.349206349206348,
+        "score-precision": 46.666666666666664,
+        "score-recall": 14.76190476190476
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_bushes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.666666666666664,
+        "score-precision": 61.666666666666664,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_plants",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 3.333333333333333,
+        "score-precision": 5.0,
+        "score-recall": 2.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_the_ground",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.357142857142858,
+        "score-precision": 10.833333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_trees",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 68.72935561170856,
+        "score-precision": 82.42063492063491,
+        "score-recall": 61.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_vines",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.12698412698412,
+        "score-precision": 60.0,
+        "score-recall": 25.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_underground",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.333333333333332,
+        "score-precision": 35.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_arms",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_blades",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_handles",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.0,
+        "score-precision": 40.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_prongs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 20.0,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_3_prongs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 20.0,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_3_wheels",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.534798534798526,
+        "score-precision": 75.5952380952381,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_4_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.7800561542497,
+        "score-precision": 72.67298714357538,
+        "score-recall": 65.08333333333334
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_4_wheels",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.8036408036408,
+        "score-precision": 70.9047619047619,
+        "score-recall": 48.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_6_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 72.52380952380952,
+        "score-precision": 88.33333333333333,
+        "score-recall": 63.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_8_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.43939393939394,
+        "score-precision": 80.0,
+        "score-recall": 62.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_barrel",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.33333333333333,
+        "score-precision": 70.0,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_beak",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 83.99844599844599,
+        "score-precision": 96.57142857142857,
+        "score-recall": 76.33333333333334
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_bell",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_blade",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.36052836052836,
+        "score-precision": 71.05952380952381,
+        "score-recall": 44.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_bushy_tail",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.0,
+        "score-precision": 35.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cap",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.095238095238095,
+        "score-precision": 33.33333333333333,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_clasp",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 31.76190476190476,
+        "score-precision": 51.666666666666664,
+        "score-recall": 25.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_collar",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 64.76190476190476,
+        "score-precision": 77.66666666666666,
+        "score-recall": 58.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cord",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.428571428571427,
+        "score-precision": 45.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cover",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.784493284493283,
+        "score-precision": 22.916666666666664,
+        "score-recall": 13.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_door",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.22766122766123,
+        "score-precision": 54.80952380952381,
+        "score-recall": 31.190476190476186
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_face",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.333333333333332,
+        "score-precision": 25.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_filter",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.857142857142854,
+        "score-precision": 28.333333333333332,
+        "score-recall": 19.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_flat_head",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_flat_surface",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.64379555497955,
+        "score-precision": 49.71042519571931,
+        "score-recall": 38.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_frame",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.787878787878787,
+        "score-precision": 15.0,
+        "score-recall": 6.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_green_stem",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hand_grip",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.283993783993784,
+        "score-precision": 22.833333333333332,
+        "score-recall": 8.571428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_handle",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 59.56260009034603,
+        "score-precision": 61.96977347557843,
+        "score-recall": 57.72727272727273
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hard_shell",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.712620712620705,
+        "score-precision": 75.33333333333334,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_head",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.14257964257964,
+        "score-precision": 40.33333333333333,
+        "score-recall": 12.142857142857142
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hood",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.80952380952381,
+        "score-precision": 50.0,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_knob",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.95238095238095,
+        "score-precision": 54.833333333333336,
+        "score-recall": 27.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_latch",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.857142857142856,
+        "score-precision": 14.166666666666666,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_lid",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.25226831011035,
+        "score-precision": 61.6468253968254,
+        "score-recall": 45.904761904761905
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_lock",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.285714285714285,
+        "score-precision": 71.66666666666666,
+        "score-recall": 30.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_barrel",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.33333333333333,
+        "score-precision": 70.0,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_handle",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.523809523809522,
+        "score-precision": 25.0,
+        "score-recall": 6.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_neck",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_tail",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 61.690084220562525,
+        "score-precision": 70.29831606302194,
+        "score-recall": 56.13970588235294
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_motor",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.868748382680266,
+        "score-precision": 58.760101010101,
+        "score-recall": 41.45454545454545
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_mouth",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.666666666666664,
+        "score-precision": 40.0,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_mouthpiece",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.11111111111111,
+        "score-precision": 68.5,
+        "score-recall": 45.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_neck",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.666666666666664,
+        "score-precision": 75.0,
+        "score-recall": 38.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_nose",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.0,
+        "score-precision": 33.33333333333333,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_nozzle",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.34920634920635,
+        "score-precision": 55.666666666666664,
+        "score-recall": 48.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_plug",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.0,
+        "score-precision": 20.0,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_pointed_end",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.177000158424306,
+        "score-precision": 38.96428571428571,
+        "score-recall": 26.21794871794872
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_roof",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.992063492063494,
+        "score-precision": 54.33333333333333,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_seat",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 58.14285714285713,
+        "score-precision": 81.75,
+        "score-recall": 48.57142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_shell",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 50.97619047619047,
+        "score-precision": 89.16666666666666,
+        "score-recall": 39.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_skin",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.367243867243864,
+        "score-precision": 69.0,
+        "score-recall": 35.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_snout",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.333333333333332,
+        "score-precision": 23.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_spout",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.047619047619047,
+        "score-precision": 26.666666666666664,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_steering_wheel",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.047619047619047,
+        "score-precision": 28.333333333333332,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_stem",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.36826082414318,
+        "score-precision": 48.50396825396825,
+        "score-recall": 31.111111111111107
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_strap",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.5,
+        "score-precision": 12.5,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_surface",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_switch",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.857142857142858,
+        "score-precision": 15.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_tail",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 69.10745258509692,
+        "score-precision": 72.90648146143502,
+        "score-recall": 67.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_temperature_control",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 57.01587301587301,
+        "score-precision": 77.66666666666666,
+        "score-recall": 48.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_timer",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.96459096459096,
+        "score-precision": 42.61904761904761,
+        "score-recall": 25.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_trigger",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.142857142857146,
+        "score-precision": 65.0,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_wooden_handle",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.333333333333332,
+        "score-precision": 28.333333333333332,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_zipper",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 60.785353535353536,
+        "score-precision": 76.66666666666666,
+        "score-recall": 53.333333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_an_engine",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.627235509588445,
+        "score-precision": 64.57142857142857,
+        "score-recall": 53.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_an_inside",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_antennae",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.83333333333333,
+        "score-precision": 51.0,
+        "score-recall": 30.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_armrests",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.33333333333333,
+        "score-precision": 58.333333333333336,
+        "score-recall": 38.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_bars",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_big_ears",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_blades",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.25252525252525,
+        "score-precision": 43.44444444444444,
+        "score-recall": 34.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_brakes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.73376623376623,
+        "score-precision": 63.33333333333333,
+        "score-recall": 31.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_branches",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 65.9047619047619,
+        "score-precision": 88.33333333333334,
+        "score-recall": 55.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_bristles",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.666666666666664,
+        "score-precision": 50.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_buckles",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 38.33333333333333,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_buttons",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.93816456348425,
+        "score-precision": 58.82811632811632,
+        "score-recall": 37.69230769230769
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_clasps",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.666666666666664,
+        "score-precision": 56.666666666666664,
+        "score-recall": 29.999999999999993
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_claws",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.77723617971296,
+        "score-precision": 51.89393939393939,
+        "score-recall": 32.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_doors",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.663003663003664,
+        "score-precision": 64.28571428571429,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_drawers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 57.38095238095237,
+        "score-precision": 73.33333333333333,
+        "score-recall": 51.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_ears",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.666666666666664,
+        "score-precision": 40.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_edges",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 10.0,
+        "score-recall": 2.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_engines",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_eyes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.3030303030303,
+        "score-precision": 53.33333333333333,
+        "score-recall": 20.238095238095234
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_feathers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 86.8065268065268,
+        "score-precision": 100.0,
+        "score-recall": 77.61904761904762
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_filling",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.17676767676768,
+        "score-precision": 39.666666666666664,
+        "score-recall": 20.476190476190474
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_fins",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.333333333333332,
+        "score-precision": 40.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_flashing_lights",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_flowers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.428571428571427,
+        "score-precision": 48.33333333333333,
+        "score-recall": 22.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_fur",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 90.35470528421028,
+        "score-precision": 92.75805322128852,
+        "score-recall": 88.29166666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_gills",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.666666666666664,
+        "score-precision": 56.666666666666664,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_green_leaves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.42857142857143,
+        "score-precision": 66.66666666666666,
+        "score-recall": 23.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hair",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.492063492063494,
+        "score-precision": 45.666666666666664,
+        "score-recall": 22.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_handles",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.360841772606477,
+        "score-precision": 38.57539682539682,
+        "score-recall": 22.22222222222222
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hands",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.33333333333333,
+        "score-precision": 40.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hinges",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.19047619047619,
+        "score-precision": 33.33333333333333,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_holes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hooks",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hooves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 87.35198135198135,
+        "score-precision": 93.23809523809524,
+        "score-recall": 83.33333333333334
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_horns",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.936507936507937,
+        "score-precision": 42.5,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_keys",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.857142857142854,
+        "score-precision": 60.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_lace",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_laces",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_large_ears",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_large_eyes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.357142857142856,
+        "score-precision": 25.833333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_layers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.33333333333333,
+        "score-precision": 40.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_leaves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 64.66057188425609,
+        "score-precision": 77.75,
+        "score-recall": 57.04545454545455
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.321749132093956,
+        "score-precision": 45.87745587745588,
+        "score-recall": 32.38095238095238
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_lenses",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.0,
+        "score-precision": 38.33333333333333,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_long_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.861471861471856,
+        "score-precision": 63.61904761904761,
+        "score-recall": 32.857142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_long_sleeves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 59.0,
+        "score-precision": 70.83333333333333,
+        "score-recall": 54.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_many_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_many_seats",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.8968253968254,
+        "score-precision": 48.45238095238095,
+        "score-recall": 33.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_no_sleeves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.590909090909086,
+        "score-precision": 69.28571428571429,
+        "score-recall": 52.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_no_straps",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.676767676767676,
+        "score-precision": 20.0,
+        "score-recall": 10.476190476190476
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_numbers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.777777777777777,
+        "score-precision": 19.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_patterns",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.95983967723098,
+        "score-precision": 48.582417582417584,
+        "score-recall": 37.472527472527474
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_pedals",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 35.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_pockets",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 70.18437118437119,
+        "score-precision": 86.16666666666666,
+        "score-recall": 60.972222222222214
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_poles",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_scales",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.666666666666664,
+        "score-precision": 75.0,
+        "score-recall": 41.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_seats",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.595238095238095,
+        "score-precision": 55.83333333333333,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sections",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_seeds",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 57.307116773835034,
+        "score-precision": 71.74458874458875,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sharp_teeth",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.03196528273926,
+        "score-precision": 77.38347763347764,
+        "score-recall": 63.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_shelves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.5,
+        "score-precision": 65.83333333333333,
+        "score-recall": 41.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_short_sleeves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.26190476190476,
+        "score-precision": 80.83333333333333,
+        "score-recall": 60.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_skin",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.73465423465423,
+        "score-precision": 62.38095238095239,
+        "score-recall": 38.57142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sleeves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.590909090909086,
+        "score-precision": 69.28571428571429,
+        "score-recall": 52.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_smooth_skin",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_speakers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.0,
+        "score-precision": 63.33333333333333,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_straps",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.676767676767676,
+        "score-precision": 20.0,
+        "score-recall": 10.476190476190476
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_strings",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 59.904761904761905,
+        "score-precision": 90.0,
+        "score-recall": 47.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_stripes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_teeth",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.604617604617605,
+        "score-precision": 41.53968253968254,
+        "score-recall": 16.805555555555554
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_tracks",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.666666666666664,
+        "score-precision": 56.666666666666664,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_value",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_valves",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.333333333333332,
+        "score-precision": 26.666666666666664,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_vitamin_C",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.38095238095238,
+        "score-precision": 25.833333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_webbed_feet",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.33333333333333,
+        "score-precision": 61.666666666666664,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wheels",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 57.030396855901415,
+        "score-precision": 64.640756302521,
+        "score-recall": 53.46153846153847
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_whiskers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.33333333333333,
+        "score-precision": 60.0,
+        "score-recall": 32.49999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_windows",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.388888888888893,
+        "score-precision": 45.0,
+        "score-recall": 23.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wings",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 69.51012145748987,
+        "score-precision": 85.64935064935065,
+        "score-recall": 61.54545454545455
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wires",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_zippers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.5079365079365,
+        "score-precision": 79.23809523809524,
+        "score-recall": 60.95238095238095
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "hunted_by_people",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.714285714285714,
+        "score-precision": 28.333333333333332,
+        "score-recall": 9.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_dries_quickly",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_flies",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.07613954672777,
+        "score-precision": 89.28571428571429,
+        "score-recall": 56.11111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_floats",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.333333333333332,
+        "score-precision": 30.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_holds_water",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.833333333333333,
+        "score-precision": 5.333333333333333,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_melts",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.238095238095234,
+        "score-precision": 60.0,
+        "score-recall": 24.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_deep_sounds",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_heat",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.16161616161616,
+        "score-precision": 65.5,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_light",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.21428571428571,
+        "score-precision": 39.33333333333333,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_loud_noise",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.333333333333332,
+        "score-precision": 40.0,
+        "score-recall": 11.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_music",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.0,
+        "score-precision": 40.0,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_noise",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.50815850815851,
+        "score-precision": 31.166666666666664,
+        "score-recall": 12.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_smoke",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.0,
+        "score-precision": 30.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_sound",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.31979735240604,
+        "score-precision": 77.2063492063492,
+        "score-recall": 61.11111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_addictive",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 15.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_adjustable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.089367908419135,
+        "score-precision": 45.137430097980086,
+        "score-recall": 38.733333333333334
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_ancient",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_beautiful",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.0,
+        "score-precision": 30.0,
+        "score-recall": 12.499999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_black",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.40455702220408,
+        "score-precision": 19.807563308724298,
+        "score-recall": 15.88095238095238
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_breakable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_brown",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.777597868056475,
+        "score-precision": 45.91267461630365,
+        "score-recall": 37.52016129032258
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_casual",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.48196248196248,
+        "score-precision": 80.33333333333334,
+        "score-recall": 61.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_clear",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.09090909090909,
+        "score-precision": 24.166666666666664,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cold",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.29246192404087,
+        "score-precision": 65.63888888888889,
+        "score-recall": 37.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_colourful",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.20122778420405,
+        "score-precision": 41.44729344729345,
+        "score-recall": 32.91871921182266
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_comfortable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 57.22869674185464,
+        "score-precision": 69.36111111111111,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_common",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_convenient",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_crunchy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.26177763248701,
+        "score-precision": 59.13095238095237,
+        "score-recall": 33.26923076923077
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_curved",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.066045066045067,
+        "score-precision": 33.33333333333333,
+        "score-recall": 12.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cute",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.62237762237763,
+        "score-precision": 79.20238095238095,
+        "score-recall": 61.607142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cylindrical",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.848518051509473,
+        "score-precision": 32.19549291288422,
+        "score-recall": 23.913043478260867
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dangerous",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.42946721809904,
+        "score-precision": 45.79373807494012,
+        "score-recall": 36.78333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_decorative",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.52229818892438,
+        "score-precision": 53.3301303751132,
+        "score-recall": 50.23001508295626
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_delicate",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.833333333333332,
+        "score-precision": 45.69047619047619,
+        "score-recall": 19.107142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dirty",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_disposable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.46754871481692,
+        "score-precision": 52.467320261437905,
+        "score-recall": 40.7843137254902
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_domestic",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.666666666666664,
+        "score-precision": 31.666666666666664,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dressy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dried",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.857142857142854,
+        "score-precision": 43.33333333333333,
+        "score-recall": 12.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_durable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.597634572861175,
+        "score-precision": 37.630528955768355,
+        "score-recall": 32.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_edible",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 77.96479712233013,
+        "score-precision": 78.39126088427331,
+        "score-recall": 77.72163120567376
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_electrical",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.637278430381876,
+        "score-precision": 47.67732267732268,
+        "score-recall": 40.42857142857143
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_electronic",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.51128550149048,
+        "score-precision": 62.7182152418557,
+        "score-recall": 52.710526315789465
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_endangered",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.92857142857143,
+        "score-precision": 42.666666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_engraved",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.0,
+        "score-precision": 61.666666666666664,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_expensive",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.150060918576195,
+        "score-precision": 36.32575757575758,
+        "score-recall": 26.923076923076923
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fashionable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.5,
+        "score-precision": 32.5,
+        "score-recall": 12.499999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fast",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.74889168802212,
+        "score-precision": 56.51767676767677,
+        "score-recall": 41.66666666666667
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fat",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.22222222222222,
+        "score-precision": 32.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_flat",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.027426782944545,
+        "score-precision": 48.70454545454545,
+        "score-recall": 39.27350427350427
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fluffy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.6031746031746,
+        "score-precision": 36.666666666666664,
+        "score-recall": 14.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_formal",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 60.19408369408369,
+        "score-precision": 77.33333333333334,
+        "score-recall": 53.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_friendly",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.33333333333333,
+        "score-precision": 68.33333333333334,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fun",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_furry",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.297924297924293,
+        "score-precision": 37.57142857142857,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_gold",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_green",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.13680217697434,
+        "score-precision": 51.55918433206763,
+        "score-recall": 42.38095238095238
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_grey",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.58832833832834,
+        "score-precision": 40.76190476190476,
+        "score-recall": 15.777777777777777
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hairy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hand_held",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.19047619047619,
+        "score-precision": 13.333333333333332,
+        "score-recall": 4.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hard",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.99863185815999,
+        "score-precision": 45.461038961038966,
+        "score-recall": 34.19047619047619
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_harvested",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_healthy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.95881895881895,
+        "score-precision": 62.83333333333333,
+        "score-recall": 33.57142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_heavy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.03399437387705,
+        "score-precision": 46.974923549257355,
+        "score-recall": 40.322580645161295
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_high_in_fat",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.0,
+        "score-precision": 55.0,
+        "score-recall": 19.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hollow",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.047619047619047,
+        "score-precision": 41.666666666666664,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hot",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.04065868771751,
+        "score-precision": 58.88888888888889,
+        "score-recall": 32.916666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_inexpensive",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 2.6785714285714284,
+        "score-precision": 4.166666666666666,
+        "score-recall": 2.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_intelligent",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.1046176046176,
+        "score-precision": 58.166666666666664,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_juicy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 75.40598290598291,
+        "score-precision": 84.80952380952381,
+        "score-recall": 70.53571428571429
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_large",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.97451451102176,
+        "score-precision": 39.542946984145324,
+        "score-recall": 38.57638888888889
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_lethal",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 25.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_light_weight",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.333333333333332,
+        "score-precision": 25.0,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_long",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 47.395822002768305,
+        "score-precision": 49.95145528724687,
+        "score-recall": 45.753911806543385
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_loud",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.95053621988607,
+        "score-precision": 61.666666666666664,
+        "score-recall": 32.909090909090914
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_male",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_manual",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.427995548098032,
+        "score-precision": 33.415476190476184,
+        "score-recall": 27.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_mechanical",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.86417756153097,
+        "score-precision": 48.36080586080586,
+        "score-recall": 35.625
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_melted",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 23.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_messy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_mobile",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_modern",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_nutritious",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.005403884041655,
+        "score-precision": 67.05680430680431,
+        "score-recall": 49.294871794871796
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_open",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_orange",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.603174603174603,
+        "score-precision": 36.666666666666664,
+        "score-recall": 9.523809523809522
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_oval",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.572871572871572,
+        "score-precision": 31.666666666666664,
+        "score-recall": 9.285714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_pink",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_poisonous",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_popular",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.09090909090909,
+        "score-precision": 29.166666666666664,
+        "score-recall": 14.285714285714283
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_portable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 47.28066113275014,
+        "score-precision": 47.68248280607391,
+        "score-recall": 47.30790960451977
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_powerful",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.0,
+        "score-precision": 40.0,
+        "score-recall": 12.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_prickly",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_purple",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_rectangular",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.34004935346526,
+        "score-precision": 53.75230325799752,
+        "score-recall": 49.73015873015873
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_red",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.141309155241046,
+        "score-precision": 47.00396825396825,
+        "score-recall": 29.80769230769231
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_rough",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.030303030303024,
+        "score-precision": 59.02380952380952,
+        "score-recall": 32.14285714285714
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_round",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.91460035227451,
+        "score-precision": 37.477367791293226,
+        "score-recall": 36.808510638297875
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_scented",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.57142857142857,
+        "score-precision": 39.166666666666664,
+        "score-recall": 18.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sharp",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 59.29239766081871,
+        "score-precision": 73.0042735042735,
+        "score-recall": 50.984848484848484
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sharpened",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.619047619047617,
+        "score-precision": 33.33333333333333,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_shiny",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.22609253491606,
+        "score-precision": 47.007936507936506,
+        "score-recall": 29.583333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_short",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.43685588650739,
+        "score-precision": 48.00546757164405,
+        "score-recall": 29.935064935064936
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_silver",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.0,
+        "score-precision": 30.0,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sleek",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slender",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.69047619047619,
+        "score-precision": 60.0,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slimy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.071428571428573,
+        "score-precision": 45.83333333333333,
+        "score-recall": 16.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slow",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_small",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.44524896499892,
+        "score-precision": 53.523550050364975,
+        "score-recall": 55.48452661945974
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_smelly",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.0,
+        "score-precision": 60.0,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_smooth",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.73896159804479,
+        "score-precision": 35.46550671550672,
+        "score-recall": 24.869281045751634
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_soft",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.95970333732974,
+        "score-precision": 39.92226873186394,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_solid",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.854922854922854,
+        "score-precision": 46.33333333333333,
+        "score-recall": 19.444444444444446
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_square",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.153680770553837,
+        "score-precision": 38.08333333333333,
+        "score-recall": 22.045454545454543
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sticky",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.82556332556332,
+        "score-precision": 79.66666666666666,
+        "score-recall": 34.107142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_straight",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.056249220335907,
+        "score-precision": 47.19336219336219,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_stretchy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.285714285714285,
+        "score-precision": 31.666666666666664,
+        "score-recall": 14.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_strong",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.13369963369963,
+        "score-precision": 35.69047619047619,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_tall",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.424939353731922,
+        "score-precision": 41.74206349206349,
+        "score-recall": 24.423076923076923
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_thick",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.84917222789076,
+        "score-precision": 51.01159951159951,
+        "score-recall": 27.23809523809524
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_thin",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.18388245394232,
+        "score-precision": 40.91804544298823,
+        "score-recall": 32.88306451612903
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_transparent",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 47.42427687255274,
+        "score-precision": 57.81135531135531,
+        "score-recall": 40.69852941176471
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_twisted",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_ugly",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_uncomfortable",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.857142857142854,
+        "score-precision": 43.33333333333333,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_upholstered",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 50.0,
+        "score-precision": 60.0,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_warm",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.381396381396385,
+        "score-precision": 68.61904761904762,
+        "score-recall": 35.95238095238095
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_waterproof",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.834365325077396,
+        "score-precision": 34.86904761904761,
+        "score-recall": 27.888888888888893
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_white",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.49278004729876,
+        "score-precision": 24.06298993329549,
+        "score-recall": 18.076923076923077
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_wild",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 10.0,
+        "score-recall": 2.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_yellow",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.064276303406736,
+        "score-precision": 35.54545454545455,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_Africa",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_a_colony",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_cold_climates",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_deserts",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_forests",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.22222222222222,
+        "score-precision": 37.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_herds",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.666666666666664,
+        "score-precision": 40.0,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_hot_climates",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_nests",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_oceans",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.97619047619047,
+        "score-precision": 67.66666666666666,
+        "score-recall": 46.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_saltwater",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_trees",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.71428571428571,
+        "score-precision": 41.666666666666664,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_warm_climates",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_water",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.89835164835165,
+        "score-precision": 80.72619047619048,
+        "score-recall": 61.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_near_water",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_on_farms",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 53.0,
+        "score-precision": 73.33333333333333,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_on_water",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 63.82805429864253,
+        "score-precision": 76.66666666666666,
+        "score-recall": 57.857142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_brass",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.0,
+        "score-precision": 56.666666666666664,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_cardboard",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.38095238095238,
+        "score-precision": 21.666666666666664,
+        "score-recall": 19.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_ceramic",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.319347319347322,
+        "score-precision": 49.45238095238095,
+        "score-recall": 21.785714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_concrete",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_cotton",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.74050038368923,
+        "score-precision": 74.94047619047619,
+        "score-recall": 44.55555555555556
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_different_fabrics",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.666666666666664,
+        "score-precision": 86.66666666666666,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_different_materials",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.6088985615731,
+        "score-precision": 39.75030732024167,
+        "score-recall": 39.81481481481482
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_fiberglass",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.333333333333332,
+        "score-precision": 35.0,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_fibreglass",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.714285714285715,
+        "score-precision": 36.666666666666664,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_flour",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 60.04218004218004,
+        "score-precision": 69.26190476190476,
+        "score-recall": 54.28571428571428
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_glass",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.132391275180645,
+        "score-precision": 55.4460510249984,
+        "score-recall": 47.810457516339866
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_gold",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_leather",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.43001443001443,
+        "score-precision": 39.36507936507937,
+        "score-recall": 23.939393939393938
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_material",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 20.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_metal",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 69.72939042504066,
+        "score-precision": 68.63086045424693,
+        "score-recall": 71.01912212081704
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_nylon",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.238095238095234,
+        "score-precision": 45.0,
+        "score-recall": 18.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_paper",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.22224334403771,
+        "score-precision": 46.65223665223665,
+        "score-recall": 34.31818181818182
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_plastic",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.685509936338704,
+        "score-precision": 54.58928752457524,
+        "score-recall": 54.9
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_porcelain",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_rubber",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.091575091575091,
+        "score-precision": 19.909090909090907,
+        "score-recall": 8.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_silk",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.38095238095238,
+        "score-precision": 30.0,
+        "score-recall": 8.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_silver",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_stainless_steel",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 15.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_steel",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.205128205128204,
+        "score-precision": 14.333333333333332,
+        "score-recall": 10.714285714285714
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_stones",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.095238095238095,
+        "score-precision": 41.666666666666664,
+        "score-recall": 21.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wax",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.33333333333333,
+        "score-precision": 51.666666666666664,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wire",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wood",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 58.07067413556224,
+        "score-precision": 60.82746096208829,
+        "score-recall": 55.68627450980392
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wool",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.928571428571427,
+        "score-precision": 45.0,
+        "score-recall": 21.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_with_flour",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 57.24603174603175,
+        "score-precision": 83.33333333333334,
+        "score-recall": 46.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_with_sugar",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "part_of_a_tree",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_balance",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.0,
+        "score-precision": 75.0,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_cleaning",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.858585858585859,
+        "score-precision": 9.5,
+        "score-recall": 4.523809523809524
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_drivers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_electricity",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.95502114632549,
+        "score-precision": 47.484432234432234,
+        "score-recall": 35.833333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_fuel",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.47008547008547,
+        "score-precision": 51.80952380952381,
+        "score-recall": 33.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_gasoline",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.579365079365076,
+        "score-precision": 67.5,
+        "score-recall": 33.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_skill",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.24114774114774,
+        "score-precision": 48.0530303030303,
+        "score-recall": 28.111111111111107
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_water",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.69047619047619,
+        "score-precision": 12.5,
+        "score-recall": 7.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "symbol_of_power",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.999999999999996,
+        "score-precision": 30.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "tastes_good",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.325396825396826,
+        "score-precision": 45.0,
+        "score-recall": 18.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "tastes_sweet",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.738095238095234,
+        "score-precision": 73.33333333333333,
+        "score-recall": 32.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_restaurants",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_special_occasions",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.666666666666666,
+        "score-precision": 20.0,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_weddings",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_babies",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.0,
+        "score-precision": 46.666666666666664,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_children",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.8015873015873,
+        "score-precision": 68.33333333333334,
+        "score-recall": 19.523809523809522
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_cutting",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.21428571428571,
+        "score-precision": 53.33333333333333,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_schools",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.333333333333332,
+        "score-precision": 18.333333333333332,
+        "score-recall": 9.166666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_the_military",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_throwing",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.333333333333332,
+        "score-precision": 8.333333333333332,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_women",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.785714285714285,
+        "score-precision": 54.166666666666664,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_art",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.333333333333332,
+        "score-precision": 25.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_babies",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.33333333333333,
+        "score-precision": 78.33333333333334,
+        "score-recall": 41.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_baking",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.88618354988669,
+        "score-precision": 65.8298319327731,
+        "score-recall": 45.55555555555556
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_boats",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_building_buildings",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.833333333333333,
+        "score-precision": 13.333333333333332,
+        "score-recall": 4.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_camping",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_carpentry",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.0,
+        "score-precision": 23.333333333333332,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_climbing",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_communication",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.525974025974023,
+        "score-precision": 53.5,
+        "score-recall": 20.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_construction",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 50.1384403117996,
+        "score-precision": 61.67657342657343,
+        "score-recall": 43.75
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_cooking",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 62.00431958989784,
+        "score-precision": 66.58318077803203,
+        "score-recall": 58.46153846153847
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_cutting",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 63.04329004329004,
+        "score-precision": 83.0,
+        "score-recall": 54.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_decoration",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.705908580397576,
+        "score-precision": 46.32918204205746,
+        "score-recall": 42.11711711711712
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_eating_dessert",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.666666666666664,
+        "score-precision": 40.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_emergencies",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.666666666666664,
+        "score-precision": 66.66666666666666,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_exercising",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.04040404040404,
+        "score-precision": 12.5,
+        "score-recall": 7.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_fishing",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.238095238095234,
+        "score-precision": 50.0,
+        "score-recall": 27.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_food",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.888111888111887,
+        "score-precision": 43.5,
+        "score-recall": 18.214285714285715
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_games",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.7142857142857135,
+        "score-precision": 5.833333333333333,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_gardening",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.333333333333332,
+        "score-precision": 21.666666666666664,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_garnish",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.0,
+        "score-precision": 30.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_heating",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.666666666666664,
+        "score-precision": 60.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_heating_food",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_holding_liquids",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.0,
+        "score-precision": 35.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_holding_things",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.0,
+        "score-precision": 25.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_hunting",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 20.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_insulation",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_killing",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 31.666666666666664,
+        "score-precision": 49.166666666666664,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_leisure",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 20.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_making_paper",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_making_tea",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_offices",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.243344890403716,
+        "score-precision": 33.94444444444444,
+        "score-recall": 23.392857142857142
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_passengers",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 10.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_pies",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_plumbing",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 10.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_privacy",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.0,
+        "score-precision": 75.0,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_protection",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.007267242561362,
+        "score-precision": 38.25,
+        "score-recall": 18.47222222222222
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_recreation",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 60.742063492063494,
+        "score-precision": 77.0,
+        "score-recall": 52.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_serving_food",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.0,
+        "score-precision": 80.0,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_sewing",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_soup",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.849206349206348,
+        "score-precision": 28.333333333333332,
+        "score-recall": 15.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_special_occasions",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.333333333333332,
+        "score-precision": 10.0,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_sports",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.047496621026035,
+        "score-precision": 45.0,
+        "score-recall": 26.111111111111107
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storage",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.13310479173987,
+        "score-precision": 68.57323232323232,
+        "score-recall": 46.28787878787879
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storing_clothing",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storing_food",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_support",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.436507936507937,
+        "score-precision": 15.833333333333332,
+        "score-recall": 8.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_transportation",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 68.03938728274592,
+        "score-precision": 72.72388503309557,
+        "score-recall": 64.44444444444444
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_transporting_liquids",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_travel",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.0,
+        "score-precision": 23.333333333333332,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_war",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_warmth",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.930402930402934,
+        "score-precision": 68.80952380952381,
+        "score-recall": 33.66666666666667
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_weddings",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_baking",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 56.77078712362688,
+        "score-precision": 68.8217787114846,
+        "score-recall": 49.83660130718954
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_bands",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.5,
+        "score-precision": 75.83333333333333,
+        "score-recall": 50.83333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_cooking",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 58.18340162974606,
+        "score-precision": 64.57952865847602,
+        "score-recall": 53.96666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_desserts",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.44876691935515,
+        "score-precision": 66.45238095238095,
+        "score-recall": 42.142857142857146
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_experiments",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.0,
+        "score-precision": 30.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_games",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.119047619047613,
+        "score-precision": 48.33333333333333,
+        "score-recall": 23.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_orchestras",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 71.34126984126983,
+        "score-precision": 92.16666666666666,
+        "score-recall": 62.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_sandwiches",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.738095238095234,
+        "score-precision": 31.666666666666664,
+        "score-recall": 13.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_on_boats",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_on_ships",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 5.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_outdoors",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_with_food",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.465811965811966,
+        "score-precision": 43.33333333333333,
+        "score-recall": 16.19047619047619
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_around_neck",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 20.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_around_waist",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 20.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_men",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.77097902097902,
+        "score-precision": 58.46428571428571,
+        "score-recall": 36.96428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_people",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.333333333333332,
+        "score-precision": 35.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_women",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 68.32623837559878,
+        "score-precision": 71.65834655540539,
+        "score-recall": 65.91666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_formal_occasions",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.0,
+        "score-precision": 50.0,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_keeping_warm",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 57.04761904761904,
+        "score-precision": 85.0,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_protection",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.803030303030305,
+        "score-precision": 25.357142857142854,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_special_occasions",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.666666666666666,
+        "score-precision": 25.0,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_warmth",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.74603174603174,
+        "score-precision": 70.0,
+        "score-recall": 42.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_in_cold_temperatures",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.0,
+        "score-precision": 45.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_indoors",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_feet",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.0,
+        "score-precision": 51.666666666666664,
+        "score-recall": 38.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_hands",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.33333333333333,
+        "score-precision": 40.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_heads",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 67.15800865800865,
+        "score-precision": 74.58333333333333,
+        "score-recall": 63.333333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.33333333333333,
+        "score-precision": 40.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_the_head",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 59.92851592851592,
+        "score-precision": 70.84126984126985,
+        "score-recall": 56.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_the_legs",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.33333333333333,
+        "score-precision": 40.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_over_clothes",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.857142857142854,
+        "score-precision": 69.16666666666666,
+        "score-recall": 48.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_with_skirts",
+        "level": "concept",
+        "model": "deberta-v3-contextual-layers-0-to-4-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    }
+]

@@ -1,0 +1,5332 @@
+[
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_bird",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.27344877344878,
+        "score-precision": 64.16666666666666,
+        "score-recall": 33.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_boat",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.33333333333333,
+        "score-precision": 48.33333333333333,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_carnivore",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 50.01098901098901,
+        "score-precision": 55.97619047619048,
+        "score-recall": 46.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_colour",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.695970695970695,
+        "score-precision": 12.0,
+        "score-recall": 10.555555555555555
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_container",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.035357247104315,
+        "score-precision": 50.15704178862073,
+        "score-recall": 43.61904761904761
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_dessert",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.12071751777634,
+        "score-precision": 48.33333333333333,
+        "score-recall": 42.67857142857143
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_dish",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.89773453240945,
+        "score-precision": 49.699855699855696,
+        "score-recall": 35.72727272727273
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_drink",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.238095238095234,
+        "score-precision": 43.33333333333333,
+        "score-recall": 22.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fashion_accessory",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.83312765665707,
+        "score-precision": 45.107142857142854,
+        "score-recall": 24.76190476190476
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fish",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.0,
+        "score-precision": 13.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_food",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 53.912875540359025,
+        "score-precision": 57.154680989884355,
+        "score-recall": 51.61538461538462
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_footwear",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.444444444444445,
+        "score-precision": 2.8571428571428568,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_fruit",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.004466379853376,
+        "score-precision": 58.848901098901095,
+        "score-recall": 53.75
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_herbivore",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.770495242631466,
+        "score-precision": 35.21520146520147,
+        "score-recall": 25.81818181818182
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_machine",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.61246155421567,
+        "score-precision": 39.02505827505827,
+        "score-recall": 30.71428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_mammal",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 73.94902077291049,
+        "score-precision": 79.03383458646616,
+        "score-recall": 70.55555555555556
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_musical_instrument",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.9875374711288,
+        "score-precision": 71.9514652014652,
+        "score-recall": 49.09090909090909
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_pest",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 15.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_pet",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.2063492063492,
+        "score-precision": 52.33333333333333,
+        "score-recall": 32.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_plant",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.03558309595461,
+        "score-precision": 41.041070041070036,
+        "score-recall": 25.075757575757574
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_predator",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.54958508983277,
+        "score-precision": 59.083333333333336,
+        "score-recall": 45.27777777777778
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_rock",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.0,
+        "score-precision": 15.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_rodent",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_scavenger",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.333333333333332,
+        "score-precision": 13.333333333333332,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_seafood",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.0,
+        "score-precision": 21.666666666666664,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_stick",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.33333333333333,
+        "score-precision": 40.83333333333333,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_tool",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.166398163976005,
+        "score-precision": 48.76221252656262,
+        "score-recall": 44.22348484848485
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_toy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.562271062271062,
+        "score-precision": 22.595238095238095,
+        "score-recall": 14.285714285714283
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_treat",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.72222222222222,
+        "score-precision": 51.83333333333333,
+        "score-recall": 36.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_tube",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_utensil",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.714285714285712,
+        "score-precision": 19.166666666666664,
+        "score-recall": 14.166666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_vegetable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.317042606516296,
+        "score-precision": 59.569264069264065,
+        "score-recall": 46.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_vehicle",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 59.75907988453419,
+        "score-precision": 68.93939393939394,
+        "score-recall": 55.36363636363636
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "a_weapon",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.19469419469419,
+        "score-precision": 53.057359307359306,
+        "score-recall": 44.285714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_animal",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 65.14094139447768,
+        "score-precision": 66.68943556443557,
+        "score-recall": 65.014245014245
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_appliance",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.53196803196803,
+        "score-precision": 55.08730158730159,
+        "score-recall": 42.857142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_evergreen",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.0,
+        "score-precision": 16.666666666666664,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_explosive",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.0,
+        "score-precision": 50.0,
+        "score-recall": 38.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_insect",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.04761904761905,
+        "score-precision": 36.666666666666664,
+        "score-recall": 31.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "an_instrument",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.9875374711288,
+        "score-precision": 71.9514652014652,
+        "score-recall": 49.09090909090909
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_builds_nests",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.666666666666664,
+        "score-precision": 25.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_climbs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 5.833333333333333,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_climbs_trees",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.076923076923077,
+        "score-precision": 24.333333333333332,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.47641247641248,
+        "score-precision": 45.54761904761905,
+        "score-recall": 34.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_fish",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.5,
+        "score-precision": 47.666666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_fish_food",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.5,
+        "score-precision": 47.666666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_grass",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.738095238095234,
+        "score-precision": 44.166666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_hay",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.69047619047619,
+        "score-precision": 46.166666666666664,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_insects",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.943972693972693,
+        "score-precision": 37.992063492063494,
+        "score-recall": 25.71428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_eats_leaves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.0,
+        "score-precision": 13.333333333333332,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_flies",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.68958492487904,
+        "score-precision": 49.535714285714285,
+        "score-recall": 33.888888888888886
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_is_nocturnal",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.879731379731378,
+        "score-precision": 16.0,
+        "score-recall": 12.678571428571427
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_jumps",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_lays_eggs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.95461401343754,
+        "score-precision": 55.15079365079365,
+        "score-recall": 39.46428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_makes_loud_noises",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.357142857142854,
+        "score-precision": 24.166666666666664,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_makes_noises",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.166666666666667,
+        "score-precision": 7.5,
+        "score-recall": 4.523809523809524
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_runs_fast",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.521367521367516,
+        "score-precision": 39.52380952380952,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "beh_-_swims",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.393978193177276,
+        "score-precision": 53.464701964701966,
+        "score-recall": 42.72727272727273
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "clothing",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.96825396825396,
+        "score-precision": 46.08333333333333,
+        "score-recall": 37.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_from_trees",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.333333333333332,
+        "score-precision": 23.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_in_pairs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 10.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "comes_in_rolls",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_colours",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.75968475968476,
+        "score-precision": 33.04639804639804,
+        "score-recall": 20.416666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_designs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.309593914857071,
+        "score-precision": 10.976190476190476,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_sizes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "different_speeds",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.412698412698413,
+        "score-precision": 15.833333333333332,
+        "score-recall": 11.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_as_food",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.333333333333332,
+        "score-precision": 18.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_as_meat",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 33.33333333333333,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_animals",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 8.333333333333332,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_cooking",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.095238095238095,
+        "score-precision": 40.666666666666664,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_by_people",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.0769230769230775,
+        "score-precision": 7.0,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_for_breakfast",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_in_salads",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.5,
+        "score-precision": 25.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_in_summer",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.666666666666666,
+        "score-precision": 17.5,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "eaten_raw",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.40468408819233,
+        "score-precision": 35.274666509960625,
+        "score-recall": 33.25757575757576
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_bathrooms",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.67676767676768,
+        "score-precision": 34.05555555555556,
+        "score-recall": 24.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_bedrooms",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.999999999999998,
+        "score-precision": 12.5,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_buildings",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.85064935064935,
+        "score-precision": 33.69047619047619,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_cars",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.047619047619047,
+        "score-precision": 27.833333333333332,
+        "score-recall": 30.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_forests",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.136363636363637,
+        "score-precision": 17.333333333333332,
+        "score-recall": 14.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_gardens",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.429292929292929,
+        "score-precision": 15.333333333333332,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_kitchens",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.21999767180886,
+        "score-precision": 42.096862288038764,
+        "score-recall": 37.36263736263736
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_oceans",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.26984126984127,
+        "score-precision": 24.333333333333332,
+        "score-recall": 21.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_offices",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.017316017316016,
+        "score-precision": 13.095238095238093,
+        "score-recall": 10.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_parks",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_seas",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.666666666666666,
+        "score-precision": 18.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_in_toolboxes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 2.8571428571428568,
+        "score-precision": 2.5,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "found_outdoors",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_fields",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.0,
+        "score-precision": 28.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_gardens",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.27148281714845,
+        "score-precision": 55.607142857142854,
+        "score-recall": 45.44444444444444
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_the_ground",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.65079365079365,
+        "score-precision": 29.5,
+        "score-recall": 20.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_the_summer",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_tropical_climates",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 18.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_in_warm_climates",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.91841491841492,
+        "score-precision": 17.69047619047619,
+        "score-recall": 14.76190476190476
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_bushes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.0,
+        "score-precision": 20.0,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_plants",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 15.0,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_the_ground",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.564213564213564,
+        "score-precision": 25.095238095238095,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_trees",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.47683310841206,
+        "score-precision": 53.95238095238095,
+        "score-recall": 41.07142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_on_vines",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.15079365079365,
+        "score-precision": 26.944444444444446,
+        "score-recall": 13.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "grows_underground",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.666666666666666,
+        "score-precision": 18.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_arms",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_blades",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.666666666666666,
+        "score-precision": 18.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_handles",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.714285714285715,
+        "score-precision": 30.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_2_prongs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_3_prongs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_3_wheels",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.16233766233766,
+        "score-precision": 47.0,
+        "score-recall": 30.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_4_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.68389597218198,
+        "score-precision": 51.31008976403713,
+        "score-recall": 42.916666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_4_wheels",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.15873015873016,
+        "score-precision": 48.33333333333333,
+        "score-recall": 29.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_6_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.1031746031746,
+        "score-precision": 25.333333333333332,
+        "score-recall": 20.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_8_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.738095238095234,
+        "score-precision": 50.0,
+        "score-recall": 19.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_barrel",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.666666666666664,
+        "score-precision": 35.0,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_beak",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.15584415584415,
+        "score-precision": 71.33333333333334,
+        "score-recall": 37.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_bell",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_blade",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.641858141858144,
+        "score-precision": 26.440476190476186,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_bushy_tail",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.666666666666664,
+        "score-precision": 26.666666666666664,
+        "score-recall": 19.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cap",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.69047619047619,
+        "score-precision": 10.833333333333332,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_clasp",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.69047619047619,
+        "score-precision": 35.0,
+        "score-recall": 20.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_collar",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.75396825396825,
+        "score-precision": 49.0,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cord",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 13.333333333333332,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_cover",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.05982905982906,
+        "score-precision": 15.607142857142856,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_door",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.514957264957264,
+        "score-precision": 22.428571428571427,
+        "score-recall": 13.57142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_face",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.0,
+        "score-precision": 15.833333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_filter",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.769841269841265,
+        "score-precision": 27.07936507936508,
+        "score-recall": 26.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_flat_head",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.333333333333332,
+        "score-precision": 25.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_flat_surface",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.052283481538495,
+        "score-precision": 35.34479599920776,
+        "score-recall": 30.28947368421052
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_frame",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.626307902623692,
+        "score-precision": 11.25,
+        "score-recall": 7.361111111111112
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_green_stem",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hand_grip",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.133040935672515,
+        "score-precision": 9.520202020202019,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_handle",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.130219907633276,
+        "score-precision": 47.80597142034425,
+        "score-recall": 48.86363636363636
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hard_shell",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.867093690623102,
+        "score-precision": 16.41269841269841,
+        "score-recall": 14.464285714285714
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_head",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.60989010989011,
+        "score-precision": 21.26190476190476,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_hood",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.404761904761905,
+        "score-precision": 30.333333333333332,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_knob",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.762626262626263,
+        "score-precision": 18.523809523809526,
+        "score-recall": 19.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_latch",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_lid",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.588769014996224,
+        "score-precision": 44.91670910788558,
+        "score-recall": 37.38095238095238
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_lock",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.388888888888893,
+        "score-precision": 35.33333333333333,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_barrel",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.666666666666664,
+        "score-precision": 35.0,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_handle",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.382395382395382,
+        "score-precision": 12.416666666666666,
+        "score-recall": 13.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_neck",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.523809523809524,
+        "score-precision": 20.833333333333332,
+        "score-recall": 11.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_long_tail",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.75469614901664,
+        "score-precision": 42.42163100057837,
+        "score-recall": 33.419117647058826
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_motor",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.99856880828748,
+        "score-precision": 41.564935064935064,
+        "score-recall": 33.27272727272727
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_mouth",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 8.333333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_mouthpiece",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.936507936507937,
+        "score-precision": 21.5,
+        "score-recall": 14.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_neck",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_nose",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 31.333333333333332,
+        "score-precision": 37.5,
+        "score-recall": 31.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_nozzle",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.88095238095238,
+        "score-precision": 32.023809523809526,
+        "score-recall": 27.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_plug",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_pointed_end",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.741340868027525,
+        "score-precision": 23.69493251846193,
+        "score-recall": 19.679487179487175
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_roof",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 38.37373737373737,
+        "score-precision": 46.83333333333333,
+        "score-recall": 36.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_seat",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.507936507936506,
+        "score-precision": 43.97222222222222,
+        "score-recall": 40.238095238095234
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_shell",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.888888888888886,
+        "score-precision": 49.5,
+        "score-recall": 28.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_skin",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.17707292707293,
+        "score-precision": 57.45238095238095,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_snout",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_spout",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.19047619047619,
+        "score-precision": 38.33333333333333,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_steering_wheel",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.71428571428571,
+        "score-precision": 28.333333333333332,
+        "score-recall": 20.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_stem",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.996444731738848,
+        "score-precision": 33.273809523809526,
+        "score-recall": 24.444444444444443
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_strap",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.19047619047619,
+        "score-precision": 8.333333333333332,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_surface",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_switch",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.666666666666664,
+        "score-precision": 28.333333333333332,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_tail",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.7757979177334,
+        "score-precision": 52.4399635452267,
+        "score-recall": 41.43382352941176
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_temperature_control",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.624098124098126,
+        "score-precision": 46.55555555555556,
+        "score-recall": 40.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_timer",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.38095238095238,
+        "score-precision": 23.19047619047619,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_trigger",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 31.619047619047613,
+        "score-precision": 36.25,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_wooden_handle",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.0,
+        "score-precision": 41.666666666666664,
+        "score-recall": 31.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_a_zipper",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 57.94444444444444,
+        "score-precision": 67.55555555555556,
+        "score-recall": 53.333333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_an_engine",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.137973137973134,
+        "score-precision": 37.9563492063492,
+        "score-recall": 35.476190476190474
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_an_inside",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_antennae",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.07936507936508,
+        "score-precision": 38.666666666666664,
+        "score-recall": 26.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_armrests",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.0,
+        "score-precision": 35.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_bars",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_big_ears",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_blades",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.279942279942283,
+        "score-precision": 40.166666666666664,
+        "score-recall": 24.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_brakes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.154600301659123,
+        "score-precision": 34.70238095238095,
+        "score-recall": 27.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_branches",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.52380952380952,
+        "score-precision": 61.666666666666664,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_bristles",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_buckles",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.69047619047619,
+        "score-precision": 30.0,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_buttons",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.96575049664294,
+        "score-precision": 45.569597069597066,
+        "score-recall": 27.69230769230769
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_clasps",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.826839826839826,
+        "score-precision": 28.333333333333332,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_claws",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.053804382751753,
+        "score-precision": 34.87301587301587,
+        "score-recall": 24.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_doors",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.10966810966811,
+        "score-precision": 46.88888888888889,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_drawers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.83333333333333,
+        "score-precision": 56.0,
+        "score-recall": 32.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_ears",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.0,
+        "score-precision": 23.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_edges",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 2.2222222222222223,
+        "score-precision": 1.6666666666666665,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_engines",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.19047619047619,
+        "score-precision": 9.5,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_eyes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.47252747252747,
+        "score-precision": 12.714285714285714,
+        "score-recall": 12.38095238095238
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_feathers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.53263403263403,
+        "score-precision": 64.71428571428571,
+        "score-recall": 44.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_filling",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.02014652014652,
+        "score-precision": 39.83333333333333,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_fins",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.904761904761905,
+        "score-precision": 45.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_flashing_lights",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.333333333333332,
+        "score-precision": 30.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_flowers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.857142857142857,
+        "score-precision": 8.333333333333332,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_fur",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.08937245755934,
+        "score-precision": 71.92812089870912,
+        "score-recall": 61.625
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_gills",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.55555555555556,
+        "score-precision": 39.76190476190476,
+        "score-recall": 41.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_green_leaves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.0,
+        "score-precision": 4.999999999999999,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hair",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.16300366300366,
+        "score-precision": 33.035714285714285,
+        "score-recall": 30.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_handles",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.807677616501147,
+        "score-precision": 19.405844155844157,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hands",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.0,
+        "score-precision": 20.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hinges",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_holes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.357142857142857,
+        "score-precision": 5.333333333333333,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hooks",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.333333333333332,
+        "score-precision": 15.0,
+        "score-recall": 10.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_hooves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.04761904761905,
+        "score-precision": 74.0,
+        "score-recall": 41.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_horns",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.57936507936508,
+        "score-precision": 38.04761904761905,
+        "score-recall": 26.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_keys",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.88961038961039,
+        "score-precision": 42.26190476190476,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_lace",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_laces",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_large_ears",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_large_eyes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.46825396825397,
+        "score-precision": 23.166666666666664,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_layers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_leaves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.95739937562524,
+        "score-precision": 46.32575757575758,
+        "score-recall": 40.07575757575758
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.921240992407025,
+        "score-precision": 32.54349816849817,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_lenses",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.523809523809526,
+        "score-precision": 29.166666666666664,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_long_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.40148448043185,
+        "score-precision": 23.69047619047619,
+        "score-recall": 17.142857142857142
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_long_sleeves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.523809523809522,
+        "score-precision": 24.166666666666664,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_many_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 20.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_many_seats",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.33977133977133,
+        "score-precision": 43.94047619047619,
+        "score-recall": 40.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_no_sleeves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.89316239316239,
+        "score-precision": 26.083333333333332,
+        "score-recall": 18.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_no_straps",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.951528863293568,
+        "score-precision": 22.166666666666664,
+        "score-recall": 14.523809523809524
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_numbers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 29.22222222222222,
+        "score-precision": 42.58333333333333,
+        "score-recall": 27.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_patterns",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.8208026472765,
+        "score-precision": 28.025156216332686,
+        "score-recall": 28.186813186813186
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_pedals",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.166666666666664,
+        "score-precision": 26.0,
+        "score-recall": 24.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_pockets",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.78434869224343,
+        "score-precision": 52.56818181818181,
+        "score-recall": 48.47222222222222
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_poles",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.333333333333332,
+        "score-precision": 13.333333333333332,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_scales",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.238095238095234,
+        "score-precision": 20.833333333333332,
+        "score-recall": 19.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_seats",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.98412698412698,
+        "score-precision": 58.0,
+        "score-recall": 37.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sections",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_seeds",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 31.265615017937,
+        "score-precision": 36.04509379509379,
+        "score-recall": 29.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sharp_teeth",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.87238930659983,
+        "score-precision": 51.24747474747475,
+        "score-recall": 38.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_shelves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.07142857142857,
+        "score-precision": 50.0,
+        "score-recall": 35.83333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_short_sleeves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.738095238095234,
+        "score-precision": 53.333333333333336,
+        "score-recall": 30.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_skin",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.19658119658119,
+        "score-precision": 54.71428571428571,
+        "score-recall": 38.57142857142857
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_sleeves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.89316239316239,
+        "score-precision": 26.083333333333332,
+        "score-recall": 18.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_smooth_skin",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.72222222222222,
+        "score-precision": 22.0,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_speakers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.83333333333333,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_straps",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.951528863293568,
+        "score-precision": 22.166666666666664,
+        "score-recall": 14.523809523809524
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_strings",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.69047619047619,
+        "score-precision": 25.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_stripes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_teeth",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.82051282051282,
+        "score-precision": 40.75,
+        "score-recall": 30.138888888888886
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_tracks",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.76190476190476,
+        "score-precision": 25.0,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_value",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_valves",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.238095238095234,
+        "score-precision": 23.333333333333332,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_vitamin_C",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.5,
+        "score-precision": 14.333333333333332,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_webbed_feet",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.547619047619047,
+        "score-precision": 16.166666666666664,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wheels",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.88031769441064,
+        "score-precision": 48.58220211161388,
+        "score-recall": 43.02197802197802
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_whiskers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.38095238095238,
+        "score-precision": 16.666666666666664,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_windows",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.23232323232323,
+        "score-precision": 45.904761904761905,
+        "score-recall": 35.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wings",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 50.80716943874838,
+        "score-precision": 66.49242424242424,
+        "score-recall": 45.090909090909086
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_wires",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.857142857142857,
+        "score-precision": 12.5,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "has_zippers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.41791541791541,
+        "score-precision": 68.52380952380952,
+        "score-recall": 49.52380952380952
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "hunted_by_people",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.76190476190476,
+        "score-precision": 30.0,
+        "score-recall": 14.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_dries_quickly",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 8.333333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_flies",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.203185617272304,
+        "score-precision": 56.0,
+        "score-recall": 40.27777777777778
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_floats",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.333333333333332,
+        "score-precision": 25.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_holds_water",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.71428571428571,
+        "score-precision": 33.69047619047619,
+        "score-recall": 29.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_melts",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.190476190476193,
+        "score-precision": 48.33333333333333,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_deep_sounds",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_heat",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 55.030303030303024,
+        "score-precision": 63.55555555555556,
+        "score-recall": 50.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_light",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.41269841269841,
+        "score-precision": 45.666666666666664,
+        "score-recall": 39.166666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_loud_noise",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.857142857142857,
+        "score-precision": 9.999999999999998,
+        "score-recall": 6.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_music",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.0,
+        "score-precision": 38.33333333333333,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_noise",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.228438228438229,
+        "score-precision": 8.761904761904763,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_smoke",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.19047619047619,
+        "score-precision": 15.833333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "inbeh_-_produces_sound",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.32547880396178,
+        "score-precision": 62.4045954045954,
+        "score-recall": 52.222222222222214
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_addictive",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 19.166666666666664,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_adjustable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.67771286048793,
+        "score-precision": 36.715375905983116,
+        "score-recall": 35.45
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_ancient",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_beautiful",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.428571428571427,
+        "score-precision": 26.666666666666664,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_black",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.596832424665998,
+        "score-precision": 19.241865977160096,
+        "score-recall": 18.404761904761905
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_breakable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.111111111111107,
+        "score-precision": 17.857142857142854,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_brown",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.088255006811,
+        "score-precision": 31.71714955991218,
+        "score-recall": 29.445564516129032
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_casual",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 49.15673215673216,
+        "score-precision": 63.5,
+        "score-recall": 44.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_clear",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.12537136066548,
+        "score-precision": 20.666666666666664,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cold",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.07059314954052,
+        "score-precision": 41.893048128342244,
+        "score-recall": 34.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_colourful",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.341342541064357,
+        "score-precision": 22.170920460319877,
+        "score-recall": 20.997536945812808
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_comfortable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.59559996247303,
+        "score-precision": 41.45238095238095,
+        "score-recall": 32.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_common",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_convenient",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.888888888888886,
+        "score-precision": 29.0,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_crunchy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.150956594892524,
+        "score-precision": 22.567071817071817,
+        "score-recall": 17.435897435897438
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_curved",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.950280112044817,
+        "score-precision": 17.480158730158728,
+        "score-recall": 11.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cute",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.2917572623455,
+        "score-precision": 48.33333333333333,
+        "score-recall": 39.285714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_cylindrical",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.025088669347117,
+        "score-precision": 16.029947275599447,
+        "score-recall": 16.52173913043478
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dangerous",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.22908579439158,
+        "score-precision": 40.699007133217656,
+        "score-recall": 32.7
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_decorative",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.06850068234383,
+        "score-precision": 44.6408345101169,
+        "score-recall": 43.97435897435897
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_delicate",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.398268398268396,
+        "score-precision": 23.623015873015873,
+        "score-recall": 18.392857142857142
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dirty",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.333333333333332,
+        "score-precision": 8.333333333333332,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_disposable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.704051623752985,
+        "score-precision": 33.791100192937584,
+        "score-recall": 29.11764705882353
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_domestic",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.0,
+        "score-precision": 16.666666666666664,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dressy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_dried",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.747474747474747,
+        "score-precision": 18.523809523809526,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_durable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.996667381319178,
+        "score-precision": 28.65417527272937,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_edible",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 66.14727949685945,
+        "score-precision": 68.28058606248241,
+        "score-recall": 64.49024822695036
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_electrical",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.958457645414164,
+        "score-precision": 38.115884115884114,
+        "score-recall": 29.571428571428573
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_electronic",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.964816325804364,
+        "score-precision": 52.342302091501175,
+        "score-recall": 44.210526315789465
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_endangered",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.19047619047619,
+        "score-precision": 25.833333333333332,
+        "score-recall": 12.499999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_engraved",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.523809523809526,
+        "score-precision": 27.5,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_expensive",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.70968594043992,
+        "score-precision": 29.155462184873947,
+        "score-recall": 25.65934065934066
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fashionable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.333333333333332,
+        "score-precision": 22.833333333333332,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fast",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.32838621571964,
+        "score-precision": 51.852813852813846,
+        "score-recall": 39.42307692307692
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fat",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.746031746031743,
+        "score-precision": 21.166666666666664,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_flat",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 31.107412501392172,
+        "score-precision": 32.562877412968156,
+        "score-recall": 30.099715099715098
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fluffy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.841991341991342,
+        "score-precision": 16.761904761904763,
+        "score-recall": 7.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_formal",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.64502164502164,
+        "score-precision": 55.28571428571429,
+        "score-recall": 52.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_friendly",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.333333333333332,
+        "score-precision": 31.5,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_fun",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.818181818181818,
+        "score-precision": 21.25,
+        "score-recall": 9.166666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_furry",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.45543345543346,
+        "score-precision": 36.86904761904761,
+        "score-recall": 31.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_gold",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_green",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 31.784672851391512,
+        "score-precision": 35.533502729154904,
+        "score-recall": 29.523809523809526
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_grey",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.521708683473388,
+        "score-precision": 15.178571428571427,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hairy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hand_held",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hard",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.162386862706057,
+        "score-precision": 22.122899159663866,
+        "score-recall": 21.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_harvested",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.666666666666664,
+        "score-precision": 20.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_healthy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.527583527583527,
+        "score-precision": 21.0,
+        "score-recall": 13.095238095238093
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_heavy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.70884758757824,
+        "score-precision": 26.86493946758103,
+        "score-recall": 27.09677419354839
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_high_in_fat",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.857142857142854,
+        "score-precision": 42.5,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hollow",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.532467532467533,
+        "score-precision": 8.095238095238093,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_hot",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.37533544886486,
+        "score-precision": 34.11904761904761,
+        "score-recall": 22.361111111111107
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_inexpensive",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.585718345309138,
+        "score-precision": 8.663059163059163,
+        "score-recall": 7.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_intelligent",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.523809523809526,
+        "score-precision": 50.83333333333333,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_juicy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.30516611011967,
+        "score-precision": 46.613275613275604,
+        "score-recall": 39.46428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_large",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.7452342988736,
+        "score-precision": 27.851204836822824,
+        "score-recall": 29.791666666666668
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_lethal",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.523809523809526,
+        "score-precision": 17.0,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_light_weight",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.675324675324676,
+        "score-precision": 9.761904761904763,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_long",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.649136517595302,
+        "score-precision": 22.26548347964023,
+        "score-recall": 23.15078236130868
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_loud",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.916502486161924,
+        "score-precision": 30.60894660894661,
+        "score-recall": 26.363636363636363
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_male",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.333333333333332,
+        "score-precision": 15.833333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_manual",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.399600056852947,
+        "score-precision": 24.91352004548599,
+        "score-recall": 22.342105263157894
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_mechanical",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.028774190432568,
+        "score-precision": 34.11401098901099,
+        "score-recall": 27.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_melted",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 10.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_messy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_mobile",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 20.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_modern",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_nutritious",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 46.017955565929256,
+        "score-precision": 51.78932178932179,
+        "score-recall": 44.294871794871796
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_open",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_orange",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.08080808080808,
+        "score-precision": 10.666666666666666,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_oval",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 3.4848484848484844,
+        "score-precision": 4.0,
+        "score-recall": 3.095238095238095
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_pink",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.205128205128204,
+        "score-precision": 16.11111111111111,
+        "score-recall": 12.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_poisonous",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.666666666666664,
+        "score-precision": 23.333333333333332,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_popular",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.356643356643357,
+        "score-precision": 13.416666666666666,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_portable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 42.0940645881182,
+        "score-precision": 41.67959206591268,
+        "score-recall": 42.80508474576271
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_powerful",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.34920634920635,
+        "score-precision": 59.83333333333333,
+        "score-recall": 34.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_prickly",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_purple",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.333333333333332,
+        "score-precision": 18.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_rectangular",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.27324112902072,
+        "score-precision": 36.18089490107928,
+        "score-recall": 38.817460317460316
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_red",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.21938641069076,
+        "score-precision": 17.406288156288156,
+        "score-recall": 13.782051282051281
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_rough",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.509477364740526,
+        "score-precision": 32.27777777777778,
+        "score-recall": 27.321428571428573
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_round",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.659912401011162,
+        "score-precision": 29.88585927176043,
+        "score-recall": 31.914893617021278
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_scented",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.29365079365079,
+        "score-precision": 36.666666666666664,
+        "score-recall": 18.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sharp",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.49042374339488,
+        "score-precision": 46.32706766917293,
+        "score-recall": 38.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sharpened",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.071428571428573,
+        "score-precision": 20.333333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_shiny",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.53578610931552,
+        "score-precision": 21.452380952380953,
+        "score-recall": 15.555555555555554
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_short",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.61303716910572,
+        "score-precision": 23.857268411537863,
+        "score-recall": 25.757575757575758
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_silver",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sleek",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slender",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.427350427350428,
+        "score-precision": 18.928571428571427,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slimy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.69047619047619,
+        "score-precision": 13.333333333333332,
+        "score-recall": 6.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_slow",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.555555555555554,
+        "score-precision": 10.0,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_small",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.22955545633266,
+        "score-precision": 47.92471330932433,
+        "score-recall": 48.867689483346446
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_smelly",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.61904761904761,
+        "score-precision": 54.166666666666664,
+        "score-recall": 40.83333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_smooth",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.4575537877745,
+        "score-precision": 22.779059155332497,
+        "score-recall": 23.104575163398692
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_soft",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.129194231015163,
+        "score-precision": 24.382889743333667,
+        "score-recall": 24.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_solid",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.67661750014691,
+        "score-precision": 29.22222222222222,
+        "score-recall": 14.027777777777777
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_square",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.142355500250236,
+        "score-precision": 24.799908424908427,
+        "score-recall": 21.28787878787879
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_sticky",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.73587197116609,
+        "score-precision": 46.21428571428571,
+        "score-recall": 33.92857142857143
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_straight",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.899724802201582,
+        "score-precision": 25.023809523809526,
+        "score-recall": 17.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_stretchy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.715728715728716,
+        "score-precision": 23.5,
+        "score-recall": 18.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_strong",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.702380952380953,
+        "score-precision": 22.1038961038961,
+        "score-recall": 14.444444444444443
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_tall",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.782660978313153,
+        "score-precision": 18.38888888888889,
+        "score-recall": 15.897435897435894
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_thick",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.105577436611917,
+        "score-precision": 26.071303696303698,
+        "score-recall": 21.428571428571427
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_thin",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.8702956704891,
+        "score-precision": 28.797795416086387,
+        "score-recall": 29.485887096774196
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_transparent",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.70062502856621,
+        "score-precision": 39.51967150496562,
+        "score-recall": 32.05882352941177
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_twisted",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.5,
+        "score-precision": 5.333333333333333,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_ugly",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_uncomfortable",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.357142857142857,
+        "score-precision": 5.333333333333333,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_upholstered",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.33333333333333,
+        "score-precision": 38.33333333333333,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_warm",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.53138528138528,
+        "score-precision": 37.55555555555556,
+        "score-recall": 27.857142857142854
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_waterproof",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.29594820384294,
+        "score-precision": 24.52777777777778,
+        "score-recall": 19.77777777777778
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_white",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.071760401051694,
+        "score-precision": 26.073853013171895,
+        "score-recall": 26.538461538461537
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_wild",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.19047619047619,
+        "score-precision": 25.666666666666664,
+        "score-recall": 16.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "is_yellow",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.553403271023408,
+        "score-precision": 15.377969252969255,
+        "score-recall": 14.166666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_Africa",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.666666666666666,
+        "score-precision": 13.333333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_a_colony",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 2.8571428571428568,
+        "score-precision": 2.5,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_cold_climates",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 15.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_deserts",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 2.8571428571428568,
+        "score-precision": 2.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_forests",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.65151515151515,
+        "score-precision": 22.5,
+        "score-recall": 14.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_herds",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.333333333333332,
+        "score-precision": 25.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_hot_climates",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.999999999999998,
+        "score-precision": 13.333333333333332,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_nests",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_oceans",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.095238095238095,
+        "score-precision": 64.61904761904762,
+        "score-recall": 50.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_saltwater",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.57142857142857,
+        "score-precision": 22.5,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_trees",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.508658008658008,
+        "score-precision": 12.261904761904763,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_warm_climates",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.333333333333332,
+        "score-precision": 15.0,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_in_water",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.808446455505276,
+        "score-precision": 57.61111111111111,
+        "score-recall": 36.25
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_near_water",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.222222222222223,
+        "score-precision": 11.666666666666666,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_on_farms",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 43.238095238095234,
+        "score-precision": 45.83333333333333,
+        "score-recall": 43.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "lives_on_water",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.2020202020202,
+        "score-precision": 62.107142857142854,
+        "score-recall": 38.75
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_brass",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.857142857142854,
+        "score-precision": 39.166666666666664,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_cardboard",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 8.333333333333332,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_ceramic",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.34698634698635,
+        "score-precision": 23.0,
+        "score-recall": 12.857142857142856
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_concrete",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.333333333333332,
+        "score-precision": 10.833333333333332,
+        "score-recall": 16.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_cotton",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.409812604051396,
+        "score-precision": 47.48412698412698,
+        "score-recall": 32.11111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_different_fabrics",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.57142857142857,
+        "score-precision": 36.5,
+        "score-recall": 33.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_different_materials",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.118022252195146,
+        "score-precision": 35.00362115169403,
+        "score-recall": 37.96296296296296
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_fiberglass",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.214285714285714,
+        "score-precision": 19.166666666666664,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_fibreglass",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.88095238095238,
+        "score-precision": 24.166666666666664,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_flour",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 41.07967032967033,
+        "score-precision": 45.21933621933622,
+        "score-recall": 41.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_glass",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.6230972351662,
+        "score-precision": 43.77287573108006,
+        "score-recall": 38.4640522875817
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_gold",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_leather",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.365053330357057,
+        "score-precision": 19.978991596638657,
+        "score-recall": 13.560606060606059
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_material",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.0,
+        "score-precision": 13.333333333333332,
+        "score-recall": 13.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_metal",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 63.74396313946348,
+        "score-precision": 63.95738429322497,
+        "score-recall": 63.61002462697378
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_nylon",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.936507936507937,
+        "score-precision": 20.333333333333332,
+        "score-recall": 9.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_paper",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.25102699158427,
+        "score-precision": 37.47284878863826,
+        "score-recall": 30.909090909090914
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_plastic",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 53.132426502343286,
+        "score-precision": 52.327168336617866,
+        "score-recall": 54.1
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_porcelain",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 6.666666666666666,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_rubber",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.205504703788456,
+        "score-precision": 12.677350427350428,
+        "score-recall": 9.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_silk",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.897546897546897,
+        "score-precision": 11.166666666666666,
+        "score-recall": 8.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_silver",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_stainless_steel",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 13.333333333333332,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_steel",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.107142857142858,
+        "score-precision": 9.69047619047619,
+        "score-recall": 7.619047619047618
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_stones",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.580808080808076,
+        "score-precision": 37.69047619047619,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wax",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.666666666666664,
+        "score-precision": 31.666666666666664,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wire",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 4.0,
+        "score-precision": 5.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wood",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.007551197755845,
+        "score-precision": 48.69168060709089,
+        "score-recall": 48.23529411764706
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_of_wool",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.079365079365079,
+        "score-precision": 12.833333333333332,
+        "score-recall": 11.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_with_flour",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.523809523809526,
+        "score-precision": 32.5,
+        "score-recall": 26.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "made_with_sugar",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "part_of_a_tree",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 5.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_balance",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.857142857142858,
+        "score-precision": 12.5,
+        "score-recall": 9.999999999999998
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_cleaning",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.993006993006993,
+        "score-precision": 8.666666666666666,
+        "score-recall": 5.952380952380952
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_drivers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.666666666666666,
+        "score-precision": 18.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_electricity",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 34.738692192365356,
+        "score-precision": 38.012348762348765,
+        "score-recall": 32.820512820512825
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_fuel",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.01010101010101,
+        "score-precision": 39.33333333333333,
+        "score-recall": 25.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_gasoline",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 40.559163059163055,
+        "score-precision": 59.166666666666664,
+        "score-recall": 32.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_skill",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.23702638950317,
+        "score-precision": 33.98268398268398,
+        "score-recall": 23.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "requires_water",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.714285714285714,
+        "score-precision": 19.583333333333332,
+        "score-recall": 12.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "symbol_of_power",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.666666666666666,
+        "score-precision": 13.333333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "tastes_good",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.532467532467532,
+        "score-precision": 27.619047619047613,
+        "score-recall": 19.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "tastes_sweet",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 36.16494616494616,
+        "score-precision": 38.38095238095238,
+        "score-recall": 36.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_restaurants",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 15.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_special_occasions",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.206349206349206,
+        "score-precision": 25.0,
+        "score-recall": 16.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_at_weddings",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_babies",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.333333333333333,
+        "score-precision": 6.666666666666666,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_children",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 20.45038295038295,
+        "score-precision": 23.238095238095237,
+        "score-recall": 19.523809523809526
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_cutting",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.69047619047619,
+        "score-precision": 27.5,
+        "score-recall": 14.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_schools",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 15.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_the_military",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 17.333333333333332,
+        "score-precision": 17.333333333333332,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_throwing",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.0,
+        "score-precision": 17.5,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_by_women",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.15873015873016,
+        "score-precision": 39.0,
+        "score-recall": 30.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_art",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.079365079365078,
+        "score-precision": 7.0,
+        "score-recall": 7.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_babies",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 7.857142857142857,
+        "score-precision": 12.0,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_baking",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.81278609646731,
+        "score-precision": 46.83919240673178,
+        "score-recall": 43.92156862745098
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_boats",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 5.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_building_buildings",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 2.5,
+        "score-precision": 3.333333333333333,
+        "score-recall": 2.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_camping",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_carpentry",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 3.333333333333333,
+        "score-precision": 2.5,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_climbing",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.0,
+        "score-precision": 13.333333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_communication",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.954933954933956,
+        "score-precision": 33.666666666666664,
+        "score-recall": 27.333333333333336
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_construction",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.41089837941896,
+        "score-precision": 32.17092874445815,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_cooking",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 45.549665096279966,
+        "score-precision": 49.163493913493916,
+        "score-recall": 42.863247863247864
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_cutting",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.904761904761905,
+        "score-precision": 57.28571428571429,
+        "score-recall": 42.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_decoration",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.5953336445239,
+        "score-precision": 36.01685843067512,
+        "score-recall": 35.4954954954955
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_eating_dessert",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.666666666666664,
+        "score-precision": 25.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_emergencies",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 25.690476190476193,
+        "score-precision": 37.83333333333333,
+        "score-recall": 22.499999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_exercising",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.737096237096235,
+        "score-precision": 21.22222222222222,
+        "score-recall": 18.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_fishing",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.357142857142854,
+        "score-precision": 31.833333333333332,
+        "score-recall": 22.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_food",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 16.44047619047619,
+        "score-precision": 22.678571428571427,
+        "score-recall": 14.107142857142856
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_games",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.743589743589743,
+        "score-precision": 13.666666666666666,
+        "score-recall": 14.166666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_gardening",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 2.2222222222222223,
+        "score-precision": 1.6666666666666665,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_garnish",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 15.0,
+        "score-recall": 6.666666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_heating",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.015873015873012,
+        "score-precision": 32.5,
+        "score-recall": 28.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_heating_food",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 9.0,
+        "score-precision": 8.333333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_holding_liquids",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 21.333333333333332,
+        "score-precision": 28.333333333333332,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_holding_things",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 19.444444444444446,
+        "score-precision": 27.333333333333332,
+        "score-recall": 19.999999999999996
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_hunting",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 2.8571428571428568,
+        "score-precision": 2.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_insulation",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_killing",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.33333333333333,
+        "score-precision": 50.83333333333333,
+        "score-recall": 36.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_leisure",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.357142857142854,
+        "score-precision": 31.166666666666664,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_making_paper",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_making_tea",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_offices",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 13.270487682252389,
+        "score-precision": 14.663059163059163,
+        "score-recall": 12.678571428571427
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_passengers",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.333333333333332,
+        "score-precision": 35.0,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_pies",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.333333333333332,
+        "score-precision": 33.33333333333333,
+        "score-recall": 18.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_plumbing",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 5.0,
+        "score-recall": 5.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_privacy",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.666666666666664,
+        "score-precision": 69.52380952380952,
+        "score-recall": 49.99999999999999
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_protection",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.33382140735082,
+        "score-precision": 18.273310023310025,
+        "score-recall": 19.583333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_recreation",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 33.88514461115081,
+        "score-precision": 42.43398268398268,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_serving_food",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 32.21428571428571,
+        "score-precision": 45.83333333333333,
+        "score-recall": 27.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_sewing",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_soup",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.61111111111111,
+        "score-precision": 21.25,
+        "score-recall": 17.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_special_occasions",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 14.3015873015873,
+        "score-precision": 13.166666666666666,
+        "score-recall": 15.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_sports",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 26.747737556561088,
+        "score-precision": 32.83477633477633,
+        "score-recall": 24.305555555555554
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storage",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 51.0794566047763,
+        "score-precision": 57.289377289377285,
+        "score-recall": 47.12121212121212
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storing_clothing",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_storing_food",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 10.0,
+        "score-recall": 3.333333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_support",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.6991341991342,
+        "score-precision": 37.0,
+        "score-recall": 14.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_transportation",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 52.571145648528514,
+        "score-precision": 56.996545483502004,
+        "score-recall": 51.11111111111111
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_transporting_liquids",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.999999999999996,
+        "score-precision": 35.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_travel",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 8.0,
+        "score-precision": 8.333333333333332,
+        "score-recall": 8.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_war",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 12.333333333333332,
+        "score-precision": 10.833333333333332,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_warmth",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.7005772005772,
+        "score-precision": 53.95238095238095,
+        "score-recall": 40.33333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_for_weddings",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_baking",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 50.39215629709451,
+        "score-precision": 52.960459639521424,
+        "score-recall": 49.54248366013072
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_bands",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 30.793650793650794,
+        "score-precision": 36.66666666666667,
+        "score-recall": 30.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_cooking",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 48.90779748014169,
+        "score-precision": 54.32950052930871,
+        "score-recall": 45.56666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_desserts",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 37.541301835419475,
+        "score-precision": 44.301587301587304,
+        "score-recall": 34.285714285714285
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_experiments",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 11.857142857142858,
+        "score-precision": 18.333333333333332,
+        "score-recall": 9.166666666666666
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_games",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 23.484848484848484,
+        "score-precision": 25.952380952380953,
+        "score-recall": 22.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_orchestras",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.56349206349206,
+        "score-precision": 38.166666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_in_sandwiches",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.41219891219891,
+        "score-precision": 24.845238095238095,
+        "score-recall": 22.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_on_boats",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 6.666666666666666,
+        "score-precision": 5.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_on_ships",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_outdoors",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "used_with_food",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.070929070929072,
+        "score-precision": 27.38095238095238,
+        "score-recall": 19.523809523809526
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_around_neck",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.934065934065934,
+        "score-precision": 39.5,
+        "score-recall": 23.333333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_around_waist",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.666666666666666,
+        "score-precision": 13.333333333333332,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_men",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 27.75777490483373,
+        "score-precision": 32.08730158730158,
+        "score-recall": 25.71428571428571
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_people",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 28.666666666666664,
+        "score-precision": 25.0,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_by_women",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 54.18504553988424,
+        "score-precision": 63.905303030303024,
+        "score-recall": 49.416666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_formal_occasions",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.555555555555555,
+        "score-precision": 6.666666666666666,
+        "score-recall": 5.833333333333333
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_keeping_warm",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 39.71428571428571,
+        "score-precision": 56.666666666666664,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_protection",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 18.66883116883117,
+        "score-precision": 17.619047619047617,
+        "score-recall": 20.833333333333332
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_special_occasions",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_for_warmth",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 44.30952380952381,
+        "score-precision": 60.83333333333333,
+        "score-recall": 38.5
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_in_cold_temperatures",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.0,
+        "score-precision": 28.333333333333332,
+        "score-recall": 21.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_indoors",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_feet",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 15.833333333333332,
+        "score-precision": 24.5,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_hands",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 10.0,
+        "score-precision": 10.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_heads",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 24.954545454545453,
+        "score-precision": 27.523809523809526,
+        "score-recall": 23.666666666666664
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_the_head",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 22.66025641025641,
+        "score-precision": 30.857142857142854,
+        "score-recall": 22.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_on_the_legs",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 5.0,
+        "score-precision": 3.333333333333333,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_over_clothes",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 35.15873015873016,
+        "score-precision": 49.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "mcrae-mapped",
+        "feature": "worn_with_skirts",
+        "level": "concept",
+        "model": "gpt2-contextual-last-word",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    }
+]

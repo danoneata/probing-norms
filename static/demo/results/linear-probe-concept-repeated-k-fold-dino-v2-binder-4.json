@@ -1,0 +1,372 @@
+[
+    {
+        "norms-type": "binder-4",
+        "feature": "Attention",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 24.944444444444446,
+        "score-precision": 46.0,
+        "score-recall": 20.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Audition",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 65.92329239388064,
+        "score-precision": 66.87301587301587,
+        "score-recall": 66.42857142857142
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Benefit",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 0.0,
+        "score-precision": 0.0,
+        "score-recall": 0.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Biomotion",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 93.18338360985419,
+        "score-precision": 92.16666666666666,
+        "score-recall": 94.82142857142857
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Body",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 80.28571428571429,
+        "score-precision": 90.0,
+        "score-recall": 80.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Color",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 65.2603120993214,
+        "score-precision": 68.91544566544567,
+        "score-recall": 64.66666666666666
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Communication",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 35.0,
+        "score-precision": 45.0,
+        "score-recall": 30.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Face",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 73.33333333333333,
+        "score-precision": 70.0,
+        "score-recall": 80.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Fast",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 52.44660894660895,
+        "score-precision": 62.45238095238095,
+        "score-recall": 48.33333333333333
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Happy",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 48.33333333333333,
+        "score-precision": 55.0,
+        "score-recall": 45.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Harm",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 13.333333333333332,
+        "score-precision": 20.0,
+        "score-recall": 10.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Head",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 65.19480519480518,
+        "score-precision": 78.0079365079365,
+        "score-recall": 59.04761904761905
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "High",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 25.666666666666664,
+        "score-precision": 28.333333333333332,
+        "score-recall": 25.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Large",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 76.4126984126984,
+        "score-precision": 86.33333333333333,
+        "score-recall": 75.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Loud",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 45.61904761904761,
+        "score-precision": 65.0,
+        "score-recall": 37.5
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "LowerLimb",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 40.0,
+        "score-precision": 40.0,
+        "score-recall": 40.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Motion",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 69.07387057387056,
+        "score-precision": 69.3452380952381,
+        "score-recall": 75.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Music",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 90.47619047619047,
+        "score-precision": 100.0,
+        "score-recall": 85.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Near",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 77.76612276612278,
+        "score-precision": 84.4047619047619,
+        "score-recall": 75.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Needs",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 55.95238095238095,
+        "score-precision": 62.5,
+        "score-recall": 58.33333333333333
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Path",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 31.666666666666664,
+        "score-precision": 30.0,
+        "score-recall": 35.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Pattern",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 14.666666666666666,
+        "score-precision": 15.0,
+        "score-recall": 15.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Pleasant",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 30.923187923187925,
+        "score-precision": 38.92063492063492,
+        "score-recall": 29.333333333333332
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Practice",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 81.5258516513534,
+        "score-precision": 81.93912949795302,
+        "score-recall": 82.85714285714286
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Scene",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 30.523809523809526,
+        "score-precision": 39.166666666666664,
+        "score-recall": 26.666666666666664
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Shape",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 94.69184361668903,
+        "score-precision": 93.85175690543007,
+        "score-recall": 95.8119658119658
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Small",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 56.02564102564103,
+        "score-precision": 75.47619047619048,
+        "score-recall": 51.666666666666664
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Smell",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 68.38095238095238,
+        "score-precision": 80.66666666666666,
+        "score-recall": 66.5
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Sound",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 66.02106227106228,
+        "score-precision": 72.63095238095238,
+        "score-recall": 62.5
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Speech",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 73.33333333333333,
+        "score-precision": 70.0,
+        "score-recall": 80.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Taste",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 86.48992673992674,
+        "score-precision": 89.22619047619048,
+        "score-recall": 85.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Temperature",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 50.0,
+        "score-precision": 55.0,
+        "score-recall": 50.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Texture",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 15.238095238095235,
+        "score-precision": 20.0,
+        "score-recall": 12.5
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Touch",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 54.91414141414141,
+        "score-precision": 65.13888888888889,
+        "score-recall": 53.095238095238095
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "UpperLimb",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 80.66967002725517,
+        "score-precision": 84.43759018759019,
+        "score-recall": 80.0
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Vision",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 97.99387760968085,
+        "score-precision": 96.7304412309974,
+        "score-recall": 99.32183908045977
+    },
+    {
+        "norms-type": "binder-4",
+        "feature": "Weight",
+        "level": "concept",
+        "model": "dino-v2",
+        "split": "repeated-k-fold",
+        "score-f1": 68.41425884904146,
+        "score-precision": 66.9484126984127,
+        "score-recall": 71.41025641025642
+    }
+]

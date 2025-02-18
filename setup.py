@@ -24,5 +24,7 @@ setup(
         "seaborn",
         "numpy",
         "pandas",
+        "importlib_resources",
+        "pillow",
     ],
 )

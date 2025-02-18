@@ -1,7 +1,7 @@
 import altair as alt
+import numpy as np
 import pandas as pd
 import streamlit as st
-import numpy as np
 
 from toolz import partition_all
 
@@ -142,12 +142,23 @@ def show_results(norms_type, norms_loader, models, feature, filter, sorter, num_
         IMG_URL = "https://things-initiative.org/uploads/THINGS/images_resized/{}/{}"
         return IMG_URL.format(concept, image_names[concept])
 
-    feature_to_concepts, _, _ = norms_loader()
+    feature_to_concepts, _, features_selected = norms_loader()
     concepts = norms_loader.load_concepts()
 
-    preds = np.load("static/demo/predictions-{}.npy".format(norms_type))
-    df = df[df["feature"] == feature]
-    df = df.pivot(index="i", columns="model", values="pred")
+    # FIXME These results were generated with get_results.py aggregate_predictions_for_demo
+    # I had to use NumPy to be able to push those to GitHub and use them on Streamlit cloud.
+    # Is there a better solution? Maybe host the files on GitHub releases?
+    # Currently, the format is a bit too brittle.
+    preds = np.load("static/demo/predictions-{}.npz".format(norms_type))
+    preds = preds["results"]
+    i_feature = features_selected.index(feature)
+    i_models = (
+        MAIN_TABLE_MODELS.index(models[0]),
+        MAIN_TABLE_MODELS.index(models[1]),
+    )
+    preds = preds[i_feature, i_models]
+    df = pd.DataFrame(preds.T, columns=models)
+    df["i"] = range(len(df))
     df["concept"] = df.index.map(lambda i: concepts[i])
     df["is-positive"] = df["concept"].map(lambda c: c in feature_to_concepts[feature])
 

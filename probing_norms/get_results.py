@@ -1318,6 +1318,52 @@ def get_norm_completeness():
     do1("mcrae-mapped", True)
 
 
+def aggregate_predictions_for_demo(norms_type):
+    CLASSIFIER_TYPE = "linear-probe"
+    EMBEDDINGS_LEVEL = "concept"
+    SPLIT_TYPE = "repeated-k-fold"
+    DATASET_NAME = "things"
+
+    norms_loader = NORMS_LOADERS[norms_type]()
+    _, feature_to_id, features_selected = norms_loader()
+    concepts = norms_loader.load_concepts()
+    num_concepts = len(concepts)
+
+    def get_path_results(model, feature):
+        feature_id = feature_to_id[feature]
+        path = OUTPUT_PATH.format(
+            CLASSIFIER_TYPE,
+            EMBEDDINGS_LEVEL,
+            SPLIT_TYPE,
+            DATASET_NAME,
+            model,
+            norms_loader.get_suffix(),
+            feature_id,
+        )
+        return path + ".json"
+
+    def get_five_folds(results):
+        data = [datum for fold in range(5) for datum in results[fold]["preds"]]
+        data = sorted(data, key=lambda datum: datum["i"])
+        indices = [datum["i"] for datum in data]
+        assert indices == list(range(num_concepts))
+        preds = [datum["pred"] for datum in data]
+        return preds
+
+    results = [
+        [
+            get_five_folds(read_json(get_path_results(model, feature)))
+            for model in MAIN_TABLE_MODELS
+        ]
+        for feature in features_selected
+    ]
+
+    path = f"static/demo/predictions-{norms_type}.npz"
+    results_np = np.array(results)
+    results_np = results_np.astype(np.float32)
+    np.savez(path, results=results_np)
+
+
 FUNCS = {
     "levels-and-splits": get_results_levels_and_splits,
     "per-metacategory": partial(
@@ -1342,6 +1388,7 @@ FUNCS = {
     "results-for-stella": prepare_results_for_stella,
     "classifiers-for-stella": prepare_classifiers_for_stella,
     "get-norm-completeness": get_norm_completeness,
+    "aggregate-predictions-for-demo": aggregate_predictions_for_demo,
 }
 
 

@@ -5,6 +5,7 @@ from functools import partial
 from itertools import groupby
 from pathlib import Path
 
+import importlib_resources
 import pandas as pd
 
 from PIL import Image
@@ -15,6 +16,8 @@ from toolz import first, identity, second
 
 from probing_norms.utils import read_file, reverse_dict
 
+
+DIR_LOCAL = importlib_resources.files("probing_norms") / ".."
 
 DIR_GPT3_NORMS = "/home/doneata/work/semantic-features-gpt-3"
 DIR_GPT3_NORMS = os.environ.get("DIR_GPT3_NORMS", DIR_GPT3_NORMS)
@@ -61,7 +64,9 @@ def load_gpt3_feature_norms(
 
 def load_mcrae_feature_norms():
     cols = ["Concept", "Feature"]
-    df = pd.read_csv("data/norms/mcrae/CONCS_FEATS_concstats_brm.txt", sep="\t")
+    path = "data/norms/mcrae/CONCS_FEATS_concstats_brm.txt"
+    path = DIR_LOCAL / path
+    df = pd.read_csv(str(path), sep="\t")
     df = df[cols]
     df = df.drop_duplicates()
     concept_feature = df.values.tolist()
@@ -69,7 +74,9 @@ def load_mcrae_feature_norms():
 
 
 def filter_by_things_concepts(df):
-    concepts_things = read_file("data/concepts-things.txt")
+    path = "data/concepts-things.txt"
+    path = DIR_LOCAL / path
+    concepts_things = read_file(path)
     supercats = [
         "living object",
         "artifact",
@@ -86,7 +93,9 @@ def filter_by_things_concepts(df):
 
 
 def load_binder_dense():
-    df = pd.read_excel("data/binder-norms.xlsx")
+    path = "data/binder-norms.xlsx"
+    path = DIR_LOCAL / path
+    df = pd.read_excel(path)
     df = filter_by_things_concepts(df)
 
     cols = df.columns[5: 70]

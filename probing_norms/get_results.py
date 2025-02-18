@@ -26,6 +26,7 @@ from sklearn.metrics import (
 )
 from tqdm import tqdm
 
+from probing_norms.data import DIR_LOCAL
 from probing_norms.utils import cache_df, cache_json, read_json, read_file, multimap
 from probing_norms.predict import NORMS_LOADERS, FEATURE_TYPE_TO_MODALITY
 
@@ -308,7 +309,9 @@ def get_score_random_features(norms_type):
 
 def load_taxonomy_mcrae():
     cols = ["Feature", "BR_Label"]
-    df = pd.read_csv("data/norms/mcrae/CONCS_FEATS_concstats_brm.txt", sep="\t")
+    path = "data/norms/mcrae/CONCS_FEATS_concstats_brm.txt"
+    path = DIR_LOCAL / path
+    df = pd.read_csv(path, sep="\t")
     df = df[cols]
     df = df.drop_duplicates()
     feature_metacategory = df.values.tolist()
@@ -348,7 +351,9 @@ def load_taxonomy_binder():
         metacategory, feature, *_ = line.split(" ")
         return feature, metacategory
 
-    return dict(read_file("data/binder-types.txt", parse_line))
+    path = "data/binder-types.txt"
+    path = DIR_LOCAL / path
+    return dict(read_file(path, parse_line))
 
 
 def load_taxonomy_binder_2():

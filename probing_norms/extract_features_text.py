@@ -18,7 +18,7 @@ from toolz import compose
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel, CLIPModel
 
-from probing_norms.data import DATASETS, load_things_concept_mapping
+from probing_norms.data import DATASETS, DIR_LOCAL, load_things_concept_mapping
 from probing_norms.utils import implies, read_file
 
 
@@ -172,6 +172,7 @@ class HFModelContextual(HFModel):
             "gpt4o_50_constrained_concept",
         }
         path = f"data/things/{type_}_context_sentences.jsonl"
+        path = DIR_LOCAL / path
         return dict(read_file(path, parse_line))
 
     def generate_word_variants(self, word):

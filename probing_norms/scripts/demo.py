@@ -11,9 +11,6 @@ from probing_norms.get_results import (
     METACATEGORY_NAMES,
     NORMS_NAMES,
     NORMS_LOADERS,
-    OUTPUT_PATH,
-    get_score_random_features,
-    load_result_features,
     load_taxonomy_mcrae,
     load_taxonomy_binder,
 )
@@ -36,15 +33,27 @@ st.set_page_config(layout="wide")
 
 
 def load_data(model1, model2, norms_type):
+    def load_score_random_features(norms_type):
+        path = f"static/results/score-random-{norms_type}.json"
+        return read_json(path)
+
+    def load_result_features(model):
+        path = "static/results/{}-{}-{}-{}-{}.json".format(
+            CLASSIFIER_TYPE,
+            EMBEDDINGS_LEVEL,
+            SPLIT_TYPE,
+            model,
+            norms_type,
+        )
+        return read_json(path)
+
     taxonomy = LOAD_TAXONOMY[NORMS_NAMES[norms_type]]()
-    scores_random = get_score_random_features(norms_type)
+    scores_random = load_score_random_features(norms_type)
 
     results = [
         r
         for m in [model1, model2]
-        for r in load_result_features(
-            CLASSIFIER_TYPE, EMBEDDINGS_LEVEL, SPLIT_TYPE, m, norms_type
-        )
+        for r in load_result_features(m)
     ]
 
     for r in results:
@@ -132,7 +141,7 @@ class SortByDifference(Sorter):
 def show_results(norms_type, norms_loader, models, feature, filter, sorter, num_to_show):
     image_names = dict(
         read_file(
-            "data/things/image-names.txt",
+            "static/things-image-names.txt",
             lambda line: line.split(),
         )
     )
@@ -149,7 +158,7 @@ def show_results(norms_type, norms_loader, models, feature, filter, sorter, num_
     # I had to use NumPy to be able to push those to GitHub and use them on Streamlit cloud.
     # Is there a better solution? Maybe host the files on GitHub releases?
     # Currently, the format is a bit too brittle.
-    preds = np.load("static/demo/predictions-{}.npz".format(norms_type))
+    preds = np.load("static/predictions-{}.npz".format(norms_type))
     preds = preds["results"]
     i_feature = features_selected.index(feature)
     i_models = (

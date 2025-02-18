@@ -24,6 +24,7 @@ from tqdm import tqdm
 from probing_norms.constants import NUM_MIN_CONCEPTS
 from probing_norms.data import (
     DATASETS,
+    DIR_LOCAL,
     filter_by_things_concepts,
     load_features_metadata,
     load_binder_feature_norms,
@@ -236,7 +237,9 @@ class NormsLoader:
         raise NotImplementedError
 
     def load_concepts(self):
-        return read_file("data/concepts-things.txt")
+        path = "data/concepts-things.txt"
+        path = DIR_LOCAL / path
+        return read_file(path)
 
 
 class GPT3NormsLoader(NormsLoader):
@@ -283,7 +286,9 @@ class McRaeMappedNormsLoader(NormsLoader):
         self.model = "mcrae-to-gpt35"
 
     def __call__(self, *, num_min_concepts=10):
-        with open("data/mcrae++.json".format(self.model)) as f:
+        path = "data/mcrae++.json"
+        path = DIR_LOCAL / path
+        with open(path) as f:
             data = json.load(f)
 
         feature_to_concepts = {d["norm"]: d["concepts"] for d in data}
@@ -312,7 +317,9 @@ class BinderNormsLoader(NormsLoader):
             assert False
 
     def load_concepts(self):
-        df = pd.read_excel("data/binder-norms.xlsx")
+        path = "data/binder-norms.xlsx"
+        path = DIR_LOCAL / path
+        df = pd.read_excel(path)
         df = filter_by_things_concepts(df)
         return df["Word"].tolist()
 

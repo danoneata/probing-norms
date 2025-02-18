@@ -347,6 +347,7 @@ def load_taxonomy_binder():
     def parse_line(line):
         metacategory, feature, *_ = line.split(" ")
         return feature, metacategory
+
     return dict(read_file("data/binder-types.txt", parse_line))
 
 
@@ -554,7 +555,15 @@ def get_results_per_metacategory_binder():
         r["metacategory"] = BINDER_METACATEGORIES_2[taxonomy[r["feature"]]]
         r["score-f1-selectivity"] = r["score-f1"] - scores_random[r["feature"]]
 
-    order_metacategory = ["Sensory", "Motor", "Space", "Time", "Social", "Emotion", "Drive"]
+    order_metacategory = [
+        "Sensory",
+        "Motor",
+        "Space",
+        "Time",
+        "Social",
+        "Emotion",
+        "Drive",
+    ]
     fig = plot_results_per_metacategory(results, models, order_metacategory)
     fig.savefig("output/plots/per-metacategory-binder.pdf", bbox_inches="tight")
 
@@ -621,10 +630,7 @@ def get_results_binder_norms():
         ["Space", "Time", "Social", "Emotion", "Drive"],
     ]
 
-    rows_sizes = [
-        [counts_taxonomy2[elem] for elem in row]
-        for row in rows
-    ]
+    rows_sizes = [[counts_taxonomy2[elem] for elem in row] for row in rows]
 
     st.write(df)
 
@@ -649,7 +655,7 @@ def get_results_binder_norms():
         # ax.set_xticklabels([])
 
     def annotate_ax(ax):
-        ax.text(0.5, 0.5, "ax%d" % (i+1), va="center", ha="center")
+        ax.text(0.5, 0.5, "ax%d" % (i + 1), va="center", ha="center")
         ax.tick_params(labelbottom=False, labelleft=False)
 
     sns.set(style="whitegrid", font="Arial")
@@ -660,7 +666,7 @@ def get_results_binder_norms():
         s = 0
         for j, elem in enumerate(row):
             e = s + rows_sizes[i][j]
-            fig.add_subplot(gs[i, s: e])
+            fig.add_subplot(gs[i, s:e])
             s = e
 
     i = 0
@@ -812,7 +818,9 @@ def get_results_all_one_norm(feature):
         if result["feature"] == feature
     ]
     for r in results:
-        r["score-f1-selectivity"] = r["score-f1"] - feature_to_random_score[r["feature"]]
+        r["score-f1-selectivity"] = (
+            r["score-f1"] - feature_to_random_score[r["feature"]]
+        )
     df = pd.DataFrame(results)
     df = df.pivot_table(index="model", columns="feature", values="score-f1-selectivity")
     df = df.reindex(MAIN_TABLE_MODELS)
@@ -1016,7 +1024,7 @@ def compare_two_models_scatterplot_2():
     sns.move_legend(axs[0], "lower left", bbox_to_anchor=(0, 1), ncol=5, title="")
     st.pyplot(fig)
     fig.savefig(
-        f"output/plots/scatterplot-model-comparison.pdf", 
+        f"output/plots/scatterplot-model-comparison.pdf",
         bbox_inches="tight",
     )
 
@@ -1290,16 +1298,24 @@ def get_norm_completeness():
             features = features_selected
         else:
             features = feature_to_concepts.keys()
-        num_norms = len(features) 
-        num_norms_with_n_concepts = sum(1 for f in features if len(feature_to_concepts[f]) >= 10)
+        num_norms = len(features)
+        num_norms_with_n_concepts = sum(
+            1 for f in features if len(feature_to_concepts[f]) >= 10
+        )
         use_selected_str = "✓" if use_selected else "✗"
-        print("{:10s} {:s} → {:5d} ({:.1f}%)".format(NAMES[norm_type], use_selected_str, num_norms_with_n_concepts, 100 * num_norms_with_n_concepts / num_norms))
+        print(
+            "{:10s} {:s} → {:5d} ({:.1f}%)".format(
+                NAMES[norm_type],
+                use_selected_str,
+                num_norms_with_n_concepts,
+                100 * num_norms_with_n_concepts / num_norms,
+            )
+        )
 
     do1("mcrae", False)
     do1("generated-gpt35", False)
     do1("mcrae-mapped", False)
     do1("mcrae-mapped", True)
-
 
 
 FUNCS = {

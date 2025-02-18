@@ -17,7 +17,8 @@ from toolz import first, identity, second
 from probing_norms.utils import read_file, reverse_dict
 
 
-DIR_LOCAL = importlib_resources.files("probing_norms") / ".."
+# DIR_LOCAL = importlib_resources.files("probing_norms") / ".."
+DIR_LOCAL = Path(".")
 
 DIR_GPT3_NORMS = "/home/doneata/work/semantic-features-gpt-3"
 DIR_GPT3_NORMS = os.environ.get("DIR_GPT3_NORMS", DIR_GPT3_NORMS)

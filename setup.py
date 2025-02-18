@@ -8,6 +8,7 @@ setup(
     author_email="dan.oneata@gmail.com",
     description="Understanding deep learning models by probing feature norms",
     packages=find_packages(),
+    # package_data={"probing_norms": ["data/*"]},
     install_requires=[
         "black",
         "click",
@@ -26,5 +27,6 @@ setup(
         "pandas",
         "importlib_resources",
         "pillow",
+        "openpyxl",
     ],
 )

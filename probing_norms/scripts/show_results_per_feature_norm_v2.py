@@ -32,16 +32,18 @@ def main():
         "clip-word",
     ]
 
-    norms_type = "mcrae-mapped"
+    norms_type = "binder-median"
     norms_loader = NORMS_LOADERS[norms_type]()
     feature_to_concepts, feature_to_id, features_selected = norms_loader()
 
-    num_concepts_total = len(norms_loader.load_concepts())
+    concepts = norms_loader.load_concepts()
+    num_concepts_total = len(concepts)
     labels = np.arange(num_concepts_total)
     taxonomy = load_taxonomy_mcrae()
 
     with st.sidebar:
         feature = st.selectbox("Feature norm:", features_selected)
+        sort_by = st.selectbox("Sort by:", ["concept name", "concept label"] + ["score {}".format(m) for m in MODELS], index=2)
 
     def evaluate(results):
         def eval1(data):
@@ -83,7 +85,7 @@ def main():
         for datum in get_five_folds(results):
             i = datum["i"]
             true[i] = datum["true"]
-            pred[i] = datum["pred"] > 0.5
+            pred[i] = datum["pred"] 
         return true, pred
 
     def get_tp_fp_fn(true, pred):
@@ -99,22 +101,56 @@ def main():
             "fn": mapc(fn),
         }
 
+    def get_image_path(concept):
+        return DIR_THINGS / "object_images_CC0" / (concept + ".jpg")
+
     results = {model: read_json(get_path(model)) for model in MODELS}
     scores = {m: evaluate(r) for m, r in results.items()}
-    results_tp_fp_fn = {
-        m: get_tp_fp_fn(*prepare_results(r)) for m, r in results.items()
-    }
+    results_2 = {m: prepare_results(r) for m, r in results.items()}
+    # results_tp_fp_fn = {
+    #     m: get_tp_fp_fn(*prepare_results(r)) for m, r in results.items()
+    # }
 
     num_models = len(MODELS)
     num_categories = 3
     table = [st.columns(num_models) for _ in range(1 + num_categories)]
     table = list(zip(*table))
 
-    for i, model in enumerate(MODELS):
-        table[i][0].markdown("## {}".format(model))
-        for j, category in enumerate(["tp", "fp", "fn"]):
-            table[i][j + 1].markdown("### {}".format(category))
-            table[i][j + 1].markdown(", ".join(results_tp_fp_fn[model][category]))
+    # for i, model in enumerate(MODELS):
+    #     table[i][0].markdown("## {}".format(model))
+    #     for j, category in enumerate(["tp", "fp", "fn"]):
+    #         table[i][j + 1].markdown("### {}".format(category))
+    #         table[i][j + 1].markdown(", ".join(results_tp_fp_fn[model][category]))
+
+    def sort_func(concept):
+        if sort_by == "concept name":
+            return concept
+        elif sort_by == "concept label":
+            return concept not in feature_to_concepts[feature]
+        else:
+            _, model = sort_by.split()
+            return -results_2[model][1][concepts.index(concept)]
+
+    concepts_order = sorted(concepts, key=sort_func)
+
+    for i, concept in enumerate(concepts_order):
+        cols = st.columns(1 + num_models)
+        label_str = "+" if concept in feature_to_concepts[feature] else "-"
+        c = concepts.index(concept)
+        cols[0].markdown("#{} · {} · {}".format(i, concept, label_str))
+        cols[0].image(str(get_image_path(concept)))
+        for i in range(num_models):
+            model = MODELS[i]
+            model_name = FEATURE_NAMES[model]
+            true, pred = results_2[model]
+            t = true[c]
+            p = pred[c]
+            b = p >= 0.5
+            # pred_str = "+" if p else "-"
+            is_correct_str = "✓" if t == b else "✗"
+            cols[i + 1].markdown("{} · pred: {:.1f} · is correct: {}".format(model_name, p, is_correct_str))
+
+    return 
 
     predicted_concepts = [
         concept
@@ -123,9 +159,6 @@ def main():
         for concept in results_tp_fp_fn[model][category]
     ]
     predicted_concepts = sorted(set(predicted_concepts))
-
-    def get_image_path(concept):
-        return DIR_THINGS / "object_images_CC0" / (concept + ".jpg")
 
     def get_pred_type(result, concept):
         if concept in result["tp"]:
@@ -139,19 +172,21 @@ def main():
 
     st.markdown("---")
 
-    # cols = st.columns(1 + num_models)
-    # cols[0].markdown("## Concept")
-    # for i in range(num_models):
-    #     model = MODELS[i]
-    #     model_name = FEATURE_NAMES[model]
-    #     cols[i + 1].markdown("## {} ({:.1f})".format(model_name, scores[model]))
+    cols = st.columns(1 + num_models)
+    cols[0].markdown("## Concept")
+    for i in range(num_models):
+        model = MODELS[i]
+        model_name = FEATURE_NAMES[model]
+        cols[i + 1].markdown("## {} ({:.1f})".format(model_name, scores[model]))
 
-    # for c in predicted_concepts:
-    #     cols = st.columns(1 + num_models)
-    #     cols[0].image(str(get_image_path(c)))
-    #     cols[0].markdown("{}".format(c))
-    #     for i in range(num_models):
-    #         cols[i + 1].markdown(get_pred_type(results_tp_fp_fn[MODELS[i]], c))
+    for c in predicted_concepts:
+        cols = st.columns(1 + num_models)
+        cols[0].image(str(get_image_path(c)))
+        cols[0].markdown("{}".format(c))
+        for i in range(num_models):
+            cols[i + 1].markdown(get_pred_type(results_tp_fp_fn[MODELS[i]], c))
+
+    return
 
     r = [
         {

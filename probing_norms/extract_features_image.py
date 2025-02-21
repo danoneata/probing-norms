@@ -1,4 +1,5 @@
 import pdb
+import requests
 
 from functools import partial
 from pathlib import Path
@@ -24,6 +25,8 @@ from transformers.models.siglip import SiglipVisionModel
 from torch.utils.data import DataLoader
 
 import torchvision.transforms as T
+
+from open_clip import create_model_from_pretrained
 
 from probing_norms.data import DATASETS
 
@@ -79,6 +82,24 @@ class CLIP(nn.Module):
 
     def forward(self, x):
         return self.model.get_image_features(x)
+
+
+class OpenCLIP(nn.Module):
+    def __init__(self, name):
+        super(OpenCLIP, self).__init__()
+        assert name == "hf-hub:apple/DFN2B-CLIP-ViT-L-14"
+        model, processor = create_model_from_pretrained(name)
+        self.model = model.eval()
+        self.transform = processor
+
+        name_short = name.split(":")[1]
+        URL = "https://huggingface.co/{}/resolve/main/config.json".format(name_short)
+        config = requests.get(URL)
+        config = config.json()
+        self.feature_dim = config["projection_dim"]
+
+    def forward(self, x):
+        return self.model.encode_image(x)
 
 
 class SigLIP(nn.Module):
@@ -193,6 +214,7 @@ FEATURE_EXTRACTORS = {
     "vit-mae-large": VITMAE,
     # Image-text models
     "clip": CLIP,
+    "clip-dfn2b": partial(OpenCLIP, name="hf-hub:apple/DFN2B-CLIP-ViT-L-14"),
     "siglip-224": SigLIP,
     "pali-gemma-224": PaliGemma,
     # Supervised models

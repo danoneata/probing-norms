@@ -28,5 +28,6 @@ setup(
         "importlib_resources",
         "pillow",
         "openpyxl",
+        "open_clip_torch",
     ],
 )

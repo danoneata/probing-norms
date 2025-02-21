@@ -68,7 +68,6 @@ def normalize_norm(text):
 def prepare_mcrae_feature_list(num_min_concepts=5):
     concept_feature = load_mcrae_feature_norms_grouped()
     feature_concept = [(f, c) for c, f in concept_feature]
-    pdb.set_trace()
     feature_to_concepts = multimap(feature_concept)
     feature_to_concepts = {
         f: cs for f, cs in feature_to_concepts.items() if len(cs) >= num_min_concepts

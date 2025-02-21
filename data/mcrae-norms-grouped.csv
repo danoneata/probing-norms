@@ -1,0 +1,282 @@
+norm,norm (language),num. concepts
+a_bird,a bird,39
+a_building,a building,6
+a_carnivore,a carnivore,11
+a_cat,a cat,5
+a_container,a container,5
+a_fish,a fish,16
+a_food,a food,9
+a_fruit,a fruit,29
+a_gun,a gun,6
+a_herbivore,a herbivore,5
+a_house,a house,6
+a_mammal,a mammal,42
+a_musical_instrument,a musical instrument,18
+a_pet,a pet,11
+a_predator,a predator,9
+a_reptile,a reptile,8
+a_rodent,a rodent,5
+a_scavenger,a scavenger,5
+a_tool,a tool,18
+a_toy,a toy,5
+a_tree,a tree,5
+a_utensil,a utensil,12
+a_vegetable,a vegetable,28
+a_vehicle,a vehicle,10
+a_weapon,a weapon,29
+an_animal,an animal,99
+an_appliance,an appliance,10
+an_insect,an insect,12
+beh_-_builds_nests,animate entity that builds nests,10
+beh_-_cannot_fly,animate entity that cannot fly,7
+beh_-_chirps,animate entity that chirps,6
+beh_-_crawls,animate entity that crawls,5
+beh_-_eats,animate entity that eats,39
+beh_-_eats_fish,animate entity that eats fish,7
+beh_-_eats_garbage,animate entity that eats garbage,5
+beh_-_eats_grass,animate entity that eats grass,7
+beh_-_eats_insects,animate entity that eats insects,5
+beh_-_flies,animate entity that flies,46
+beh_-_hunts,animate entity that hunts,5
+beh_-_jumps,animate entity that jumps,5
+beh_-_lays_eggs,animate entity that lays eggs,32
+beh_-_migrates,animate entity that migrates,5
+beh_-_runs,animate entity that runs,5
+beh_-_sings,animate entity that sings,11
+beh_-_swims,animate entity that swims,33
+beh_-_travels_in_herds,animate entity that travels in herds,5
+bought/sold_in_stores,bought/sold in stores,5
+clothing,clothing,34
+comes_in_pairs,comes in pairs,7
+different_colours,different colours,58
+different_sizes,different sizes,19
+eaten_as_meat,eaten as meat,6
+eaten_by_baking,eaten by baking,6
+eaten_by_cooking,eaten by cooking,15
+eaten_in_pies,eaten in pies,5
+eaten_in_salads,eaten in salads,13
+eaten_in_soups,eaten in soups,5
+eaten_in_summer,eaten in summer,5
+found_in_bathrooms,found in bathrooms,10
+found_in_bedrooms,found in bedrooms,5
+found_in_houses,found in houses,11
+found_in_kitchens,found in kitchens,32
+found_on_walls,found on walls,7
+furniture,furniture,11
+grows_in_forests,grows in forests,5
+grows_in_gardens,grows in gardens,18
+grows_in_the_ground,grows in the ground,8
+grows_on_trees,grows on trees,19
+has_2_wheels,has 2 wheels,5
+has_4_legs,has 4 legs,49
+has_4_wheels,has 4 wheels,11
+has_a_beak,has a beak,38
+has_a_blade,has a blade,6
+has_a_door,has a door,5
+has_a_handle,has a handle,42
+has_a_head,has a head,7
+has_a_lid,has a lid,6
+has_a_long_neck,has a long neck,5
+has_a_long_tail,has a long tail,6
+has_a_neck,has a neck,5
+has_a_pit,has a pit,6
+has_a_pointed_end,has a pointed end,11
+has_a_roof,has a roof,7
+has_a_seat,has a seat,7
+has_a_shell,has a shell,10
+has_a_skin,has a skin,19
+has_a_tail,has a tail,39
+has_a_trigger,has a trigger,5
+has_a_wooden_handle,has a wooden handle,7
+has_a_zipper,has a zipper,7
+has_an_engine,has an engine,10
+has_an_inside,has an inside,11
+has_blades,has blades,5
+has_buttons,has buttons,13
+has_claws,has claws,10
+has_doors,has doors,15
+has_drawers,has drawers,5
+has_ears,has ears,5
+has_eyes,has eyes,16
+has_feathers,has feathers,38
+has_feet,has feet,10
+has_fins,has fins,11
+has_fur,has fur,22
+has_gills,has gills,9
+has_hair,has hair,9
+has_handles,has handles,7
+has_holes,has holes,6
+has_hooves,has hooves,9
+has_horns,has horns,6
+has_keys,has keys,7
+has_leaves,has leaves,15
+has_legs,has legs,44
+has_long_legs,has long legs,6
+has_numbers,has numbers,5
+has_patterns,has patterns,5
+has_peel,has peel,6
+has_pockets,has pockets,6
+has_prongs,has prongs,5
+has_scales,has scales,10
+has_seats,has seats,5
+has_seeds,has seeds,21
+has_shelves,has shelves,6
+has_sleeves,has sleeves,6
+has_strings,has strings,9
+has_teeth,has teeth,14
+has_webbed_feet,has webbed feet,6
+has_wheels,has wheels,23
+has_whiskers,has whiskers,8
+has_windows,has windows,9
+has_wings,has wings,44
+hunted_by_people,hunted by people,27
+inbeh_-_fires,inanimate object that fires,5
+inbeh_-_floats,inanimate object that floats,7
+inbeh_-_produces_music,inanimate object that produces music,13
+inbeh_-_produces_noise,inanimate object that produces noise,7
+is_beautiful,is beautiful,6
+is_black,is black,50
+is_blue,is blue,6
+is_breakable,is breakable,10
+is_brown,is brown,54
+is_citrus,is citrus,5
+is_cold,is cold,6
+is_colourful,is colourful,19
+is_comfortable,is comfortable,15
+is_crunchy,is crunchy,11
+is_cute,is cute,9
+is_dangerous,is dangerous,37
+is_decorative,is decorative,8
+is_dirty,is dirty,10
+is_domestic,is domestic,5
+is_edible,is edible,78
+is_electrical,is electrical,22
+is_endangered,is endangered,5
+is_expensive,is expensive,22
+is_fast,is fast,33
+is_flat,is flat,10
+is_fun,is fun,7
+is_furry,is furry,20
+is_gold,is gold,7
+is_green,is green,47
+is_grey,is grey,13
+is_hand_held,is hand held,7
+is_hard,is hard,22
+is_heavy,is heavy,27
+is_juicy,is juicy,21
+is_knitted,is knitted,5
+is_large,is large,106
+is_long,is long,81
+is_loud,is loud,34
+is_nutritious,is nutritious,15
+is_orange,is orange,15
+is_pink,is pink,5
+is_pretty,is pretty,7
+is_purple,is purple,5
+is_rectangular,is rectangular,10
+is_red,is red,26
+is_round,is round,76
+is_sharp,is sharp,18
+is_shiny,is shiny,15
+is_silver,is silver,8
+is_slimy,is slimy,10
+is_slow,is slow,7
+is_small,is small,121
+is_smelly,is smelly,16
+is_smooth,is smooth,8
+is_soft,is soft,27
+is_square,is square,6
+is_strong,is strong,8
+is_tall,is tall,12
+is_thin,is thin,16
+is_transparent,is transparent,6
+is_ugly,is ugly,10
+is_useful,is useful,6
+is_warm,is warm,14
+is_white,is white,51
+is_white_inside,is white inside,5
+is_yellow,is yellow,27
+lives_in_Africa,lives in Africa,7
+lives_in_deserts,lives in deserts,6
+lives_in_forests,lives in forests,9
+lives_in_ground,lives in ground,5
+lives_in_jungles,lives in jungles,7
+lives_in_oceans,lives in oceans,10
+lives_in_trees,lives in trees,6
+lives_in_water,lives in water,32
+lives_in_wilderness,lives in wilderness,9
+lives_in_zoos,lives in zoos,9
+lives_on_farms,lives on farms,12
+made_of_brass,made of brass,5
+made_of_brick,made of brick,5
+made_of_ceramic,made of ceramic,7
+made_of_cotton,made of cotton,12
+made_of_different_materials,made of different materials,6
+made_of_glass,made of glass,14
+made_of_gold,made of gold,6
+made_of_leather,made of leather,13
+made_of_material,made of material,18
+made_of_metal,made of metal,133
+made_of_paper,made of paper,10
+made_of_plastic,made of plastic,51
+made_of_porcelain,made of porcelain,6
+made_of_rubber,made of rubber,7
+made_of_silk,made of silk,6
+made_of_silver,made of silver,7
+made_of_steel,made of steel,6
+made_of_wood,made of wood,80
+made_of_wool,made of wool,9
+requires_drivers,requires drivers,5
+requires_gasoline,requires gasoline,6
+tastes_good,tastes good,33
+tastes_sour,tastes sour,8
+tastes_sweet,tastes sweet,24
+used_by_blowing_air_through,used by blowing air through,7
+used_by_children,used by children,13
+used_by_people,used by people,10
+used_by_riding,used by riding,7
+used_by_shooting,used by shooting,5
+used_by_sitting_on,used by sitting on,8
+used_by_the_military,used by the military,6
+used_by_the_police,used by the police,7
+used_by_throwing,used by throwing,7
+used_by_turning,used by turning,5
+used_for_cargo,used for cargo,5
+used_for_carpentry,used for carpentry,8
+used_for_carrying_things,used for carrying things,9
+used_for_cleaning,used for cleaning,5
+used_for_construction,used for construction,16
+used_for_cooking,used for cooking,13
+used_for_cutting,used for cutting,9
+used_for_eating,used for eating,5
+used_for_fishing,used for fishing,5
+used_for_food,used for food,7
+used_for_holding_things,used for holding things,14
+used_for_holding_things_together,used for holding things together,11
+used_for_holding_water,used for holding water,5
+used_for_hunting,used for hunting,8
+used_for_juice,used for juice,7
+used_for_keeping_out_light/sun,used for keeping out light/sun,6
+used_for_killing,used for killing,19
+used_for_moving_things,used for moving things,5
+used_for_music,used for music,6
+used_for_passengers,used for passengers,10
+used_for_playing,used for playing,5
+used_for_protection,used for protection,9
+used_for_sleeping,used for sleeping,5
+used_for_sports,used for sports,7
+used_for_storage,used for storage,18
+used_for_transportation,used for transportation,33
+used_for_war,used for war,12
+used_in_bands,used in bands,9
+used_in_circuses,used in circuses,5
+used_in_orchestras,used in orchestras,6
+used_on_water,used on water,7
+worn_around_neck,worn around neck,6
+worn_by_men,worn by men,6
+worn_by_women,worn by women,18
+worn_for_covering_body,worn for covering body,8
+worn_for_protection,worn for protection,8
+worn_for_wamth,worn for wamth,17
+worn_in_winter,worn in winter,8
+worn_on_feet,worn on feet,6

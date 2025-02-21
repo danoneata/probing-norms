@@ -144,7 +144,7 @@ used_at_weddings,bouquet,used_for_weddings,0.96,"cathedral, chapel, church",n,,
 has_lace,camisole,has_laces,0.96,"boots, football, shoes",n,,
 used_by_hitting_balls,racquet,used_for_hitting_balls,0.96,bat_(baseball),y,used_for_hitting_balls,
 used_by_pulling,"cart, sleigh, wagon",used_for_pulling,0.96,"horse, pliers, rope",n,,
-eaten_by_stuffing,turkey,eaten_with_stuffing,0.96,turkey,y,eaten_with_turkey,eaten_by_stuffing is strange english
+eaten_by_stuffing,turkey,eaten_with_stuffing,0.96,turkey,y,eaten_with_stuffing,eaten_by_stuffing is strange english
 worn_as_necklaces,pearl,worn_on_necklaces,0.96,emerald,y,worn_on/as_necklaces,
 used_by_carving,pumpkin,used_for_carving,0.97,chisel,n,,
 used_by_sealing,envelope,used_for_sealing,0.97,"cap_(bottle), cork",n,,

@@ -21,7 +21,7 @@ def load_mapping_features():
     }
 
     # https://docs.google.com/spreadsheets/d/1xDXnQIwfngg4QGdUoYSQq5qSi95ImP1xtgz01X0UsKQ/edit?gid=1000224099#gid=1000224099
-    df = pd.read_csv("data/mcrae-norms-grouped.csv")
+    df = pd.read_csv("data/mcrae-norms-grouped-input.csv")
     idxs = df["merge to"].notnull()
     df = df[idxs]
     mapping2 = dict(df[["norm", "merge to"]].values)
@@ -30,8 +30,8 @@ def load_mapping_features():
     mapping = {**mapping1, **mapping2, **mapping3}
     mapping = {k: v for k, v in mapping.items() if k != v}
 
-    for k, v in mapping.items():
-        print("{:12s} → {}".format(k, v))
+    # for k, v in mapping.items():
+    #     print("{:12s} → {}".format(k, v))
 
     return mapping
 
@@ -39,7 +39,8 @@ def load_mapping_features():
 def load_mcrae_feature_norms_grouped():
     mapping = load_mapping_features()
     concept_feature = load_mcrae_feature_norms()
-    return [(c, mapping.get(f, f)) for c, f in concept_feature]
+    concept_feature_new = [(c, mapping.get(f, f)) for c, f in concept_feature]
+    return sorted(set(concept_feature_new))
 
 
 def normalize_norm(text):
@@ -67,6 +68,7 @@ def normalize_norm(text):
 def prepare_mcrae_feature_list(num_min_concepts=5):
     concept_feature = load_mcrae_feature_norms_grouped()
     feature_concept = [(f, c) for c, f in concept_feature]
+    pdb.set_trace()
     feature_to_concepts = multimap(feature_concept)
     feature_to_concepts = {
         f: cs for f, cs in feature_to_concepts.items() if len(cs) >= num_min_concepts
@@ -83,4 +85,5 @@ def prepare_mcrae_feature_list(num_min_concepts=5):
     df.to_csv("data/mcrae-norms-grouped.csv", index=False)
 
 
-prepare_mcrae_feature_list(5)
+if __name__ == "__main__":
+    prepare_mcrae_feature_list(5)

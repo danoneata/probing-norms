@@ -116,9 +116,7 @@ has_numbers,has numbers,5
 has_patterns,has patterns,5
 has_peel,has peel,6
 has_pockets,has pockets,6
-has_prongs,has prongs,5
 has_scales,has scales,10
-has_seats,has seats,5
 has_seeds,has seeds,21
 has_shelves,has shelves,6
 has_sleeves,has sleeves,6
@@ -224,7 +222,7 @@ made_of_rubber,made of rubber,7
 made_of_silk,made of silk,6
 made_of_silver,made of silver,7
 made_of_steel,made of steel,6
-made_of_wood,made of wood,80
+made_of_wood,made of wood,79
 made_of_wool,made of wool,9
 requires_drivers,requires drivers,5
 requires_gasoline,requires gasoline,6
@@ -237,7 +235,7 @@ used_by_people,used by people,10
 used_by_riding,used by riding,7
 used_by_shooting,used by shooting,5
 used_by_sitting_on,used by sitting on,8
-used_by_the_military,used by the military,6
+used_by_the_military,used by the military,5
 used_by_the_police,used by the police,7
 used_by_throwing,used by throwing,7
 used_by_turning,used by turning,5
@@ -245,18 +243,17 @@ used_for_cargo,used for cargo,5
 used_for_carpentry,used for carpentry,8
 used_for_carrying_things,used for carrying things,9
 used_for_cleaning,used for cleaning,5
-used_for_construction,used for construction,16
+used_for_construction,used for construction,12
 used_for_cooking,used for cooking,13
 used_for_cutting,used for cutting,9
 used_for_eating,used for eating,5
 used_for_fishing,used for fishing,5
 used_for_food,used for food,7
 used_for_holding_things,used for holding things,14
-used_for_holding_things_together,used for holding things together,11
+used_for_holding_things_together,used for holding things together,8
 used_for_holding_water,used for holding water,5
 used_for_hunting,used for hunting,8
 used_for_juice,used for juice,7
-used_for_keeping_out_light/sun,used for keeping out light/sun,6
 used_for_killing,used for killing,19
 used_for_moving_things,used for moving things,5
 used_for_music,used for music,6

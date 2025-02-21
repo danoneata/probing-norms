@@ -1,0 +1,65 @@
+Vision Vision something that you can easily see
+Vision Bright visually light or bright
+Vision Dark visually dark
+Vision Color having a characteristic or defining colour
+Vision Pattern having a characteristic or defining visual texture or surface pattern
+Vision Large large in size
+Vision Small small in size
+Vision Motion showing a lot of visually observable movement
+Vision Biomotion showing movement like that of a living thing
+Vision Fast showing visible movement that is fast
+Vision Slow showing visible movement that is slow
+Vision Shape having a characteristic or defining visual shape or form
+Vision Complexity visually complex
+Vision Face having a human or human-like face
+Vision Body having human or human-like body parts
+Somatic Touch something that you could easily recognize by touch
+Somatic Temperature hot or cold to the touch
+Somatic Texture having a smooth or rough texture to the touch
+Somatic Weight light or heavy in weight
+Somatic Pain associated with pain or physical discomfort
+Audition Audition something that you can easily hear
+Audition Loud making a loud sound
+Audition Low having a low-pitched sound
+Audition High having a high-pitched sound
+Audition Sound having a characteristic or recognizable sound or sounds
+Audition Music making a musical sound
+Audition Speech someone or something that talks
+Gustation Taste having a characteristic or defining taste
+Olfaction Smell having a characteristic or defining smell or smells
+Motor Head associated with actions using the face, mouth, or tongue
+Motor UpperLimb associated with actions using the arm, hand, or fingers
+Motor LowerLimb associated with actions using the leg or foot
+Motor Practice a physical object YOU have personal experience using
+Spatial Landmark having a fixed location, as on a map
+Spatial Path showing changes in location along a particular direction or path
+Spatial Scene bringing to mind a particular setting or physical location
+Spatial Near often physically near to you (within easy reach) in everyday life
+Spatial Toward associated with movement toward or into you
+Spatial Away associated with movement away from or out of you
+Spatial Number associated with a specific number or amount
+Temporal Time an event or occurrence that occurs at a typical or predictable time
+Temporal Duration an event that has a predictable duration, whether short or long
+Temporal Long an event that lasts for a long period of time
+Temporal Short an event that lasts for a short period of time
+Causal Caused caused by some clear preceding event, action, or situation
+Causal Consequential likely to have consequences (cause other things to happen)
+Social Social an activity or event that involves an interaction between people
+Social Human having human or human-like intentions, plans, or goals
+Social Communication a thing or action that people use to communicate
+Social Self related to your own view of yourself, a part of YOUR self-image
+Cognition Cognition a form of mental activity or a function of the mind
+Emotion Benefit someone or something that could help or benefit you or others
+Emotion Harm someone or something that could cause harm to you or others
+Emotion Pleasant someone or something that you find pleasant
+Emotion Unpleasant someone or something that you find unpleasant
+Emotion Happy someone or something that makes you feel happy
+Emotion Sad someone or something that makes you feel sad
+Emotion Angry someone or something that makes you feel angry
+Emotion Disgusted someone or something that makes you feel disgusted
+Emotion Fearful someone or something that makes you feel afraid
+Emotion Surprised someone or something that makes you feel surprised
+Drive Drive someone or something that motivates you to do something
+Drive Needs someone or something that would be hard for you to live without
+Attention Attention someone or something that grabs your attention
+Attention Arousal someone or something that makes you feel alert, activated, excited, or keyed up in either a positive or negative way

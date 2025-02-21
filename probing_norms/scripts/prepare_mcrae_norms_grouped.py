@@ -48,7 +48,7 @@ def normalize_norm(text):
         prefix, text = text.split(MCRAE_SEP)
         assert prefix in MCRAE_PREFIXES, prefix
         if prefix == "beh":
-            text = "animate entity that " + text
+            text = "living being that " + text
         elif prefix == "inbeh":
             text = "inanimate object that " + text
         elif prefix == "eg":
@@ -58,8 +58,8 @@ def normalize_norm(text):
         else:
             pass
 
-    # if text.startswith("a_") or text.startswith("an_"):
-    #     text = "is_" + text
+    if text.startswith("a_") or text.startswith("an_"):
+        text = "is_" + text
 
     text = text.replace("_", " ").strip()
     return text

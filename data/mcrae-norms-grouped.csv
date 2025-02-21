@@ -1,50 +1,50 @@
 norm,norm (language),num. concepts
-a_bird,a bird,39
-a_building,a building,6
-a_carnivore,a carnivore,11
-a_cat,a cat,5
-a_container,a container,5
-a_fish,a fish,16
-a_food,a food,9
-a_fruit,a fruit,29
-a_gun,a gun,6
-a_herbivore,a herbivore,5
-a_house,a house,6
-a_mammal,a mammal,42
-a_musical_instrument,a musical instrument,18
-a_pet,a pet,11
-a_predator,a predator,9
-a_reptile,a reptile,8
-a_rodent,a rodent,5
-a_scavenger,a scavenger,5
-a_tool,a tool,18
-a_toy,a toy,5
-a_tree,a tree,5
-a_utensil,a utensil,12
-a_vegetable,a vegetable,28
-a_vehicle,a vehicle,10
-a_weapon,a weapon,29
-an_animal,an animal,99
-an_appliance,an appliance,10
-an_insect,an insect,12
-beh_-_builds_nests,animate entity that builds nests,10
-beh_-_cannot_fly,animate entity that cannot fly,7
-beh_-_chirps,animate entity that chirps,6
-beh_-_crawls,animate entity that crawls,5
-beh_-_eats,animate entity that eats,39
-beh_-_eats_fish,animate entity that eats fish,7
-beh_-_eats_garbage,animate entity that eats garbage,5
-beh_-_eats_grass,animate entity that eats grass,7
-beh_-_eats_insects,animate entity that eats insects,5
-beh_-_flies,animate entity that flies,46
-beh_-_hunts,animate entity that hunts,5
-beh_-_jumps,animate entity that jumps,5
-beh_-_lays_eggs,animate entity that lays eggs,32
-beh_-_migrates,animate entity that migrates,5
-beh_-_runs,animate entity that runs,5
-beh_-_sings,animate entity that sings,11
-beh_-_swims,animate entity that swims,33
-beh_-_travels_in_herds,animate entity that travels in herds,5
+a_bird,is a bird,39
+a_building,is a building,6
+a_carnivore,is a carnivore,11
+a_cat,is a cat,5
+a_container,is a container,5
+a_fish,is a fish,16
+a_food,is a food,9
+a_fruit,is a fruit,29
+a_gun,is a gun,6
+a_herbivore,is a herbivore,5
+a_house,is a house,6
+a_mammal,is a mammal,42
+a_musical_instrument,is a musical instrument,18
+a_pet,is a pet,11
+a_predator,is a predator,9
+a_reptile,is a reptile,8
+a_rodent,is a rodent,5
+a_scavenger,is a scavenger,5
+a_tool,is a tool,18
+a_toy,is a toy,5
+a_tree,is a tree,5
+a_utensil,is a utensil,12
+a_vegetable,is a vegetable,28
+a_vehicle,is a vehicle,10
+a_weapon,is a weapon,29
+an_animal,is an animal,99
+an_appliance,is an appliance,10
+an_insect,is an insect,12
+beh_-_builds_nests,living being that builds nests,10
+beh_-_cannot_fly,living being that cannot fly,7
+beh_-_chirps,living being that chirps,6
+beh_-_crawls,living being that crawls,5
+beh_-_eats,living being that eats,39
+beh_-_eats_fish,living being that eats fish,7
+beh_-_eats_garbage,living being that eats garbage,5
+beh_-_eats_grass,living being that eats grass,7
+beh_-_eats_insects,living being that eats insects,5
+beh_-_flies,living being that flies,46
+beh_-_hunts,living being that hunts,5
+beh_-_jumps,living being that jumps,5
+beh_-_lays_eggs,living being that lays eggs,32
+beh_-_migrates,living being that migrates,5
+beh_-_runs,living being that runs,5
+beh_-_sings,living being that sings,11
+beh_-_swims,living being that swims,33
+beh_-_travels_in_herds,living being that travels in herds,5
 bought/sold_in_stores,bought/sold in stores,5
 clothing,clothing,34
 comes_in_pairs,comes in pairs,7

@@ -1,6 +1,7 @@
 import pdb
 import numpy as np
 from sentence_transformers import SentenceTransformer
+from probing_norms.constants import MCRAE_SEP, MCRAE_PREFIXES
 from probing_norms.data import (
     load_gpt3_feature_norms,
     load_mcrae_feature_norms,
@@ -10,10 +11,9 @@ from probing_norms.utils import cache_np
 
 
 def normalize_text(text):
-    SEP = "_-_"
-    if SEP in text:
-        prefix, text = text.split(SEP)
-        assert prefix in {"beh", "inbeh", "eg", "has_units", "worn_by_men"}, prefix
+    if MCRAE_SEP in text:
+        prefix, text = text.split(MCRAE_SEP)
+        assert prefix in MCRAE_PREFIXES, prefix
         if prefix == "eg":
             text = "example: " + text
         elif prefix in {"has_units", "worn_by_men"}:
@@ -28,18 +28,18 @@ def normalize_text(text):
     return text
 
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+class SentenceModel:
+    def __init__(self):
+        self.model = SentenceTransformer("all-MiniLM-L6-v2")
 
+    def get_embeddings(self, norms):
+        return self.model.encode(norms)
 
-def get_embeddings(norms):
-    return model.encode(norms)
-
-
-def get_similarities(norms1, norms2):
-    embs1 = get_embeddings(norms1)
-    embs2 = get_embeddings(norms2)
-    sims = model.similarity(embs1, embs2)
-    return sims.numpy()
+    def get_similarities(self, norms1, norms2):
+        embs1 = self.get_embeddings(norms1)
+        embs2 = self.get_embeddings(norms2)
+        sims = self.model.similarity(embs1, embs2)
+        return sims.numpy()
 
 
 class Norms:
@@ -59,82 +59,85 @@ class Norms:
         return iter(self.norms)
 
 
-norms_mcrae = Norms(load_mcrae_feature_norms())
-norms_gpt35 = Norms(load_gpt3_feature_norms())
+if __name__ == "__main__":
+    model = SentenceModel()
 
-common_concepts = set(norms_mcrae.concepts) & set(norms_gpt35.concepts)
+    norms_mcrae = Norms(load_mcrae_feature_norms())
+    norms_gpt35 = Norms(load_gpt3_feature_norms())
 
-path = "output/sims-norms-mcrae-gpt35.npy"
-norms_mcrae_1 = list(map(normalize_text, norms_mcrae))
-similarities = cache_np(path, get_similarities, norms_mcrae_1, norms_gpt35)
+    common_concepts = set(norms_mcrae.concepts) & set(norms_gpt35.concepts)
 
-SEP = "\t"
-has_match_total = 0
-data = []
+    path = "output/sims-norms-mcrae-gpt35.npy"
+    norms_mcrae_1 = list(map(normalize_text, norms_mcrae))
+    similarities = cache_np(path, model.get_similarities, norms_mcrae_1, norms_gpt35)
 
-with open("output/map-mcrae-to-gpt35.tsv", "w") as f:
+    SEP = "\t"
+    has_match_total = 0
+    data = []
 
-    for norm_mcrae, sims in zip(norms_mcrae, similarities):
-        idxs, *_ = np.where(sims >= 0.9)
-        selected_norms_str = ", ".join(
-            "{} ({:.2f})".format(norms_gpt35[i], sims[i]) for i in idxs
-        )
-        concepts_mcrae = norms_mcrae.norm_to_concepts[norm_mcrae]
-        concepts_mcrae_common = set(concepts_mcrae) & common_concepts
+    with open("output/map-mcrae-to-gpt35.tsv", "w") as f:
 
-        concepts_gpt35 = [
-            concept
-            for i in idxs
-            for concept in norms_gpt35.norm_to_concepts[norms_gpt35[i]]
-        ]
-        concepts_gpt35_common = set(concepts_gpt35) & common_concepts
+        for norm_mcrae, sims in zip(norms_mcrae, similarities):
+            idxs, *_ = np.where(sims >= 0.9)
+            selected_norms_str = ", ".join(
+                "{} ({:.2f})".format(norms_gpt35[i], sims[i]) for i in idxs
+            )
+            concepts_mcrae = norms_mcrae.norm_to_concepts[norm_mcrae]
+            concepts_mcrae_common = set(concepts_mcrae) & common_concepts
 
-        has_match = len(idxs) > 0
-        has_match_total += int(has_match)
-
-        # if has_match:
-        #     print(
-        #         "{} · {} → {} · {}".format(
-        #             norm_mcrae, len(concepts_mcrae), selected_norms_str, len(concepts_gpt35)
-        #         )
-        #     )
-
-        out = SEP.join(
-            [
-                norm_mcrae,
-                selected_norms_str,
-                str(len(concepts_mcrae_common)),
-                str(len(concepts_gpt35_common)),
-                str(len(concepts_mcrae)),
-                str(len(concepts_gpt35)),
-                ", ".join(concepts_gpt35_common - concepts_mcrae_common),
-                ", ".join(concepts_mcrae_common - concepts_gpt35_common),
+            concepts_gpt35 = [
+                concept
+                for i in idxs
+                for concept in norms_gpt35.norm_to_concepts[norms_gpt35[i]]
             ]
-        )
-        f.write(out + "\n")
+            concepts_gpt35_common = set(concepts_gpt35) & common_concepts
 
-        if norm_mcrae == "has_seeds":
-            print("McRae")
-            print("{} ({}) → {}".format(norm_mcrae, len(concepts_mcrae), ", ".join(sorted(concepts_mcrae))))
-            print("Hansen")
-            for i in idxs:
-                print("{} ({}) → {}".format(norms_gpt35[i], len(norms_gpt35.norm_to_concepts[norms_gpt35[i]]), ", ".join(sorted(norms_gpt35.norm_to_concepts[norms_gpt35[i]]))))
-            print("McRae++")
-            extended = set(concepts_gpt35) | set(concepts_mcrae_common)
-            print("{} ({}) → {}".format(norm_mcrae, len(extended), ", ".join(sorted(extended))))
-            pdb.set_trace()
+            has_match = len(idxs) > 0
+            has_match_total += int(has_match)
+
+            # if has_match:
+            #     print(
+            #         "{} · {} → {} · {}".format(
+            #             norm_mcrae, len(concepts_mcrae), selected_norms_str, len(concepts_gpt35)
+            #         )
+            #     )
+
+            out = SEP.join(
+                [
+                    norm_mcrae,
+                    selected_norms_str,
+                    str(len(concepts_mcrae_common)),
+                    str(len(concepts_gpt35_common)),
+                    str(len(concepts_mcrae)),
+                    str(len(concepts_gpt35)),
+                    ", ".join(concepts_gpt35_common - concepts_mcrae_common),
+                    ", ".join(concepts_mcrae_common - concepts_gpt35_common),
+                ]
+            )
+            f.write(out + "\n")
+
+            if norm_mcrae == "has_seeds":
+                print("McRae")
+                print("{} ({}) → {}".format(norm_mcrae, len(concepts_mcrae), ", ".join(sorted(concepts_mcrae))))
+                print("Hansen")
+                for i in idxs:
+                    print("{} ({}) → {}".format(norms_gpt35[i], len(norms_gpt35.norm_to_concepts[norms_gpt35[i]]), ", ".join(sorted(norms_gpt35.norm_to_concepts[norms_gpt35[i]]))))
+                print("McRae++")
+                extended = set(concepts_gpt35) | set(concepts_mcrae_common)
+                print("{} ({}) → {}".format(norm_mcrae, len(extended), ", ".join(sorted(extended))))
+                pdb.set_trace()
 
 
-        datum = {
-            "norm": norm_mcrae,
-            "concepts": concepts_gpt35 + list(concepts_mcrae_common - concepts_gpt35_common),
-            "norms-gpt35": [norms_gpt35[i] for i in idxs],
-        }
-        data.append(datum)
+            datum = {
+                "norm": norm_mcrae,
+                "concepts": concepts_gpt35 + list(concepts_mcrae_common - concepts_gpt35_common),
+                "norms-gpt35": [norms_gpt35[i] for i in idxs],
+            }
+            data.append(datum)
 
-print(has_match_total)
-print(len(norms_mcrae))
+    print(has_match_total)
+    print(len(norms_mcrae))
 
-# import json
-# with open("output/map-mcrae-to-gpt35.json", "w") as f:
-#     json.dump(data, f, indent=4)
+    # import json
+    # with open("output/map-mcrae-to-gpt35.json", "w") as f:
+    #     json.dump(data, f, indent=4)

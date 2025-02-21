@@ -70,6 +70,7 @@ MAIN_TABLE_MODELS = [
     #
     "siglip-224",
     "pali-gemma-224",
+    "clip-dfn2b",
     "clip",
     #
     "glove-840b-300d-word",
@@ -106,6 +107,7 @@ FEATURE_NAMES = {
     "siglip-224": "SigLIP",
     "pali-gemma-224": "PaliGemma",
     "clip": "CLIP (image)",
+    "clip-dfn2b": "CLIP DFN-2B (image)",
     "glove-6b-300d-word": "GloVe 6B",
     "glove-840b-300d-word": "GloVe 840B",
     "fasttext-word": "FastText",

@@ -46,6 +46,6 @@ with open(path1) as csvfile:
         if i > 0
     ]
 
-path2 = "data/things/concepts-and-categories.csv"
+path2 = "data/things/concepts-and-categories.json"
 with open(path2, "w") as f:
     json.dump(data, f, indent=2, sort_keys=False)

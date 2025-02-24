@@ -28,14 +28,21 @@ SPECIAL_CATEGORIES = {
 }
 
 
+SPECIAL_DEFINITIONS = {
+    "bat2": "a piece of equipment used by batters in the sport of cricket to hit the ball",
+}
+
+
 def parse_line(elems):
-    concept = elems[1]
-    category = SPECIAL_CATEGORIES.get(concept, elems[22])
+    id_ = elems[1]
+    concept = elems[0]
+    category = SPECIAL_CATEGORIES.get(id_, elems[22])
+    definition = SPECIAL_DEFINITIONS.get(id_, elems[7])
     return {
-        "id": concept,
-        "concept": elems[0],
+        "id": id_,
+        "concept": concept,
         "category": category,
-        "definition": elems[7],
+        "definition": definition,
     }
 
 path1 = DIR_THINGS / "_concepts-metadata_things.tsv"

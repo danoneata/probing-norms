@@ -45,14 +45,16 @@ def parse_line(elems):
         "definition": definition,
     }
 
-path1 = DIR_THINGS / "_concepts-metadata_things.tsv"
-with open(path1) as csvfile:
-    data = [
-        parse_line(elems)
-        for i, elems in enumerate(csv.reader(csvfile, delimiter="\t"))
-        if i > 0
-    ]
 
-path2 = "data/things/concepts-and-categories.json"
-with open(path2, "w") as f:
-    json.dump(data, f, indent=2, sort_keys=False)
+if __name__ == "__main__":
+    path1 = DIR_THINGS / "_concepts-metadata_things.tsv"
+    with open(path1) as csvfile:
+        data = [
+            parse_line(elems)
+            for i, elems in enumerate(csv.reader(csvfile, delimiter="\t"))
+            if i > 0
+        ]
+
+    path2 = "data/things/concepts-and-categories.json"
+    with open(path2, "w") as f:
+        json.dump(data, f, indent=2, sort_keys=False)

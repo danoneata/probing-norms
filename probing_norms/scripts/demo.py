@@ -211,6 +211,10 @@ if __name__ == "__main__":
         model2_name = st.selectbox("Model 2", model_names, index=index2)
         norms_type_name = st.selectbox("Dataset", norm_types_names, index=0)
 
+    if model1_name == model2_name:
+        st.error("Please select two different models.")
+        st.stop()
+
     model1 = MAIN_TABLE_MODELS[model_names.index(model1_name)]
     model2 = MAIN_TABLE_MODELS[model_names.index(model2_name)]
     norms_type = norms_types[norm_types_names.index(norms_type_name)]

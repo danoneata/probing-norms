@@ -2,7 +2,7 @@
     {
         "norm": "a_bird",
         "norm (language)": "is a bird",
-        "concepts1": [
+        "concepts-mcrae": [
             "blackbird",
             "bluejay",
             "budgie",
@@ -43,7 +43,7 @@
             "vulture",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "chicken2",
             "crow",
             "duck",
@@ -68,7 +68,7 @@
     {
         "norm": "a_building",
         "norm (language)": "is a building",
-        "concepts1": [
+        "concepts-mcrae": [
             "barn",
             "cathedral",
             "church",
@@ -76,12 +76,12 @@
             "shed",
             "skyscraper"
         ],
-        "concepts2 ": []
+        "concepts-things ": []
     },
     {
         "norm": "a_carnivore",
         "norm (language)": "is a carnivore",
-        "concepts1": [
+        "concepts-mcrae": [
             "buzzard",
             "cheetah",
             "coyote",
@@ -94,7 +94,7 @@
             "panther",
             "tiger"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cheetah",
             "coyote",
             "dog",
@@ -110,14 +110,14 @@
     {
         "norm": "a_cat",
         "norm (language)": "is a cat",
-        "concepts1": [
+        "concepts-mcrae": [
             "cheetah",
             "cougar",
             "lion",
             "panther",
             "tiger"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cheetah",
             "cougar",
             "lion",
@@ -128,14 +128,14 @@
     {
         "norm": "a_container",
         "norm (language)": "is a container",
-        "concepts1": [
+        "concepts-mcrae": [
             "barrel",
             "bottle",
             "box",
             "jar",
             "mug"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "barrel",
             "bottle",
             "box",
@@ -146,7 +146,7 @@
     {
         "norm": "a_fish",
         "norm (language)": "is a fish",
-        "concepts1": [
+        "concepts-mcrae": [
             "catfish",
             "cod",
             "dolphin",
@@ -164,7 +164,7 @@
             "trout",
             "tuna"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "catfish",
             "dolphin",
             "eel",
@@ -177,7 +177,7 @@
     {
         "norm": "a_food",
         "norm (language)": "is a food",
-        "concepts1": [
+        "concepts-mcrae": [
             "biscuit",
             "bread",
             "cheese",
@@ -188,7 +188,7 @@
             "rice",
             "walnut"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "biscuit",
             "bread",
             "cheese",
@@ -203,7 +203,7 @@
     {
         "norm": "a_fruit",
         "norm (language)": "is a fruit",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "avocado",
             "banana",
@@ -234,7 +234,7 @@
             "tangerine",
             "tomato"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "avocado",
             "banana",
@@ -265,7 +265,7 @@
     {
         "norm": "a_gun",
         "norm (language)": "is a gun",
-        "concepts1": [
+        "concepts-mcrae": [
             "bazooka",
             "bullet",
             "pistol",
@@ -273,7 +273,7 @@
             "rifle",
             "shotgun"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bazooka",
             "bullet",
             "gun",
@@ -284,14 +284,14 @@
     {
         "norm": "a_herbivore",
         "norm (language)": "is a herbivore",
-        "concepts1": [
+        "concepts-mcrae": [
             "caribou",
             "deer",
             "elk",
             "hare",
             "moose"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "deer",
             "moose"
         ]
@@ -299,7 +299,7 @@
     {
         "norm": "a_house",
         "norm (language)": "is a house",
-        "concepts1": [
+        "concepts-mcrae": [
             "apartment",
             "bungalow",
             "cottage",
@@ -307,14 +307,14 @@
             "hut",
             "shell"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "shell2"
         ]
     },
     {
         "norm": "a_mammal",
         "norm (language)": "is a mammal",
-        "concepts1": [
+        "concepts-mcrae": [
             "bat_(animal)",
             "bear",
             "beaver",
@@ -358,7 +358,7 @@
             "whale",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bat1",
             "bear",
             "beaver",
@@ -399,7 +399,7 @@
     {
         "norm": "a_musical_instrument",
         "norm (language)": "is a musical instrument",
-        "concepts1": [
+        "concepts-mcrae": [
             "accordion",
             "bagpipe",
             "banjo",
@@ -419,7 +419,7 @@
             "tuba",
             "violin"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "accordion",
             "bagpipe",
             "banjo",
@@ -441,7 +441,7 @@
     {
         "norm": "a_pet",
         "norm (language)": "is a pet",
-        "concepts1": [
+        "concepts-mcrae": [
             "budgie",
             "canary",
             "cat",
@@ -454,7 +454,7 @@
             "rabbit",
             "turtle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cat",
             "dog",
             "goldfish",
@@ -467,7 +467,7 @@
     {
         "norm": "a_predator",
         "norm (language)": "is a predator",
-        "concepts1": [
+        "concepts-mcrae": [
             "cougar",
             "eagle",
             "falcon",
@@ -478,7 +478,7 @@
             "panther",
             "tiger"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cougar",
             "eagle",
             "hawk",
@@ -492,7 +492,7 @@
     {
         "norm": "a_reptile",
         "norm (language)": "is a reptile",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "crocodile",
             "iguana",
@@ -502,7 +502,7 @@
             "tortoise",
             "turtle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "iguana",
             "rattlesnake",
@@ -512,14 +512,14 @@
     {
         "norm": "a_rodent",
         "norm (language)": "is a rodent",
-        "concepts1": [
+        "concepts-mcrae": [
             "groundhog",
             "hamster",
             "mole_(animal)",
             "mouse",
             "rat"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "groundhog",
             "hamster",
             "mole",
@@ -530,14 +530,14 @@
     {
         "norm": "a_scavenger",
         "norm (language)": "is a scavenger",
-        "concepts1": [
+        "concepts-mcrae": [
             "buzzard",
             "crow",
             "hyena",
             "raven",
             "vulture"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "crow",
             "hyena",
             "vulture"
@@ -546,7 +546,7 @@
     {
         "norm": "a_tool",
         "norm (language)": "is a tool",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "chisel",
             "clamp",
@@ -566,7 +566,7 @@
             "tomahawk",
             "wrench"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "chisel",
             "crowbar",
@@ -586,14 +586,14 @@
     {
         "norm": "a_toy",
         "norm (language)": "is a toy",
-        "concepts1": [
+        "concepts-mcrae": [
             "doll",
             "kite",
             "rattle",
             "slingshot",
             "wagon"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "doll",
             "kite",
             "rattle",
@@ -604,21 +604,21 @@
     {
         "norm": "a_tree",
         "norm (language)": "is a tree",
-        "concepts1": [
+        "concepts-mcrae": [
             "birch",
             "cedar",
             "oak",
             "pine",
             "willow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "pine_tree"
         ]
     },
     {
         "norm": "a_utensil",
         "norm (language)": "is a utensil",
-        "concepts1": [
+        "concepts-mcrae": [
             "colander",
             "fork",
             "grater",
@@ -632,7 +632,7 @@
             "strainer",
             "tongs"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "fork",
             "grater",
             "knife",
@@ -649,7 +649,7 @@
     {
         "norm": "a_vegetable",
         "norm (language)": "is a vegetable",
-        "concepts1": [
+        "concepts-mcrae": [
             "asparagus",
             "avocado",
             "beans",
@@ -679,7 +679,7 @@
             "yam",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "asparagus",
             "avocado",
             "bean",
@@ -711,7 +711,7 @@
     {
         "norm": "a_vehicle",
         "norm (language)": "is a vehicle",
-        "concepts1": [
+        "concepts-mcrae": [
             "ambulance",
             "bus",
             "car",
@@ -723,7 +723,7 @@
             "truck",
             "van"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ambulance",
             "bus",
             "car",
@@ -738,7 +738,7 @@
     {
         "norm": "a_weapon",
         "norm (language)": "is a weapon",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "bazooka",
             "bomb",
@@ -769,7 +769,7 @@
             "tomahawk",
             "whip"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "bazooka",
             "bomb",
@@ -799,7 +799,7 @@
     {
         "norm": "an_animal",
         "norm (language)": "is an animal",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "bat_(animal)",
             "bear",
@@ -900,7 +900,7 @@
             "woodpecker",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "bat1",
             "bear",
@@ -980,7 +980,7 @@
     {
         "norm": "an_appliance",
         "norm (language)": "is an appliance",
-        "concepts1": [
+        "concepts-mcrae": [
             "blender",
             "dishwasher",
             "freezer",
@@ -992,7 +992,7 @@
             "stove",
             "toaster"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "blender",
             "dishwasher",
             "freezer",
@@ -1008,7 +1008,7 @@
     {
         "norm": "an_insect",
         "norm (language)": "is an insect",
-        "concepts1": [
+        "concepts-mcrae": [
             "ant",
             "beetle",
             "butterfly",
@@ -1022,7 +1022,7 @@
             "spider",
             "wasp"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ant",
             "beetle",
             "butterfly",
@@ -1037,7 +1037,7 @@
     {
         "norm": "beh_-_builds_nests",
         "norm (language)": "living being that builds nests",
-        "concepts1": [
+        "concepts-mcrae": [
             "blackbird",
             "bluejay",
             "eagle",
@@ -1049,7 +1049,7 @@
             "starling",
             "wasp"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "eagle",
             "wasp"
         ]
@@ -1057,7 +1057,7 @@
     {
         "norm": "beh_-_cannot_fly",
         "norm (language)": "living being that cannot fly",
-        "concepts1": [
+        "concepts-mcrae": [
             "chicken",
             "emu",
             "ostrich",
@@ -1066,7 +1066,7 @@
             "rooster",
             "turkey"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "chicken2",
             "ostrich",
             "peacock",
@@ -1078,7 +1078,7 @@
     {
         "norm": "beh_-_chirps",
         "norm (language)": "living being that chirps",
-        "concepts1": [
+        "concepts-mcrae": [
             "blackbird",
             "budgie",
             "canary",
@@ -1086,19 +1086,19 @@
             "parakeet",
             "sparrow"
         ],
-        "concepts2 ": []
+        "concepts-things ": []
     },
     {
         "norm": "beh_-_crawls",
         "norm (language)": "living being that crawls",
-        "concepts1": [
+        "concepts-mcrae": [
             "ant",
             "beetle",
             "caterpillar",
             "spider",
             "worm"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ant",
             "beetle",
             "caterpillar",
@@ -1109,7 +1109,7 @@
     {
         "norm": "beh_-_eats",
         "norm (language)": "living being that eats",
-        "concepts1": [
+        "concepts-mcrae": [
             "budgie",
             "buzzard",
             "canary",
@@ -1150,7 +1150,7 @@
             "whale",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cat",
             "chicken2",
             "cougar",
@@ -1184,7 +1184,7 @@
     {
         "norm": "beh_-_eats_fish",
         "norm (language)": "living being that eats fish",
-        "concepts1": [
+        "concepts-mcrae": [
             "bear",
             "dolphin",
             "pelican",
@@ -1193,7 +1193,7 @@
             "seal",
             "stork"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bear",
             "dolphin",
             "pelican",
@@ -1205,14 +1205,14 @@
     {
         "norm": "beh_-_eats_garbage",
         "norm (language)": "living being that eats garbage",
-        "concepts1": [
+        "concepts-mcrae": [
             "catfish",
             "housefly",
             "raccoon",
             "rat",
             "seagull"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "catfish",
             "raccoon",
             "rat",
@@ -1222,7 +1222,7 @@
     {
         "norm": "beh_-_eats_grass",
         "norm (language)": "living being that eats grass",
-        "concepts1": [
+        "concepts-mcrae": [
             "calf",
             "cow",
             "fawn",
@@ -1231,7 +1231,7 @@
             "ox",
             "sheep"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "calf1",
             "cow",
             "goat",
@@ -1242,14 +1242,14 @@
     {
         "norm": "beh_-_eats_insects",
         "norm (language)": "living being that eats insects",
-        "concepts1": [
+        "concepts-mcrae": [
             "frog",
             "robin",
             "spider",
             "toad",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "frog",
             "spider",
             "toad"
@@ -1258,7 +1258,7 @@
     {
         "norm": "beh_-_flies",
         "norm (language)": "living being that flies",
-        "concepts1": [
+        "concepts-mcrae": [
             "airplane",
             "bat_(animal)",
             "beetle",
@@ -1306,7 +1306,7 @@
             "wasp",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "airplane",
             "bat1",
             "beetle",
@@ -1337,14 +1337,14 @@
     {
         "norm": "beh_-_hunts",
         "norm (language)": "living being that hunts",
-        "concepts1": [
+        "concepts-mcrae": [
             "cheetah",
             "coyote",
             "falcon",
             "fox",
             "panther"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cheetah",
             "coyote",
             "fox",
@@ -1354,14 +1354,14 @@
     {
         "norm": "beh_-_jumps",
         "norm (language)": "living being that jumps",
-        "concepts1": [
+        "concepts-mcrae": [
             "dolphin",
             "flea",
             "grasshopper",
             "hare",
             "toad"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "dolphin",
             "grasshopper",
             "toad"
@@ -1370,7 +1370,7 @@
     {
         "norm": "beh_-_lays_eggs",
         "norm (language)": "living being that lays eggs",
-        "concepts1": [
+        "concepts-mcrae": [
             "blackbird",
             "bluejay",
             "chickadee",
@@ -1404,7 +1404,7 @@
             "vulture",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "chicken2",
             "duck",
             "eagle",
@@ -1423,14 +1423,14 @@
     {
         "norm": "beh_-_migrates",
         "norm (language)": "living being that migrates",
-        "concepts1": [
+        "concepts-mcrae": [
             "caribou",
             "duck",
             "goose",
             "robin",
             "sparrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "duck",
             "goose"
         ]
@@ -1438,14 +1438,14 @@
     {
         "norm": "beh_-_runs",
         "norm (language)": "living being that runs",
-        "concepts1": [
+        "concepts-mcrae": [
             "buffalo",
             "deer",
             "hyena",
             "ostrich",
             "squirrel"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "deer",
             "hyena",
             "ostrich",
@@ -1455,7 +1455,7 @@
     {
         "norm": "beh_-_sings",
         "norm (language)": "living being that sings",
-        "concepts1": [
+        "concepts-mcrae": [
             "blackbird",
             "bluejay",
             "budgie",
@@ -1468,12 +1468,12 @@
             "sparrow",
             "starling"
         ],
-        "concepts2 ": []
+        "concepts-things ": []
     },
     {
         "norm": "beh_-_swims",
         "norm (language)": "living being that swims",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "beaver",
             "catfish",
@@ -1508,7 +1508,7 @@
             "walrus",
             "whale"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "beaver",
             "catfish",
@@ -1537,14 +1537,14 @@
     {
         "norm": "beh_-_travels_in_herds",
         "norm (language)": "living being that travels in herds",
-        "concepts1": [
+        "concepts-mcrae": [
             "bison",
             "buffalo",
             "caribou",
             "elk",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bison",
             "zebra"
         ]
@@ -1552,14 +1552,14 @@
     {
         "norm": "bought/sold_in_stores",
         "norm (language)": "bought/sold in stores",
-        "concepts1": [
+        "concepts-mcrae": [
             "bracelet",
             "card_(greeting)",
             "magazine",
             "necklace",
             "toy"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bracelet2",
             "necklace",
             "toy"
@@ -1568,7 +1568,7 @@
     {
         "norm": "clothing",
         "norm (language)": "clothing",
-        "concepts1": [
+        "concepts-mcrae": [
             "belt",
             "blouse",
             "boots",
@@ -1604,7 +1604,7 @@
             "trousers",
             "vest"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "belt",
             "blouse",
             "boot",
@@ -1638,7 +1638,7 @@
     {
         "norm": "comes_in_pairs",
         "norm (language)": "comes in pairs",
-        "concepts1": [
+        "concepts-mcrae": [
             "boots",
             "gloves",
             "mittens",
@@ -1647,7 +1647,7 @@
             "slippers",
             "socks"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "boot",
             "glove",
             "mitten",
@@ -1660,7 +1660,7 @@
     {
         "norm": "different_colours",
         "norm (language)": "different colours",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "ball",
             "balloon",
@@ -1720,7 +1720,7 @@
             "umbrella",
             "vest"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "ball",
             "balloon",
@@ -1776,7 +1776,7 @@
     {
         "norm": "different_sizes",
         "norm (language)": "different sizes",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "bed",
             "bolts",
@@ -1797,7 +1797,7 @@
             "tank_(container)",
             "wrench"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "bed",
             "bolt",
@@ -1822,7 +1822,7 @@
     {
         "norm": "eaten_as_meat",
         "norm (language)": "eaten as meat",
-        "concepts1": [
+        "concepts-mcrae": [
             "coconut",
             "cow",
             "lamb",
@@ -1830,7 +1830,7 @@
             "sheep",
             "turkey"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "coconut",
             "cow",
             "lamb",
@@ -1842,7 +1842,7 @@
     {
         "norm": "eaten_by_baking",
         "norm (language)": "eaten by baking",
-        "concepts1": [
+        "concepts-mcrae": [
             "beans",
             "biscuit",
             "cake",
@@ -1850,7 +1850,7 @@
             "potato",
             "walnut"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bean",
             "biscuit",
             "cake",
@@ -1862,7 +1862,7 @@
     {
         "norm": "eaten_by_cooking",
         "norm (language)": "eaten by cooking",
-        "concepts1": [
+        "concepts-mcrae": [
             "asparagus",
             "beans",
             "broccoli",
@@ -1879,7 +1879,7 @@
             "yam",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "asparagus",
             "bean",
             "broccoli",
@@ -1898,14 +1898,14 @@
     {
         "norm": "eaten_in_pies",
         "norm (language)": "eaten in pies",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "blueberry",
             "cherry",
             "lemon",
             "pumpkin"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "blueberry",
             "cherry",
@@ -1916,7 +1916,7 @@
     {
         "norm": "eaten_in_salads",
         "norm (language)": "eaten in salads",
-        "concepts1": [
+        "concepts-mcrae": [
             "beets",
             "cabbage",
             "carrot",
@@ -1931,7 +1931,7 @@
             "spinach",
             "tomato"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beet",
             "cabbage",
             "carrot",
@@ -1950,14 +1950,14 @@
     {
         "norm": "eaten_in_soups",
         "norm (language)": "eaten in soups",
-        "concepts1": [
+        "concepts-mcrae": [
             "asparagus",
             "cabbage",
             "onions",
             "peas",
             "spinach"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "asparagus",
             "cabbage",
             "onion",
@@ -1968,14 +1968,14 @@
     {
         "norm": "eaten_in_summer",
         "norm (language)": "eaten in summer",
-        "concepts1": [
+        "concepts-mcrae": [
             "cantaloupe",
             "cherry",
             "honeydew",
             "nectarine",
             "peach"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cantaloupe",
             "cherry",
             "peach"
@@ -1984,7 +1984,7 @@
     {
         "norm": "found_in_bathrooms",
         "norm (language)": "found in bathrooms",
-        "concepts1": [
+        "concepts-mcrae": [
             "bathtub",
             "comb",
             "faucet",
@@ -1996,7 +1996,7 @@
             "tap",
             "toilet"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bathtub",
             "comb",
             "faucet",
@@ -2011,14 +2011,14 @@
     {
         "norm": "found_in_bedrooms",
         "norm (language)": "found in bedrooms",
-        "concepts1": [
+        "concepts-mcrae": [
             "bed",
             "bureau",
             "closet",
             "dresser",
             "mirror"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bed",
             "closet",
             "dresser",
@@ -2028,7 +2028,7 @@
     {
         "norm": "found_in_houses",
         "norm (language)": "found in houses",
-        "concepts1": [
+        "concepts-mcrae": [
             "ashtray",
             "bedroom",
             "bookcase",
@@ -2041,7 +2041,7 @@
             "telephone",
             "wall"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ashtray",
             "bookshelf",
             "cabinet",
@@ -2055,7 +2055,7 @@
     {
         "norm": "found_in_kitchens",
         "norm (language)": "found in kitchens",
-        "concepts1": [
+        "concepts-mcrae": [
             "blender",
             "bowl",
             "cabinet",
@@ -2089,7 +2089,7 @@
             "toaster",
             "tongs"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "blender",
             "bowl",
             "cabinet",
@@ -2123,7 +2123,7 @@
     {
         "norm": "found_on_walls",
         "norm (language)": "found on walls",
-        "concepts1": [
+        "concepts-mcrae": [
             "bookcase",
             "certificate",
             "clock",
@@ -2132,7 +2132,7 @@
             "plug_(electric)",
             "shelves"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bookshelf",
             "clock",
             "hook2",
@@ -2144,7 +2144,7 @@
     {
         "norm": "furniture",
         "norm (language)": "furniture",
-        "concepts1": [
+        "concepts-mcrae": [
             "bed",
             "bookcase",
             "bureau",
@@ -2157,7 +2157,7 @@
             "sofa",
             "table"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bed",
             "bookshelf",
             "cabinet",
@@ -2172,14 +2172,14 @@
     {
         "norm": "grows_in_forests",
         "norm (language)": "grows in forests",
-        "concepts1": [
+        "concepts-mcrae": [
             "birch",
             "cedar",
             "mushroom",
             "oak",
             "pine"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "mushroom",
             "pine_tree"
         ]
@@ -2187,7 +2187,7 @@
     {
         "norm": "grows_in_gardens",
         "norm (language)": "grows in gardens",
-        "concepts1": [
+        "concepts-mcrae": [
             "asparagus",
             "beans",
             "beets",
@@ -2207,7 +2207,7 @@
             "tomato",
             "turnip"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "asparagus",
             "bean",
             "beet",
@@ -2230,7 +2230,7 @@
     {
         "norm": "grows_in_the_ground",
         "norm (language)": "grows in the ground",
-        "concepts1": [
+        "concepts-mcrae": [
             "beets",
             "carrot",
             "cauliflower",
@@ -2240,7 +2240,7 @@
             "turnip",
             "yam"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beet",
             "carrot",
             "cauliflower",
@@ -2252,7 +2252,7 @@
     {
         "norm": "grows_on_trees",
         "norm (language)": "grows on trees",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "banana",
             "cantaloupe",
@@ -2273,7 +2273,7 @@
             "tangerine",
             "walnut"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "banana",
             "cantaloupe",
@@ -2295,14 +2295,14 @@
     {
         "norm": "has_2_wheels",
         "norm (language)": "has 2 wheels",
-        "concepts1": [
+        "concepts-mcrae": [
             "bike",
             "cart",
             "motorcycle",
             "scooter",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bike",
             "cart",
             "motorcycle",
@@ -2313,7 +2313,7 @@
     {
         "norm": "has_4_legs",
         "norm (language)": "has 4 legs",
-        "concepts1": [
+        "concepts-mcrae": [
             "bear",
             "bench",
             "buffalo",
@@ -2364,7 +2364,7 @@
             "turtle",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bear",
             "bench",
             "calf1",
@@ -2408,7 +2408,7 @@
     {
         "norm": "has_4_wheels",
         "norm (language)": "has 4 wheels",
-        "concepts1": [
+        "concepts-mcrae": [
             "ambulance",
             "buggy",
             "car",
@@ -2421,7 +2421,7 @@
             "van",
             "wagon"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ambulance",
             "buggy",
             "car",
@@ -2437,7 +2437,7 @@
     {
         "norm": "has_a_beak",
         "norm (language)": "has a beak",
-        "concepts1": [
+        "concepts-mcrae": [
             "blackbird",
             "bluejay",
             "budgie",
@@ -2477,7 +2477,7 @@
             "swan",
             "vulture"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "chicken2",
             "crow",
             "duck",
@@ -2502,7 +2502,7 @@
     {
         "norm": "has_a_blade",
         "norm (language)": "has a blade",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "dagger",
             "hoe",
@@ -2510,7 +2510,7 @@
             "sword",
             "tomahawk"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "dagger",
             "hoe",
@@ -2521,14 +2521,14 @@
     {
         "norm": "has_a_door",
         "norm (language)": "has a door",
-        "concepts1": [
+        "concepts-mcrae": [
             "cage",
             "dishwasher",
             "oven",
             "shack",
             "tent"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cage",
             "dishwasher",
             "oven",
@@ -2538,7 +2538,7 @@
     {
         "norm": "has_a_handle",
         "norm (language)": "has a handle",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "basket",
             "broom",
@@ -2582,7 +2582,7 @@
             "whip",
             "wrench"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "basket",
             "broom",
@@ -2627,7 +2627,7 @@
     {
         "norm": "has_a_head",
         "norm (language)": "has a head",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "hammer",
             "pin",
@@ -2636,7 +2636,7 @@
             "spear",
             "turtle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "hammer",
             "pin",
@@ -2649,7 +2649,7 @@
     {
         "norm": "has_a_lid",
         "norm (language)": "has a lid",
-        "concepts1": [
+        "concepts-mcrae": [
             "barrel",
             "bottle",
             "box",
@@ -2657,7 +2657,7 @@
             "pan",
             "pot"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "barrel",
             "bottle",
             "box",
@@ -2669,14 +2669,14 @@
     {
         "norm": "has_a_long_neck",
         "norm (language)": "has a long neck",
-        "concepts1": [
+        "concepts-mcrae": [
             "emu",
             "flamingo",
             "giraffe",
             "ostrich",
             "swan"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "flamingo",
             "giraffe",
             "ostrich",
@@ -2686,7 +2686,7 @@
     {
         "norm": "has_a_long_tail",
         "norm (language)": "has a long tail",
-        "concepts1": [
+        "concepts-mcrae": [
             "cougar",
             "iguana",
             "mouse",
@@ -2694,7 +2694,7 @@
             "rat",
             "salamander"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cougar",
             "iguana",
             "mouse1",
@@ -2705,14 +2705,14 @@
     {
         "norm": "has_a_neck",
         "norm (language)": "has a neck",
-        "concepts1": [
+        "concepts-mcrae": [
             "banjo",
             "bottle",
             "buzzard",
             "emu",
             "ostrich"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "banjo",
             "bottle",
             "ostrich"
@@ -2721,7 +2721,7 @@
     {
         "norm": "has_a_pit",
         "norm (language)": "has a pit",
-        "concepts1": [
+        "concepts-mcrae": [
             "cherry",
             "nectarine",
             "olive",
@@ -2729,7 +2729,7 @@
             "plum",
             "prune"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cherry",
             "olive",
             "peach",
@@ -2740,7 +2740,7 @@
     {
         "norm": "has_a_pointed_end",
         "norm (language)": "has a pointed end",
-        "concepts1": [
+        "concepts-mcrae": [
             "bullet",
             "carrot",
             "dagger",
@@ -2753,7 +2753,7 @@
             "sword",
             "tack"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bullet",
             "carrot",
             "dagger",
@@ -2769,7 +2769,7 @@
     {
         "norm": "has_a_roof",
         "norm (language)": "has a roof",
-        "concepts1": [
+        "concepts-mcrae": [
             "building",
             "bungalow",
             "cottage",
@@ -2778,14 +2778,14 @@
             "shack",
             "shed"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "jeep"
         ]
     },
     {
         "norm": "has_a_seat",
         "norm (language)": "has a seat",
-        "concepts1": [
+        "concepts-mcrae": [
             "bike",
             "chair",
             "stool_(furniture)",
@@ -2794,7 +2794,7 @@
             "tricycle",
             "unicycle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bike",
             "chair",
             "stool",
@@ -2807,7 +2807,7 @@
     {
         "norm": "has_a_shell",
         "norm (language)": "has a shell",
-        "concepts1": [
+        "concepts-mcrae": [
             "beetle",
             "clam",
             "cockroach",
@@ -2819,7 +2819,7 @@
             "turtle",
             "walnut"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beetle",
             "clam",
             "cockroach",
@@ -2834,7 +2834,7 @@
     {
         "norm": "has_a_skin",
         "norm (language)": "has a skin",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "banana",
             "cantaloupe",
@@ -2855,7 +2855,7 @@
             "prune",
             "tangerine"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "banana",
             "cantaloupe",
@@ -2877,7 +2877,7 @@
     {
         "norm": "has_a_tail",
         "norm (language)": "has a tail",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "beaver",
             "calf",
@@ -2918,7 +2918,7 @@
             "trout",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "beaver",
             "calf1",
@@ -2956,14 +2956,14 @@
     {
         "norm": "has_a_trigger",
         "norm (language)": "has a trigger",
-        "concepts1": [
+        "concepts-mcrae": [
             "gun",
             "pistol",
             "revolver",
             "rifle",
             "shotgun"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "gun",
             "revolver",
             "rifle"
@@ -2972,7 +2972,7 @@
     {
         "norm": "has_a_wooden_handle",
         "norm (language)": "has a wooden handle",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "hammer",
             "hoe",
@@ -2981,7 +2981,7 @@
             "spear",
             "tomahawk"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "hammer",
             "hoe",
@@ -2993,7 +2993,7 @@
     {
         "norm": "has_a_zipper",
         "norm (language)": "has a zipper",
-        "concepts1": [
+        "concepts-mcrae": [
             "coat",
             "jacket",
             "jeans",
@@ -3002,7 +3002,7 @@
             "trousers",
             "vest"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "coat",
             "jacket",
             "jeans",
@@ -3014,7 +3014,7 @@
     {
         "norm": "has_an_engine",
         "norm (language)": "has an engine",
-        "concepts1": [
+        "concepts-mcrae": [
             "bus",
             "car",
             "dunebuggy",
@@ -3026,7 +3026,7 @@
             "van",
             "yacht"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bus",
             "car",
             "jet",
@@ -3041,7 +3041,7 @@
     {
         "norm": "has_an_inside",
         "norm (language)": "has an inside",
-        "concepts1": [
+        "concepts-mcrae": [
             "coconut",
             "cucumber",
             "freezer",
@@ -3054,7 +3054,7 @@
             "radish",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "coconut",
             "cucumber",
             "freezer",
@@ -3070,14 +3070,14 @@
     {
         "norm": "has_blades",
         "norm (language)": "has blades",
-        "concepts1": [
+        "concepts-mcrae": [
             "blender",
             "fan_(appliance)",
             "helicopter",
             "mixer",
             "scissors"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "blender",
             "fan",
             "helicopter",
@@ -3088,7 +3088,7 @@
     {
         "norm": "has_buttons",
         "norm (language)": "has buttons",
-        "concepts1": [
+        "concepts-mcrae": [
             "accordion",
             "blouse",
             "coat",
@@ -3103,7 +3103,7 @@
             "trousers",
             "vest"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "accordion",
             "blouse",
             "coat",
@@ -3120,7 +3120,7 @@
     {
         "norm": "has_claws",
         "norm (language)": "has claws",
-        "concepts1": [
+        "concepts-mcrae": [
             "bear",
             "cat",
             "cougar",
@@ -3132,7 +3132,7 @@
             "tiger",
             "vulture"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bear",
             "cat",
             "cougar",
@@ -3148,7 +3148,7 @@
     {
         "norm": "has_doors",
         "norm (language)": "has doors",
-        "concepts1": [
+        "concepts-mcrae": [
             "barn",
             "building",
             "bus",
@@ -3165,7 +3165,7 @@
             "shed",
             "van"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bus",
             "cabinet",
             "car",
@@ -3179,14 +3179,14 @@
     {
         "norm": "has_drawers",
         "norm (language)": "has drawers",
-        "concepts1": [
+        "concepts-mcrae": [
             "bureau",
             "cabinet",
             "desk",
             "dresser",
             "fridge"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cabinet",
             "desk",
             "dresser",
@@ -3196,14 +3196,14 @@
     {
         "norm": "has_ears",
         "norm (language)": "has ears",
-        "concepts1": [
+        "concepts-mcrae": [
             "corn",
             "donkey",
             "elephant",
             "hare",
             "rabbit"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "corn",
             "donkey",
             "elephant",
@@ -3213,7 +3213,7 @@
     {
         "norm": "has_eyes",
         "norm (language)": "has eyes",
-        "concepts1": [
+        "concepts-mcrae": [
             "beetle",
             "cat",
             "cow",
@@ -3231,7 +3231,7 @@
             "rat",
             "spider"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beetle",
             "cat",
             "cow",
@@ -3249,7 +3249,7 @@
     {
         "norm": "has_feathers",
         "norm (language)": "has feathers",
-        "concepts1": [
+        "concepts-mcrae": [
             "blackbird",
             "bluejay",
             "budgie",
@@ -3289,7 +3289,7 @@
             "vulture",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "chicken2",
             "crow",
             "duck",
@@ -3313,7 +3313,7 @@
     {
         "norm": "has_feet",
         "norm (language)": "has feet",
-        "concepts1": [
+        "concepts-mcrae": [
             "bear",
             "chickadee",
             "duck",
@@ -3325,7 +3325,7 @@
             "raven",
             "rooster"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bear",
             "duck",
             "goose",
@@ -3339,7 +3339,7 @@
     {
         "norm": "has_fins",
         "norm (language)": "has fins",
-        "concepts1": [
+        "concepts-mcrae": [
             "catfish",
             "cod",
             "dolphin",
@@ -3352,7 +3352,7 @@
             "trout",
             "tuna"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "catfish",
             "dolphin",
             "goldfish",
@@ -3362,7 +3362,7 @@
     {
         "norm": "has_fur",
         "norm (language)": "has fur",
-        "concepts1": [
+        "concepts-mcrae": [
             "bat_(animal)",
             "bear",
             "caribou",
@@ -3386,7 +3386,7 @@
             "squirrel",
             "tiger"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bat1",
             "bear",
             "cat",
@@ -3411,7 +3411,7 @@
     {
         "norm": "has_gills",
         "norm (language)": "has gills",
-        "concepts1": [
+        "concepts-mcrae": [
             "catfish",
             "cod",
             "goldfish",
@@ -3422,7 +3422,7 @@
             "trout",
             "tuna"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "catfish",
             "goldfish"
         ]
@@ -3430,7 +3430,7 @@
     {
         "norm": "has_hair",
         "norm (language)": "has hair",
-        "concepts1": [
+        "concepts-mcrae": [
             "buffalo",
             "chimp",
             "coconut",
@@ -3441,7 +3441,7 @@
             "moose",
             "pony"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "coconut",
             "dog",
             "doll",
@@ -3454,7 +3454,7 @@
     {
         "norm": "has_handles",
         "norm (language)": "has handles",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "cabinet",
             "cupboard",
@@ -3463,7 +3463,7 @@
             "scissors",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "cabinet",
             "dresser",
@@ -3475,7 +3475,7 @@
     {
         "norm": "has_holes",
         "norm (language)": "has holes",
-        "concepts1": [
+        "concepts-mcrae": [
             "belt",
             "colander",
             "flute",
@@ -3483,7 +3483,7 @@
             "socks",
             "strainer"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "belt",
             "flute",
             "grater",
@@ -3494,7 +3494,7 @@
     {
         "norm": "has_hooves",
         "norm (language)": "has hooves",
-        "concepts1": [
+        "concepts-mcrae": [
             "calf",
             "deer",
             "donkey",
@@ -3505,7 +3505,7 @@
             "pony",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "calf1",
             "deer",
             "donkey",
@@ -3519,7 +3519,7 @@
     {
         "norm": "has_horns",
         "norm (language)": "has horns",
-        "concepts1": [
+        "concepts-mcrae": [
             "buffalo",
             "bull",
             "caribou",
@@ -3527,7 +3527,7 @@
             "goat",
             "ox"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bull",
             "goat"
         ]
@@ -3535,7 +3535,7 @@
     {
         "norm": "has_keys",
         "norm (language)": "has keys",
-        "concepts1": [
+        "concepts-mcrae": [
             "accordion",
             "clarinet",
             "flute",
@@ -3544,7 +3544,7 @@
             "saxophone",
             "typewriter"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "accordion",
             "clarinet",
             "flute",
@@ -3556,7 +3556,7 @@
     {
         "norm": "has_leaves",
         "norm (language)": "has leaves",
-        "concepts1": [
+        "concepts-mcrae": [
             "beets",
             "birch",
             "broccoli",
@@ -3573,7 +3573,7 @@
             "vine",
             "willow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beet",
             "broccoli",
             "cabbage",
@@ -3589,7 +3589,7 @@
     {
         "norm": "has_legs",
         "norm (language)": "has legs",
-        "concepts1": [
+        "concepts-mcrae": [
             "beetle",
             "camel",
             "canary",
@@ -3635,7 +3635,7 @@
             "trousers",
             "turtle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beetle",
             "camel",
             "cat",
@@ -3675,7 +3675,7 @@
     {
         "norm": "has_long_legs",
         "norm (language)": "has long legs",
-        "concepts1": [
+        "concepts-mcrae": [
             "emu",
             "flamingo",
             "giraffe",
@@ -3683,7 +3683,7 @@
             "ostrich",
             "stork"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "flamingo",
             "giraffe",
             "grasshopper",
@@ -3693,14 +3693,14 @@
     {
         "norm": "has_numbers",
         "norm (language)": "has numbers",
-        "concepts1": [
+        "concepts-mcrae": [
             "clock",
             "ruler",
             "telephone",
             "thermometer",
             "typewriter"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "clock",
             "phone",
             "ruler",
@@ -3711,14 +3711,14 @@
     {
         "norm": "has_patterns",
         "norm (language)": "has patterns",
-        "concepts1": [
+        "concepts-mcrae": [
             "cup",
             "mug",
             "plate",
             "saucer",
             "tie"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cup",
             "mug",
             "plate",
@@ -3729,7 +3729,7 @@
     {
         "norm": "has_peel",
         "norm (language)": "has peel",
-        "concepts1": [
+        "concepts-mcrae": [
             "banana",
             "grapefruit",
             "lemon",
@@ -3737,7 +3737,7 @@
             "orange",
             "tangerine"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "banana",
             "grapefruit",
             "lemon",
@@ -3747,7 +3747,7 @@
     {
         "norm": "has_pockets",
         "norm (language)": "has pockets",
-        "concepts1": [
+        "concepts-mcrae": [
             "coat",
             "jacket",
             "jeans",
@@ -3755,7 +3755,7 @@
             "shirt",
             "trousers"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "coat",
             "jacket",
             "jeans",
@@ -3766,7 +3766,7 @@
     {
         "norm": "has_scales",
         "norm (language)": "has scales",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "catfish",
             "cod",
@@ -3778,7 +3778,7 @@
             "rattlesnake",
             "trout"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "catfish",
             "goldfish",
@@ -3788,7 +3788,7 @@
     {
         "norm": "has_seeds",
         "norm (language)": "has seeds",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "avocado",
             "cantaloupe",
@@ -3811,7 +3811,7 @@
             "tomato",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "avocado",
             "cantaloupe",
@@ -3835,7 +3835,7 @@
     {
         "norm": "has_shelves",
         "norm (language)": "has shelves",
-        "concepts1": [
+        "concepts-mcrae": [
             "bookcase",
             "cabinet",
             "cellar",
@@ -3843,7 +3843,7 @@
             "cupboard",
             "fridge"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bookshelf",
             "cabinet",
             "closet",
@@ -3853,7 +3853,7 @@
     {
         "norm": "has_sleeves",
         "norm (language)": "has sleeves",
-        "concepts1": [
+        "concepts-mcrae": [
             "blouse",
             "coat",
             "dress",
@@ -3861,7 +3861,7 @@
             "shirt",
             "sweater"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "blouse",
             "coat",
             "dress",
@@ -3873,7 +3873,7 @@
     {
         "norm": "has_strings",
         "norm (language)": "has strings",
-        "concepts1": [
+        "concepts-mcrae": [
             "apron",
             "banjo",
             "cello",
@@ -3884,7 +3884,7 @@
             "racquet",
             "violin"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apron",
             "banjo",
             "cello",
@@ -3898,7 +3898,7 @@
     {
         "norm": "has_teeth",
         "norm (language)": "has teeth",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "bear",
             "comb",
@@ -3914,7 +3914,7 @@
             "tiger",
             "walrus"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "bear",
             "comb",
@@ -3932,7 +3932,7 @@
     {
         "norm": "has_webbed_feet",
         "norm (language)": "has webbed feet",
-        "concepts1": [
+        "concepts-mcrae": [
             "duck",
             "goose",
             "pelican",
@@ -3940,7 +3940,7 @@
             "platypus",
             "swan"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "duck",
             "goose",
             "pelican",
@@ -3952,7 +3952,7 @@
     {
         "norm": "has_wheels",
         "norm (language)": "has wheels",
-        "concepts1": [
+        "concepts-mcrae": [
             "bike",
             "buggy",
             "bus",
@@ -3977,7 +3977,7 @@
             "wagon",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bike",
             "buggy",
             "bus",
@@ -4005,7 +4005,7 @@
     {
         "norm": "has_whiskers",
         "norm (language)": "has whiskers",
-        "concepts1": [
+        "concepts-mcrae": [
             "cat",
             "catfish",
             "mouse",
@@ -4015,7 +4015,7 @@
             "tiger",
             "walrus"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cat",
             "catfish",
             "mouse1",
@@ -4029,7 +4029,7 @@
     {
         "norm": "has_windows",
         "norm (language)": "has windows",
-        "concepts1": [
+        "concepts-mcrae": [
             "apartment",
             "basement",
             "building",
@@ -4040,7 +4040,7 @@
             "house",
             "skyscraper"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bus",
             "car"
         ]
@@ -4048,7 +4048,7 @@
     {
         "norm": "has_wings",
         "norm (language)": "has wings",
-        "concepts1": [
+        "concepts-mcrae": [
             "airplane",
             "bat_(animal)",
             "beetle",
@@ -4094,7 +4094,7 @@
             "wasp",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "airplane",
             "bat1",
             "beetle",
@@ -4125,7 +4125,7 @@
     {
         "norm": "hunted_by_people",
         "norm (language)": "hunted by people",
-        "concepts1": [
+        "concepts-mcrae": [
             "bear",
             "beaver",
             "bison",
@@ -4154,7 +4154,7 @@
             "whale",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bear",
             "beaver",
             "bison",
@@ -4177,14 +4177,14 @@
     {
         "norm": "inbeh_-_fires",
         "norm (language)": "inanimate object that fires",
-        "concepts1": [
+        "concepts-mcrae": [
             "bazooka",
             "cannon",
             "gun",
             "pistol",
             "rifle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bazooka",
             "cannon",
             "gun",
@@ -4194,7 +4194,7 @@
     {
         "norm": "inbeh_-_floats",
         "norm (language)": "inanimate object that floats",
-        "concepts1": [
+        "concepts-mcrae": [
             "balloon",
             "boat",
             "canoe",
@@ -4203,7 +4203,7 @@
             "ship",
             "surfboard"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "balloon",
             "boat",
             "canoe",
@@ -4216,7 +4216,7 @@
     {
         "norm": "inbeh_-_produces_music",
         "norm (language)": "inanimate object that produces music",
-        "concepts1": [
+        "concepts-mcrae": [
             "accordion",
             "banjo",
             "clarinet",
@@ -4231,7 +4231,7 @@
             "trombone",
             "violin"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "accordion",
             "banjo",
             "clarinet",
@@ -4248,7 +4248,7 @@
     {
         "norm": "inbeh_-_produces_noise",
         "norm (language)": "inanimate object that produces noise",
-        "concepts1": [
+        "concepts-mcrae": [
             "cello",
             "drum",
             "rattle",
@@ -4257,7 +4257,7 @@
             "whip",
             "whistle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cello",
             "drum",
             "rattle",
@@ -4270,7 +4270,7 @@
     {
         "norm": "is_beautiful",
         "norm (language)": "is beautiful",
-        "concepts1": [
+        "concepts-mcrae": [
             "butterfly",
             "emerald",
             "fawn",
@@ -4278,7 +4278,7 @@
             "peacock",
             "swan"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "butterfly",
             "emerald",
             "horse",
@@ -4289,7 +4289,7 @@
     {
         "norm": "is_black",
         "norm (language)": "is black",
-        "concepts1": [
+        "concepts-mcrae": [
             "ant",
             "bat_(animal)",
             "bear",
@@ -4341,7 +4341,7 @@
             "whip",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ant",
             "bat1",
             "bear",
@@ -4385,7 +4385,7 @@
     {
         "norm": "is_blue",
         "norm (language)": "is blue",
-        "concepts1": [
+        "concepts-mcrae": [
             "blueberry",
             "bluejay",
             "budgie",
@@ -4393,7 +4393,7 @@
             "peacock",
             "pen"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "blueberry",
             "jeans",
             "peacock",
@@ -4403,7 +4403,7 @@
     {
         "norm": "is_breakable",
         "norm (language)": "is breakable",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "bottle",
             "crayon",
@@ -4415,7 +4415,7 @@
             "saucer",
             "shell"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "bottle",
             "crayon",
@@ -4431,7 +4431,7 @@
     {
         "norm": "is_brown",
         "norm (language)": "is brown",
-        "concepts1": [
+        "concepts-mcrae": [
             "barrel",
             "beans",
             "bear",
@@ -4487,7 +4487,7 @@
             "willow",
             "worm"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "barrel",
             "bean",
             "bear",
@@ -4536,14 +4536,14 @@
     {
         "norm": "is_citrus",
         "norm (language)": "is citrus",
-        "concepts1": [
+        "concepts-mcrae": [
             "grapefruit",
             "lemon",
             "lime",
             "orange",
             "tangerine"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "grapefruit",
             "lemon",
             "lime",
@@ -4553,7 +4553,7 @@
     {
         "norm": "is_cold",
         "norm (language)": "is cold",
-        "concepts1": [
+        "concepts-mcrae": [
             "basement",
             "cellar",
             "doorknob",
@@ -4561,7 +4561,7 @@
             "fridge",
             "stone"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "doorknob",
             "freezer",
             "refrigerator",
@@ -4571,7 +4571,7 @@
     {
         "norm": "is_colourful",
         "norm (language)": "is colourful",
-        "concepts1": [
+        "concepts-mcrae": [
             "balloon",
             "banner",
             "bouquet",
@@ -4592,7 +4592,7 @@
             "scarf",
             "skirt"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "balloon",
             "banner",
             "bouquet",
@@ -4612,7 +4612,7 @@
     {
         "norm": "is_comfortable",
         "norm (language)": "is comfortable",
-        "concepts1": [
+        "concepts-mcrae": [
             "bed",
             "camisole",
             "chair",
@@ -4629,7 +4629,7 @@
             "sofa",
             "trousers"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bed",
             "chair",
             "couch",
@@ -4647,7 +4647,7 @@
     {
         "norm": "is_crunchy",
         "norm (language)": "is crunchy",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "biscuit",
             "carrot",
@@ -4660,7 +4660,7 @@
             "turnip",
             "walnut"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "biscuit",
             "carrot",
@@ -4676,7 +4676,7 @@
     {
         "norm": "is_cute",
         "norm (language)": "is cute",
-        "concepts1": [
+        "concepts-mcrae": [
             "chimp",
             "chipmunk",
             "dolphin",
@@ -4687,7 +4687,7 @@
             "sheep",
             "squirrel"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "chipmunk",
             "dolphin",
             "mouse1",
@@ -4700,7 +4700,7 @@
     {
         "norm": "is_dangerous",
         "norm (language)": "is dangerous",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "axe",
             "bayonet",
@@ -4739,7 +4739,7 @@
             "tiger",
             "wasp"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "axe",
             "bazooka",
@@ -4777,7 +4777,7 @@
     {
         "norm": "is_decorative",
         "norm (language)": "is decorative",
-        "concepts1": [
+        "concepts-mcrae": [
             "belt",
             "candle",
             "carpet",
@@ -4787,7 +4787,7 @@
             "ring_(jewelry)",
             "urn"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "belt",
             "candle",
             "curtain",
@@ -4799,7 +4799,7 @@
     {
         "norm": "is_dirty",
         "norm (language)": "is dirty",
-        "concepts1": [
+        "concepts-mcrae": [
             "ashtray",
             "barn",
             "carpet",
@@ -4811,7 +4811,7 @@
             "socks",
             "subway"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ashtray",
             "cockroach",
             "pig",
@@ -4823,14 +4823,14 @@
     {
         "norm": "is_domestic",
         "norm (language)": "is domestic",
-        "concepts1": [
+        "concepts-mcrae": [
             "cat",
             "chicken",
             "cow",
             "dog",
             "turkey"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cat",
             "chicken2",
             "cow",
@@ -4841,7 +4841,7 @@
     {
         "norm": "is_edible",
         "norm (language)": "is edible",
-        "concepts1": [
+        "concepts-mcrae": [
             "asparagus",
             "avocado",
             "banana",
@@ -4921,7 +4921,7 @@
             "walnut",
             "yam"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "asparagus",
             "avocado",
             "banana",
@@ -4991,7 +4991,7 @@
     {
         "norm": "is_electrical",
         "norm (language)": "is electrical",
-        "concepts1": [
+        "concepts-mcrae": [
             "blender",
             "chandelier",
             "clock",
@@ -5015,7 +5015,7 @@
             "subway",
             "toaster"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "blender",
             "chandelier",
             "clock",
@@ -5040,14 +5040,14 @@
     {
         "norm": "is_endangered",
         "norm (language)": "is endangered",
-        "concepts1": [
+        "concepts-mcrae": [
             "bison",
             "buffalo",
             "eagle",
             "seal",
             "whale"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bison",
             "eagle",
             "seal",
@@ -5057,7 +5057,7 @@
     {
         "norm": "is_expensive",
         "norm (language)": "is expensive",
-        "concepts1": [
+        "concepts-mcrae": [
             "bracelet",
             "car",
             "chandelier",
@@ -5081,7 +5081,7 @@
             "taxi",
             "yacht"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bracelet2",
             "car",
             "chandelier",
@@ -5106,7 +5106,7 @@
     {
         "norm": "is_fast",
         "norm (language)": "is fast",
-        "concepts1": [
+        "concepts-mcrae": [
             "airplane",
             "ambulance",
             "bike",
@@ -5141,7 +5141,7 @@
             "taxi",
             "train"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "airplane",
             "ambulance",
             "bike",
@@ -5173,7 +5173,7 @@
     {
         "norm": "is_flat",
         "norm (language)": "is flat",
-        "concepts1": [
+        "concepts-mcrae": [
             "board_(wood)",
             "plate",
             "ruler",
@@ -5185,7 +5185,7 @@
             "tray",
             "wall"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "board",
             "plate",
             "ruler",
@@ -5201,7 +5201,7 @@
     {
         "norm": "is_fun",
         "norm (language)": "is fun",
-        "concepts1": [
+        "concepts-mcrae": [
             "ball",
             "dunebuggy",
             "motorcycle",
@@ -5210,7 +5210,7 @@
             "toy",
             "tricycle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ball",
             "motorcycle",
             "sled",
@@ -5221,7 +5221,7 @@
     {
         "norm": "is_furry",
         "norm (language)": "is furry",
-        "concepts1": [
+        "concepts-mcrae": [
             "beaver",
             "bison",
             "buffalo",
@@ -5243,7 +5243,7 @@
             "rabbit",
             "raccoon"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beaver",
             "bison",
             "caterpillar",
@@ -5264,7 +5264,7 @@
     {
         "norm": "is_gold",
         "norm (language)": "is gold",
-        "concepts1": [
+        "concepts-mcrae": [
             "chain",
             "goldfish",
             "key",
@@ -5273,7 +5273,7 @@
             "trumpet",
             "tuba"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "chain",
             "goldfish",
             "key",
@@ -5286,7 +5286,7 @@
     {
         "norm": "is_green",
         "norm (language)": "is green",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "apple",
             "asparagus",
@@ -5335,7 +5335,7 @@
             "willow",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "apple",
             "asparagus",
@@ -5379,7 +5379,7 @@
     {
         "norm": "is_grey",
         "norm (language)": "is grey",
-        "concepts1": [
+        "concepts-mcrae": [
             "dolphin",
             "donkey",
             "eel",
@@ -5394,7 +5394,7 @@
             "stone",
             "walrus"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "dolphin",
             "donkey",
             "eel",
@@ -5412,7 +5412,7 @@
     {
         "norm": "is_hand_held",
         "norm (language)": "is hand held",
-        "concepts1": [
+        "concepts-mcrae": [
             "brush",
             "lantern",
             "mouse_(computer)",
@@ -5421,7 +5421,7 @@
             "screwdriver",
             "tongs"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "brush",
             "gun",
             "lantern",
@@ -5434,7 +5434,7 @@
     {
         "norm": "is_hard",
         "norm (language)": "is hard",
-        "concepts1": [
+        "concepts-mcrae": [
             "ball",
             "bathtub",
             "beetle",
@@ -5458,7 +5458,7 @@
             "turtle",
             "walnut"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ball",
             "bathtub",
             "beetle",
@@ -5484,7 +5484,7 @@
     {
         "norm": "is_heavy",
         "norm (language)": "is heavy",
-        "concepts1": [
+        "concepts-mcrae": [
             "anchor",
             "armour",
             "axe",
@@ -5513,7 +5513,7 @@
             "typewriter",
             "wrench"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "anchor",
             "armor",
             "axe",
@@ -5544,7 +5544,7 @@
     {
         "norm": "is_juicy",
         "norm (language)": "is juicy",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "beets",
             "blueberry",
@@ -5567,7 +5567,7 @@
             "tangerine",
             "tomato"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "beet",
             "blueberry",
@@ -5590,14 +5590,14 @@
     {
         "norm": "is_knitted",
         "norm (language)": "is knitted",
-        "concepts1": [
+        "concepts-mcrae": [
             "gloves",
             "mittens",
             "scarf",
             "shawl",
             "sweater"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "glove",
             "mitten",
             "scarf",
@@ -5608,7 +5608,7 @@
     {
         "norm": "is_large",
         "norm (language)": "is large",
-        "concepts1": [
+        "concepts-mcrae": [
             "airplane",
             "ambulance",
             "anchor",
@@ -5716,7 +5716,7 @@
             "willow",
             "yacht"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "airplane",
             "ambulance",
             "anchor",
@@ -5798,7 +5798,7 @@
     {
         "norm": "is_long",
         "norm (language)": "is long",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "apron",
             "asparagus",
@@ -5881,7 +5881,7 @@
             "worm",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "apron",
             "asparagus",
@@ -5957,7 +5957,7 @@
     {
         "norm": "is_loud",
         "norm (language)": "is loud",
-        "concepts1": [
+        "concepts-mcrae": [
             "accordion",
             "ambulance",
             "bagpipe",
@@ -5993,7 +5993,7 @@
             "whistle",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "accordion",
             "ambulance",
             "bagpipe",
@@ -6027,7 +6027,7 @@
     {
         "norm": "is_nutritious",
         "norm (language)": "is nutritious",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "beans",
             "bread",
@@ -6044,7 +6044,7 @@
             "spinach",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "bean",
             "bread",
@@ -6064,7 +6064,7 @@
     {
         "norm": "is_orange",
         "norm (language)": "is orange",
-        "concepts1": [
+        "concepts-mcrae": [
             "ambulance",
             "cantaloupe",
             "carrot",
@@ -6081,7 +6081,7 @@
             "tiger",
             "yam"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ambulance",
             "cantaloupe",
             "carrot",
@@ -6097,14 +6097,14 @@
     {
         "norm": "is_pink",
         "norm (language)": "is pink",
-        "concepts1": [
+        "concepts-mcrae": [
             "flamingo",
             "grapefruit",
             "pig",
             "salmon",
             "shrimp"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "flamingo",
             "grapefruit",
             "pig",
@@ -6114,7 +6114,7 @@
     {
         "norm": "is_pretty",
         "norm (language)": "is pretty",
-        "concepts1": [
+        "concepts-mcrae": [
             "blouse",
             "bluejay",
             "bouquet",
@@ -6123,7 +6123,7 @@
             "ring_(jewelry)",
             "swan"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "blouse",
             "bouquet",
             "butterfly",
@@ -6135,14 +6135,14 @@
     {
         "norm": "is_purple",
         "norm (language)": "is purple",
-        "concepts1": [
+        "concepts-mcrae": [
             "beets",
             "eggplant",
             "grape",
             "plum",
             "prune"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beet",
             "eggplant",
             "grape",
@@ -6153,7 +6153,7 @@
     {
         "norm": "is_rectangular",
         "norm (language)": "is rectangular",
-        "concepts1": [
+        "concepts-mcrae": [
             "banner",
             "box",
             "brick",
@@ -6165,7 +6165,7 @@
             "ruler",
             "tray"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "banner",
             "box",
             "brick",
@@ -6180,7 +6180,7 @@
     {
         "norm": "is_red",
         "norm (language)": "is red",
-        "concepts1": [
+        "concepts-mcrae": [
             "ambulance",
             "ant",
             "apple",
@@ -6208,7 +6208,7 @@
             "tricycle",
             "wagon"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ambulance",
             "ant",
             "apple",
@@ -6239,7 +6239,7 @@
     {
         "norm": "is_round",
         "norm (language)": "is round",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "ashtray",
             "ball",
@@ -6317,7 +6317,7 @@
             "wand",
             "wheel"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "ashtray",
             "ball",
@@ -6391,7 +6391,7 @@
     {
         "norm": "is_sharp",
         "norm (language)": "is sharp",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "bayonet",
             "chisel",
@@ -6411,7 +6411,7 @@
             "tack",
             "tomahawk"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "chisel",
             "dagger",
@@ -6432,7 +6432,7 @@
     {
         "norm": "is_shiny",
         "norm (language)": "is shiny",
-        "concepts1": [
+        "concepts-mcrae": [
             "armour",
             "buckle",
             "chain",
@@ -6449,7 +6449,7 @@
             "tack",
             "trumpet"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "armor",
             "buckle",
             "chain",
@@ -6470,7 +6470,7 @@
     {
         "norm": "is_silver",
         "norm (language)": "is silver",
-        "concepts1": [
+        "concepts-mcrae": [
             "armour",
             "chain",
             "flute",
@@ -6480,7 +6480,7 @@
             "tack",
             "thimble"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "armor",
             "chain",
             "flute",
@@ -6494,7 +6494,7 @@
     {
         "norm": "is_slimy",
         "norm (language)": "is slimy",
-        "concepts1": [
+        "concepts-mcrae": [
             "eel",
             "iguana",
             "perch",
@@ -6506,7 +6506,7 @@
             "toad",
             "worm"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "eel",
             "iguana",
             "sardine",
@@ -6520,7 +6520,7 @@
     {
         "norm": "is_slow",
         "norm (language)": "is slow",
-        "concepts1": [
+        "concepts-mcrae": [
             "porcupine",
             "scooter",
             "snail",
@@ -6529,7 +6529,7 @@
             "tricycle",
             "turtle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "porcupine",
             "scooter",
             "snail",
@@ -6541,7 +6541,7 @@
     {
         "norm": "is_small",
         "norm (language)": "is small",
-        "concepts1": [
+        "concepts-mcrae": [
             "ant",
             "apartment",
             "bat_(animal)",
@@ -6664,7 +6664,7 @@
             "whistle",
             "worm"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ant",
             "bat1",
             "bean",
@@ -6759,7 +6759,7 @@
     {
         "norm": "is_smelly",
         "norm (language)": "is smelly",
-        "concepts1": [
+        "concepts-mcrae": [
             "ashtray",
             "barn",
             "bin_(waste)",
@@ -6777,7 +6777,7 @@
             "trout",
             "tuna"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ashtray",
             "cabbage",
             "cigar",
@@ -6795,7 +6795,7 @@
     {
         "norm": "is_smooth",
         "norm (language)": "is smooth",
-        "concepts1": [
+        "concepts-mcrae": [
             "dolphin",
             "magazine",
             "marble",
@@ -6805,7 +6805,7 @@
             "seal",
             "stone"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "dolphin",
             "marble",
             "pearl",
@@ -6816,7 +6816,7 @@
     {
         "norm": "is_soft",
         "norm (language)": "is soft",
-        "concepts1": [
+        "concepts-mcrae": [
             "avocado",
             "banana",
             "bed",
@@ -6845,7 +6845,7 @@
             "sofa",
             "strawberry"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "avocado",
             "banana",
             "bed",
@@ -6871,7 +6871,7 @@
     {
         "norm": "is_square",
         "norm (language)": "is square",
-        "concepts1": [
+        "concepts-mcrae": [
             "box",
             "cushion",
             "napkin",
@@ -6879,7 +6879,7 @@
             "table",
             "tray"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "box",
             "cushion",
             "napkin",
@@ -6891,7 +6891,7 @@
     {
         "norm": "is_strong",
         "norm (language)": "is strong",
-        "concepts1": [
+        "concepts-mcrae": [
             "ant",
             "armour",
             "chain",
@@ -6901,7 +6901,7 @@
             "ox",
             "rope"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ant",
             "armor",
             "chain",
@@ -6913,7 +6913,7 @@
     {
         "norm": "is_tall",
         "norm (language)": "is tall",
-        "concepts1": [
+        "concepts-mcrae": [
             "birch",
             "bookcase",
             "building",
@@ -6927,7 +6927,7 @@
             "skyscraper",
             "stool_(furniture)"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bookshelf",
             "gate",
             "giraffe",
@@ -6938,7 +6938,7 @@
     {
         "norm": "is_thin",
         "norm (language)": "is thin",
-        "concepts1": [
+        "concepts-mcrae": [
             "belt",
             "bracelet",
             "canoe",
@@ -6956,7 +6956,7 @@
             "tie",
             "whip"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "belt",
             "bracelet2",
             "canoe",
@@ -6978,7 +6978,7 @@
     {
         "norm": "is_transparent",
         "norm (language)": "is transparent",
-        "concepts1": [
+        "concepts-mcrae": [
             "bottle",
             "hose_(leggings)",
             "jar",
@@ -6986,7 +6986,7 @@
             "tape_(scotch)",
             "veil"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bottle",
             "jar",
             "leggings",
@@ -6998,7 +6998,7 @@
     {
         "norm": "is_ugly",
         "norm (language)": "is ugly",
-        "concepts1": [
+        "concepts-mcrae": [
             "beetle",
             "buzzard",
             "cockroach",
@@ -7010,7 +7010,7 @@
             "toad",
             "vulture"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "beetle",
             "cockroach",
             "crow",
@@ -7025,7 +7025,7 @@
     {
         "norm": "is_useful",
         "norm (language)": "is useful",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "pliers",
             "shelves",
@@ -7033,7 +7033,7 @@
             "tape_(scotch)",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "pliers",
             "shelf",
@@ -7045,7 +7045,7 @@
     {
         "norm": "is_warm",
         "norm (language)": "is warm",
-        "concepts1": [
+        "concepts-mcrae": [
             "bed",
             "cap_(hat)",
             "cloak",
@@ -7061,7 +7061,7 @@
             "shawl",
             "sweater"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bed",
             "cloak",
             "coat",
@@ -7076,7 +7076,7 @@
     {
         "norm": "is_white",
         "norm (language)": "is white",
-        "concepts1": [
+        "concepts-mcrae": [
             "ambulance",
             "bathtub",
             "bear",
@@ -7129,7 +7129,7 @@
             "veil",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ambulance",
             "bathtub",
             "bear",
@@ -7179,14 +7179,14 @@
     {
         "norm": "is_white_inside",
         "norm (language)": "is white inside",
-        "concepts1": [
+        "concepts-mcrae": [
             "coconut",
             "cucumber",
             "eggplant",
             "radish",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "coconut",
             "cucumber",
             "eggplant",
@@ -7197,7 +7197,7 @@
     {
         "norm": "is_yellow",
         "norm (language)": "is yellow",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "banana",
             "beans",
@@ -7226,7 +7226,7 @@
             "tractor",
             "wasp"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "banana",
             "bean",
@@ -7254,7 +7254,7 @@
     {
         "norm": "lives_in_Africa",
         "norm (language)": "lives in Africa",
-        "concepts1": [
+        "concepts-mcrae": [
             "cheetah",
             "elephant",
             "giraffe",
@@ -7263,7 +7263,7 @@
             "tiger",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cheetah",
             "elephant",
             "giraffe",
@@ -7276,7 +7276,7 @@
     {
         "norm": "lives_in_deserts",
         "norm (language)": "lives in deserts",
-        "concepts1": [
+        "concepts-mcrae": [
             "buzzard",
             "camel",
             "coyote",
@@ -7284,7 +7284,7 @@
             "rattlesnake",
             "vulture"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "camel",
             "coyote",
             "iguana",
@@ -7295,7 +7295,7 @@
     {
         "norm": "lives_in_forests",
         "norm (language)": "lives in forests",
-        "concepts1": [
+        "concepts-mcrae": [
             "bear",
             "cougar",
             "coyote",
@@ -7306,7 +7306,7 @@
             "porcupine",
             "skunk"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bear",
             "cougar",
             "coyote",
@@ -7319,14 +7319,14 @@
     {
         "norm": "lives_in_ground",
         "norm (language)": "lives in ground",
-        "concepts1": [
+        "concepts-mcrae": [
             "ant",
             "gopher",
             "groundhog",
             "mole_(animal)",
             "worm"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ant",
             "gopher",
             "groundhog",
@@ -7337,7 +7337,7 @@
     {
         "norm": "lives_in_jungles",
         "norm (language)": "lives in jungles",
-        "concepts1": [
+        "concepts-mcrae": [
             "chimp",
             "cougar",
             "gorilla",
@@ -7346,7 +7346,7 @@
             "python",
             "tiger"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cougar",
             "gorilla",
             "lion",
@@ -7357,7 +7357,7 @@
     {
         "norm": "lives_in_oceans",
         "norm (language)": "lives in oceans",
-        "concepts1": [
+        "concepts-mcrae": [
             "clam",
             "crab",
             "dolphin",
@@ -7369,7 +7369,7 @@
             "tuna",
             "whale"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "clam",
             "crab",
             "dolphin",
@@ -7384,7 +7384,7 @@
     {
         "norm": "lives_in_trees",
         "norm (language)": "lives in trees",
-        "concepts1": [
+        "concepts-mcrae": [
             "caterpillar",
             "chipmunk",
             "dove",
@@ -7392,7 +7392,7 @@
             "squirrel",
             "woodpecker"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "caterpillar",
             "chipmunk",
             "owl",
@@ -7402,7 +7402,7 @@
     {
         "norm": "lives_in_water",
         "norm (language)": "lives in water",
-        "concepts1": [
+        "concepts-mcrae": [
             "alligator",
             "beaver",
             "catfish",
@@ -7436,7 +7436,7 @@
             "walrus",
             "whale"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "alligator",
             "beaver",
             "catfish",
@@ -7463,7 +7463,7 @@
     {
         "norm": "lives_in_wilderness",
         "norm (language)": "lives in wilderness",
-        "concepts1": [
+        "concepts-mcrae": [
             "bear",
             "caribou",
             "cougar",
@@ -7474,7 +7474,7 @@
             "moose",
             "tiger"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bear",
             "cougar",
             "coyote",
@@ -7487,7 +7487,7 @@
     {
         "norm": "lives_in_zoos",
         "norm (language)": "lives in zoos",
-        "concepts1": [
+        "concepts-mcrae": [
             "chimp",
             "elephant",
             "giraffe",
@@ -7498,7 +7498,7 @@
             "tiger",
             "zebra"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "elephant",
             "giraffe",
             "gorilla",
@@ -7512,7 +7512,7 @@
     {
         "norm": "lives_on_farms",
         "norm (language)": "lives on farms",
-        "concepts1": [
+        "concepts-mcrae": [
             "calf",
             "chicken",
             "cow",
@@ -7526,7 +7526,7 @@
             "sheep",
             "turkey"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "calf1",
             "chicken2",
             "cow",
@@ -7544,14 +7544,14 @@
     {
         "norm": "made_of_brass",
         "norm (language)": "made of brass",
-        "concepts1": [
+        "concepts-mcrae": [
             "doorknob",
             "saxophone",
             "trombone",
             "trumpet",
             "tuba"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "doorknob",
             "saxophone",
             "trombone",
@@ -7562,21 +7562,21 @@
     {
         "norm": "made_of_brick",
         "norm (language)": "made of brick",
-        "concepts1": [
+        "concepts-mcrae": [
             "apartment",
             "building",
             "bungalow",
             "house",
             "wall"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "wall"
         ]
     },
     {
         "norm": "made_of_ceramic",
         "norm (language)": "made of ceramic",
-        "concepts1": [
+        "concepts-mcrae": [
             "bathtub",
             "bowl",
             "cup",
@@ -7585,7 +7585,7 @@
             "plate",
             "toilet"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bathtub",
             "bowl",
             "cup",
@@ -7598,7 +7598,7 @@
     {
         "norm": "made_of_cotton",
         "norm (language)": "made of cotton",
-        "concepts1": [
+        "concepts-mcrae": [
             "apron",
             "blouse",
             "bra",
@@ -7612,7 +7612,7 @@
             "socks",
             "sweater"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apron",
             "blouse",
             "bra",
@@ -7628,7 +7628,7 @@
     {
         "norm": "made_of_different_materials",
         "norm (language)": "made of different materials",
-        "concepts1": [
+        "concepts-mcrae": [
             "coat",
             "pants",
             "robe",
@@ -7636,7 +7636,7 @@
             "skirt",
             "swimsuit"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "coat",
             "pants",
             "robe",
@@ -7647,7 +7647,7 @@
     {
         "norm": "made_of_glass",
         "norm (language)": "made of glass",
-        "concepts1": [
+        "concepts-mcrae": [
             "ashtray",
             "blender",
             "bottle",
@@ -7663,7 +7663,7 @@
             "tank_(container)",
             "thermometer"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ashtray",
             "blender",
             "bottle",
@@ -7683,7 +7683,7 @@
     {
         "norm": "made_of_gold",
         "norm (language)": "made of gold",
-        "concepts1": [
+        "concepts-mcrae": [
             "bracelet",
             "crown",
             "medal",
@@ -7691,7 +7691,7 @@
             "ring_(jewelry)",
             "tuba"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bracelet2",
             "crown",
             "medal",
@@ -7703,7 +7703,7 @@
     {
         "norm": "made_of_leather",
         "norm (language)": "made of leather",
-        "concepts1": [
+        "concepts-mcrae": [
             "belt",
             "boots",
             "coat",
@@ -7718,7 +7718,7 @@
             "slippers",
             "whip"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "belt",
             "boot",
             "coat",
@@ -7736,7 +7736,7 @@
     {
         "norm": "made_of_material",
         "norm (language)": "made of material",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "belt",
             "blouse",
@@ -7756,7 +7756,7 @@
             "tie",
             "trousers"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "belt",
             "blouse",
@@ -7777,7 +7777,7 @@
     {
         "norm": "made_of_metal",
         "norm (language)": "made of metal",
-        "concepts1": [
+        "concepts-mcrae": [
             "airplane",
             "anchor",
             "armour",
@@ -7912,7 +7912,7 @@
             "whistle",
             "wrench"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "airplane",
             "anchor",
             "armor",
@@ -8035,7 +8035,7 @@
     {
         "norm": "made_of_paper",
         "norm (language)": "made of paper",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "banner",
             "book",
@@ -8047,7 +8047,7 @@
             "napkin",
             "plate"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "banner",
             "book",
@@ -8060,7 +8060,7 @@
     {
         "norm": "made_of_plastic",
         "norm (language)": "made of plastic",
-        "concepts1": [
+        "concepts-mcrae": [
             "ashtray",
             "bag",
             "balloon",
@@ -8113,7 +8113,7 @@
             "umbrella",
             "whistle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ashtray",
             "bag",
             "balloon",
@@ -8167,7 +8167,7 @@
     {
         "norm": "made_of_porcelain",
         "norm (language)": "made of porcelain",
-        "concepts1": [
+        "concepts-mcrae": [
             "cup",
             "doll",
             "plate",
@@ -8175,7 +8175,7 @@
             "sink",
             "toilet"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cup",
             "doll",
             "plate",
@@ -8187,7 +8187,7 @@
     {
         "norm": "made_of_rubber",
         "norm (language)": "made of rubber",
-        "concepts1": [
+        "concepts-mcrae": [
             "balloon",
             "boots",
             "hose",
@@ -8196,7 +8196,7 @@
             "spatula",
             "wheel"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "balloon",
             "boot",
             "hose",
@@ -8209,7 +8209,7 @@
     {
         "norm": "made_of_silk",
         "norm (language)": "made of silk",
-        "concepts1": [
+        "concepts-mcrae": [
             "blouse",
             "camisole",
             "gown",
@@ -8217,7 +8217,7 @@
             "pajamas",
             "tie"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "blouse",
             "pajamas",
             "tie"
@@ -8226,7 +8226,7 @@
     {
         "norm": "made_of_silver",
         "norm (language)": "made of silver",
-        "concepts1": [
+        "concepts-mcrae": [
             "bracelet",
             "coin",
             "crown",
@@ -8235,7 +8235,7 @@
             "necklace",
             "ring_(jewelry)"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bracelet2",
             "coin",
             "crown",
@@ -8248,7 +8248,7 @@
     {
         "norm": "made_of_steel",
         "norm (language)": "made of steel",
-        "concepts1": [
+        "concepts-mcrae": [
             "bolts",
             "clamp",
             "fork",
@@ -8256,7 +8256,7 @@
             "pliers",
             "sword"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bolt",
             "fork",
             "knife",
@@ -8267,7 +8267,7 @@
     {
         "norm": "made_of_wood",
         "norm (language)": "made of wood",
-        "concepts1": [
+        "concepts-mcrae": [
             "banjo",
             "barn",
             "barrel",
@@ -8348,7 +8348,7 @@
             "wall",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "banjo",
             "barrel",
             "baseball_bat",
@@ -8414,7 +8414,7 @@
     {
         "norm": "made_of_wool",
         "norm (language)": "made of wool",
-        "concepts1": [
+        "concepts-mcrae": [
             "carpet",
             "coat",
             "gloves",
@@ -8425,7 +8425,7 @@
             "sweater",
             "trousers"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "coat",
             "glove",
             "mitten",
@@ -8439,14 +8439,14 @@
     {
         "norm": "requires_drivers",
         "norm (language)": "requires drivers",
-        "concepts1": [
+        "concepts-mcrae": [
             "bus",
             "car",
             "limousine",
             "taxi",
             "truck"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bus",
             "car",
             "limousine",
@@ -8457,7 +8457,7 @@
     {
         "norm": "requires_gasoline",
         "norm (language)": "requires gasoline",
-        "concepts1": [
+        "concepts-mcrae": [
             "car",
             "limousine",
             "motorcycle",
@@ -8465,7 +8465,7 @@
             "truck",
             "van"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "car",
             "limousine",
             "motorcycle",
@@ -8477,7 +8477,7 @@
     {
         "norm": "tastes_good",
         "norm (language)": "tastes good",
-        "concepts1": [
+        "concepts-mcrae": [
             "avocado",
             "banana",
             "biscuit",
@@ -8512,7 +8512,7 @@
             "tuna",
             "zucchini"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "avocado",
             "banana",
             "biscuit",
@@ -8545,7 +8545,7 @@
     {
         "norm": "tastes_sour",
         "norm (language)": "tastes sour",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "cranberry",
             "grapefruit",
@@ -8555,7 +8555,7 @@
             "raspberry",
             "rhubarb"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "cranberry",
             "grapefruit",
@@ -8569,7 +8569,7 @@
     {
         "norm": "tastes_sweet",
         "norm (language)": "tastes sweet",
-        "concepts1": [
+        "concepts-mcrae": [
             "apple",
             "blueberry",
             "cake",
@@ -8595,7 +8595,7 @@
             "tangerine",
             "yam"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apple",
             "blueberry",
             "cake",
@@ -8620,7 +8620,7 @@
     {
         "norm": "used_by_blowing_air_through",
         "norm (language)": "used by blowing air through",
-        "concepts1": [
+        "concepts-mcrae": [
             "clarinet",
             "flute",
             "harmonica",
@@ -8629,7 +8629,7 @@
             "tuba",
             "whistle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "clarinet",
             "flute",
             "harmonica",
@@ -8642,7 +8642,7 @@
     {
         "norm": "used_by_children",
         "norm (language)": "used by children",
-        "concepts1": [
+        "concepts-mcrae": [
             "balloon",
             "crayon",
             "doll",
@@ -8657,7 +8657,7 @@
             "tricycle",
             "wagon"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "balloon",
             "crayon",
             "doll",
@@ -8676,7 +8676,7 @@
     {
         "norm": "used_by_people",
         "norm (language)": "used by people",
-        "concepts1": [
+        "concepts-mcrae": [
             "bathtub",
             "boat",
             "bridge",
@@ -8688,7 +8688,7 @@
             "submarine",
             "trombone"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bathtub",
             "boat",
             "brush",
@@ -8701,7 +8701,7 @@
     {
         "norm": "used_by_riding",
         "norm (language)": "used by riding",
-        "concepts1": [
+        "concepts-mcrae": [
             "bike",
             "camel",
             "donkey",
@@ -8710,7 +8710,7 @@
             "skateboard",
             "tricycle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bike",
             "camel",
             "donkey",
@@ -8723,14 +8723,14 @@
     {
         "norm": "used_by_shooting",
         "norm (language)": "used by shooting",
-        "concepts1": [
+        "concepts-mcrae": [
             "gun",
             "harpoon",
             "pistol",
             "rifle",
             "slingshot"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "gun",
             "rifle",
             "slingshot"
@@ -8739,7 +8739,7 @@
     {
         "norm": "used_by_sitting_on",
         "norm (language)": "used by sitting on",
-        "concepts1": [
+        "concepts-mcrae": [
             "bench",
             "chair",
             "couch",
@@ -8749,7 +8749,7 @@
             "sofa",
             "stool_(furniture)"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bench",
             "chair",
             "couch",
@@ -8762,14 +8762,14 @@
     {
         "norm": "used_by_the_military",
         "norm (language)": "used by the military",
-        "concepts1": [
+        "concepts-mcrae": [
             "bazooka",
             "grenade",
             "jeep",
             "missile",
             "tank_(army)"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bazooka",
             "grenade",
             "jeep",
@@ -8780,7 +8780,7 @@
     {
         "norm": "used_by_the_police",
         "norm (language)": "used by the police",
-        "concepts1": [
+        "concepts-mcrae": [
             "bullet",
             "gun",
             "helicopter",
@@ -8789,7 +8789,7 @@
             "shotgun",
             "whistle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bullet",
             "gun",
             "helicopter",
@@ -8800,7 +8800,7 @@
     {
         "norm": "used_by_throwing",
         "norm (language)": "used by throwing",
-        "concepts1": [
+        "concepts-mcrae": [
             "ball",
             "football",
             "grenade",
@@ -8809,7 +8809,7 @@
             "stone",
             "tomahawk"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ball",
             "football",
             "grenade",
@@ -8820,14 +8820,14 @@
     {
         "norm": "used_by_turning",
         "norm (language)": "used by turning",
-        "concepts1": [
+        "concepts-mcrae": [
             "doorknob",
             "screwdriver",
             "screws",
             "tap",
             "wrench"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "doorknob",
             "faucet",
             "screw",
@@ -8838,14 +8838,14 @@
     {
         "norm": "used_for_cargo",
         "norm (language)": "used for cargo",
-        "concepts1": [
+        "concepts-mcrae": [
             "cart",
             "ship",
             "truck",
             "van",
             "wagon"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cart",
             "ship",
             "truck",
@@ -8856,7 +8856,7 @@
     {
         "norm": "used_for_carpentry",
         "norm (language)": "used for carpentry",
-        "concepts1": [
+        "concepts-mcrae": [
             "clamp",
             "drill",
             "hammer",
@@ -8866,7 +8866,7 @@
             "screwdriver",
             "screws"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "drill",
             "hammer",
             "pliers",
@@ -8878,7 +8878,7 @@
     {
         "norm": "used_for_carrying_things",
         "norm (language)": "used for carrying things",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "basket",
             "bucket",
@@ -8889,7 +8889,7 @@
             "trolley",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "basket",
             "bucket",
@@ -8903,14 +8903,14 @@
     {
         "norm": "used_for_cleaning",
         "norm (language)": "used for cleaning",
-        "concepts1": [
+        "concepts-mcrae": [
             "apron",
             "broom",
             "brush",
             "napkin",
             "rake"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apron",
             "broom",
             "brush",
@@ -8921,7 +8921,7 @@
     {
         "norm": "used_for_construction",
         "norm (language)": "used for construction",
-        "concepts1": [
+        "concepts-mcrae": [
             "board_(wood)",
             "bolts",
             "brick",
@@ -8935,7 +8935,7 @@
             "stone",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "board",
             "bolt",
             "brick",
@@ -8950,7 +8950,7 @@
     {
         "norm": "used_for_cooking",
         "norm (language)": "used for cooking",
-        "concepts1": [
+        "concepts-mcrae": [
             "apron",
             "ladle",
             "microwave",
@@ -8965,7 +8965,7 @@
             "strainer",
             "toaster"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apron",
             "ladle",
             "microwave",
@@ -8983,7 +8983,7 @@
     {
         "norm": "used_for_cutting",
         "norm (language)": "used for cutting",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "dagger",
             "grater",
@@ -8994,7 +8994,7 @@
             "scissors",
             "sword"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "dagger",
             "grater",
@@ -9009,14 +9009,14 @@
     {
         "norm": "used_for_eating",
         "norm (language)": "used for eating",
-        "concepts1": [
+        "concepts-mcrae": [
             "bowl",
             "dish",
             "fork",
             "plate",
             "spoon"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bowl",
             "dish",
             "fork",
@@ -9027,14 +9027,14 @@
     {
         "norm": "used_for_fishing",
         "norm (language)": "used for fishing",
-        "concepts1": [
+        "concepts-mcrae": [
             "boat",
             "hook",
             "pier",
             "spear",
             "worm"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "boat",
             "hook2",
             "spear",
@@ -9044,7 +9044,7 @@
     {
         "norm": "used_for_food",
         "norm (language)": "used for food",
-        "concepts1": [
+        "concepts-mcrae": [
             "bowl",
             "dish",
             "grater",
@@ -9053,7 +9053,7 @@
             "skillet",
             "tray"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bowl",
             "dish",
             "grater",
@@ -9066,7 +9066,7 @@
     {
         "norm": "used_for_holding_things",
         "norm (language)": "used for holding things",
-        "concepts1": [
+        "concepts-mcrae": [
             "bag",
             "basket",
             "bottle",
@@ -9082,7 +9082,7 @@
             "urn",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bag",
             "basket",
             "bottle",
@@ -9101,7 +9101,7 @@
     {
         "norm": "used_for_holding_things_together",
         "norm (language)": "used for holding things together",
-        "concepts1": [
+        "concepts-mcrae": [
             "bolts",
             "buckle",
             "chain",
@@ -9111,7 +9111,7 @@
             "tack",
             "tape_(scotch)"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bolt",
             "buckle",
             "chain",
@@ -9124,14 +9124,14 @@
     {
         "norm": "used_for_holding_water",
         "norm (language)": "used for holding water",
-        "concepts1": [
+        "concepts-mcrae": [
             "bathtub",
             "kettle",
             "pipe_(plumbing)",
             "sink",
             "tank_(container)"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bathtub",
             "kettle",
             "pipe2",
@@ -9142,7 +9142,7 @@
     {
         "norm": "used_for_hunting",
         "norm (language)": "used for hunting",
-        "concepts1": [
+        "concepts-mcrae": [
             "bow_(weapon)",
             "crossbow",
             "gun",
@@ -9152,7 +9152,7 @@
             "slingshot",
             "spear"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bow2",
             "crossbow",
             "gun",
@@ -9164,7 +9164,7 @@
     {
         "norm": "used_for_juice",
         "norm (language)": "used for juice",
-        "concepts1": [
+        "concepts-mcrae": [
             "cranberry",
             "grape",
             "grapefruit",
@@ -9173,7 +9173,7 @@
             "pineapple",
             "prune"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cranberry",
             "grape",
             "grapefruit",
@@ -9186,7 +9186,7 @@
     {
         "norm": "used_for_killing",
         "norm (language)": "used for killing",
-        "concepts1": [
+        "concepts-mcrae": [
             "axe",
             "bayonet",
             "bazooka",
@@ -9207,7 +9207,7 @@
             "slingshot",
             "spear"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "axe",
             "bazooka",
             "bomb",
@@ -9228,14 +9228,14 @@
     {
         "norm": "used_for_moving_things",
         "norm (language)": "used for moving things",
-        "concepts1": [
+        "concepts-mcrae": [
             "box",
             "crane_(machine)",
             "trolley",
             "van",
             "wheelbarrow"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "box",
             "crane",
             "trolley",
@@ -9246,7 +9246,7 @@
     {
         "norm": "used_for_music",
         "norm (language)": "used for music",
-        "concepts1": [
+        "concepts-mcrae": [
             "bagpipe",
             "banjo",
             "cello",
@@ -9254,7 +9254,7 @@
             "saxophone",
             "trumpet"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bagpipe",
             "banjo",
             "cello",
@@ -9266,7 +9266,7 @@
     {
         "norm": "used_for_passengers",
         "norm (language)": "used for passengers",
-        "concepts1": [
+        "concepts-mcrae": [
             "airplane",
             "bus",
             "car",
@@ -9278,7 +9278,7 @@
             "train",
             "van"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "airplane",
             "bus",
             "car",
@@ -9294,14 +9294,14 @@
     {
         "norm": "used_for_playing",
         "norm (language)": "used for playing",
-        "concepts1": [
+        "concepts-mcrae": [
             "ball",
             "doll",
             "kite",
             "marble",
             "toy"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ball",
             "doll",
             "kite",
@@ -9312,7 +9312,7 @@
     {
         "norm": "used_for_protection",
         "norm (language)": "used for protection",
-        "concepts1": [
+        "concepts-mcrae": [
             "dog",
             "gun",
             "pistol",
@@ -9323,7 +9323,7 @@
             "umbrella",
             "wall"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "dog",
             "gun",
             "revolver",
@@ -9337,14 +9337,14 @@
     {
         "norm": "used_for_sleeping",
         "norm (language)": "used for sleeping",
-        "concepts1": [
+        "concepts-mcrae": [
             "bed",
             "couch",
             "cushion",
             "pillow",
             "sofa"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bed",
             "couch",
             "cushion",
@@ -9354,7 +9354,7 @@
     {
         "norm": "used_for_sports",
         "norm (language)": "used for sports",
-        "concepts1": [
+        "concepts-mcrae": [
             "ball",
             "bat_(baseball)",
             "bow_(weapon)",
@@ -9363,7 +9363,7 @@
             "sailboat",
             "whistle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "ball",
             "baseball_bat",
             "bow2",
@@ -9376,7 +9376,7 @@
     {
         "norm": "used_for_storage",
         "norm (language)": "used for storage",
-        "concepts1": [
+        "concepts-mcrae": [
             "barn",
             "barrel",
             "basement",
@@ -9396,7 +9396,7 @@
             "shelves",
             "tank_(container)"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "barrel",
             "bookshelf",
             "box",
@@ -9412,7 +9412,7 @@
     {
         "norm": "used_for_transportation",
         "norm (language)": "used for transportation",
-        "concepts1": [
+        "concepts-mcrae": [
             "airplane",
             "ambulance",
             "bike",
@@ -9447,7 +9447,7 @@
             "wheelbarrow",
             "yacht"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "airplane",
             "ambulance",
             "bike",
@@ -9484,7 +9484,7 @@
     {
         "norm": "used_for_war",
         "norm (language)": "used for war",
-        "concepts1": [
+        "concepts-mcrae": [
             "bazooka",
             "bomb",
             "cannon",
@@ -9498,7 +9498,7 @@
             "tank_(army)",
             "tomahawk"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "bazooka",
             "bomb",
             "cannon",
@@ -9515,7 +9515,7 @@
     {
         "norm": "used_in_bands",
         "norm (language)": "used in bands",
-        "concepts1": [
+        "concepts-mcrae": [
             "banjo",
             "clarinet",
             "drum",
@@ -9526,7 +9526,7 @@
             "trumpet",
             "tuba"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "banjo",
             "clarinet",
             "drum",
@@ -9541,14 +9541,14 @@
     {
         "norm": "used_in_circuses",
         "norm (language)": "used in circuses",
-        "concepts1": [
+        "concepts-mcrae": [
             "cannon",
             "elephant",
             "lion",
             "tiger",
             "unicycle"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "cannon",
             "elephant",
             "lion",
@@ -9559,7 +9559,7 @@
     {
         "norm": "used_in_orchestras",
         "norm (language)": "used in orchestras",
-        "concepts1": [
+        "concepts-mcrae": [
             "clarinet",
             "flute",
             "trombone",
@@ -9567,7 +9567,7 @@
             "tuba",
             "violin"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "clarinet",
             "flute",
             "trombone",
@@ -9579,7 +9579,7 @@
     {
         "norm": "used_on_water",
         "norm (language)": "used on water",
-        "concepts1": [
+        "concepts-mcrae": [
             "canoe",
             "raft",
             "ship",
@@ -9588,7 +9588,7 @@
             "surfboard",
             "yacht"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "canoe",
             "raft",
             "ship",
@@ -9601,7 +9601,7 @@
     {
         "norm": "worn_around_neck",
         "norm (language)": "worn around neck",
-        "concepts1": [
+        "concepts-mcrae": [
             "apron",
             "chain",
             "medal",
@@ -9609,7 +9609,7 @@
             "scarf",
             "tie"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apron",
             "chain",
             "medal",
@@ -9621,7 +9621,7 @@
     {
         "norm": "worn_by_men",
         "norm (language)": "worn by men",
-        "concepts1": [
+        "concepts-mcrae": [
             "cap_(hat)",
             "pants",
             "shirt",
@@ -9629,7 +9629,7 @@
             "tie",
             "trousers"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "pants",
             "shirt",
             "swimsuit",
@@ -9639,7 +9639,7 @@
     {
         "norm": "worn_by_women",
         "norm (language)": "worn by women",
-        "concepts1": [
+        "concepts-mcrae": [
             "apron",
             "blouse",
             "bra",
@@ -9659,7 +9659,7 @@
             "swimsuit",
             "veil"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apron",
             "blouse",
             "bra",
@@ -9680,7 +9680,7 @@
     {
         "norm": "worn_for_covering_body",
         "norm (language)": "worn for covering body",
-        "concepts1": [
+        "concepts-mcrae": [
             "boots",
             "coat",
             "nylons",
@@ -9690,7 +9690,7 @@
             "swimsuit",
             "trousers"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "boot",
             "coat",
             "pants",
@@ -9703,7 +9703,7 @@
     {
         "norm": "worn_for_protection",
         "norm (language)": "worn for protection",
-        "concepts1": [
+        "concepts-mcrae": [
             "apron",
             "armour",
             "boots",
@@ -9713,7 +9713,7 @@
             "shoes",
             "thimble"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "apron",
             "armor",
             "boot",
@@ -9726,7 +9726,7 @@
     {
         "norm": "worn_for_wamth",
         "norm (language)": "worn for wamth",
-        "concepts1": [
+        "concepts-mcrae": [
             "boots",
             "cape",
             "coat",
@@ -9745,7 +9745,7 @@
             "trousers",
             "vest"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "boot",
             "cape",
             "coat",
@@ -9767,7 +9767,7 @@
     {
         "norm": "worn_in_winter",
         "norm (language)": "worn in winter",
-        "concepts1": [
+        "concepts-mcrae": [
             "boots",
             "coat",
             "gloves",
@@ -9777,7 +9777,7 @@
             "scarf",
             "sweater"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "boot",
             "coat",
             "glove",
@@ -9790,7 +9790,7 @@
     {
         "norm": "worn_on_feet",
         "norm (language)": "worn on feet",
-        "concepts1": [
+        "concepts-mcrae": [
             "boots",
             "sandals",
             "shoes",
@@ -9798,7 +9798,7 @@
             "slippers",
             "socks"
         ],
-        "concepts2 ": [
+        "concepts-things ": [
             "boot",
             "sandal",
             "shoe",

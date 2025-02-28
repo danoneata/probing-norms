@@ -92,7 +92,7 @@ def prepare_mcrae_feature_list(num_min_concepts=5):
             "norm": f,
             "norm (language)": normalize_norm(f),
             "concepts-mcrae": concepts1,
-            "concepts-things ": concepts2,
+            "concepts-mcrae-in-things ": concepts2,
         }
 
     data = [prepare_datum(f) for f in sorted(feature_to_concepts.keys())]

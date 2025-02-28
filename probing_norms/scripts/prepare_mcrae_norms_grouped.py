@@ -1,9 +1,10 @@
 import pdb
+import numpy as np
 import pandas as pd
 
 from probing_norms.constants import MCRAE_SEP, MCRAE_PREFIXES
 from probing_norms.data import load_mcrae_feature_norms
-from probing_norms.utils import multimap
+from probing_norms.utils import multimap, cache_json
 
 
 def load_mapping_features():
@@ -72,17 +73,34 @@ def prepare_mcrae_feature_list(num_min_concepts=5):
     feature_to_concepts = {
         f: cs for f, cs in feature_to_concepts.items() if len(cs) >= num_min_concepts
     }
-    data = [
-        {
+
+    mcrae_not_in_things = pd.read_csv("data/mcrae-not-in-things.csv")
+    mcrae_not_in_things = dict(mcrae_not_in_things[["McRae Concept", "THINGS mapped concept"]].values)
+
+    def map_to_things(c):
+        if c in mcrae_not_in_things:
+            return mcrae_not_in_things[c]
+        else:
+            return c
+
+    def prepare_datum(f):
+        concepts1 = feature_to_concepts[f]
+        concepts2 = [map_to_things(c) for c in concepts1]
+        concepts2 = [c for c in concepts2 if not pd.isna(c)]
+        concepts2 = sorted(set(concepts2))
+        return {
             "norm": f,
             "norm (language)": normalize_norm(f),
-            "num. concepts": len(feature_to_concepts[f]),
+            "concepts-mcrae": concepts1,
+            "concepts-things ": concepts2,
         }
-        for f in sorted(feature_to_concepts.keys())
-    ]
-    df = pd.DataFrame(data)
-    df.to_csv("data/mcrae-norms-grouped.csv", index=False)
+
+    data = [prepare_datum(f) for f in sorted(feature_to_concepts.keys())]
+    # df = pd.DataFrame(data)
+    # df.to_csv("data/mcrae-norms-grouped-2.csv", index=False)
+
+    return data
 
 
 if __name__ == "__main__":
-    prepare_mcrae_feature_list(5)
+    cache_json("data/mcrae-norms-grouped-with-concepts.json", prepare_mcrae_feature_list, 5)

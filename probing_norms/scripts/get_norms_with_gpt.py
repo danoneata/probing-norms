@@ -147,3 +147,5 @@ if __name__ == "__main__":
                 f.write(json.dumps(response) + "\n")
             f.write(str(total_counter)+"\n")
             f.write(str(len(mcrae_concepts)))
+
+# python probing_norms/scripts/get_norms_with_gpt.py --concepts data/things/concepts-and-categories.json --norms data/mcrae-norms-grouped-with-concepts.json --target_norm "tastes good"

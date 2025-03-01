@@ -1,0 +1,12 @@
+"```json\n{\"concept\": \"cape\", \"attribute\": \"worn for warmth\", \"valid\": true}\n```"
+"```json\n{\n  \"concept\": \"coat\",\n  \"attribute\": \"worn for warmth\",\n  \"valid\": true\n}\n```"
+"```json\n{\"concept\": \"jacket\", \"attribute\": \"worn for warmth\", \"valid\": true}\n```"
+"```json\n{\n  \"concept\": \"pants\",\n  \"attribute\": \"is worn for warmth\",\n  \"valid\": true\n}\n```"
+"```json\n{\"concept\": \"robe\", \"attribute\": \"is worn for warmth\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"scarf\", \"attribute\": \"worn for warmth\", \"valid\": true}\n```"
+"```json\n{\n  \"concept\": \"shawl\",\n  \"attribute\": \"worn for warmth\",\n  \"valid\": true\n}\n```"
+"```json\n{\"concept\": \"shirt\", \"attribute\": \"worn for warmth\", \"valid\": false}\n```"
+"```json\n{\"concept\": \"sweater\", \"attribute\": \"is worn for warmth\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"vest\", \"attribute\": \"worn for warmth\", \"valid\": true}\n```"
+10
+17

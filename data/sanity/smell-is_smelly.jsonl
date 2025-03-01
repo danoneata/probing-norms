@@ -1,0 +1,11 @@
+"```json\n{\"concept\": \"ashtray\", \"attribute\": \"smelly\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"cabbage\", \"attribute\": \"is smelly\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"cigar\", \"attribute\": \"smelly\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"cigarette\", \"attribute\": \"smelly\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"cow\", \"attribute\": \"smelly\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"garlic\", \"attribute\": \"smelly\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"domestic swine\", \"attribute\": \"is smelly\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"sardine\", \"attribute\": \"smelly\", \"valid\": true}\n```"
+"```json\n{\n  \"concept\": \"seaweed\",\n  \"attribute\": \"smelly\",\n  \"valid\": true\n}\n```"
+9
+16

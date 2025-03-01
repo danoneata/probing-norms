@@ -1,0 +1,12 @@
+"```json\n{\n  \"concept\": \"cow\",\n  \"attribute\": \"lives on farms\",\n  \"valid\": true\n}\n```"
+"```json\n{\n  \"concept\": \"donkey\",\n  \"attribute\": \"lives on farms\",\n  \"valid\": true\n}\n```"
+"```json\n{\n  \"concept\": \"goat\",\n  \"attribute\": \"lives on farms\",\n  \"valid\": true\n}\n```"
+"```json\n{\"concept\": \"horse\", \"attribute\": \"lives on farms\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"lamb\", \"attribute\": \"lives on farms\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"pig\", \"attribute\": \"lives on farms\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"pony\", \"attribute\": \"lives on farms\", \"valid\": true}\n```"
+"```json\n{\"concept\": \"rooster\", \"attribute\": \"lives on farms\", \"valid\": true}\n```"
+"```json\n{\n  \"concept\": \"sheep\",\n  \"attribute\": \"lives on farms\",\n  \"valid\": true\n}\n```"
+"```json\n{\n  \"concept\": \"turkey\",\n  \"attribute\": \"lives on farms\",\n  \"valid\": true\n}\n```"
+10
+12

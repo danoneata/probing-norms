@@ -9724,8 +9724,8 @@
         ]
     },
     {
-        "norm": "worn_for_wamth",
-        "norm (language)": "worn for wamth",
+        "norm": "worn_for_warmth",
+        "norm (language)": "worn for warmth",
         "concepts-mcrae": [
             "boots",
             "cape",

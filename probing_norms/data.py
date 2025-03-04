@@ -160,6 +160,48 @@ def load_features_metadata(
     return feature_to_concepts, feature_to_id
 
 
+def load_mcrae_x_things():
+    import json
+    import gzip
+
+    from probing_norms.utils import read_json
+
+    data_features = read_json("data/mcrae-norms-grouped-with-concepts.json")
+    data_concepts = read_json("data/things/concepts-and-categories.json")
+
+    def load_norm(norm):
+        path = "data/api-gpt4o/outputs/output-{}.jsonl.gz".format(norm)
+        with gzip.open(path, "rt") as f:
+            for line in f:
+                datum = json.loads(line)
+                content = datum["response"]["body"]["choices"][0]["message"]["content"]
+                try:
+                    hd, *content, tl = content.split("\n")
+                except Exception as e:
+                    print(content)
+                    print(e)
+                    yield {}
+                assert hd == "```json"
+                assert tl == "```"
+                content = "\n".join(content)
+                try:
+                    result = json.loads(content)
+                except Exception as e:
+                    print(e)
+                    result = {}
+                result["attribute-orig"] = norm
+                yield result
+
+    data = [
+        datum
+        for datumf in data_features
+        # if datumf["norm"] in "a_herbivore an_animal an_appliance".split()
+        for datum in load_norm(datumf["norm"])
+    ]
+    concept_feature = [(datum["concept"], datum["feature"]) for datum in data if datum["valid"]]
+    return concept_feature
+
+
 class THINGS(Dataset):
     def __init__(self, root=DIR_THINGS, transform=identity):
         self.root = root
@@ -231,3 +273,6 @@ DATASETS = {
     "imagenet12": partial(ImageNet, root=DIR_IMAGENET, split="val"),
     "things": partial(THINGS, root=DIR_THINGS),
 }
+
+
+load_mcrae_x_things()

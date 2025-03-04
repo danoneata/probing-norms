@@ -30,6 +30,7 @@ from probing_norms.data import (
     load_binder_feature_norms,
     load_binder_feature_norms_median,
     load_mcrae_feature_norms,
+    load_mcrae_x_things,
     get_feature_to_concepts,
 )
 from probing_norms.utils import cache_json, read_file
@@ -304,6 +305,28 @@ class McRaeMappedNormsLoader(NormsLoader):
         return str(self.model)
 
 
+class McRaeXThingsNormsLoader(NormsLoader):
+    def __init__(self):
+        self.model = "mcrae-x-things"
+
+    def __call__(self, *, num_min_concepts=10):
+        concept_feature = load_mcrae_x_things()
+        feature_to_concepts = get_feature_to_concepts(concept_feature)
+
+        features = sorted(feature_to_concepts.keys())
+        feature_to_id = {feature: i for i, feature in enumerate(features)}
+
+        features_selected = [
+            norm
+            for norm, concepts in feature_to_concepts.items()
+            if len(concepts) >= num_min_concepts
+        ]
+        return feature_to_concepts, feature_to_id, features_selected
+
+    def get_suffix(self):
+        return str(self.model)
+
+
 class BinderNormsLoader(NormsLoader):
     def __init__(self, thresh):
         self.model = "binder"
@@ -345,6 +368,7 @@ NORMS_LOADERS = {
     "generated-gpt35": partial(GPT3NormsLoader, norms_model="chatgpt-gpt3.5-turbo"),
     "mcrae": McRaeNormsLoader,
     "mcrae-mapped": McRaeMappedNormsLoader,
+    "mcrae-x-things": McRaeXThingsNormsLoader,
     "binder-3": partial(BinderNormsLoader, thresh=3),
     "binder-4": partial(BinderNormsLoader, thresh=4),
     "binder-5": partial(BinderNormsLoader, thresh=5),

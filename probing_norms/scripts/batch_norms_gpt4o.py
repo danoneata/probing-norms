@@ -5,6 +5,7 @@ import json
 import sys
 import ipdb
 import argparse
+from pathlib import Path
 
 from openai import OpenAI
 
@@ -27,43 +28,53 @@ client = OpenAI(
 )
 
 
-def create_batch_api_input(target_norm, norms, concepts):
-    if target_norm != None:
-        output_file = "data/api-gpt4o/inputs/{}.jsonl".format(args.target_norm)
+def create_batch_api_input(target_norm, norms, concepts, submit=False):
 
     batchf = """{{"custom_id": "request-{}", "method": "POST", "url": "/v1/chat/completions", "body": {{"model": "gpt-4o", "messages": [{{"role": "system", "content": "{}"}},{{"role": "user", "content": "{}"}}], "max_tokens": 100}}"""
 
-    with open(output_file, 'w', buffering=1) as f:
-        for nn in norms:
-            norm = nn['norm']
-            norm_language = nn['norm (language)']
-            if norm != args.target_norm:
-                continue
+    alignf = """{{"custom_id": "request-{}", "concept_id": "{}", "norm": "{}"}}"""
+    
+    for nn in norms:
+        norm = nn['norm']
+        norm_language = nn['norm (language)']
+        if args.target_norm == "" or norm == args.target_norm:
             i = 0
+            norm = norm.replace("/", "ORRR")
+            output_file = "data/api-gpt4o/inputs/{}.jsonl".format(norm)
+            output_handle = open(output_file, "w")
+            align_file = "data/api-gpt4o/align/{}.jsonl".format(norm)
+            align_handle = open(align_file, "w")
+            norm = norm.replace("ORRR", "/")
             for cc in concepts:
                 USER = QUESTION.format(norm_language, cc['concept'], cc['definition'])
                 jsonline = batchf.format(i, SYSTEM_BATCH, USER)
-                f.write(jsonline+"}\n")
+                output_handle.write(jsonline+"}\n")
+                alignline = alignf.format(i, cc['id'], norm)
+                align_handle.write(alignline+"\n")
                 i += 1
-
-    batch_input_file = client.files.create(
-        file=open(output_file, "rb"),
-        purpose="batch"
-    )
-    batch_input_file_id = batch_input_file.id
-    with open("file_ids.txt", "a") as f:
-        f.write("{}: {}".format(output_file, batch_input_file_id))
-
-    req = client.batches.create(
-        input_file_id=batch_input_file_id,
-        endpoint="/v1/chat/completions",
-        completion_window="24h",
-        metadata={
-            "description": "ACL 2025 data collection job"
-        }
-    )
-    with open("batch_ids.txt", "a") as f:
-        f.write("{}: {}".format(output_file, req.id))
+            output_handle.close()
+            align_handle.close()
+            if submit:
+                batch_input_file = client.files.create(
+                    file=open(output_file, "rb"),
+                    purpose="batch"
+                )
+                batch_input_file_id = batch_input_file.id
+                with open("file_ids.txt", "a") as f:
+                    f.write("{}: {}".format(output_file, batch_input_file_id))
+            
+                req = client.batches.create(
+                    input_file_id=batch_input_file_id,
+                    endpoint="/v1/chat/completions",
+                    completion_window="24h",
+                    metadata={
+                        "description": "ACL 2025 data collection job"
+                    }
+                )
+                with open("batch_ids.txt", "a") as f:
+                    f.write("{}: {}\n".format(output_file, req.id))
+        else:
+            continue
 
 
 def retrieve_batch_api_output():
@@ -71,18 +82,26 @@ def retrieve_batch_api_output():
     for f_pair in filenames:
         f_pair = f_pair.replace("\n", "")
         f_pair = f_pair.split(":")
+        """ BUG BUG BUG """
+        write_path = f_pair[0]
+        the_path = Path(write_path)
+        new_path = "{}/{}".format(the_path.parts[0], the_path.parts[1])
+        new_path += "/outputs/"
+        new_path += "output-{}{}".format(the_path.stem, the_path.suffix)
+        """ BUG BUG BUG """
         api_response = client.batches.retrieve(f_pair[1][1:])
         if api_response.status == "completed":
             file_response = client.files.content(api_response.output_file_id)
-            with open("data/api-gpt4o/outputs/output-{}".format(f_pair[0]), "w") as f:
+            with open(new_path, "w") as f:
                 f.write(file_response.text)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="Norm Prompter")
     parser.add_argument("--norms", type=str)
     parser.add_argument("--concepts", type=str)
-    parser.add_argument("--target_norm", type=str)
+    parser.add_argument("--target_norm", type=str, default="")
     parser.add_argument("--batch_api", action="store_true")
+    parser.add_argument("--submit", action="store_true")
     parser.add_argument("--retrieve", action="store_true")
     args = parser.parse_args()
 
@@ -97,7 +116,7 @@ if __name__ == "__main__":
     random.seed(1337)
 
     if args.batch_api:
-        create_batch_api_input(args.target_norm, norms, concepts)
+        create_batch_api_input(args.target_norm, norms, concepts, args.submit)
 
     if args.retrieve:
         retrieve_batch_api_output()

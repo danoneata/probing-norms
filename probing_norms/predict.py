@@ -310,7 +310,7 @@ class McRaeXThingsNormsLoader(NormsLoader):
         self.model = "mcrae-x-things"
 
     def __call__(self, *, num_min_concepts=10):
-        concept_feature = load_mcrae_x_things()
+        concept_feature = cache_json("data/mcrae-x-things.json", load_mcrae_x_things)
         feature_to_concepts = get_feature_to_concepts(concept_feature)
 
         features = sorted(feature_to_concepts.keys())

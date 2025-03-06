@@ -8,13 +8,15 @@ from pathlib import Path
 import importlib_resources
 import pandas as pd
 
+from parsy import alt, regex, seq, string
 from PIL import Image
 from torch.utils.data import Dataset
+from tqdm import tqdm
 
 from torchvision.datasets import ImageNet
 from toolz import first, identity, second
 
-from probing_norms.utils import read_file, reverse_dict
+from probing_norms.utils import read_file, reverse_dict, cache_json
 
 
 # DIR_LOCAL = importlib_resources.files("probing_norms") / ".."
@@ -169,37 +171,110 @@ def load_mcrae_x_things():
     data_features = read_json("data/mcrae-norms-grouped-with-concepts.json")
     data_concepts = read_json("data/things/concepts-and-categories.json")
 
-    def load_norm(norm):
-        path = "data/api-gpt4o/outputs/output-{}.jsonl.gz".format(norm)
+    def make_parser():
+        """Adapted version of the JSON parser described here [1] to the our setup and the quirks of the generated data.
+
+        https://parsy.readthedocs.io/en/latest/howto/other_examples.html#json-parser
+
+        """
+        whitespace = regex(r"\s*")
+        lexeme = lambda p: p << whitespace
+
+        lbrace = lexeme(string("{"))
+        rbrace = lexeme(string("}"))
+        colon = lexeme(string(":"))
+        comma = lexeme(string(","))
+
+        code_block_s = lexeme(string("```json"))
+        code_block_e = lexeme(string("```"))
+
+        true = ["true", "True", "TRUE"]
+        true = alt(*map(string, true))
+        true = lexeme(true).result(True)
+
+        false = ["false", "False"]
+        false = alt(*map(string, false))
+        false = lexeme(false).result(False)
+
+        q1 = string('"')
+        s1 = regex(r'[^"\\]+')
+        e1 = string("\\") >> (string('"') | string("'"))
+        s1 = (s1 | e1).many().concat()
+        quoted1 = lexeme(q1 >> s1 << q1)
+
+        q2 = string("'")
+        s2 = regex(r"[^'\\]+")
+        e2 = string("\\") >> string("'")
+        s2 = (s2 | e2).many().concat()
+        quoted2 = lexeme(q2 >> s2 << q2)
+
+        quoted = quoted1 | quoted2
+        key = quoted << colon
+        value = quoted | true | false
+        object_pair = seq(key, value).map(tuple)
+
+        return code_block_s.optional() >> lbrace >> object_pair.sep_by(comma).map(dict) << rbrace << code_block_e.optional()
+
+    parser = make_parser()
+
+    def load_norm_valid(norm):
+        norm1 = norm.replace("/", "ORRR")
+        path = "data/api-gpt4o/outputs/output-{}.jsonl.gz".format(norm1)
         with gzip.open(path, "rt") as f:
             for line in f:
                 datum = json.loads(line)
                 content = datum["response"]["body"]["choices"][0]["message"]["content"]
-                try:
-                    hd, *content, tl = content.split("\n")
-                except Exception as e:
-                    print(content)
-                    print(e)
-                    yield {}
-                assert hd == "```json"
-                assert tl == "```"
-                content = "\n".join(content)
-                try:
-                    result = json.loads(content)
-                except Exception as e:
-                    print(e)
-                    result = {}
-                result["attribute-orig"] = norm
-                yield result
+                result1 = {
+                    "custom_id": datum["custom_id"],
+                    "norm": norm,
+                }
+                # Special case: sometimes the quote in '... baby's ...' is not escaped,
+                # making parsing very difficult?
+                content = content.replace("baby's", r"baby\'s")
+                # Special case: sometimes there is stuff after the JSON.
+                result2, _ = parser.parse_partial(content)
+                # result2 = parser.parse(content)
+                yield {**result1, **result2}
 
-    data = [
-        datum
-        for datumf in data_features
-        # if datumf["norm"] in "a_herbivore an_animal an_appliance".split()
-        for datum in load_norm(datumf["norm"])
-    ]
-    concept_feature = [(datum["concept"], datum["feature"]) for datum in data if datum["valid"]]
-    return concept_feature
+    def load_norm_align(norm):
+        norm1 = norm.replace("/", "ORRR")
+        path = "data/api-gpt4o/align/{}.jsonl.gz".format(norm1)
+        with gzip.open(path, "rt") as f:
+            for line in f:
+                yield json.loads(line)
+
+    def load_norm_valid_all():
+        return [datum for datumf in tqdm(data_features) for datum in load_norm_valid(datumf["norm"])]
+
+    def load_norm_align_all():
+        return [datum for datumf in tqdm(data_features) for datum in load_norm_align(datumf["norm"])]
+
+    OUT_DIR = Path("output/api-gpt4o")
+    OUT_DIR.mkdir(exist_ok=True, parents=True)
+    data_valid = cache_json(OUT_DIR / "valid.json", load_norm_valid_all)
+    data_align = cache_json(OUT_DIR / "align.json", load_norm_align_all)
+
+    VALUES_VALID = {
+        True: True,
+        "true": True,
+        "True": True,
+        "yes": True,
+        "Yes": True,
+        "sometimes": True,
+        False: False,
+        "false": False,
+        "False": False,
+        "no": False,
+        "No": False,
+    }
+
+    df_valid = pd.DataFrame(data_valid)
+    df_align = pd.DataFrame(data_align)
+    df = pd.merge(df_valid, df_align, on=["custom_id", "norm"])
+    df["valid"] = df["valid"].map(VALUES_VALID)
+
+    df = df[df["valid"]]
+    return df[["concept_id", "norm"]].values.tolist()
 
 
 class THINGS(Dataset):
@@ -273,6 +348,3 @@ DATASETS = {
     "imagenet12": partial(ImageNet, root=DIR_IMAGENET, split="val"),
     "things": partial(THINGS, root=DIR_THINGS),
 }
-
-
-load_mcrae_x_things()

@@ -26,6 +26,7 @@ setup(
         "numpy",
         "pandas",
         "importlib_resources",
+        "parsy",
         "pillow",
         "openpyxl",
         "open_clip_torch",

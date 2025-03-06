@@ -487,8 +487,8 @@ def main(classifier_type, embeddings_level, feature_type, norms_type, split_type
             results = func(*args)
             save_preds(path_json, results)
             # Avoid saving classifiers for KNN since it stores the whole data!
-            if classifier_type != "knn-3":
-                save_clfs(path, results)
+            # if classifier_type != "knn-3":
+            #     save_clfs(path, results)
 
     def process_feature(feature):
         binary_labels = get_binary_labels(

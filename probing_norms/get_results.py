@@ -28,6 +28,7 @@ from tqdm import tqdm
 
 from probing_norms.data import DIR_LOCAL
 from probing_norms.utils import cache_df, cache_json, read_json, read_file, multimap
+from probing_norms.scripts.prepare_mcrae_norms_grouped import load_mapping_features
 from probing_norms.predict import NORMS_LOADERS, FEATURE_TYPE_TO_MODALITY
 
 NORMS_MODEL = "chatgpt-gpt3.5-turbo"
@@ -120,6 +121,7 @@ FEATURE_NAMES = {
 }
 
 NORMS_NAMES = {
+    "mcrae-x-things": "McRae×THINGS",
     "mcrae-mapped": "McRae++",
     "binder-4": "Binder",
     "binder-median": "Binder",
@@ -307,6 +309,23 @@ def get_score_random_features(norms_type):
         }
 
     return cache_json(path, do)
+
+
+def load_taxonomy_mcrae_x_things():
+    def collapse(values):
+        try:
+            assert len(set(values)) == 1
+        except AssertionError:
+            print(values)
+            # pdb.set_trace()
+        return values[0]
+
+    taxonomy_mcrae = load_taxonomy_mcrae()
+    mapping = load_mapping_features()
+    taxonomy = [(mapping.get(f, f), t) for f, t in taxonomy_mcrae.items()]
+    taxonomy = multimap(taxonomy)
+    taxonomy = {k: collapse(vs) for k, vs in taxonomy.items()}
+    return taxonomy
 
 
 def load_taxonomy_mcrae():
@@ -758,12 +777,9 @@ def get_results_paper_table_main_row(*models):
     classifier_type = "linear-probe"
     embeddings_level = "concept"
     split_type = "repeated-k-fold"
-    norm_types = ["mcrae-mapped", "binder-median"]
+    norm_types = ["mcrae-x-things", "mcrae-mapped", "binder-median"]
 
-    scores_random_features = {
-        "mcrae-mapped": get_score_random_features("mcrae-mapped"),
-        "binder-median": get_score_random_features("binder-median"),
-    }
+    scores_random_features = {k: get_score_random_features(k) for k in norm_types}
 
     def add_f1_sel(results, norm_type):
         for r in results:

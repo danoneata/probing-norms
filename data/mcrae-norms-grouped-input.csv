@@ -113,7 +113,7 @@ used_for_chopping,"axe, hatchet",used_for_chopping_food,0.94,blender,n,,
 worn_on_heads,"cap_(hat), earmuffs, helmet",worn_on_the_head,0.94,crown,y,worn_on_head,
 used_by_shooting,harpoon,used_for_shooting,0.94,"gun, pistol, rifle, slingshot",y,used_by_shooting,
 used_for_closing_doors,doorknob,used_for_opening_doors,0.94,doorknob,n,,
-worn_for_keeping_warm,"jacket, vest",worn_for_warmth,0.94,"boots, cape, coat, gloves, hose_(leggings), mittens, pants, robe, scarf, shawl, shirt, slippers, socks, sweater, trousers",y,worn_for_wamth,
+worn_for_keeping_warm,"jacket, vest",worn_for_warmth,0.94,"boots, cape, coat, gloves, hose_(leggings), mittens, pants, robe, scarf, shawl, shirt, slippers, socks, sweater, trousers",y,worn_for_warmth,
 used_for_loosening_screws,screwdriver,used_for_tightening_screws,0.94,screwdriver,y,used_for_loosening/tightening_screws,used_for_loosening/tightening_screws
 used_by_riding,"bike, camel, donkey, horse, pony, skateboard, tricycle",used_for_riding,0.94,saddle,n,,
 used_for_keeping_things_in,gate,used_for_keeping_things_out,0.94,"door, gate",n,,

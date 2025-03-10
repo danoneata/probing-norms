@@ -37,6 +37,15 @@ def load_mapping_features():
     return mapping
 
 
+def load_feature_new_to_features_mcrae():
+    """New feature name to list of mapped McRae features."""
+    concept_feature = load_mcrae_feature_norms()
+    features = sorted(set(f for _, f in concept_feature))
+    mapping = load_mapping_features()
+    feature1_to_features = [(mapping.get(f, f), f) for f in features]
+    return multimap(feature1_to_features)
+
+
 def load_mcrae_feature_norms_grouped():
     mapping = load_mapping_features()
     concept_feature = load_mcrae_feature_norms()

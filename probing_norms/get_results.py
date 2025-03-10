@@ -26,9 +26,9 @@ from sklearn.metrics import (
 )
 from tqdm import tqdm
 
-from probing_norms.data import DIR_LOCAL
+from probing_norms.data import DIR_LOCAL, load_mcrae_x_things
 from probing_norms.utils import cache_df, cache_json, read_json, read_file, multimap
-from probing_norms.scripts.prepare_mcrae_norms_grouped import load_mapping_features
+from probing_norms.scripts.prepare_mcrae_norms_grouped import load_feature_new_to_features_mcrae
 from probing_norms.predict import NORMS_LOADERS, FEATURE_TYPE_TO_MODALITY
 
 NORMS_MODEL = "chatgpt-gpt3.5-turbo"
@@ -312,20 +312,28 @@ def get_score_random_features(norms_type):
 
 
 def load_taxonomy_mcrae_x_things():
-    def collapse(values):
-        try:
-            assert len(set(values)) == 1
-        except AssertionError:
-            print(values)
-            # pdb.set_trace()
-        return values[0]
+    """Collapse the McRae taxonomy on the grouped feature norms."""
+    concept_feature = load_mcrae_x_things()
+    features1 = sorted(set(f for _, f in concept_feature))
+    feature1_to_features = load_feature_new_to_features_mcrae()
 
     taxonomy_mcrae = load_taxonomy_mcrae()
-    mapping = load_mapping_features()
-    taxonomy = [(mapping.get(f, f), t) for f, t in taxonomy_mcrae.items()]
-    taxonomy = multimap(taxonomy)
-    taxonomy = {k: collapse(vs) for k, vs in taxonomy.items()}
-    return taxonomy
+
+    SPECIAL_CASES = {
+        "made_of_wood": "visual-form_and_surface",
+        "worn_in_winter": "encyclopaedic",
+    }
+
+    def get_taxonomy(feature1):
+        features = feature1_to_features[feature1]
+        taxonomies = [taxonomy_mcrae[f] for f in features]
+        try:
+            assert len(set(taxonomies)) == 1
+            return taxonomies[0]
+        except AssertionError:
+            return SPECIAL_CASES[feature1]
+
+    return {f: get_taxonomy(f) for f in features1}
 
 
 def load_taxonomy_mcrae():
@@ -511,10 +519,15 @@ def get_results_per_metacategory(level, split):
     plot_results_per_metacategory(results)
 
 
-def get_results_per_metacategory_mcrae_mapped():
+def get_results_per_metacategory_mcrae_mapped(norms_type="mcrae-mapped"):
+    LOAD_TAXONOMY = {
+        "mcrae-mapped": load_taxonomy_mcrae,
+        "mcrae-x-things": load_taxonomy_mcrae_x_things,
+    }
+    assert norms_type in LOAD_TAXONOMY
+
     classifier_type = "linear-probe"
-    norms_type = "mcrae-mapped"
-    taxonomy = load_taxonomy_mcrae()
+    taxonomy = LOAD_TAXONOMY[norms_type]()
     level = "concept"
     split = "repeated-k-fold"
     models = [
@@ -545,7 +558,8 @@ def get_results_per_metacategory_mcrae_mapped():
         r["score-f1-selectivity"] = r["score-f1"] - scores_random[r["feature"]]
 
     fig = plot_results_per_metacategory(results, models)
-    fig.savefig("output/plots/per-metacategory-mcrae-mapped.pdf", bbox_inches="tight")
+    path = "output/plots/per-metacategory-{}.pdf".format(norms_type)
+    fig.savefig(path, bbox_inches="tight")
 
 
 def get_results_per_metacategory_binder():

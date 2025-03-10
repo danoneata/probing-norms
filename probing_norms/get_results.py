@@ -313,27 +313,30 @@ def get_score_random_features(norms_type):
 
 def load_taxonomy_mcrae_x_things():
     """Collapse the McRae taxonomy on the grouped feature norms."""
-    concept_feature = load_mcrae_x_things()
-    features1 = sorted(set(f for _, f in concept_feature))
-    feature1_to_features = load_feature_new_to_features_mcrae()
+    def do():
+        concept_feature = load_mcrae_x_things()
+        features1 = sorted(set(f for _, f in concept_feature))
+        feature1_to_features = load_feature_new_to_features_mcrae()
 
-    taxonomy_mcrae = load_taxonomy_mcrae()
+        taxonomy_mcrae = load_taxonomy_mcrae()
 
-    SPECIAL_CASES = {
-        "made_of_wood": "visual-form_and_surface",
-        "worn_in_winter": "encyclopaedic",
-    }
+        SPECIAL_CASES = {
+            "made_of_wood": "visual-form_and_surface",
+            "worn_in_winter": "encyclopaedic",
+        }
 
-    def get_taxonomy(feature1):
-        features = feature1_to_features[feature1]
-        taxonomies = [taxonomy_mcrae[f] for f in features]
-        try:
-            assert len(set(taxonomies)) == 1
-            return taxonomies[0]
-        except AssertionError:
-            return SPECIAL_CASES[feature1]
+        def get_taxonomy(feature1):
+            features = feature1_to_features[feature1]
+            taxonomies = [taxonomy_mcrae[f] for f in features]
+            try:
+                assert len(set(taxonomies)) == 1
+                return taxonomies[0]
+            except AssertionError:
+                return SPECIAL_CASES[feature1]
 
-    return {f: get_taxonomy(f) for f in features1}
+        return {f: get_taxonomy(f) for f in features1}
+
+    return cache_json("data/mcrae-x-things-taxonomy.json", do)
 
 
 def load_taxonomy_mcrae():

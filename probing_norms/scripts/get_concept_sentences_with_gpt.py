@@ -3,24 +3,24 @@ import pdb
 import random
 import json
 import sys
+import argparse
 
 from openai import OpenAI
 
 from probing_norms.data import load_things_concept_mapping
 from probing_norms.utils import cache_json, read_json, read_file
-from probing_norms.predict import McRaeNormsLoader, McRaeMappedNormsLoader
 
 
-QUESTION = "Write 50 short sentences about {}. You must use {} as a noun in each sentence."
+QUESTION = "Write {} short sentences about {}, in the sense of {}. You must use {} as a noun in each sentence. Return a list of numbered sentences 1 -- {}."
 
-def get_prompt(question, word, word_with_category_parenthesis):
+def get_prompt(question, word, count, sense):
     return [
         {
             "role": "system",
             "content": [
                 {
                     "type": "text",
-                    "text": "You are asked to write 10 short sentences about a word (to follow). Answer the request by returning a list of numbered sentences, 1--50. ",
+                    "text": "You are asked to write short sentences about a word (to follow).",
                 }
             ],
         },
@@ -29,7 +29,7 @@ def get_prompt(question, word, word_with_category_parenthesis):
             "content": [
                 {
                     "type": "text",
-                    "text": question.format(word, word_with_category_parenthesis),
+                    "text": question.format(count, word, sense, word, count),
                 },
             ],
         },
@@ -48,9 +48,9 @@ client = OpenAI(
 )
 
 
-def do1(id, word, word_with_category_parenthesis):
+def do1(id, word, count, sense):
     question = QUESTION
-    prompt = get_prompt(question, word, word_with_category_parenthesis)
+    prompt = get_prompt(question, word, count, sense)
 
     response = client.chat.completions.create(
         model=deployment,
@@ -78,52 +78,25 @@ def do1(id, word, word_with_category_parenthesis):
     }
 
 
-def make_useful(concept_string):
-    '''
-    'aardvark,aardvark,animal,aardvark (animal)' -> list
-    '''
-    return concept_string.split(",")
-
-
-def get_id(concept):
-    '''
-       concept: ["aluminum_foil", "aluminum foil", "food packaging", "aluminum foil (food packaging)"]
-       We want the second element of the list
-    '''
-    return concept[0]
-
-def get_word(concept):
-    '''
-       concept: ["aluminum_foil", "aluminum foil", "food packaging", "aluminum foil (food packaging)"]
-       We want the second element of the list
-    '''
-    return concept[1]
-
-
-def get_word_with_category_parenthesis(concept):
-    '''
-       Not every concept has a category parenthesis version
-       ['aardvark', 'aardvark', '', '']
-       We want to return it iff it exists, otherwise we just want the word
-    '''
-    if concept[-1] == "":
-        return get_word(concept)
-    else:
-        return concept[-1]
-
-
 if __name__ == "__main__":
-    concepts_file = sys.argv[1]
-    concepts = read_file(concepts_file)
-    concepts = sorted(concepts)
+    parser = argparse.ArgumentParser(prog="Norm Prompter")
+    parser.add_argument("--concepts", type=str)
+    parser.add_argument("--target_concept", type=str)
+    parser.add_argument("--target_concepts", type=str)
+    parser.add_argument("--count", type=int, default=10)
+    args = parser.parse_args()
+    concepts_file = args.concepts
+    concepts = read_json(concepts_file)
     print(f"Read {len(concepts)} concepts from {concepts_file}")
+    if args.target_concepts != None:
+        targets = read_file(args.target_concepts)
+    print(f"Read {len(targets)} concepts from {args.target_concepts}")
 
     random.seed(1337)
 
-    output = {}
 
-    with open('concept_sentences.jsonl', 'w', buffering=1) as f:
-        for c in concepts:
-            cc = make_useful(c)
-            response = do1(get_id(cc), get_word(cc), get_word_with_category_parenthesis(cc))
-            f.write(json.dumps(response) + "\n")
+    for c in concepts:
+        if c['id'] in targets:
+            with open('{}-{}-concept_sentences.jsonl'.format(c['id'], args.count), 'w', buffering=1) as f:
+                response = do1(c['id'], c['concept'], args.count, c['definition'])
+                f.write(json.dumps(response) + "\n")

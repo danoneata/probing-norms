@@ -17,10 +17,13 @@ from transformers import (
     AutoProcessor,
     CLIPModel,
     CLIPProcessor,
+    LlavaForConditionalGeneration,
     PaliGemmaForConditionalGeneration,
+    Qwen2_5_VLForConditionalGeneration,
     ViTMAEModel,
 )
 from transformers.models.siglip import SiglipVisionModel
+from qwen_vl_utils import process_vision_info
 
 from torch.utils.data import DataLoader
 
@@ -149,6 +152,117 @@ class PaliGemma(nn.Module):
         return features
 
 
+class Qwen25VL(nn.Module):
+    def __init__(self):
+        super(Qwen25VL, self).__init__()
+        model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
+        self.model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+            model_id,
+            torch_dtype="auto",
+            device_map="auto",
+        )
+        self.model.eval()
+        self.processor = AutoProcessor.from_pretrained(model_id)
+        self.feature_dim = self.model.config.vision_config.out_hidden_size
+
+    def transform(self, x):
+        messages = [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "image",
+                        "image": x,
+                        "resized_height": 224,
+                        "resized_width": 224,
+                    }
+                ],
+            }
+        ]
+        image_inputs, video_inputs = process_vision_info(messages)
+        assert video_inputs is None
+        inputs = self.processor.image_processor(
+            images=image_inputs,
+            videos=video_inputs,
+            return_tensors="pt",
+        )
+        return inputs
+
+    def forward(self, inp):
+        pixel_values = inp["pixel_values"]
+        image_grid_thw = inp["image_grid_thw"].squeeze(1)
+        features = self.model.visual(pixel_values, image_grid_thw)
+        features = features.unsqueeze(0)
+        features = features.mean(0)
+        features = features.float()
+        return features
+
+
+class LLaVa(nn.Module):
+    def __init__(self):
+        super(LLaVa, self).__init__()
+        model_id = "llava-hf/llava-1.5-7b-hf"
+        model = LlavaForConditionalGeneration.from_pretrained(
+            model_id,
+            # torch_dtype="auto",
+            # device_map="auto",
+        )
+        model.eval()
+        self.vision_tower = model.vision_tower
+        self.multi_modal_projector = model.multi_modal_projector
+        self.processor = AutoProcessor.from_pretrained(model_id)
+        self.feature_dim = model.config.text_config.hidden_size
+        self.config = model.config
+
+    def transform(self, x):
+        inputs = self.processor.image_processor(x, return_tensors="pt")
+        inputs = inputs["pixel_values"]
+        inputs = inputs.squeeze(0)
+        return inputs
+
+    def get_image_features(
+        self,
+        pixel_values,
+        vision_feature_layer,
+        vision_feature_select_strategy,
+    ):
+        """
+        Code take from here:
+        https://github.com/huggingface/transformers/blob/main/src/transformers/models/llava/modeling_llava.py#L281
+
+        """
+        image_outputs = self.vision_tower(pixel_values, output_hidden_states=True)
+
+        # If we have one vision feature layer, return the corresponding hidden states,
+        # otherwise, select the hidden states of each feature layer and concatenate them
+        if isinstance(vision_feature_layer, int):
+            selected_image_feature = image_outputs.hidden_states[vision_feature_layer]
+            if vision_feature_select_strategy == "default":
+                selected_image_feature = selected_image_feature[:, 1:]
+        else:
+            hs_pool = [
+                image_outputs.hidden_states[layer_idx]
+                for layer_idx in vision_feature_layer
+            ]
+            # For default; crop CLS from each hidden state in the hidden state pool
+            if vision_feature_select_strategy == "default":
+                hs_pool = [hs[:, 1:] for hs in hs_pool]
+            selected_image_feature = torch.cat(hs_pool, dim=-1)
+
+        image_features = self.multi_modal_projector(selected_image_feature)
+        return image_features
+
+    def forward(self, x):
+        image_features = self.get_image_features(
+            x,
+            self.config.vision_feature_layer,
+            self.config.vision_feature_select_strategy,
+        )
+        image_features = image_features.mean(1)
+        image_features = image_features.float()
+        return image_features
+
+
 class VITMAE(nn.Module):
     def __init__(self):
         super(VITMAE, self).__init__()
@@ -205,7 +319,6 @@ class DINOV2(nn.Module):
         return features
 
 
-
 FEATURE_EXTRACTORS = {
     # fmt: off
     # Self supervised models
@@ -217,6 +330,8 @@ FEATURE_EXTRACTORS = {
     "clip-dfn2b": partial(OpenCLIP, name="hf-hub:apple/DFN2B-CLIP-ViT-L-14"),
     "siglip-224": SigLIP,
     "pali-gemma-224": PaliGemma,
+    "qwen2.5-vl-3b-instruct": Qwen25VL,
+    "llava-1.5-7b": LLaVa,
     # Supervised models
     "swin-v2-ssl": partial(TimmModel, model_id="swinv2_large_window12_192.ms_in22k"),
     "swin-v2": partial(TimmModel, model_id="swinv2_large_window12to24_192to384.ms_in22k_ft_in1k"),
@@ -238,8 +353,14 @@ def main(dataset_name, feature_type):
     feature_extractor.eval()
     feature_extractor.to(DEVICE)
 
+    BATCH_SIZES = {
+        "qwen2.5-vl-3b-instruct": 1,
+        "llava-1.5-7b": 64,
+    }
+    batch_size = BATCH_SIZES.get(feature_type, 16)
+
     dataset = DATASETS[dataset_name](transform=feature_extractor.transform)
-    dataloader = DataLoader(dataset, batch_size=16, num_workers=4)
+    dataloader = DataLoader(dataset, batch_size=batch_size, num_workers=4)
 
     def extract1(image):
         with torch.no_grad():

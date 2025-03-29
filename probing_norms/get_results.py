@@ -73,6 +73,7 @@ MAIN_TABLE_MODELS = [
     "pali-gemma-224",
     "clip-dfn2b",
     "clip",
+    "qwen2.5-vl-3b-instruct",
     #
     "glove-840b-300d-word",
     "fasttext-word",
@@ -107,6 +108,8 @@ FEATURE_NAMES = {
     "dino-v2": "DINOv2",
     "siglip-224": "SigLIP",
     "pali-gemma-224": "PaliGemma",
+    "qwen2.5-vl-3b-instruct": " Qwen2.5-VL 3B Instruct",
+    "llava-1.5-7b": "LLaVa-1.5 7B",
     "clip": "CLIP (image)",
     "clip-dfn2b": "CLIP DFN-2B (image)",
     "glove-6b-300d-word": "GloVe 6B",
@@ -794,7 +797,8 @@ def get_results_paper_table_main_row(*models):
     classifier_type = "linear-probe"
     embeddings_level = "concept"
     split_type = "repeated-k-fold"
-    norm_types = ["mcrae-x-things", "mcrae-mapped", "binder-median"]
+    # norm_types = ["mcrae-x-things", "mcrae-mapped", "binder-median"]
+    norm_types = ["mcrae-mapped", "binder-median"]
 
     scores_random_features = {k: get_score_random_features(k) for k in norm_types}
 

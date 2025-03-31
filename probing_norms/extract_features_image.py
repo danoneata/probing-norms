@@ -199,7 +199,7 @@ class Qwen25VL(nn.Module):
 
 
 class LLaVa(nn.Module):
-    def __init__(self):
+    def __init__(self, to_apply_projector=True):
         super(LLaVa, self).__init__()
         model_id = "llava-hf/llava-1.5-7b-hf"
         model = LlavaForConditionalGeneration.from_pretrained(
@@ -211,8 +211,13 @@ class LLaVa(nn.Module):
         self.vision_tower = model.vision_tower
         self.multi_modal_projector = model.multi_modal_projector
         self.processor = AutoProcessor.from_pretrained(model_id)
-        self.feature_dim = model.config.text_config.hidden_size
         self.config = model.config
+        self.to_apply_projector = to_apply_projector
+
+        if self.to_apply_projector:
+            self.feature_dim = model.config.text_config.hidden_size
+        else:
+            self.feature_dim = model.config.vision_config.hidden_size
 
     def transform(self, x):
         inputs = self.processor.image_processor(x, return_tensors="pt")
@@ -249,7 +254,11 @@ class LLaVa(nn.Module):
                 hs_pool = [hs[:, 1:] for hs in hs_pool]
             selected_image_feature = torch.cat(hs_pool, dim=-1)
 
-        image_features = self.multi_modal_projector(selected_image_feature)
+        if self.to_apply_projector:
+            image_features = self.multi_modal_projector(selected_image_feature)
+        else:
+            image_features = selected_image_feature
+
         return image_features
 
     def forward(self, x):
@@ -332,6 +341,7 @@ FEATURE_EXTRACTORS = {
     "pali-gemma-224": PaliGemma,
     "qwen2.5-vl-3b-instruct": Qwen25VL,
     "llava-1.5-7b": LLaVa,
+    "llava-1.5-7b-pre-projector": partial(LLaVa, to_apply_projector=False),
     # Supervised models
     "swin-v2-ssl": partial(TimmModel, model_id="swinv2_large_window12_192.ms_in22k"),
     "swin-v2": partial(TimmModel, model_id="swinv2_large_window12to24_192to384.ms_in22k_ft_in1k"),

@@ -69,6 +69,8 @@ MAIN_TABLE_MODELS = [
     "swin-v2-ssl",
     "dino-v2",
     #
+    "llava-1.5-7b",
+    "llava-1.5-7b-pre-projector",
     "siglip-224",
     "pali-gemma-224",
     "clip-dfn2b",
@@ -77,9 +79,11 @@ MAIN_TABLE_MODELS = [
     #
     "glove-840b-300d-word",
     "fasttext-word",
+    "numberbatch-word",
     "deberta-v3-contextual-layers-0-to-6-word",
     "clip-word",
     "gemma-2b-contextual-layers-9-to-18-seq-last-word",
+    "qwen2.5-3b-contextual-layers-27-to-36-seq-last-word",
 ]
 
 
@@ -110,16 +114,20 @@ FEATURE_NAMES = {
     "pali-gemma-224": "PaliGemma",
     "qwen2.5-vl-3b-instruct": " Qwen2.5-VL 3B Instruct",
     "llava-1.5-7b": "LLaVa-1.5 7B",
+    "llava-1.5-7b-pre-projector": "LLaVa-1.5 7B (pre-projector)",
     "clip": "CLIP (image)",
     "clip-dfn2b": "CLIP DFN-2B (image)",
     "glove-6b-300d-word": "GloVe 6B",
     "glove-840b-300d-word": "GloVe 840B",
+    "numberbatch-word": "ConceptNet Numberbatch",
     "fasttext-word": "FastText",
     "deberta-v3-contextual-last-word": "DeBERTa v3",
     "deberta-v3-contextual-layers-0-to-6-word": "DeBERTa v3",
     "gemma-2b-word": "Gemma",
     "gemma-2b-contextual-last-word": "Gemma",
     "gemma-2b-contextual-layers-9-to-18-seq-last-word": "Gemma",
+    "qwen2.5-3b-contextual-last-seq-last-word": "Qwen2.5 3B",
+    "qwen2.5-3b-contextual-layers-27-to-36-seq-last-word": "Qwen2.5 3B",
     "clip-word": "CLIP (text)",
 }
 
@@ -797,8 +805,8 @@ def get_results_paper_table_main_row(*models):
     classifier_type = "linear-probe"
     embeddings_level = "concept"
     split_type = "repeated-k-fold"
-    # norm_types = ["mcrae-x-things", "mcrae-mapped", "binder-median"]
-    norm_types = ["mcrae-mapped", "binder-median"]
+    norm_types = ["mcrae-x-things", "mcrae-mapped", "binder-median"]
+    # norm_types = ["mcrae-mapped", "binder-median"]
 
     scores_random_features = {k: get_score_random_features(k) for k in norm_types}
 

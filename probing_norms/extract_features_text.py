@@ -2,6 +2,7 @@ import csv
 import json
 import pdb
 
+from abc import ABC, abstractmethod
 from itertools import combinations
 from functools import partial
 from typing import List, Optional, Tuple
@@ -76,11 +77,23 @@ class BERT:
         return rest
 
 
+class Qwen:
+    def __init__(self):
+        self.model_class = AutoModelForCausalLM
+
+    def get_backbone(self, model):
+        return model.model
+
+    def get_tokens(self, word, tokenizer):
+        return tokenizer.encode(word)
+
+
 BASE_HF_MODELS = {
     "gemma": Gemma,
     "gpt2": GPT2,
     "bert": BERT,
     "deberta": BERT,
+    "qwen": Qwen,
 }
 
 
@@ -108,6 +121,7 @@ class HFModel:
             "layers-0-to-8": partial(self.get_embeddings_layer, layers=slice(0, 9)),
             "layers-0-to-9": partial(self.get_embeddings_layer, layers=slice(0, 10)),
             "layers-9-to-18": partial(self.get_embeddings_layer, layers=slice(9, 19)),
+            "layers-27-to-36": partial(self.get_embeddings_layer, layers=slice(27, 37)),
         }
         self.get_embeddings = GET_EMBEDDINGS[layer]
 
@@ -338,6 +352,50 @@ class Glove:
         return np.mean(embs, axis=0)
 
 
+class Numberbatch:
+    def __init__(self):
+        path = f"data/numberbatch/numberbatch-en-19.08.txt"
+        self.words = pd.read_table(
+            path,
+            sep=" ",
+            index_col=0,
+            skiprows=1,
+            header=None,
+            quoting=csv.QUOTE_NONE,
+        )
+        self.dim = 300
+        self.special_names = {
+            "first-aid_kit": "first_aid_kit",
+            "flip-flop": "flip_flop",
+            "go-kart": "go_kart",
+            "hot-air_balloon": "hot_air_balloon",
+            "hot-water_bottle": "hot_water_bottle",
+            "ice-cream_cone": "ice_cream_cone",
+            "iceskate": "ice_skate",
+            "ping-pong_table": "ping_pong_table",
+            "pom-pom": "pom_pom",
+            "t-shirt": "t_shirt",
+            "yo-yo": "yo_yo",
+        }
+
+    def __call__(self, text, **_):
+        def get1(word):
+            return self.words.loc[word].values
+
+        word1 = text.replace(" ", "_")
+        word2 = self.special_names.get(word1, word1)
+        try:
+            emb = get1(word2)
+        except KeyError:
+            # print(f"KeyError: {word2}")
+            words = word2.split("_")
+            embs = [get1(word) for word in words]
+            embs = np.array(embs)
+            emb = np.mean(embs, axis=0)
+        return emb
+
+
+
 class CLIP:
     def __init__(self) -> None:
         model_id = "openai/clip-vit-large-patch14"
@@ -356,6 +414,7 @@ FEATURE_EXTRACTORS = {
     "fasttext": FastText,
     "glove-6b-300d": partial(Glove, n_tokens="6B"),
     "glove-840b-300d": partial(Glove, n_tokens="840B"),
+    "numberbatch": Numberbatch,
     "clip": CLIP,
     "gemma-2b": partial(
         HFModel,
@@ -495,6 +554,22 @@ FEATURE_EXTRACTORS = {
         model_id="microsoft/deberta-v3-base",
         layer="layers-0-to-6",
         context_type="gpt4o_concept",
+    ),
+    "qwen2.5-3b-contextual-last-seq-last": partial(
+        HFModelContextual,
+        model_type="qwen",
+        model_id="Qwen/Qwen2.5-3B",
+        layer="last",
+        context_type="gpt4o_concept",
+        seq_pooling="last",
+    ),
+    "qwen2.5-3b-contextual-layers-27-to-36-seq-last": partial(
+        HFModelContextual,
+        model_type="qwen",
+        model_id="Qwen/Qwen2.5-3B",
+        layer="layers-27-to-36",
+        context_type="gpt4o_concept",
+        seq_pooling="last",
     ),
 }
 

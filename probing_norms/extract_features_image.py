@@ -32,6 +32,7 @@ import torchvision.transforms as T
 from open_clip import create_model_from_pretrained
 
 from probing_norms.data import DATASETS
+from probing_norms.utils import implies
 
 
 def count_params(model):
@@ -70,12 +71,25 @@ class ImageBackboneDINO(nn.Module):
 
 
 class CLIP(nn.Module):
-    def __init__(self):
+    def __init__(self, model_id, tokens, layer):
         super(CLIP, self).__init__()
-        model_id = "openai/clip-vit-large-patch14"
+
+        assert tokens in ["CLS", "patches"]
+        assert implies(layer == "post-projection", tokens == "CLS")
+
         self.model = CLIPModel.from_pretrained(model_id).eval()
-        self.feature_dim = self.model.config.projection_dim
         self.processor = CLIPProcessor.from_pretrained(model_id)
+
+        if layer == "post-projection":
+            self.feature_dim = self.model.config.projection_dim
+            self.get_image_features = self.get_image_features_post_projection
+        else:
+            self.feature_dim = self.model.config.vision_config.hidden_size
+            self.get_image_features = partial(
+                self.get_image_features_pre_projection,
+                tokens=tokens,
+                layer=layer,
+            )
 
     def transform(self, x):
         output = self.processor(images=x, return_tensors="pt")
@@ -83,8 +97,18 @@ class CLIP(nn.Module):
         output = output.squeeze(0)
         return output
 
-    def forward(self, x):
+    def get_image_features_pre_projection(self, x, tokens, layer):
+        outputs = self.model.vision_model(x, output_hidden_states=True)
+        outputs = outputs.hidden_states[layer]
+        outputs = outputs[:, :1] if tokens == "CLS" else outputs[:, 1:]
+        outputs = outputs.mean(1)
+        return outputs
+
+    def get_image_features_post_projection(self, x):
         return self.model.get_image_features(x)
+
+    def forward(self, x):
+        return self.get_image_features(x)
 
 
 class OpenCLIP(nn.Module):
@@ -335,7 +359,7 @@ FEATURE_EXTRACTORS = {
     "dino-v2": DINOV2,
     "vit-mae-large": VITMAE,
     # Image-text models
-    "clip": CLIP,
+    "clip": partial(CLIP, model_id="openai/clip-vit-large-patch14", tokens="CLS", layer="post-projection"),
     "clip-dfn2b": partial(OpenCLIP, name="hf-hub:apple/DFN2B-CLIP-ViT-L-14"),
     "siglip-224": SigLIP,
     "pali-gemma-224": PaliGemma,
@@ -349,6 +373,11 @@ FEATURE_EXTRACTORS = {
     "max-vit-large-in21k": partial(TimmModel, model_id="maxvit_large_tf_224.in21k"),
     # Random models
     "random-siglip": partial(SigLIP, use_random_weights=True),
+    # CLIP study to answer the following question: Why do LLaVa embeddings are worse than the CLIP ones?
+    "clip-layer--2": partial(CLIP, model_id="openai/clip-vit-large-patch14", tokens="CLS", layer=-2),
+    "clip-layer--2-patches": partial(CLIP, model_id="openai/clip-vit-large-patch14", tokens="patches", layer=-2),
+    "clip-336px": partial(CLIP, model_id="openai/clip-vit-large-patch14-336", tokens="CLS", layer="post-projection"),
+    "clip-llava": partial(CLIP, model_id="openai/clip-vit-large-patch14-336", tokens="patches", layer=-2),
     # fmt: on
 }
 

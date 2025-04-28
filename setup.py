@@ -31,5 +31,6 @@ setup(
         "openpyxl",
         "open_clip_torch",
         "qwen-vl-utils",
+        "inflect",
     ],
 )

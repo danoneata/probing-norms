@@ -560,7 +560,7 @@ FEATURE_EXTRACTORS = {
         model_type="qwen",
         model_id="Qwen/Qwen2.5-3B",
         layer="last",
-        context_type="gpt4o_concept",
+        context_type="gpt4o_concept_context_sentences_v2",
         seq_pooling="last",
     ),
     "qwen2.5-3b-contextual-layers-27-to-36-seq-last": partial(
@@ -568,7 +568,7 @@ FEATURE_EXTRACTORS = {
         model_type="qwen",
         model_id="Qwen/Qwen2.5-3B",
         layer="layers-27-to-36",
-        context_type="gpt4o_concept",
+        context_type="gpt4o_concept_context_sentences_v2",
         seq_pooling="last",
     ),
 }

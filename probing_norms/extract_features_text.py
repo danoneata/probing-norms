@@ -98,7 +98,7 @@ BASE_HF_MODELS = {
 
 
 class HFModel:
-    def __init__(self, model_type, model_id, layer, seq_pooling="mean"):
+    def __init__(self, model_type, model_id, layer, seq_pooling="mean", prepend_space=False):
         self.base_model = BASE_HF_MODELS[model_type]()
         self.device = "cuda"
 
@@ -130,6 +130,7 @@ class HFModel:
             "last": lambda xs: xs[-1],
         }
         self.pool_seq = SEQ_POOLING[seq_pooling]
+        self.prepend_space = prepend_space
 
     def get_embeddings_layer(self, inp, layers):
         output = self.model(**inp, output_hidden_states=True)
@@ -145,7 +146,11 @@ class HFModel:
 
     def __call__(self, text, **_):
         with torch.no_grad():
-            input_ids = self.tokenizer(" " + text, return_tensors="pt")
+            if self.prepend_space:
+                text = " " + text
+            input_ids = self.tokenizer(text, return_tensors="pt")
+            input_ids = input_ids.to(self.device)
+
             # Remove BOS token.
             # input_ids["input_ids"] = input_ids["input_ids"][:, 1:]
             embs = self.get_embeddings(input_ids)
@@ -153,7 +158,7 @@ class HFModel:
             assert B == 1
             embs = embs[0]
             emb = self.pool_seq(embs)
-            return emb.numpy()
+            return emb.cpu().numpy()
 
 
 class HFModelContextual(HFModel):
@@ -421,6 +426,14 @@ FEATURE_EXTRACTORS = {
         model_type="gemma",
         model_id="google/gemma-2b",
         layer="zero",
+        prepend_space=True,
+    ),
+    "gemma-2b-no-space": partial(
+        HFModel,
+        model_type="gemma",
+        model_id="google/gemma-2b",
+        layer="zero",
+        prepend_space=False,
     ),
     "gemma-2b-last": partial(
         HFModel,

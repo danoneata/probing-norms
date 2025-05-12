@@ -66,24 +66,19 @@ MAIN_TABLE_MODELS = [
     "vit-mae-large",
     "max-vit-large",
     "max-vit-large-in21k",
-    "swin-v2-ssl",
     "dino-v2",
+    "swin-v2-ssl",
     #
-    "llava-1.5-7b",
-    "llava-1.5-7b-pre-projector",
-    "siglip-224",
-    "pali-gemma-224",
-    "clip-dfn2b",
+    # "clip-dfn2b",
     "clip",
-    "qwen2.5-vl-3b-instruct",
+    "pali-gemma-224",
+    "siglip-224",
     #
     "glove-840b-300d-word",
     "fasttext-word",
-    "numberbatch-word",
-    "deberta-v3-contextual-layers-0-to-6-word",
     "clip-word",
+    "deberta-v3-contextual-layers-0-to-6-word",
     "gemma-2b-contextual-layers-9-to-18-seq-last-word",
-    "qwen2.5-3b-contextual-layers-27-to-36-seq-last-word",
 ]
 
 
@@ -112,22 +107,16 @@ FEATURE_NAMES = {
     "dino-v2": "DINOv2",
     "siglip-224": "SigLIP",
     "pali-gemma-224": "PaliGemma",
-    "qwen2.5-vl-3b-instruct": " Qwen2.5-VL 3B Instruct",
-    "llava-1.5-7b": "LLaVa-1.5 7B",
-    "llava-1.5-7b-pre-projector": "LLaVa-1.5 7B (pre-projector)",
     "clip": "CLIP (image)",
     "clip-dfn2b": "CLIP DFN-2B (image)",
     "glove-6b-300d-word": "GloVe 6B",
     "glove-840b-300d-word": "GloVe 840B",
-    "numberbatch-word": "ConceptNet Numberbatch",
     "fasttext-word": "FastText",
     "deberta-v3-contextual-last-word": "DeBERTa v3",
     "deberta-v3-contextual-layers-0-to-6-word": "DeBERTa v3",
     "gemma-2b-word": "Gemma",
     "gemma-2b-contextual-last-word": "Gemma",
     "gemma-2b-contextual-layers-9-to-18-seq-last-word": "Gemma",
-    "qwen2.5-3b-contextual-last-seq-last-word": "Qwen2.5 3B",
-    "qwen2.5-3b-contextual-layers-27-to-36-seq-last-word": "Qwen2.5 3B",
     "clip-word": "CLIP (text)",
 }
 
@@ -545,18 +534,20 @@ def get_results_per_metacategory_mcrae_mapped(norms_type="mcrae-mapped"):
     level = "concept"
     split = "repeated-k-fold"
     models = [
-        "random-siglip",
+        # "random-siglip",
         "vit-mae-large",
         "max-vit-large-in21k",
-        "swin-v2-ssl",
         "dino-v2",
-        # "siglip-224",
-        "pali-gemma-224",
+        "swin-v2-ssl",
+        #
         "clip",
+        "pali-gemma-224",
+        "siglip-224",
+        # 
         "glove-840b-300d-word",
         "fasttext-word",
-        "deberta-v3-contextual-layers-0-to-6-word",
         "clip-word",
+        "deberta-v3-contextual-layers-0-to-6-word",
         "gemma-2b-contextual-layers-9-to-18-seq-last-word",
     ]
 
@@ -583,18 +574,20 @@ def get_results_per_metacategory_binder():
     level = "concept"
     split = "repeated-k-fold"
     models = [
-        "random-siglip",
+        # "random-siglip",
         "vit-mae-large",
         "max-vit-large-in21k",
-        "swin-v2-ssl",
         "dino-v2",
-        # "siglip-224",
-        "pali-gemma-224",
+        "swin-v2-ssl",
+        #
         "clip",
+        "pali-gemma-224",
+        "siglip-224",
+        #
         "glove-840b-300d-word",
         "fasttext-word",
-        "deberta-v3-contextual-layers-0-to-6-word",
         "clip-word",
+        "deberta-v3-contextual-layers-0-to-6-word",
         "gemma-2b-contextual-layers-9-to-18-seq-last-word",
     ]
 
@@ -633,16 +626,17 @@ def get_results_binder_norms():
         "random-siglip",
         "vit-mae-large",
         "max-vit-large-in21k",
-        "swin-v2-ssl",
         "dino-v2",
-        # "siglip-224",
-        "pali-gemma-224",
+        "swin-v2-ssl",
+        # 
         "clip",
+        "pali-gemma-224",
+        "siglip-224",
         #
         "glove-840b-300d-word",
         "fasttext-word",
-        "deberta-v3-contextual-layers-0-to-6-word",
         "clip-word",
+        "deberta-v3-contextual-layers-0-to-6-word",
         "gemma-2b-contextual-layers-9-to-18-seq-last-word",
     ]
 
@@ -801,12 +795,12 @@ def get_classifiers_agreement_binder_norms():
     df.to_csv("output/classifier-agreement-binder-norms-2.csv")
 
 
-def get_results_paper_table_main_row(*models):
+def get_results_paper_table_main_row(*models, norm_types=None):
     classifier_type = "linear-probe"
     embeddings_level = "concept"
     split_type = "repeated-k-fold"
-    norm_types = ["mcrae-x-things", "mcrae-mapped", "binder-median"]
-    # norm_types = ["mcrae-mapped", "binder-median"]
+    # norm_types = ["mcrae-x-things", "mcrae-mapped", "binder-median"]
+    norm_types = norm_types or ["mcrae-x-things", "binder-median"]
 
     scores_random_features = {k: get_score_random_features(k) for k in norm_types}
 
@@ -852,6 +846,32 @@ def get_results_paper_table_main_row(*models):
 
 def get_results_paper_table_main():
     get_results_paper_table_main_row(*MAIN_TABLE_MODELS)
+
+
+def get_results_contextualised_language_models():
+    models = [
+        "gemma-2b-no-space-word",
+        "gemma-2b-word",
+        "gemma-2b-contextual-layer-1-word",
+        "gemma-2b-contextual-last-word",
+        "gemma-2b-contextual-last-seq-last-word",
+        "gemma-2b-contextual-layers-0-to-6-word",
+        "gemma-2b-contextual-layers-0-to-9-word",
+        "gemma-2b-contextual-layers-9-to-18-word",
+        "gemma-2b-contextual-layers-9-to-18-seq-last-word",
+        "gemma-2b-contextual-50-last-word",
+        "gemma-2b-contextual-50-constrained-last-word",
+        #
+        "deberta-v3-contextual-last-word",
+        "deberta-v3-contextual-layers-0-to-4-word",
+        "deberta-v3-contextual-layers-0-to-6-word",
+        #
+        "gpt2-contextual-last-word",
+        #
+        "bert-base-uncased-contextual-layers-0-to-4-word",
+        "bert-base-uncased-contextual-layers-0-to-6-word",
+    ]
+    get_results_paper_table_main_row(*models, norm_types=["mcrae-x-things"])
 
 
 def get_results_all_one_norm(feature):
@@ -956,7 +976,7 @@ def compare_two_models_scatterplot_ax(ax, model1, model2, legend="auto"):
     classifier_type = "linear-probe"
     embeddings_level = "concept"
     splits_type = "repeated-k-fold"
-    norms_type = "mcrae-mapped"
+    norms_type = "mcrae-x-things"
     norms_loader = NORMS_LOADERS[norms_type]()
     taxonomy = load_taxonomy_mcrae()
 
@@ -968,9 +988,13 @@ def compare_two_models_scatterplot_ax(ax, model1, model2, legend="auto"):
         )
     ]
 
+    random_scores = get_score_random_features(norms_type)
     for r in results:
-        score_random = get_score_random(norms_loader, r["feature"])
-        r["score-f1-selectivity"] = r["score-f1"] - score_random
+        r["score-f1-selectivity"] = r["score-f1"] - random_scores[r["feature"]]
+
+    # for r in results:
+    #     score_random = get_score_random(norms_loader, r["feature"])
+    #     r["score-f1-selectivity"] = r["score-f1"] - score_random
 
     df = pd.DataFrame(results)
     df["metacategory"] = df["feature"].map(taxonomy)
@@ -1067,7 +1091,7 @@ def compare_two_models_scatterplot(model1, model2):
 def compare_two_models_scatterplot_2():
     sns.set(style="whitegrid", font="Arial")
     models = [
-        ["gemma-2b-contextual-layers-9-to-18-seq-last-word", "dino-v2"],
+        ["gemma-2b-contextual-layers-9-to-18-seq-last-word", "swin-v2-ssl"],
         ["clip-word", "clip"],
     ]
     fig, axs = plt.subplots(figsize=(10, 10), ncols=2, nrows=1, sharex=True)
@@ -1153,15 +1177,15 @@ def get_correlation_between_models_2():
         "max-vit-large",
         "max-vit-large-in21k",
         # "swin-v2",
-        "swin-v2-ssl",
         "dino-v2",
+        "swin-v2-ssl",
+        "clip",
         "pali-gemma-224",
         "siglip-224",
-        "clip",
         "glove-840b-300d-word",
         "fasttext-word",
-        "deberta-v3-contextual-layers-0-to-6-word",
         "clip-word",
+        "deberta-v3-contextual-layers-0-to-6-word",
         "gemma-2b-contextual-layers-9-to-18-seq-last-word",
     ]
 
@@ -1211,7 +1235,7 @@ def get_correlation_between_models_2():
     fig, axs = plt.subplots(
         figsize=(10, 18), ncols=2, nrows=1, sharex=True, sharey=True
     )
-    plot1(axs[0], "mcrae-mapped")
+    plot1(axs[0], "mcrae-x-things")
     plot1(axs[1], "binder-median")
     fig.tight_layout()
     st.pyplot(fig)
@@ -1413,7 +1437,7 @@ def aggregate_predictions_for_demo(norms_type):
     path = f"static/demo/predictions-{norms_type}.npz"
     results_np = np.array(results)
     results_np = results_np.astype(np.float32)
-    np.savez(path, models=MAIN_TABLE_MODELS, results=results_np)
+    np.savez(path, results=results_np)
 
 
 FUNCS = {
@@ -1432,6 +1456,7 @@ FUNCS = {
     "per-feature-norm": get_results_per_feature_norm,
     "random-predictor": get_results_random_predictor,
     "results-all-one-norm": get_results_all_one_norm,
+    "results-contextualised-language-models": get_results_contextualised_language_models,
     "compare-two-models-scatterplot": compare_two_models_scatterplot,
     "compare-two-models-scatterplot-2": compare_two_models_scatterplot_2,
     "correlation-between-models": get_correlation_between_models,

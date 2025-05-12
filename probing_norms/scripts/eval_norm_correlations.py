@@ -114,7 +114,7 @@ def load_result_features_1(model):
     classifier_type = "linear-probe"
     embeddings_level = "concept"
     split_type = "repeated-k-fold"
-    norms_type = "mcrae-mapped"
+    norms_type = "mcrae-x-things"
     results = load_result_features(
         classifier_type,
         embeddings_level,

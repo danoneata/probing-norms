@@ -171,7 +171,7 @@ def main():
         else:
             return "TN"
 
-    # st.markdown("---")
+    st.markdown("---")
 
     # cols = st.columns(1 + num_models)
     # cols[0].markdown("## Concept")
@@ -263,20 +263,26 @@ def main():
         "TP": 3,
         "FP": 2,
         "FN": 1,
-        "TN": 0,
+        "TN": 1,
     }
 
     CONCEPTS_SELECTED = {
-        "has_4_legs": ["anteater", "mole", "goat", "stool", "dog"],
-        "is_dangerous": ["razor", "dynamite", "axe", "tumbleweed", "mole"],
-        "made_of_wood": ["bow3", "dynamite", "axe", "loveseat", "ski"],
-        "tastes_sweet": ["plum", "raisin", "watermelon", "pineapple", "lavender"],
+        # "has_4_legs": ["anteater", "mole", "goat", "stool", "dog"],
+        "has_4_legs": ["tablecloth", "altar", "kangaroo", "stool", "dog"],
+        # "is_dangerous": ["razor", "dynamite", "axe", "tumbleweed", "mole"],
+        "is_dangerous": ["dynamite", "razor", "bison", "corkscrew", "cheesecake"],
+        # "made_of_wood": ["bow3", "dynamite", "axe", "loveseat", "ski"],
+        "made_of_wood": ["bow3", "puppet", "axe", "cardboard", "ski"],
+        # "tastes_sweet": ["plum", "raisin", "watermelon", "pineapple", "lavender"],
+        "tastes_sweet": ["plum", "raisin", "cake_mix", "tomato_sauce", "crystal1"],
     }
 
     def score_concept(concept):
-        return sum(
-            [SCORES[get_pred_type(results_tp_fp_fn[m], concept)] for m in MODELS]
-        )
+        preds_trues = [get_pred_and_true(results[m], concept) for m in MODELS]
+        preds, trues = zip(*preds_trues)
+        assert len(set(trues)) == 1
+        corrects = [p == t for p, t in zip(preds, trues)]
+        return first(trues), sum(corrects)
 
     def is_positive_str(concept):
         if concept in feature_to_concepts[feature]:
@@ -294,6 +300,9 @@ def main():
         key=score_concept,
         reverse=True,
     )
+    for c in predicted_concepts_ss:
+        st.write(get_image_path(c))
+
     st.write(" ".join(predicted_concepts_ss))
 
     blocks = [generate_table(c) for c in predicted_concepts_ss]

@@ -148,8 +148,8 @@ FEATURE_NAMES = {
 NORMS_NAMES = {
     "mcrae-x-things": "McRae×THINGS",
     "mcrae-mapped": "McRae++",
-    "binder-4": "Binder (discretized)",
-    "binder-median": "Binder (discretized)",
+    "binder-4": "Binder (binarised)",
+    "binder-median": "Binder (binarised)",
     "binder-dense": "Binder",
 }
 

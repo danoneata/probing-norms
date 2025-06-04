@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="container" style="max-width: 720px">
+    <div class="container">
         <div class="row mt-3">
             <span class="text-center">
                 paper
@@ -38,7 +38,58 @@
                 <a href="https://github.com/danoneata/seeing-what-tastes-good">code</a>
             </span>
         </div>
-        <div class="mt-4">
+        <div class="row mt-3">
+            <p class="alert alert-info text-center">Self-supervised vision models are surprisingly good at predicting
+                the semantic attributes of concepts.</p>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-3">
+                <h4 class="text-center">Overview</h4>
+                <ul>
+                    <li>Revisit classic work in distributional semantics, but with a new twist: larger models and denser
+                        data.</li>
+                    <li>Evaluate how well large-scale pretrained models capture the semantic attributes of concepts;
+                        for example, <span style="font-variant: small-caps">rose</span> <i>is red</i>, <i>smells
+                            sweet</i>, <i>is a flower</i>.</li>
+                    <li>Evaluate on datasets that go beyond perception, e.g. sense, touch, emotion, or encyclopaedic
+                        attributes.</li>
+                </ul>
+            </div>
+
+            <div class="col-3">
+                <h4 class="text-center">Methodology</h4>
+                <img src="imgs/method.png" class="img-fluid" alt="Methodology overview" style="max-width: 100%; height: auto;">
+                <p>
+                    <ul>
+                        <li>Train linear probes on frozen representations extracted from pretrained vision or language
+                            models.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="col-3">
+                <h4 class="text-center">Datasets</h4>
+                <img src="imgs/datasets.png" class="img-fluid" alt="Datasets overview" style="max-width: 100%; height: auto;">
+                <p>
+                <ul>
+                    <li>McRae et al. (2005): Commonly elicited attributes.</li>
+                    <li>Binder et al. (2016): Average ratings for a set of experiential attributes based on
+                        neurobiological mechanisms.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="col-3">
+                <h4 class="text-center">Main results</h4>
+                <img src="imgs/ranking.png" class="img-fluid" alt="Results overview"
+                    style="max-width: 100%; height: auto;">
+            </div>
+
+        </div>
+
+        <div class="row mt-4">
+            <h4 class="text-center">Interactive demo</h4>
             <iframe src="https://probing-norms-demo.streamlit.app?embed=true"
                 style="height: 640px; width: 100%;"></iframe>
         </div>

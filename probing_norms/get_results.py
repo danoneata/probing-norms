@@ -18,21 +18,33 @@ from adjustText import adjust_text
 from matplotlib import gridspec
 from matplotlib import pyplot as plt
 from sklearn.metrics import (
-    f1_score,
     accuracy_score,
-    roc_auc_score,
-    recall_score,
+    f1_score,
+    mean_absolute_error,
+    mean_squared_error,
+    root_mean_squared_error,
     precision_score,
+    r2_score,
+    recall_score,
+    roc_auc_score,
 )
 from tqdm import tqdm
 
 from probing_norms.data import DIR_LOCAL, load_mcrae_x_things
 from probing_norms.utils import cache_df, cache_json, read_json, read_file, multimap
-from probing_norms.scripts.prepare_mcrae_norms_grouped import load_feature_new_to_features_mcrae
+from probing_norms.scripts.prepare_mcrae_norms_grouped import (
+    load_feature_new_to_features_mcrae,
+)
 from probing_norms.predict import NORMS_LOADERS, FEATURE_TYPE_TO_MODALITY
 
 NORMS_MODEL = "chatgpt-gpt3.5-turbo"
 DATASET_NAME = "things"
+
+
+def accuracy_within(true, pred, delta=1):
+    """Calculate accuracy within a certain delta."""
+    return 100 * np.mean(np.abs(true - pred) <= delta)
+
 
 SCORE_FUNCS = {
     "score-accuracy": accuracy_score,
@@ -40,6 +52,13 @@ SCORE_FUNCS = {
     "score-recall": recall_score,
     "score-f1": f1_score,
     "score-roc-auc": roc_auc_score,
+    # regression metrics
+    "score-rmse": root_mean_squared_error,
+    "score-mse": mean_squared_error,
+    "score-mae": mean_absolute_error,
+    "score-r2": r2_score,
+    "score-accuracy-delta-1": partial(accuracy_within, delta=1),
+    "score-accuracy-delta-0.5": partial(accuracy_within, delta=0.5),
 }
 
 SPLIT_TO_SCORE_FUNCS = {
@@ -70,12 +89,15 @@ MAIN_TABLE_MODELS = [
     "swin-v2-ssl",
     #
     # "clip-dfn2b",
+    "llava-1.5-7b",
+    "qwen2.5-vl-3b-instruct",
     "clip",
     "pali-gemma-224",
     "siglip-224",
     #
     "glove-840b-300d-word",
     "fasttext-word",
+    "numberbatch-word",
     "clip-word",
     "deberta-v3-contextual-layers-0-to-6-word",
     "gemma-2b-contextual-layers-9-to-18-seq-last-word",
@@ -85,13 +107,13 @@ MAIN_TABLE_MODELS = [
 # Names used for plotting or other output.
 METACATEGORY_SHORT_NAMES = {
     # "encyclopaedic": "encycl.",
-    "visual-colour": "visual: color",
+    "visual-colour": "visual: colour",
     "visual-form_and_surface": "visual: form & surface",
     "visual-motion": "visual: motion",
 }
 
 METACATEGORY_NAMES = {
-    "visual-colour": "visual: color",
+    "visual-colour": "visual: colour",
     "visual-form_and_surface": "visual: form & surface",
     "visual-motion": "visual: motion",
 }
@@ -107,10 +129,13 @@ FEATURE_NAMES = {
     "dino-v2": "DINOv2",
     "siglip-224": "SigLIP",
     "pali-gemma-224": "PaliGemma",
+    "llava-1.5-7b": "LLaVA-1.5",
+    "qwen2.5-vl-3b-instruct": "Qwen2.5-VL",
     "clip": "CLIP (image)",
     "clip-dfn2b": "CLIP DFN-2B (image)",
     "glove-6b-300d-word": "GloVe 6B",
     "glove-840b-300d-word": "GloVe 840B",
+    "numberbatch-word": "Numberbatch",
     "fasttext-word": "FastText",
     "deberta-v3-contextual-last-word": "DeBERTa v3",
     "deberta-v3-contextual-layers-0-to-6-word": "DeBERTa v3",
@@ -123,8 +148,9 @@ FEATURE_NAMES = {
 NORMS_NAMES = {
     "mcrae-x-things": "McRae×THINGS",
     "mcrae-mapped": "McRae++",
-    "binder-4": "Binder",
-    "binder-median": "Binder",
+    "binder-4": "Binder (discretized)",
+    "binder-median": "Binder (discretized)",
+    "binder-dense": "Binder",
 }
 
 SCORE_NAMES = {
@@ -134,8 +160,21 @@ SCORE_NAMES = {
     "score-f1": "F1",
     "score-f1-selectivity": "F1 selectivity",
     "score-roc-auc": "ROC AUC",
+    "score-mse": "MSE",
+    "score-rmse": "RMSE",
+    "score-r2": "R²",
+    "score-accuracy-delta-1": "Accuracy (Δ=1)",
+    "score-accuracy-delta-0.5": "Accuracy (Δ=0.5)",
 }
 
+METRIC_TO_FMT = {
+    "score-f1-selectivity": "{:.1f}",
+    "score-f1": "{:.1f}",
+    "score-precision": "{:.1f}",
+    "score-recall": "{:.1f}",
+    "score-rmse": "{:.2f}",
+    "score-mae": "{:.2f}",
+}
 
 # Second level of type aggregation.
 BINDER_METACATEGORIES_2 = {
@@ -165,22 +204,34 @@ def normalize_feature_name(text):
     return text
 
 
-def load_result_path(path, score_types):
-    def evaluate(data):
-        true = np.array([datum["true"] for datum in data])
-        pred = np.array([datum["pred"] for datum in data])
-        pred = (pred > 0.5).astype(int)
-        return [
-            {
-                "score-type": score_type,
-                "score": 100 * SCORE_FUNCS[score_type](true, pred),
-            }
-            for score_type in score_types
-        ]
+def evaluate_binary_classification(data, score_types):
+    true = np.array([datum["true"] for datum in data])
+    pred = np.array([datum["pred"] for datum in data])
+    pred = (pred > 0.5).astype(int)
+    return [
+        {
+            "score-type": score_type,
+            "score": 100 * SCORE_FUNCS[score_type](true, pred),
+        }
+        for score_type in score_types
+    ]
 
+
+def evaluate_regression(data, score_types):
+    true = np.array([datum["true"] for datum in data])
+    pred = np.array([datum["pred"] for datum in data])
+    return [
+        {
+            "score-type": score_type,
+            "score": SCORE_FUNCS[score_type](true, pred),
+        }
+        for score_type in score_types
+    ]
+
+
+def load_result_path(path, evaluate):
     results = read_json(path)
     scores = [score for result in results for score in evaluate(result["preds"])]
-
     df = pd.DataFrame(scores)
     df = df.groupby("score-type")["score"].mean()
     return df.to_dict()
@@ -206,7 +257,25 @@ def load_result(
         )
         + ".json"
     )
-    scores_dict = load_result_path(path, SPLIT_TO_SCORE_FUNCS[split_type])
+    evaluate_func = (
+        evaluate_regression
+        if classifier_type == "linear-regression"
+        else evaluate_binary_classification
+    )
+    if classifier_type == "linear-regression":
+        score_types = [
+            "score-rmse",
+            "score-mse",
+            "score-mae",
+            "score-r2",
+            "score-accuracy-delta-1",
+            "score-accuracy-delta-0.5",
+        ]
+    else:
+        score_types = SPLIT_TO_SCORE_FUNCS[split_type]
+    scores_dict = load_result_path(
+        path, partial(evaluate_func, score_types=score_types)
+    )
     return {
         "level": embeddings_level,
         "model": feature_type,
@@ -216,7 +285,7 @@ def load_result(
 
 
 def load_result_features(
-    classifier_type, embeddings_level, split_type, feature_type, norms_type
+    classifier_type, embeddings_level, split_type, feature_type, norms_type,
 ):
     """Aggregates results for all features."""
 
@@ -313,6 +382,7 @@ def get_score_random_features(norms_type):
 
 def load_taxonomy_mcrae_x_things():
     """Collapse the McRae taxonomy on the grouped feature norms."""
+
     def do():
         concept_feature = load_mcrae_x_things()
         features1 = sorted(set(f for _, f in concept_feature))
@@ -430,8 +500,10 @@ def get_results_levels_and_splits():
     print(df.to_csv())
 
 
-def plot_results_per_metacategory(results, order_models=None, order_metacategory=None):
-    metric = "score-f1-selectivity"
+def plot_results_per_metacategory(
+    results, order_models=None, order_metacategory=None, metric=None
+):
+    metric = metric or "score-f1-selectivity"
 
     df = pd.DataFrame(results)
     df["modality"] = df["model"].map(FEATURE_TYPE_TO_MODALITY)
@@ -462,8 +534,8 @@ def plot_results_per_metacategory(results, order_models=None, order_metacategory
 
     modalities = ["image", "text"]
     modality_to_color = {
-        "image": "rocket_r",
-        "text": "mako_r",
+        "image": "flare_r",
+        "text": "crest_r",
     }
     num_models = Counter(model_performance["modality"])
     palette = [
@@ -486,8 +558,9 @@ def plot_results_per_metacategory(results, order_models=None, order_metacategory
         # errorbar=None,
         err_kws={"linewidth": 1},
         ax=ax,
+        legend=False,
     )
-    sns.move_legend(ax, "lower center", bbox_to_anchor=(0.5, 1), ncol=6, title="")
+    # sns.move_legend(ax, "lower center", bbox_to_anchor=(0.5, 1), ncol=6, title="", framealpha=0.0)
     ax.set_xlabel("")
     ax.set_ylabel(SCORE_NAMES[metric])
     st.pyplot(fig)
@@ -543,7 +616,7 @@ def get_results_per_metacategory_mcrae_mapped(norms_type="mcrae-mapped"):
         "clip",
         "pali-gemma-224",
         "siglip-224",
-        # 
+        #
         "glove-840b-300d-word",
         "fasttext-word",
         "clip-word",
@@ -564,15 +637,22 @@ def get_results_per_metacategory_mcrae_mapped(norms_type="mcrae-mapped"):
 
     fig = plot_results_per_metacategory(results, models)
     path = "output/plots/per-metacategory-{}.pdf".format(norms_type)
-    fig.savefig(path, bbox_inches="tight")
+    fig.savefig(path, bbox_inches="tight", transparent=True)
+    # path = "output/plots/per-metacategory-{}.png".format(norms_type)
+    # fig.savefig(path, bbox_inches="tight", transparent=True, dpi=800)
 
 
 def get_results_per_metacategory_binder():
-    classifier_type = "linear-probe"
-    norms_type = "binder-median"
-    taxonomy = load_taxonomy_binder()
+    # classifier_type = "linear-probe"
+    # norms_type = "binder-median"
+    # level = "concept"
+    # split = "repeated-k-fold"
+    classifier_type = "linear-regression"
+    norms_type = "binder-dense"
     level = "concept"
-    split = "repeated-k-fold"
+    split = "repeated-k-fold-simple"
+    metric = "score-rmse"
+    taxonomy = load_taxonomy_binder()
     models = [
         # "random-siglip",
         "vit-mae-large",
@@ -600,7 +680,8 @@ def get_results_per_metacategory_binder():
 
     for r in results:
         r["metacategory"] = BINDER_METACATEGORIES_2[taxonomy[r["feature"]]]
-        r["score-f1-selectivity"] = r["score-f1"] - scores_random[r["feature"]]
+        if metric == "score-f1-selectivity":
+            r["score-f1-selectivity"] = r["score-f1"] - scores_random[r["feature"]]
 
     order_metacategory = [
         "Sensory",
@@ -611,24 +692,27 @@ def get_results_per_metacategory_binder():
         "Emotion",
         "Drive",
     ]
-    fig = plot_results_per_metacategory(results, models, order_metacategory)
-    fig.savefig("output/plots/per-metacategory-binder.pdf", bbox_inches="tight")
+    fig = plot_results_per_metacategory(results, models, order_metacategory, metric)
+    # fig.savefig("output/plots/per-metacategory-binder.pdf", bbox_inches="tight")
+    fig.savefig("output/plots/per-metacategory-binder.pdf", bbox_inches="tight", transparent=True)
+    # fig.savefig("output/plots/per-metacategory-binder.png", bbox_inches="tight", transparent=True, dpi=800)
 
 
-def get_results_binder_norms():
-    classifier_type = "linear-probe"
-    level = "concept"
-    split = "repeated-k-fold"
-    norm_type = "binder-median"
-    metric = "score-f1-selectivity"
+def get_results_binder_norms(
+    classifier_type="linear-probe",
+    level="concept",
+    split="repeated-k-fold",
+    norm_type="binder-median",
+    metric="score-f1-selectivity",
+):
 
     MODELS = [
-        "random-siglip",
+        # "random-siglip",
         "vit-mae-large",
         "max-vit-large-in21k",
         "dino-v2",
         "swin-v2-ssl",
-        # 
+        #
         "clip",
         "pali-gemma-224",
         "siglip-224",
@@ -650,9 +734,14 @@ def get_results_binder_norms():
             classifier_type, level, split, model, norm_type
         )
     ]
-    score_random = get_score_random_features(norm_type)
     df = pd.DataFrame(results)
-    df["score-f1-selectivity"] = df["score-f1"] - df["feature"].map(score_random)
+    if metric == "score-f1-selectivity":
+        score_random = get_score_random_features(norm_type)
+        df[metric] = df["score-f1"] - df["feature"].map(score_random)
+    if metric in {"score-r2", "score-mse", "score-rmse", "score-mae"}:
+        fmt = ".1f"
+    else:
+        fmt = ".0f"
     df["modality"] = df["model"].map(FEATURE_TYPE_TO_MODALITY)
     df["model"] = df["model"].map(FEATURE_NAMES)
 
@@ -682,6 +771,9 @@ def get_results_binder_norms():
 
     st.write(df)
 
+    vmin = df.min().min()
+    vmax = df.max().max()
+
     def make1(ax, df, metacategory, to_hide_y):
         cols = [c for c in df.columns if taxonomy2[c] == metacategory]
         sns.heatmap(
@@ -689,8 +781,10 @@ def get_results_binder_norms():
             annot=True,
             # square=True,
             cbar=False,
-            fmt=".0f",
+            fmt=fmt,
             cmap="rocket_r",
+            vmin=vmin,
+            vmax=vmax,
             ax=ax,
         )
         ax.set_xlabel("")
@@ -708,7 +802,7 @@ def get_results_binder_norms():
 
     sns.set(style="whitegrid", font="Arial")
 
-    fig = plt.figure(figsize=(11, 10))
+    fig = plt.figure(figsize=(12.75, 11.50))
     gs = gridspec.GridSpec(2, sum(rows_sizes[0]), hspace=0.4)
     for i, row in enumerate(rows):
         s = 0
@@ -796,6 +890,8 @@ def get_classifiers_agreement_binder_norms():
 
 
 def get_results_paper_table_main_row(*models, norm_types=None):
+    assert len(models) > 0, "At least one model must be provided."
+
     classifier_type = "linear-probe"
     embeddings_level = "concept"
     split_type = "repeated-k-fold"
@@ -842,6 +938,150 @@ def get_results_paper_table_main_row(*models, norm_types=None):
     df = df.reset_index()
     df["model"] = df["model"].map(lambda x: FEATURE_NAMES.get(x, x))
     print(df.to_latex(float_format="%.1f", index=False))
+
+
+def get_results_paper_table_main_acl_camera_ready(*models):
+    SETTINGS = [
+        {
+            "classifier_type": "linear-probe",
+            "embeddings_level": "concept",
+            "split_type": "repeated-k-fold",
+            "norms_type": "mcrae-x-things",
+            "metric": "score-f1-selectivity",
+        },
+        {
+            "classifier_type": "linear-regression",
+            "embeddings_level": "concept",
+            "split_type": "repeated-k-fold-simple",
+            "norms_type": "binder-dense",
+            "metric": "score-rmse",
+        },
+    ]
+
+    def get_results_1(models, metric, **settings):
+        results = [
+            result
+            for model in models
+            for result in load_result_features(feature_type=model, **settings)
+        ]
+        df = pd.DataFrame(results)
+
+        if metric == "score-f1-selectivity":
+            norm_type = settings["norms_type"]
+            scores_random_features = get_score_random_features(norm_type)
+            df[metric] = df["score-f1"] - df["feature"].map(scores_random_features)
+
+        cols = ["model", metric]
+        df = df[cols]
+        df = df.groupby("model").aggregate(["mean", "min", "max"])
+        return df
+
+    if len(models) == 0:
+        models = MAIN_TABLE_MODELS
+
+    dfs = {s["norms_type"]: get_results_1(models, **s) for s in SETTINGS}
+    df = pd.concat(dfs, axis=1)
+    df = df.reindex(models)
+    df = df.reset_index()
+    df["model"] = df["model"].map(lambda x: FEATURE_NAMES.get(x, x))
+
+    def row_to_string_1(row, setting):
+        m = setting["metric"]
+        n = setting["norms_type"]
+        fmt = METRIC_TO_FMT[m]
+        return [
+            fmt.format(row[(n, m, "mean")]),
+            r"\annot{" + fmt.format(row[(n, m, "min")]) + r"}",
+            r"\annot{--}",
+            r"\annot{" + fmt.format(row[(n, m, "max")]) + r"}",
+        ]
+
+    def concat(xss):
+        return [x for xs in xss for x in xs]
+
+    def row_to_string(row):
+        return " & ".join(
+            [row["model"].item()]
+            + concat(row_to_string_1(row, s) for s in SETTINGS)
+        )
+
+    print(" \\\\ \n".join([row_to_string(row) for _, row in df.iterrows()]))
+
+
+def get_results_paper_table_full_main_acl_camera_ready():
+    SETTINGS = [
+        {
+            "classifier_type": "linear-probe",
+            "embeddings_level": "concept",
+            "split_type": "repeated-k-fold",
+            "norms_type": "mcrae-x-things",
+            "metrics": [
+                "score-precision",
+                "score-recall",
+                "score-f1",
+                "score-f1-selectivity",
+            ],
+        },
+        {
+            "classifier_type": "linear-probe",
+            "embeddings_level": "concept",
+            "split_type": "repeated-k-fold",
+            "norms_type": "binder-median",
+            "metrics": [
+                "score-precision",
+                "score-recall",
+                "score-f1",
+                "score-f1-selectivity",
+            ],
+        },
+        {
+            "classifier_type": "linear-regression",
+            "embeddings_level": "concept",
+            "split_type": "repeated-k-fold-simple",
+            "norms_type": "binder-dense",
+            "metrics": [
+                "score-rmse",
+                "score-mae",
+            ],
+        },
+    ]
+
+    def get_results_1(models, metrics, **settings):
+        results = [
+            result
+            for model in models
+            for result in load_result_features(feature_type=model, **settings)
+        ]
+        df = pd.DataFrame(results)
+
+        if "score-f1-selectivity" in metrics:
+            norm_type = settings["norms_type"]
+            scores_random_features = get_score_random_features(norm_type)
+            df["score-f1-selectivity"] = df["score-f1"] - df["feature"].map(scores_random_features)
+
+        cols = ["model"] + metrics
+        df = df[cols]
+        df = df.groupby("model").mean()
+        return df
+
+    dfs = {s["norms_type"]: get_results_1(MAIN_TABLE_MODELS, **s) for s in SETTINGS}
+    df = pd.concat(dfs, axis=1)
+    df = df.reindex(MAIN_TABLE_MODELS)
+    df = df.reset_index()
+    df["model"] = df["model"].map(lambda x: FEATURE_NAMES.get(x, x))
+
+    def row_to_string_1(row, n, m):
+        key = (n, m)
+        fmt = METRIC_TO_FMT[m]
+        return fmt.format(row[key])
+
+    def row_to_string(row):
+        return " & ".join(
+            [row["model"].item()]
+            + [row_to_string_1(row, s["norms_type"], m) for s in SETTINGS for m in s["metrics"]]
+        )
+
+    print(" \\\\ \n".join([row_to_string(row) for _, row in df.iterrows()]))
 
 
 def get_results_paper_table_main():
@@ -1071,7 +1311,8 @@ def compare_two_models_scatterplot_ax(ax, model1, model2, legend="auto"):
     )
     add_texts(ax, df)
     if legend:
-        sns.move_legend(ax, "lower right", bbox_to_anchor=(1, 1), ncol=2, title="")
+        # sns.move_legend(ax, "lower right", bbox_to_anchor=(1, 1), ncol=2, title="")
+        sns.move_legend(ax, "upper left", bbox_to_anchor=(1, 1), ncol=1, title="", framealpha=0.0)
     ax.plot([0, 100], [0, 100], color="gray", linestyle="--")
     ax.set_xlabel("F1 selectivity · {}".format(FEATURE_NAMES[model1]))
     ax.set_ylabel("F1 selectivity · {}".format(FEATURE_NAMES[model2]))
@@ -1081,10 +1322,12 @@ def compare_two_models_scatterplot_ax(ax, model1, model2, legend="auto"):
 def compare_two_models_scatterplot(model1, model2):
     sns.set(style="whitegrid", font="Arial")
     fig, ax = plt.subplots()
-    compare_two_models_scatterplot_ax(ax, model1, model2)
+    compare_two_models_scatterplot_ax(ax, model1, model2, legend="auto")
     st.pyplot(fig)
     fig.savefig(
-        f"output/plots/scatterplot-{model1}-vs-{model2}.pdf", bbox_inches="tight"
+        f"output/plots/scatterplot-{model1}-vs-{model2}.pdf",
+        bbox_inches="tight",
+        transparent=True,
     )
 
 
@@ -1110,19 +1353,30 @@ def get_correlation_between_models(norms_type):
     embeddings_level = "concept"
     splits_type = "repeated-k-fold"
     norms_loader = NORMS_LOADERS[norms_type]()
+
     models = [
         "random-siglip",
-        "max-vit-large",
         "vit-mae-large",
-        "swin-v2",
+        "max-vit-large",
+        "max-vit-large-in21k",
+        # "swin-v2",
         "dino-v2",
+        "swin-v2-ssl",
+        #
+        "llava-1.5-7b",
+        "qwen2.5-vl-3b-instruct",
+        "clip",
         "pali-gemma-224",
         "siglip-224",
-        "clip",
-        "fasttext-word",
+        #
         "glove-840b-300d-word",
+        "fasttext-word",
+        "numberbatch-word",
         "clip-word",
+        "deberta-v3-contextual-layers-0-to-6-word",
+        "gemma-2b-contextual-layers-9-to-18-seq-last-word",
     ]
+
     results = [
         r
         for m in models
@@ -1131,10 +1385,10 @@ def get_correlation_between_models(norms_type):
         )
     ]
     cols = ["feature", "model", "score-f1"]
-    feature_to_random_score = {
-        feature: get_score_random(norms_loader, feature)
-        for feature in norms_loader.load_concepts()
-    }
+    # feature_to_random_score = {
+        # feature: get_score_random(norms_loader, feature)
+        # for feature in norms_loader.load_concepts()
+    # }
 
     df = pd.DataFrame(results)
     df = df[cols]
@@ -1157,6 +1411,17 @@ def get_correlation_between_models(norms_type):
         cmap=sns.cm.rocket_r,
         ax=ax,
     )
+
+    for text in ax.texts:
+        t = text.get_text()
+        if t.startswith("0."):
+            t1 = t.lstrip("0")
+        elif t == "1.00":
+            t1 = "1.0"
+        else:
+            t1 = t
+        text.set_text(t1)
+
     ax.set_xlabel("")
     ax.set_ylabel("")
     st.pyplot(fig)
@@ -1164,13 +1429,28 @@ def get_correlation_between_models(norms_type):
     fig.savefig(
         f"output/plots/correlation-between-models-{norms_type}.pdf",
         bbox_inches="tight",
+        transparent=True,
     )
 
 
 def get_correlation_between_models_2():
-    classifier_type = "linear-probe"
-    embeddings_level = "concept"
-    splits_type = "repeated-k-fold"
+    SETTINGS = [
+        {
+            "classifier_type": "linear-probe",
+            "embeddings_level": "concept",
+            "split_type": "repeated-k-fold",
+            "norms_type": "mcrae-x-things",
+            "metric": "score-f1",
+        },
+        {
+            "classifier_type": "linear-regression",
+            "embeddings_level": "concept",
+            "split_type": "repeated-k-fold-simple",
+            "norms_type": "binder-dense",
+            "metric": "score-rmse",
+        },
+    ]
+
     models = [
         "random-siglip",
         "vit-mae-large",
@@ -1179,32 +1459,33 @@ def get_correlation_between_models_2():
         # "swin-v2",
         "dino-v2",
         "swin-v2-ssl",
+        #
+        "llava-1.5-7b",
+        "qwen2.5-vl-3b-instruct",
         "clip",
         "pali-gemma-224",
         "siglip-224",
+        #
         "glove-840b-300d-word",
         "fasttext-word",
+        "numberbatch-word",
         "clip-word",
         "deberta-v3-contextual-layers-0-to-6-word",
         "gemma-2b-contextual-layers-9-to-18-seq-last-word",
     ]
 
-    def plot1(ax, norms_type):
+    def plot1(ax, metric, **settings):
         results = [
-            r
-            for m in models
-            for r in load_result_features(
-                classifier_type, embeddings_level, splits_type, m, norms_type
-            )
+            r for m in models for r in load_result_features(**settings, feature_type=m)
         ]
-        cols = ["feature", "model", "score-f1"]
+        cols = ["feature", "model", metric]
 
         df = pd.DataFrame(results)
         df = df[cols]
         df["model"] = df["model"].map(lambda x: FEATURE_NAMES.get(x, x))
         # df["score-random"] = df["feature"].map(lambda x: get_score_random(norms_loader, x))
         # df["score-f1-selectivity"] = df["score-f1"] - df["score-random"]
-        df = df.pivot_table(index="feature", columns="model", values="score-f1")
+        df = df.pivot_table(index="feature", columns="model", values=metric)
         corr_matrix = df.corr()
 
         models_names = [FEATURE_NAMES[m] for m in models]
@@ -1218,6 +1499,7 @@ def get_correlation_between_models_2():
             cmap=sns.cm.rocket_r,
             ax=ax,
         )
+        norms_type = settings["norms_type"]
         ax.set_xlabel("")
         ax.set_ylabel("")
         ax.set_title(NORMS_NAMES[norms_type])
@@ -1233,17 +1515,22 @@ def get_correlation_between_models_2():
 
     sns.set(style="whitegrid", font="Arial")
     fig, axs = plt.subplots(
-        figsize=(10, 18), ncols=2, nrows=1, sharex=True, sharey=True
+        figsize=(11, 19.5), ncols=2, nrows=1, sharex=True, sharey=True
     )
-    plot1(axs[0], "mcrae-x-things")
-    plot1(axs[1], "binder-median")
+    plot1(axs[0], **SETTINGS[0])
+    plot1(axs[1], **SETTINGS[1])
     fig.tight_layout()
     st.pyplot(fig)
 
     fig.savefig(
-        f"output/plots/correlation-between-models.pdf",
-        bbox_inches="tight",
+        f"output/plots/correlation-between-models.png",
+        transparent=True,
+        dpi=800,
     )
+    # fig.savefig(
+    #     f"output/plots/correlation-between-models.pdf",
+    #     bbox_inches="tight",
+    # )
 
 
 def prepare_results_for_stella():
@@ -1440,6 +1727,223 @@ def aggregate_predictions_for_demo(norms_type):
     np.savez(path, results=results_np)
 
 
+def get_results_binder_norms_regression():
+    CLASSIFIER_TYPE = "linear-regression"
+    EMBEDDINGS_LEVEL = "concept"
+    SPLIT_TYPE = "repeated-k-fold-simple"
+    NORMS_TYPE = "binder-dense"
+    # DATASET_NAME = "things"
+
+    results = [
+        r
+        for m in MAIN_TABLE_MODELS
+        for r in load_result_features(
+            CLASSIFIER_TYPE, EMBEDDINGS_LEVEL, SPLIT_TYPE, m, NORMS_TYPE
+        )
+    ]
+
+    df = pd.DataFrame(results)
+    cols = df.columns.tolist()
+    cols = ["model"] + [c for c in cols if c.startswith("score-")]
+    df = df[cols].groupby(["model"]).mean()
+    df = df.reindex(MAIN_TABLE_MODELS)
+    df = df.reset_index()
+    df["model"] = df["model"].map(FEATURE_NAMES)
+    print(df.to_csv("output/binder-regression-results.csv", index=False))
+
+
+def show_ranking_plot():
+    def get_results_1(models, classifier_type, split_type, norm_type, metrics):
+        embeddings_level = "concept"
+
+        if "score-f1-selectivity" in metrics:
+            scores_random_features = get_score_random_features(norm_type)
+
+            def add_f1_sel(results):
+                for r in results:
+                    r["score-f1-selectivity"] = (
+                        r["score-f1"] - scores_random_features[r["feature"]]
+                    )
+                return results
+
+        else:
+
+            def add_f1_sel(results):
+                return results
+
+        results = [
+            result
+            for model in models
+            for result in add_f1_sel(
+                load_result_features(
+                    classifier_type,
+                    embeddings_level,
+                    split_type,
+                    model,
+                    norm_type,
+                )
+            )
+        ]
+        cols = ["model", "norms-type"] + metrics
+        df = pd.DataFrame(results)
+        df = df[cols]
+        df = df.pivot_table(index="model", columns="norms-type")
+        return df
+
+    SETTINGS = [
+        {
+            "classifier_type": "linear-probe",
+            "split_type": "repeated-k-fold",
+            "norm_type": "mcrae-x-things",
+            "metrics": [
+                "score-f1",
+                "score-precision",
+                "score-recall",
+                "score-f1-selectivity",
+            ],
+        },
+        {
+            "classifier_type": "linear-probe",
+            "split_type": "repeated-k-fold",
+            "norm_type": "binder-median",
+            "metrics": [
+                "score-f1",
+                "score-precision",
+                "score-recall",
+                "score-f1-selectivity",
+            ],
+        },
+        {
+            "classifier_type": "linear-regression",
+            "split_type": "repeated-k-fold-simple",
+            "norm_type": "binder-dense",
+            "metrics": [
+                "score-rmse",
+                "score-mse",
+                "score-mae",
+                "score-r2",
+                "score-accuracy-delta-1",
+                "score-accuracy-delta-0.5",
+            ],
+        },
+    ]
+
+    SCORE_NAMES = {
+        "score-accuracy": "Acc.",
+        "score-precision": "P",
+        "score-recall": "R",
+        "score-f1": "F1",
+        "score-f1-selectivity": "F1 sel.",
+        "score-roc-auc": "ROC AUC",
+        "score-rmse": "RMSE",
+        "score-mse": "MSE",
+        "score-mae": "MAE",
+        "score-r2": "R²",
+        "score-accuracy-delta-1": "Acc. (Δ=1)",
+        "score-accuracy-delta-0.5": "Acc. (Δ=0.5)",
+    }
+
+    def load_data():
+        dfs = [get_results_1(MAIN_TABLE_MODELS, **setting) for setting in SETTINGS]
+        return dfs[0].join(dfs[1:])
+
+    df = load_data()
+    for e in ("mse", "rmse", "mae"):
+        df[(f"score-{e}", "binder-dense")] = -df[(f"score-{e}", "binder-dense")]
+    df = df.rank(ascending=False, method="min")
+
+    # Keep models order to have them displayed on the left.
+    def get_models_order(df, i):
+        last_col = df.columns[i]
+        idxs = df[last_col].values.argsort()
+        models = df.index.tolist()
+        return [models[i] for i in idxs]
+
+    models_left = get_models_order(df, 0)
+    models_right = get_models_order(df, -1)
+
+    ORDER = [
+        ("score-f1-selectivity", "mcrae-x-things"),
+        ("score-rmse", "binder-dense"),
+        # ("score-mae", "binder-dense"),
+        # ("score-accuracy-delta-0.5", "binder-dense"),
+        # ("score-f1-selectivity", "binder-median"),
+    ]
+
+    def sort_func(ss):
+        return ss.map(lambda x: ORDER.index(x))
+
+    df = df.unstack()
+    df = df.reset_index()
+    df = df.rename(columns={"level_0": "metric", 0: "rank"})
+    df["setting"] = df[["metric", "norms-type"]].apply(
+        lambda x: (x["metric"], x["norms-type"]), axis=1
+    )
+    NORMS_NAMES = {
+        "mcrae-x-things": "McRae×THINGS",
+        "binder-median": "Binder",
+        "binder-dense": "Binder",
+    }
+    df["setting-str"] = df["setting"].map(
+        lambda x: "{}\n{}".format(NORMS_NAMES[x[1]], SCORE_NAMES[x[0]])
+    )
+    df = df[df["setting"].isin(ORDER)]
+    df = df.sort_values(by="setting", key=sort_func)
+
+    modalities = ["image", "text"]
+    modality_to_color = {
+        "image": "flare_r",
+        "text": "crest_r",
+    }
+    num_models = Counter([FEATURE_TYPE_TO_MODALITY[m] for m in MAIN_TABLE_MODELS])
+    modality_to_palette = {modality: sns.color_palette(modality_to_color[modality], num_models[modality]) for modality in modalities}
+    modality_to_models = {
+        modality: [model for model in MAIN_TABLE_MODELS if modality == FEATURE_TYPE_TO_MODALITY[model]]
+        for modality in modalities
+    }
+    palette = {
+        model: color
+        for modality in modalities
+        for model, color in zip(modality_to_models[modality], modality_to_palette[modality])
+    }
+
+    sns.set(style="whitegrid", font="Arial")
+    # camera ready
+    fig, ax = plt.subplots(figsize=(4, 5))
+    # poster
+    # fig, ax = plt.subplots(figsize=(2, 7))
+    sns.lineplot(
+        data=df,
+        x="setting-str",
+        y="rank",
+        hue="model",
+        legend=False,
+        marker="o",
+        sort=False,
+        palette=palette,
+        ax=ax,
+    )
+    ax.set_xlabel("")
+    # ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
+
+    ax.set_ylabel("")
+    ax.set_yticks(range(1, len(models_left) + 1))
+    ax.set_yticklabels([FEATURE_NAMES.get(m, m) for m in models_left])
+
+    ax2 = ax.secondary_yaxis("right")
+    ax2.tick_params(length=0)
+    ax2.set_yticks(range(1, len(models_right) + 1))
+    ax2.set_yticklabels([FEATURE_NAMES.get(m, m) for m in models_right])
+    # ax2.set_ytickslabels([str(r) for r in range(1, len(models) + 1)])
+    # ax2.set_ylabel("Rank")
+
+    ax.invert_yaxis()
+    ax.grid(axis="y")
+    st.pyplot(fig)
+
+    fig.savefig("output/plots/ranking-plot.pdf", bbox_inches="tight", transparent=True)
+
+
 FUNCS = {
     "levels-and-splits": get_results_levels_and_splits,
     "per-metacategory": partial(
@@ -1453,6 +1957,8 @@ FUNCS = {
     "classifier-agreement-binder-norms": get_classifiers_agreement_binder_norms,
     "paper-table-main-row": get_results_paper_table_main_row,
     "paper-table-main": get_results_paper_table_main,
+    "paper-table-main-acl-camera-ready": get_results_paper_table_main_acl_camera_ready,
+    "paper-table-main-full-acl-camera-ready": get_results_paper_table_full_main_acl_camera_ready,
     "per-feature-norm": get_results_per_feature_norm,
     "random-predictor": get_results_random_predictor,
     "results-all-one-norm": get_results_all_one_norm,
@@ -1466,6 +1972,15 @@ FUNCS = {
     "classifiers-for-stella": prepare_classifiers_for_stella,
     "get-norm-completeness": get_norm_completeness,
     "aggregate-predictions-for-demo": aggregate_predictions_for_demo,
+    "binder-regression": get_results_binder_norms_regression,
+    "binder-norms-regression": lambda metric: get_results_binder_norms(
+        classifier_type="linear-regression",
+        level="concept",
+        split="repeated-k-fold-simple",
+        norm_type="binder-dense",
+        metric=metric,
+    ),
+    "ranking-plot": show_ranking_plot,
 }
 
 

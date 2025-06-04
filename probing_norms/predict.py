@@ -4,7 +4,9 @@ import random
 import os
 import pickle
 
+from collections import defaultdict
 from dataclasses import dataclass
+from itertools import groupby
 from functools import partial
 from typing import Dict, List
 
@@ -12,8 +14,8 @@ import click
 import numpy as np
 import pandas as pd
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split, RepeatedStratifiedKFold
+from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.model_selection import train_test_split, RepeatedStratifiedKFold, RepeatedKFold
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import make_pipeline
@@ -27,13 +29,14 @@ from probing_norms.data import (
     DIR_LOCAL,
     filter_by_things_concepts,
     load_features_metadata,
+    load_binder_dense,
     load_binder_feature_norms,
     load_binder_feature_norms_median,
     load_mcrae_feature_norms,
     load_mcrae_x_things,
     get_feature_to_concepts,
 )
-from probing_norms.utils import cache_json, read_file
+from probing_norms.utils import cache_json, implies, read_file
 from probing_norms.extract_features_image import (
     FEATURE_EXTRACTORS as FEATURE_EXTRACTORS_IMAGE,
 )
@@ -83,6 +86,18 @@ def load_embeddings(dataset_name, feature_type, embeddings_level):
     return embeddings, labels
 
 
+def predict_func_classifier(clf, X_te):
+    return clf.predict_proba(X_te)[:, 1]
+
+
+def predict_func_regression(clf, X_te):
+    return clf.predict(X_te)
+
+
+PREDICT_FUNCS = defaultdict(lambda: predict_func_classifier)
+PREDICT_FUNCS["LinearRegression"] = predict_func_regression
+
+
 def predict1(make_classifier, X, y, split):
     idxs_tr = split.tr_idxs
     idxs_te = split.te_idxs
@@ -91,9 +106,10 @@ def predict1(make_classifier, X, y, split):
     X_te, y_te = X[idxs_te], y[idxs_te]
 
     clf = make_classifier()
-    clf.fit(X_tr, y_tr)
+    predict_func = PREDICT_FUNCS[clf.__class__.__name__]
 
-    y_pr = clf.predict_proba(X_te)[:, 1]
+    clf.fit(X_tr, y_tr)
+    y_pr = predict_func(clf, X_te)
 
     preds = [
         {
@@ -177,6 +193,13 @@ def get_binary_labels(labels, feature, feature_to_concepts, class_to_label):
     return np.array(binary_labels).astype(int)
 
 
+def get_continuous_labels(labels, feature, feature_to_concepts, class_to_label):
+    concepts_and_scores = feature_to_concepts[feature]
+    concept_to_score = {class_to_label[c]: s for c, s in concepts_and_scores}
+    labels_out = [concept_to_score[label] for label in labels]
+    return np.array(labels_out)
+
+
 def get_train_test_split_k_fold(
     labels,
     features,
@@ -209,10 +232,38 @@ def get_train_test_split_k_fold(
     return {feature: get_f(feature) for feature in features}
 
 
+def get_train_test_split_k_fold_simple(
+    labels,
+    features,
+    *,
+    feature_to_concepts,
+    class_to_label,
+    n_splits=5,
+    n_repeats=2,
+):
+    def get_f(feature):
+        indices = np.arange(len(labels))
+        rskf = RepeatedKFold(
+            n_splits=n_splits,
+            n_repeats=n_repeats,
+            random_state=42,
+        )
+        return [
+            Split(
+                *idxss,
+                metadata={"feature": feature},
+            )
+            for idxss in rskf.split(indices)
+        ]
+
+    return {feature: get_f(feature) for feature in features}
+
+
 GET_TRAIN_TEST_SPLIT = {
     "iid-fixed": get_train_test_split_iid_fixed,
     "leave-one-concept-out": get_train_test_split_leave_one_out,
     "repeated-k-fold": get_train_test_split_k_fold,
+    "repeated-k-fold-simple": get_train_test_split_k_fold_simple,
 }
 
 
@@ -364,6 +415,35 @@ class BinderNormsLoader(NormsLoader):
         return "{}-{}".format(self.model, self.thresh)
 
 
+class BinderDenseNormsLoader(NormsLoader):
+    def __init__(self):
+        self.model = "binder-dense"
+
+    def load_concepts(self):
+        path = "data/binder-norms.xlsx"
+        path = DIR_LOCAL / path
+        df = pd.read_excel(path)
+        df = filter_by_things_concepts(df)
+        return df["Word"].tolist()
+
+    def __call__(self):
+        df = load_binder_dense()
+        data = df.to_dict("records")
+        feature_to_concepts = {
+            f: [(datum["Word"], datum["Value"]) for datum in group]
+            for f, group in groupby(data, key=lambda x: x["Feature"])
+        }
+
+        features = sorted(feature_to_concepts.keys())
+        feature_to_id = {feature: i for i, feature in enumerate(features)}
+        features_selected = features
+
+        return feature_to_concepts, feature_to_id, features_selected
+
+    def get_suffix(self):
+        return str(self.model)
+
+
 NORMS_LOADERS = {
     "generated-gpt35": partial(GPT3NormsLoader, norms_model="chatgpt-gpt3.5-turbo"),
     "mcrae": McRaeNormsLoader,
@@ -373,6 +453,7 @@ NORMS_LOADERS = {
     "binder-4": partial(BinderNormsLoader, thresh=4),
     "binder-5": partial(BinderNormsLoader, thresh=5),
     "binder-median": partial(BinderNormsLoader, thresh="median"),
+    "binder-dense": BinderDenseNormsLoader,
 }
 
 
@@ -382,6 +463,7 @@ CLASSIFIERS = {
         penalty=None,
         max_iter=1_000,
     ),
+    "linear-regression": LinearRegression,
     "linear-probe-std": lambda: make_pipeline(
         StandardScaler(),
         LogisticRegression(max_iter=1_000),
@@ -431,6 +513,10 @@ CLASSIFIERS = {
     required=True,
 )
 def main(classifier_type, embeddings_level, feature_type, norms_type, split_type):
+    assert implies(classifier_type == "linear-regression", split_type != "repeated-k-fold")
+    assert implies(classifier_type == "linear-regression", norms_type == "binder-dense")
+    assert implies(norms_type == "binder-dense", classifier_type == "linear-regression")
+
     dataset_name = "things"
     dataset = DATASETS[dataset_name]()
 
@@ -469,6 +555,11 @@ def main(classifier_type, embeddings_level, feature_type, norms_type, split_type
 
     make_classifier = CLASSIFIERS[classifier_type]
 
+    GET_LABELS_FUNCS = {
+        "linear-regression": get_continuous_labels,
+    }
+    get_labels_func = GET_LABELS_FUNCS.get(classifier_type, get_binary_labels)
+
     def save_preds(path, results):
         data = [{k: r[k] for k in ("split", "preds")} for r in results]
         with open(path, "w") as f:
@@ -491,7 +582,7 @@ def main(classifier_type, embeddings_level, feature_type, norms_type, split_type
             #     save_clfs(path, results)
 
     def process_feature(feature):
-        binary_labels = get_binary_labels(
+        classifier_labels = get_labels_func(
             labels,
             feature,
             feature_to_concepts,
@@ -502,7 +593,7 @@ def main(classifier_type, embeddings_level, feature_type, norms_type, split_type
             predict_splits,
             make_classifier,
             embeddings,
-            binary_labels,
+            classifier_labels,
             splits[feature],
         )
 

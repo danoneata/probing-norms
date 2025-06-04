@@ -217,7 +217,7 @@ def main():
     ]
     df = pd.DataFrame.from_records(results)
     df["model"] = df["model"].map(FEATURE_NAMES)
-    df = df.sort_values(by="correlation", ascending=True)
+    df = df.sort_values(by="correlation", ascending=False)
     print(df.to_string(index=False))
     print(df.to_latex(index=False, float_format="%.3f"))
 

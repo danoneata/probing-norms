@@ -188,6 +188,7 @@ class Qwen25VL(nn.Module):
         self.model.eval()
         self.processor = AutoProcessor.from_pretrained(model_id)
         self.feature_dim = self.model.config.vision_config.out_hidden_size
+        pdb.set_trace()
 
     def transform(self, x):
         messages = [

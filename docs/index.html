@@ -20,7 +20,8 @@
                 <div class="col-sm"></div>
                 <div class="col-sm-3 text-center">
                     <a href="https://doneata.bitbucket.io/">Dan Oneață</a>
-                    <p class="font-weight-light text-secondary"><span style="font-variant: small-caps">politehnica</span> Bucharest</p>
+                    <p class="font-weight-light text-secondary"><span
+                            style="font-variant: small-caps">politehnica</span> Bucharest</p>
                 </div>
                 <div class="col-sm-3 text-center">
                     <a href="https://elliottd.github.io/">Desmond Elliott</a>
@@ -38,14 +39,24 @@
     <div class="container">
         <div class="row mt-3">
             <span class="text-center">
-                <i class="bi bi-file-earmark-fill"></i> paper
+                <span class="mx-2">
+                    <i class="bi bi-file-earmark-fill"></i> <a href="https://arxiv.org/abs/2506.03994">paper</a>
+                </span>
                 ·
-                <i class="bi bi-github"></i> <a href="https://github.com/danoneata/seeing-what-tastes-good">code</a>
+                <span class="mx-2">
+                    <i class="bi bi-github"></i> <a href="https://github.com/danoneata/seeing-what-tastes-good">code</a>
+                </span>
+                ·
+                <span class="mx-2">
+                    <i class="bi bi-easel3-fill"></i> <a
+                        href="https://doneata.bitbucket.io/static/cvpr25-viscon-poster.pdf">poster</a>
+                </span>
             </span>
         </div>
 
         <div class="row mt-3">
-            <p class="alert alert-primary text-center lead">Self-supervised vision models are surprisingly good at predicting
+            <p class="alert alert-primary text-center lead">Self-supervised vision models are surprisingly good at
+                predicting
                 the semantic attributes of concepts.</p>
         </div>
 
@@ -58,33 +69,41 @@
                         <a href="https://aclanthology.org/C16-1264/">Collell and Moens, 2016</a>;
                         <a href="https://aclanthology.org/W17-2810/">Lucy and Gauthier, 2017</a>)
                         but with a new twist: larger models and denser
-                        data.</li>
+                        data.
+                    </li>
                     <li>Evaluate how well large-scale pretrained models capture the semantic attributes of concepts;
                         for example, <span style="font-variant: small-caps">rose</span> <i>is red</i>, <i>smells
                             sweet</i>, <i>is a flower</i>.</li>
-                    <li>Evaluate on data that go beyond perception, e.g. emotion, encyclopaedic, functional knowledge.</li>
+                    <li>Evaluate on data that go beyond perception, e.g. emotion, encyclopaedic, functional knowledge.
+                    </li>
                 </ul>
             </div>
 
             <div class="col-md-3">
                 <h4 class="text-center mb-3">Methodology</h4>
-                <img src="imgs/method.png" class="img-fluid" alt="Methodology overview" style="max-width: 100%; height: auto;">
+                <img src="imgs/method.png" class="img-fluid" alt="Methodology overview"
+                    style="max-width: 100%; height: auto;">
                 <p>
-                    <ul>
-                        <li>Train linear probes on frozen representations extracted from pretrained vision or language
-                            models.</li>
-                    </ul>
+                <ul>
+                    <li>Train linear probes on frozen representations extracted from pretrained vision or language
+                        models.</li>
+                </ul>
                 </p>
             </div>
 
             <div class="col-md-3">
                 <h4 class="text-center mb-3">Datasets</h4>
-                <img src="imgs/datasets.png" class="img-fluid" alt="Datasets overview" style="max-width: 100%; height: auto;">
+                <img src="imgs/datasets.png" class="img-fluid" alt="Datasets overview"
+                    style="max-width: 100%; height: auto;">
                 <p class="mt-2">
-                We link the concepts from <span style="font-variant: small-caps">things</span> (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223792">Hebart et al., 2019</a>) to two sets of attributes:
+                    Link the concepts from <span style="font-variant: small-caps">things</span> (<a
+                        href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223792">Hebart et al.,
+                        2019</a>) to two sets of attributes:
                 <ul>
-                    <li><a href="https://link.springer.com/article/10.3758/BF03192726">McRae et al. (2005)</a>: Commonly elicited attributes.</li>
-                    <li><a href="https://www.tandfonline.com/doi/full/10.1080/02643294.2016.1147426">Binder et al. (2016)</a>: Average ratings for a set of experiential attributes, based on
+                    <li><a href="https://link.springer.com/article/10.3758/BF03192726">McRae et al. (2005)</a>: Commonly
+                        elicited attributes.</li>
+                    <li><a href="https://www.tandfonline.com/doi/full/10.1080/02643294.2016.1147426">Binder et al.
+                            (2016)</a>: Average ratings for a set of experiential attributes, based on
                         neurobiological mechanisms.</li>
                 </ul>
                 </p>

@@ -115,11 +115,28 @@
                     style="max-width: 100%; height: auto;">
                 <p class="mt-2 text-secondary text-center">(Models at the top are better.)</p>
             </div>
-
         </div>
 
         <div class="row mt-4">
-            <h4 class="text-center">Interactive demo</h4>
+            <div class="col"></div>
+            <div class="col-md-6">
+                <h4 class="text-center">Interactive demo</h4>
+                <div class="text-secondary">
+                    Below you can visualise and interact with the results:
+                    you can pick two models and a dataset,
+                    and the app will display:
+                    (i) a scatterplot of the performance of the two models on the selected dataset (top), and
+                    (ii) the per concept predictions for a selected attribute (bottom).
+                    To access the demo on a full page, visit
+                    <a href="https://probing-norms-demo.streamlit.app/">this link</a>.
+                    Since the demo is hosted on Streamlit Cloud, the app goes to sleep due to inactivity, so you might need to get it back up.
+                    Currently, to get the app back up you need to do it from the full page (and not from the embedded app on this page).
+            </div>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row mt-4">
             <iframe src="https://probing-norms-demo.streamlit.app?embed=true"
                 style="height: 640px; width: 100%;"></iframe>
         </div>

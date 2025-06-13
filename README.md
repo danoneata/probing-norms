@@ -76,6 +76,33 @@ python probing_norms/get_results.py paper-table-main-acl-camera-ready:swin-v2-ss
 ## Replicating the results in the paper
 
 We provide the scripts to replicate the various tables and figures from the paper.
+Prior to running these scripts, you need to extract the features for all models and train the corresponding probes.
+The list of models used in the paper is available in the [`probing_norms/get_results.py`](probing_norms/get_results.py) script, under the `MAIN_TABLE_MODELS` variable:
+
+```python
+MAIN_TABLE_MODELS = [
+    # Vision models
+    "random-siglip",
+    "vit-mae-large",
+    "max-vit-large",
+    "max-vit-large-in21k",
+    "dino-v2",
+    "swin-v2-ssl",
+    # Vision-language models
+    "llava-1.5-7b",
+    "qwen2.5-vl-3b-instruct",
+    "clip",
+    "pali-gemma-224",
+    "siglip-224",
+    # Language models
+    "glove-840b-300d-word",
+    "fasttext-word",
+    "numberbatch-word",
+    "clip-word",
+    "deberta-v3-contextual-layers-0-to-6-word",
+    "gemma-2b-contextual-layers-9-to-18-seq-last-word",
+]
+```
 
 ### Table 2: Main results
 

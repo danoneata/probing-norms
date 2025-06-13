@@ -2,13 +2,28 @@ This repository contains code for the paper:
 
 > Oneata, Dan, Desmond Elliott, and Stella Frank.
 > [Seeing What Tastes Good: Revisiting Multimodal Distributional Semantics in the Billion Parameter Era.](https://arxiv.org/abs/2506.03994)
-> Findings ACL, 2025.
+> ACL Findings, 2025.
 
 ## Data
 
-The paper introduces the dataset McRae × ᴛʜɪɴɢs, which is obtained by labelling the concepts in the ᴛʜɪɴɢs dataset with the McRae attributes.
-This data is available in the [`data/mcrae-x-things.json`](data/mcrae-x-things.json) file, which contains a list of positive concept–attribute pairs.
-For the type corresponding to each attribute, see the [`data/mcrae-x-things-taxonomy.json`](data/mcrae-x-things-taxonomy.json) file.
+**Norm data.**
+The paper introduces the dataset McRae × ᴛʜɪɴɢs.
+This dataset is obtained by pairing the concepts in the ᴛʜɪɴɢs dataset with McRae attributes using GPT-4o.
+The resulting data is available in the [`data/mcrae-x-things.json`](data/mcrae-x-things.json) file, which contains a list of positive concept–attribute pairs;
+if a concept–attribute pair is missing, then it is a negative pair (the concept does not have that attribute).
+Each attribute can be categorised in a type (e.g. taxonomic, functional, visual-color);
+this mapping is available in the [`data/mcrae-x-things-taxonomy.json`](data/mcrae-x-things-taxonomy.json) file.
+
+**Concepts.**
+To represent the concepts visually, we use the images in the [ᴛʜɪɴɢs dataset](https://osf.io/jum2f/).
+To represent the concepts as text, we either use the concept names (e.g. "apple") or contextual sentences (e.g. "The apple fell from the tree and rolled down the hill").
+We provide three variants of contextual sentences differenting in terms of number of sentences and whether they are constrained to exclude attributes or not.
+
+| Num. sentences | Constrained? | Path |
+| --- | --- | --- |
+| 10 | ✗ | [link](data/things/gpt4o_concept_context_sentences_v2.jsonl) |
+| 50 | ✗ | [link](data/things/gpt4o_50_concept_context_sentences_v2.jsonl) |
+| 50 | ✓ | [link](data/things/gpt4o_50_constrained_concept_context_sentences_v2.jsonl) |
 
 ## Setup
 

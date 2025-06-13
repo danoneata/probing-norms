@@ -13,7 +13,7 @@ The paper introduces the dataset McRae × ᴛʜɪɴɢs.
 This dataset is obtained by pairing the concepts in the ᴛʜɪɴɢs dataset with McRae attributes using GPT-4o.
 The resulting data is available in the [`data/mcrae-x-things.json`](data/mcrae-x-things.json) file, which contains a list of positive concept–attribute pairs;
 if a concept–attribute pair is missing, then it is a negative pair (the concept does not have that attribute).
-Each attribute can be categorised in a type (e.g. taxonomic, functional, visual-color);
+Each attribute can be categorised to a higher type (e.g. taxonomic, functional, visual-color);
 this mapping is available in the [`data/mcrae-x-things-taxonomy.json`](data/mcrae-x-things-taxonomy.json) file.
 
 **Concepts.**
@@ -45,7 +45,7 @@ pip install -e .
 
 ## Evaluating a single model
 
-To evaluate the performance of a single model (let's say the Swin-V2 model, `swin-v2-ssl`), you have to follow the next steps.
+To evaluate the performance of a single model (let's say the Swin-V2 model, code as `swin-v2-ssl`), we have to perform three steps.
 
 **Feature extraction.**
 Extract the features for the ᴛʜɪɴɢs concepts:
@@ -77,3 +77,68 @@ python probing_norms/get_results.py paper-table-main-acl-camera-ready:swin-v2-ss
 
 We provide the scripts to replicate the various tables and figures from the paper.
 
+### Table 2: Main results
+
+```bash
+python probing_norms/get_results.py paper-table-main-acl-camera-ready
+```
+
+### Figure 2: Correlation between models
+
+```bash
+python probing_norms/get_results.py get-correlation-between-models-2
+```
+
+### Figure 3: Rankings of models
+
+```bash
+python probing_norms/get_results.py ranking-plot
+```
+
+### Table 3: Possible confounds
+
+```bash
+python probing_norms/scripts/eval_norm_correlations.py
+```
+
+### Figure 4: Per attribute model comparison
+
+```bash
+python probing_norms/get_results.py compare-two-models-scatterplot-2
+```
+
+### Figure 5: Per attribute type results on McRae × ᴛʜɪɴɢs
+
+```bash
+python run probing_norms/get_results.py per-metacategory-mcrae-mapped:mcrae-x-things
+```
+
+### Table 5: Main results (detailed)
+
+```bash
+python probing_norms/get_results.py paper-table-main-full-acl-camera-ready
+```
+
+### Table 6: Contextualised language models
+
+```bash
+python probing_norms/get_results.py results-contextualised-language-models
+```
+
+### Figure 8: Per attribute results on Binder
+
+```bash
+python probing_norms/get_results.py binder-norms
+```
+
+### Figure 9: Per attribute type results on Binder
+
+```bash
+python probing_norms/get_results.py per-metacategory-binder
+```
+
+### Figure 10: Qualitative results
+
+```bash
+streamlit run probing_norms/scripts/show_results_per_feature_norm_v2.py
+```

@@ -52,7 +52,7 @@ Extract the features for the ᴛʜɪɴɢs concepts:
 ```bash
 python probing_norms/extract_features_image.py -d things -f swin-v2-ssl
 ```
-For a language model, you need to use the `probing_norms/extract_features_text.py` script instead. For example,
+For a language model, we need to use the `probing_norms/extract_features_text.py` script instead. For example:
 ```bash
 python probing_norms/extract_features_text.py -d things -f numberbatch -m word
 ```
